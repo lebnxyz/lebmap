@@ -1,0 +1,390 @@
+[
+    {
+        "category": "general pronunciation",
+        "questions": [
+            {
+                "format": "grid",
+                "type": "inflection",
+                "multiple": false,
+                "title": "word-final kasra+consonant",
+                "tests": "pronounce a kasra in the last syllable of a word as 'e' or 'i'",
+                "tags": [
+                  "word-final vowel tenseness",
+                  "closed syllable",
+                  "high unrounded vowel"
+                ],
+                "rows": [
+                    {
+                        "type": "active participle",
+                        "base": "verb",
+                        "arabic": "خايف",
+                        "transliteration": "5AAY?F",
+                        "english": "scared"
+                    },
+                    {
+                        "type": "active participle",
+                        "base": "verb",
+                        "arabic": "حامل",
+                        "transliteration": "7AAM?L",
+                        "english": "holding, carrying"
+                    },
+                    {
+                        "type": "possessive suffix",
+                        "base": "noun",
+                        "arabic": "كتابك",
+                        "transliteration": "KTAAb?K",
+                        "english": "your.f book"
+                    },
+                    {
+                        "type": "internal conjugation",
+                        "base": "verb",
+                        "arabic": "يمكن",
+                        "transliteration": "YIMK?N",
+                        "english": "maybe"
+                    }
+                ],
+                "columns": [
+                    {"text": "e", "tags": ["lax"], "xor": []},
+                    {"text": "i", "tags": ["tense"], "xor": []}
+                ]
+            },
+            {
+                "format": "grid",
+                "type": "suffix",
+                "multiple": true,
+                "title": "word-final yaa",
+                "tests": "pronounce word-final yaa as 'e' or 'i'",
+                "tags": [
+                    "word-final vowel tenseness",
+                    "open syllable",
+                    "high unrounded vowel"
+                ],
+                "rows": [
+                    {
+                        "type": "2sg.f subject",
+                        "base": "pronoun",
+                        "arabic": "إنتي",
+                        "transliteration": "INT?",
+                        "english": "you.f"
+                    },
+                    {
+                        "type": "1sg possessive",
+                        "base": "noun",
+                        "arabic": "بيتي",
+                        "transliteration": "BYT?",
+                        "english": "my house"
+                    }
+                ],
+                "columns": [
+                    {"text": "e", "tags": ["lax"], "xor": []},
+                    {"text": "i", "tags": ["tense"], "xor": []}
+                ]
+            },
+            {
+                "format": "grid",
+                "type": "suffix",
+                "multiple": true,
+                "title": "word-final waaw",
+                "tests": "pronounce word-final waaw as 'u' or 'o'",
+                "tags": [
+                    "word-final vowel tenseness",
+                    "open syllable",
+                    "rounded vowel"
+                ],
+                "rows": [
+                    {
+                        "type": "3sg.m possessive",
+                        "base": "book",
+                        "arabic": "كتابو، كتابه",
+                        "transliteration": "KTAAB?",
+                        "english": "his book"
+                    },
+                    {
+                        "type": "3pl past",
+                        "base": "verb",
+                        "arabic": "رحتوا",
+                        "transliteration": "R7T?",
+                        "english": "you.pl went"
+                    }
+                ],
+                "columns": [
+                    {"text": "o", "tags": ["lax"], "xor": []},
+                    {"text": "u", "tags": ["tense"], "xor": []}
+                ]
+            },
+            {
+                "format": "grid",
+                "type": "environment",
+                "multiple": true,
+                "title": "alif pronunciation",
+                "tests": "pronounce alif differently in different contexts",
+                "tags": [
+                    "alif",
+                    "emphasis-conditioned",
+                    "rounding"
+                ],
+                "rows": [
+                    {
+                        "environment": [],
+                        "position": [],
+                        "arabic": "كتاب",
+                        "transliteration": "KT?B",
+                        "english": "book"
+                    },
+                    {
+                        "environment": ["semi-emphatic"],
+                        "position": ["before"],
+                        "arabic": "سيارة",
+                        "transliteration": "SYY?RA",
+                        "english": "car"
+                    },
+                    {
+                        "environment": ["semi-emphatic"],
+                        "position": ["after"],
+                        "arabic": "خايف",
+                        "transliteration": "5?YIF",
+                        "english": "scared"
+                    },
+                    {
+                        "environment": ["voiced", "pharyngeal"],
+                        "position": [null, "after"],
+                        "arabic": "عامل",
+                        "transliteration": "3?MIL",
+                        "english": "has done"
+                    },
+                    {
+                        "environment": ["voiced", "pharyngeal"],
+                        "position": [null, "after"],
+                        "arabic": "حاول",
+                        "transliteration": "7?WIL",
+                        "english": "try"
+                    },
+                    {
+                        "environment": ["emphatic"],
+                        "position": ["before"],
+                        "arabic": "جاط",
+                        "transliteration": "J?\u1E6C",
+                        "english": "bowl"
+                    },
+                    {
+                        "environment": ["emphatic", "semi-emphatic"],
+                        "position": ["after", "before"],
+                        "arabic": "طيارة",
+                        "transliteration": "\u1E6CYY?RA",
+                        "english": "airplane"
+                    },
+                    {
+                        "environment": ["emphatic", "affix"],
+                        "position": ["after", "before"],
+                        "arabic": "فضّاه",
+                        "transliteration": "F\u1E0C\u1E0C?",
+                        "english": "he emptied it.m"
+                    }
+                ],
+                "columns": [
+                    {"text": "e\u031E\u02D0", "tags": ["1", "mid", "front", "unrounded"], "xor": []},
+                    {"text": "\u00E6\u02D0", "tags": ["2", "near-open", "front", "unrounded"], "xor": []},
+                    {"text": "a\u02D0", "tags": ["3", "open", "front", "unrounded"], "xor": []},
+                    {"text": "\u0251\u02D0", "tags": ["4", "open", "back", "unrounded"], "xor": []},
+                    {"text": "\u0252\u02D0", "tags": ["5", "open", "back", "rounded"], "xor": []}
+                ]
+            },
+            {
+                "format": "grid",
+                "type": "environment",
+                "multiple": true,
+                "title": "pronounce kasra as damme near an emphatic consonant",
+                "tests": "round the high unrounded vowel near an emphatic consonant",
+                "tags": [
+                    "emphasis-conditioned",
+                    "rounding"
+                ],
+                "rows": [
+                    {
+                        "environment": ["emphatic"],
+                        "position": ["after"],
+                        "arabic": "صرت",
+                        "transliteration": "\u1E62?RT",
+                        "english": "I became"
+                    },
+                    {
+                        "environment": ["emphatic"],
+                        "position": ["after"],
+                        "arabic": "بصح",
+                        "transliteration": "B\u1E62?77",
+                        "english": "I heal up"
+                    },
+                    {
+                        "environment": ["emphatic", "suffix"],
+                        "position": ["before", "after"],
+                        "arabic": "بتنبسطي",
+                        "transliteration": "BT?MB?STY",
+                        "english": "you.f enjoy yourself"
+                    },
+                    {
+                        "environment": ["emphatic", "emphatic"],
+                        "position": ["before", "after"],
+                        "arabic": "قصة",
+                        "transliteration": "2?\u1E62\u1E62A",
+                        "english": "story"
+                    },
+                    {
+                        "environment": ["emphatic", "suffix"],
+                        "position": ["before", "after"],
+                        "arabic": "منفحَص",
+                        "transliteration": "MN?F7A\u1E62",
+                        "english": "we examine"
+                    },
+                    {
+                        "environment": [],
+                        "position": [],
+                        "arabic": "جمعة",
+                        "transliteration": "J?M3A",
+                        "english": "week, Friday"
+                    },
+                    {
+                        "environment": [],
+                        "position": [],
+                        "arabic": "لغة",
+                        "transliteration": "L?8A",
+                        "english": "language"
+                    }
+                ],
+                "columns": [
+                    {"text": "o/u", "tags": ["rounded"], "xor": []},
+                    {"text": "e", "tags": ["unrounded", "lax"], "xor": []},
+                    {"text": "i", "tags": ["unrounded", "tense"], "xor": []}
+                ]
+            },
+            {
+                "format": "mc",
+                "multiple": false,
+                "title": "qaaf pronunciation",
+                "tags": [
+                    "qaaf",
+                    "phonology"
+                ],
+                "options": [
+                    "q always",
+                    "q and 2 interchangeably, no particular preference",
+                    "2 except in proper names and a FEW words (maybe like اقترح qtara7, قواعد qawaa3ed, etc)",
+                    "2 always, except in some proper names"
+                ]
+            }
+        ]
+    },
+    {
+        "category": "Morphology-related pronunciation",
+        "questions": [
+            {
+                "format": "grid",
+                "type": "suffix",
+                "multiple": true,
+                "title": "mutation of the participle 'hiyye se2le' once suffixed",
+                "tests": "use different feminine-active-participle suffix bases depending on the phonological qualities of the suffix",
+                "tags": [
+                    "feminine active participle",
+                    "active participle",
+                    "suffix",
+                    "person conjugation",
+                    "mutation"
+                ],
+                "rows": [
+                    {
+                        "type": "1sg object",
+                        "base": "feminine active participle",
+                        "arabic": "سائلتني/سائليتني",
+                        "transliteration": "SAA2?NY",
+                        "english": "she's asked me"
+                    },
+                    {
+                        "type": "3sg.f object",
+                        "base": "feminine active participle",
+                        "arabic": "سائلتها/سائليتها",
+                        "transliteration": "SAA2?HA",
+                        "english": "she's asked her"
+                    },
+                    {
+                        "type": "2sg.m object",
+                        "base": "feminine active participle",
+                        "arabic": "سائلتك/سائليتك",
+                        "transliteration": "SAA2?AK",
+                        "english": "she's asked you"
+                    }
+                ],
+                "columns": [
+                    {"text": "-ilt-", "tags": [], "xor": []},
+                    {"text": "-lit-", "tags": [], "xor": []},
+                    {"text": "-liit-", "tags": [], "xor": []}
+                ]
+            },
+            {
+                "format": "mc",
+                "multiple": false,
+                "title": "distinguishing 'you(f) have asked him' from 'she's asked him'",
+                "tests": "use different feminine-active-participle suffix bases, depending on person",
+                "tags": [
+                    "feminine active participle",
+                    "active participle",
+                    "suffix",
+                    "person conjugation",
+                    "mutation"
+                ],
+                "options": [
+                    "I do distinguish them. 'You(f) have asked him' is انتي سائلتيه (sē2eltī), and the latter matches my answer to the previous question",
+                    "I don't distinguish the two; they're both سائلتيه (sē2eltī)",
+                    "I don't distinguish the two; they're both the same as my answer to the last question, and I don't ever say سائلتيه (sē2eltī)"
+                ]
+            },
+            {
+                "format": "mc",
+                "multiple": true,
+                "title": "pronunciation of 'they have bought' مشتر...ن",
+                "tests": "pronunciation of suffixed active participles of weak-final complex verbs",
+                "tags": [
+                    "active participle",
+                    "suffix"
+                ],
+                "options": [
+                    "مشترين meshtrīn",
+                    "مشترِيّين meshtriyyīn",
+                    "Other"
+                ]
+            },
+            {
+                "format": "grid",
+                "type": "suffix",
+                "multiple": false,
+                "title": "pronouncing (h) in suffixes",
+                "tests": "pronounce the (h), at the beginning of certain suffixes, in certain contexts",
+                "tags": [
+                ],
+                "rows": [
+                    {
+                        ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "Phonotactics-related pronunciation",
+        "questions": [
+        ]
+    },
+    {
+        "category": "ba3ed",
+        "questions": [
+        ]
+    },
+    {
+        "category": "Verb forms",
+        "questions": [
+        ]
+    },
+    {
+        "category": "Miscellaneous vocab",
+        "questions": [
+        ]
+    }
+]
