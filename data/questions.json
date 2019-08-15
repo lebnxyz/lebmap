@@ -25,7 +25,7 @@
             "High-vowel tenseness in a word-final open syllable"
         ],
         "answersIndicate": [[
-            "temse",
+            "tense",
             "lax"
         ]],
         "options": {
@@ -128,9 +128,9 @@
             "vowel-lengthening, CVVt-"
         ]],
         "options": {
-            "se2ilt-": {"0": [0]},
-            "se2lit-": {"0": [1]},
-            "se2liit-": {"0": [2]}
+            "s\u01132ilt-": {"0": [0]},
+            "s\u01132lit-": {"0": [1]},
+            "s\u01132l\u012bt-": {"0": [2]}
         },
         "examples": {}
     },
@@ -150,9 +150,9 @@
             "Complete avoidance"
         ]],
         "options": {
-            "I do; 2sg.f se2iltii, 3sg.f se2liito": {"0": [0]},
-            "No; both se2iltii": {"0": [1, 2]},
-            "No; both se2liito": {"0": [1, 3]},
+            "I do; 2sg.f s\u01132ilt\u012b, 3sg.f s\u01132l\u012bto": {"0": [0]},
+            "No; both s\u01132ilt\u012b": {"0": [1, 2]},
+            "No; both s\u01132l\u012bto": {"0": [1, 3]},
             "N/A, something completely different": {"0": [4]}
         },
         "examples": {}
@@ -162,15 +162,15 @@
         "flaws": [
         ],
         "explores": [
-            "Preservation of participle-final yaa2 when surrounded by two long vowels"
+            "Preservation of participle-final y\u0101 when surrounded by two long vowels"
         ],
         "answersIndicate": [[
             "preservation",
             "elision into one long vowel"
         ]],
         "options": {
-            "meshtriin": {"0": [0]},
-            "meshtriyyiin": {"0": [1]}
+            "meshtr\u012bn": {"0": [0]},
+            "meshtriyy\u012bn": {"0": [1]}
         },
         "examples": {}
     },
@@ -307,13 +307,13 @@
         "answersIndicate": [[
             "preservation",
             "collapse into monophthong",
-            "mid monophthong e",
-            "high monophthong i"
+            "mid monophthong \u0113",
+            "high monophthong \u012b"
         ]],
         "options": {
-            "bet": {"0": [1, 2]},
+            "b\u0113t": {"0": [1, 2]},
             "bayt": {"0": [0]},
-            "bit": {"0": [1, 3]}
+            "b\u012bt": {"0": [1, 3]}
         },
         "examples": {}
     },
@@ -373,11 +373,11 @@
         "flaws": [
         ],
         "explores": [
-            "Interpretation of 'ba3d + ambiguous faa3il' (the faa3il being both an adjective and a past participle)"
+            "Interpretation of 'ba3d + ambiguous f\u01013il' (the f\u01013il being both an adjective and a past participle)"
         ],
         "answersIndicate": [[
-            "interpretation of faa3il as invariably a past participle",
-            "interpretation of faa3il as invariably an adjective"
+            "interpretation of f\u01013il as invariably a past participle",
+            "interpretation of f\u01013il as invariably an adjective"
         ]],
         "options": {
             "No, it means 'have you just woken up?'. 'Are you still awake?' needs a different adjective": {"0": [0]},
@@ -509,11 +509,11 @@
             "distinction between 7atta and la7attelte/ta7attele"
         ]],
         "options": {
-            "kermel": {"0": [0]},
+            "kerm\u0113l": {"0": [0]},
             "7atta/la7atta/ta7atta": {"0": [1]},
-            "la7attelte/ta7attele": {"0": [2]},
-            "3ashen": {"0": []},
-            "menshen/mshen": {"0": []}
+            "la7att\u0113lte/ta7attele": {"0": [2]},
+            "3ash\u0113n": {"0": []},
+            "mensh\u0113n/msh\u0113n": {"0": []}
         },
         "examples": {}
     },
@@ -530,7 +530,7 @@
             "acceptance of participial internal passive"
         ]],
         "options": {
-            "byesta3mluwwa/-ouha": {"0": [0]},
+            "byesta3mluwwa/-\u016bha": {"0": [0]},
             "btesta3mal": {"0": [1]},
             "mesta3male": {"0": [2]}
         },
@@ -556,10 +556,10 @@
             ]
         ],
         "options": {
-            "mlawwaniin l7iitaan w msakkara lsyyaara": {"0": [1], "1": [0]},
-            "l7iitaan mlawwaniin w lsyyaara msakkara": {"0": [1], "1": [1]},
-            "mlawniin l7iitaan w msakra lsyyaara": {"0": [0], "1": [0]},
-            "l7iitaan mlawniin w lsyyaara msakra": {"0": [1], "1": [1, 2]}
+            "mlawwan\u012bn l7\u012bt\u0101n w msakkara lsyy\u0101ra": {"0": [1], "1": [0]},
+            "l7\u012bt\u0101n mlawwan\u012bn w lsyy\u0101ra msakkara": {"0": [1], "1": [1]},
+            "mlawn\u012bn l7\u012bt\u0101n w msakra lsyy\u0101ra": {"0": [0], "1": [0]},
+            "l7\u012bt\u0101n mlawn\u012bn w lsyy\u0101ra msakra": {"0": [1], "1": [1, 2]}
         },
         "examples": {}
     },
@@ -569,9 +569,9 @@
             "I forgot about assimilation of the /r/ into the /l/ as in Sallak, which does occur as well"
         ],
         "explores": [
-            "Assimilation of laam-dative into /r/ of Saar",
+            "Assimilation of l\u0101m-dative into /r/ of S\u0101r",
             "Semantic distinction in this assimilation",
-            "Expressing duration with Saar vs. Sarl-"
+            "Expressing duration with S\u0101r vs. Sarl-"
         ],
         "answersIndicate": [
             [
@@ -585,15 +585,15 @@
                 "Sarl- for 'happening to'"
             ],
             [
-                "expressing of duration with Saar",
+                "expressing of duration with S\u0101r",
                 "expression of duration with Sarl-"
             ]
         ],
         "options": {
-            "Sarrak shi? Sarrak se3ten": {"0": [0], "1": [0, 2], "2": [1]},
-            "Sarlak shi? Sarrak se3ten": {"0": [0], "1": [0, 3], "2": [1]},
-            "Sarlak shi? Sarlak se3ten": {"0": [1], "1": [1, 3], "2": [1]},
-            "Sarlak shi? Srt se3ten": {"0": [1], "1": [3], "2": [0]}
+            "Sarrak shi? Sarrak s\u01133t\u0113n": {"0": [0], "1": [0, 2], "2": [1]},
+            "Sarlak shi? Sarrak s\u01133t\u0113n": {"0": [0], "1": [0, 3], "2": [1]},
+            "Sarlak shi? Sarlak s\u01133t\u0113n": {"0": [1], "1": [1, 3], "2": [1]},
+            "Sarlak shi? Srt s\u01133t\u0113n": {"0": [1], "1": [3], "2": [0]}
         },
         "examples": {}
     },
@@ -609,7 +609,7 @@
             "Reduction of geminate /77/ to single-length /7/"
         ]],
         "options": {
-            "hayye/hiyye": {"0": []},
+            "hayy\u0113/hiyy\u0113": {"0": []},
             "ya77uwwe/ya77u/a77uwwe/a77u": {"0": [0]},
             "ya7uwwe/ya7u/a7uwwe/a7u": {"0": [1]}
         },
@@ -627,7 +627,7 @@
             "past perfect = ken + past participle"
         ]],
         "options": {
-            "kenna ketbiin": {"0": [1]},
+            "kenna k\u0113tb\u012bn": {"0": [1]},
             "kenna katabna": {"0": [0]}
         },
         "examples": {}
@@ -644,11 +644,11 @@
             "/l/ > /D/ fricative"
         ]],
         "options": {
-            "hol": {"0": []},
-            "hole/hawle": {"0": []},
-            "hode/hawde": {"0": [0]},
-            "hodhe/hawdhe": {"0": [1]},
-            "haydol/hadol": {"0": []}
+            "h\u014dl": {"0": []},
+            "h\u014dle/hawle": {"0": []},
+            "h\u014dde/hawde": {"0": [0]},
+            "h\u014ddhe/hawdhe": {"0": [1]},
+            "hayd\u014dl/had\u014dl": {"0": []}
         },
         "examples": {}
     },
@@ -676,14 +676,14 @@
         "flaws": [
         ],
         "explores": [
-            "Whether the difference in 'jaa2n' pronunciations is regional"
+            "Whether the difference in 'j\u01012n' pronunciations is regional"
         ],
         "answersIndicate": [[
         ]],
         "options": {
             "je": {},
-            "jey": {},
-            "jeye/jeyi": {}
+            "j\u0113y": {},
+            "j\u0113ye/j\u0113yi": {}
         },
         "examples": {}
     },
@@ -722,7 +722,7 @@
         ],
         "explores": [
             "Divide in second-person past-optative constructions",
-            "Unrounding assimilation ('vowel harmony') in 2uul + -lii-"
+            "Unrounding assimilation ('vowel harmony') in 2\u016bl + -l\u012b-"
         ],
         "answersIndicate": [
             [
@@ -735,9 +735,9 @@
             ]
         ],
         "options": {
-            "kente 2eltiile": {"0": [0], "1": []},
-            "kente 2uuliile": {"0": [1], "1": [1]},
-            "kente 2iiliile": {"0": [1], "1": [0]},
+            "kente 2elt\u012ble": {"0": [0], "1": []},
+            "kente 2\u016bl\u012ble": {"0": [1], "1": [1]},
+            "kente 2\u012bl\u012ble": {"0": [1], "1": [0]}
         },
         "examples": {}
     },
@@ -756,7 +756,7 @@
         ],
         "options": {
             "fiyye": {"0": [1]},
-            "fiine": {"0": [0]}
+            "f\u012bne": {"0": [0]}
         },
         "examples": {}
     },
@@ -771,11 +771,11 @@
 
         ]],
         "options": {
-            "shu biik": {},
-            "shu bek": {},
+            "shu b\u012bk": {},
+            "shu b\u0113k": {},
             "shu eshbak": {},
             "shu 2estak/2ostak": {},
-            "shu melak": {}
+            "shu m\u0113lak": {}
         },
         "examples": {}
     },
@@ -787,14 +787,14 @@
             "Use of words relating to returning for 'to end up'"
         ],
         "answersIndicate": [[
-            "agreement in conjugation of 3aad for subject",
-            "no agreement in conjugation of 3aad"
+            "agreement in conjugation of 3\u0101d for subject",
+            "no agreement in conjugation of 3\u0101d"
         ]],
         "options": {
             "rje3et shefta enta?": {"0": []},
             "3edet shefta enta?": {"0": [0]},
-            "3aad shefta enta?": {"0": [1]},
-            "shefta enta 3aawed?": {"0": []}
+            "3\u0101d shefta enta?": {"0": [1]},
+            "shefta enta 3\u0101wed?": {"0": []}
         },
         "examples": {}
     },
@@ -810,11 +810,11 @@
             "usage of ba2a"
         ]],
         "options": {
-            "ma ba2 ekol": {"0": []},
-            "ma3ash ekol": {"0": []},
-            "ma 7a-ekol ba3d": {"0": []},
-            "ma 7a-ekol ba2a": {"0": [1]},
-            "ra7 b3ish ekol": {"0": [0]}
+            "ma ba2 \u0113kol": {"0": []},
+            "ma3ash \u0113kol": {"0": []},
+            "ma 7a-\u0113kol ba3d": {"0": []},
+            "ma 7a-\u0113kol ba2a": {"0": [1]},
+            "ra7 b3ish \u0113kol": {"0": [0]}
         },
         "examples": {}
     },
@@ -831,9 +831,9 @@
             "pairing of het with la-"
         ]],
         "options": {
-            "het nDhar": {"0": [0]},
-            "het la-nDhar": {"0": [1]},
-            "khalliina nDhar": {"0": [2]}
+            "h\u0113t nDhar": {"0": [0]},
+            "h\u0113t la-nDhar": {"0": [1]},
+            "khall\u012bna nDhar": {"0": [2]}
         },
         "examples": {}
     },
@@ -866,8 +866,8 @@
 
         ]],
         "options": {
-            "tshiil": {},
-            "tekol": {},
+            "tsh\u012bl": {},
+            "t\u0113kol": {},
             "te3tal": {},
             "tehkal": {}
         },
@@ -903,15 +903,15 @@
         "flaws": [
         ],
         "explores": [
-            "Acceptance of suffixing 'miin' (who)"
+            "Acceptance of suffixing 'm\u012bn' (who)"
         ],
         "answersIndicate": [[
             "acceptable",
             "unacceptable"
         ]],
         "options": {
-            "miino/miinu": {"0": [0]},
-            "miin huwwe": {"0": [1]}
+            "m\u012bno/m\u012bnu": {"0": [0]},
+            "m\u012bn huwwe": {"0": [1]}
         },
         "examples": {}
     },
