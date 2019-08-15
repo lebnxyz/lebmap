@@ -11,7 +11,10 @@
             "tense",
             "lax"
         ]],
-        "options": {},
+        "options": {
+            "e": {"0": [1]},
+            "i": {"1": [0]}
+        },
         "examples": {}
     },
     {
@@ -25,7 +28,10 @@
             "temse",
             "lax"
         ]],
-        "options": {},
+        "options": {
+            "e": {"0": [1]},
+            "i": {"1": [0]}
+        },
         "examples": {}
     },
     {
@@ -39,7 +45,10 @@
             "tense",
             "lax"
         ]],
-        "options": {},
+        "options": {
+            "o": {"0": [1]},
+            "u": {"1": [0]}
+        },
         "examples": {}
     },
     {
@@ -50,13 +59,19 @@
             "Pronunciation of long /a/ depending on its phonological environment"
         ],
         "answersIndicate": [[
-            "mid front unrounded /e̞ː/",
-            "near-open front unrounded /æː/",
-            "open front unrounded /aː/",
-            "open back unrounded /ɑː/",
-            "open back rounded /ɒː/"
+            "raising",
+            "neutral pronunciation",
+            "lowering",
+            "backing",
+            "rounding"
         ]],
-        "options": {},
+        "options": {
+            "mid front unrounded /e̞ː/": {"0": [0]},
+            "near-open front unrounded /æː/": {"0": [1]},
+            "open front unrounded /aː/": {"0": [2]},
+            "open back unrounded /ɑː/": {"0": [2, 3]},
+            "open back rounded /ɒː/": {"0": [2, 3, 4]}
+        },
         "examples": {}
     },
     {
@@ -72,7 +87,11 @@
             "lax",
             "tense"
         ]],
-        "options": {},
+        "options": {
+            "o/u": {"0": 0},
+            "e": {"0": [1, 2]},
+            "i": {"0": [1, 3]}
+        },
         "examples": {}
     },
     {
@@ -83,12 +102,17 @@
             "Preservation of historic [q]"
         ],
         "answersIndicate": [[
-            "always",
-            "interchangeably with 2",
-            "almost never",
-            "never"
+            "unilateral preservation of [q]",
+            "debuccalization to [2]",
+            "preservation of [q] in proper names",
+            "preservation of [q] in some words"
         ]],
-        "options": {},
+        "options": {
+            "always": {"0": [0]},
+            "interchangeably with 2": {"0": [0, 1]},
+            "only in some words and proper names": {"0": [1, 2, 3]},
+            "only in some proper names": {"0": [1, 3]}
+        },
         "examples": {}
     },
     {
@@ -100,16 +124,20 @@
         ],
         "answersIndicate": [[
             "mutation to cluster-final VCt-",
-            "mutation to CVt-",
-            "mutation to CVVt-"
+            "no mutation, CVt-",
+            "vowel-lengthening, CVVt-"
         ]],
-        "options": {},
+        "options": {
+            "se2ilt-": {"0": [0]},
+            "se2lit-": {"0": [1]},
+            "se2liit-": {"0": [2]}
+        },
         "examples": {}
     },
     {
         "question": "Do you distinguish \"you(female) have asked him\" from \"she's asked him\"?",
         "flaws": [
-            "I didn't include a question asking what the N/A folks say instead"
+            "I didn't include a question asking what the 'N/A' folks say instead"
         ],
         "explores": [
             "Preservation of distinct suffixed feminine-active-participle forms"
@@ -119,9 +147,14 @@
             "leveling",
             "preference toward 2nd-person form",
             "preference toward 3rd-person form",
-            "N/A"
+            "Complete avoidance"
         ]],
-        "options": {},
+        "options": {
+            "I do; 2sg.f se2iltii, 3sg.f se2liito": {"0": [0]},
+            "No; both se2iltii": {"0": [1, 2]},
+            "No; both se2liito": {"0": [1, 3]},
+            "N/A, something completely different": {"0": [4]}
+        },
         "examples": {}
     },
     {
@@ -135,7 +168,10 @@
             "preservation",
             "elision into one long vowel"
         ]],
-        "options": {},
+        "options": {
+            "meshtriin": {"0": [0]},
+            "meshtriyyiin": {"0": [1]}
+        },
         "examples": {}
     },
     {
@@ -147,10 +183,13 @@
         ],
         "answersIndicate": [[
             "preservation",
-            "elision",
-            "assimilation into a semivowel"
+            "elision/assimilation"
         ]],
-        "options": {},
+        "options": {
+            "always": {"0": [0]},
+            "sometimes": {"0": [0, 1]},
+            "never": {"0": [1]}
+        },
         "examples": {}
     },
     {
@@ -161,12 +200,18 @@
             "Leveling of historic stress & voweling in certain verb forms"
         ],
         "answersIndicate": [[
-            "preservation",
+            "preservation of stress",
+            "preservation of voweling",
             "raising of vowels",
             "stress-leveling",
             "elision of newly unstressed vowel"
         ]],
-        "options": {},
+        "options": {
+            "yen-FA-3al": {"0": [0, 1]},
+            "yen-FE-3el": {"0": [0, 2]},
+            "YE-nef-3el": {"0": [2, 3]},
+            "YENF-3el": {"0": [2, 3, 4]}
+        },
         "examples": {}
     },
     {
@@ -174,15 +219,19 @@
         "flaws": [
         ],
         "explores": [
-            "Negation strategy & stages of Jespersen's Cycle"
+            "Verb-negation strategy & stages of Jespersen's Cycle"
         ],
         "answersIndicate": [[
-            "ma [...]: pre-verbal particle",
-            "ma [...]-sh: pre-verbal particle & suffix",
-            "a-[...]-sh: circumfix",
-            "[...]-sh: suffix only"
+            "pre-verbal particle",
+            "circumfix",
+            "suffix"
         ]],
-        "options": {},
+        "options": {
+            "ma b3ref": {"0": [0]},
+            "ma b3refsh": {"0": [0, 2]},
+            "ab3refsh": {"0": [1, 2]},
+            "b3refsh": {"0": [3]}
+        },
         "examples": {}
     },
     {
@@ -198,8 +247,15 @@
             "acceptance of non-leveled form",
             "rejection of non-leveled form"
         ]],
-        "options": {},
-        "examples": {}
+        "options": {
+            "I prefer metfe33el": {"0": [0]},
+            "No preference, interchangeable": {"0": [0, 1, 2]},
+            "I prefer mfa33al, but metfe33el sounds OK": {"0": [1, 2]},
+            "I prefer mfa33al, and metfe33el sounds weird/wrong": {"0": [1, 3]}
+        },
+        "examples": {
+            "//": "Lump met2e55er/met3uwwed/metjuwwez into one example"
+        }
     },
     {
         "question": "Do \u0645\u062a\u062e\u0628\u064a \"met5ebbe\" and \u0645\u062e\u0628\u0649 \"m5abba\" mean different things to you?",
@@ -214,7 +270,12 @@
             "preference toward metfe33el",
             "preference toward mfa33al"
         ]],
-        "options": {},
+        "options": {
+            "Yes, met5ebbe means hiding oneself whereas m5abba means hidden by someone else": {"0": [0]},
+            "'Meh', possible distinction but not salient: they both mean hidden by whoever": {"0": [0, 1]},
+            "No, they mean the same thing and I prefer met5ebbe": {"0": [1, 2]},
+            "No, they mean the same thing and I prefer m5abba": {"0": [1, 3]}
+        },
         "examples": {}
     },
     {
@@ -229,7 +290,11 @@
             "preservation of intermediate vowel, CiC",
             "local rejection of i -> null shift, CCiC"
         ]],
-        "options": {},
+        "options": {
+            "nn": {"0": [0]},
+            "nin": {"0": [1]},
+            "nnin": {"0": [2]}
+        },
         "examples": {}
     },
     {
@@ -240,12 +305,16 @@
             "Preservation of historic diphthong in different contexts"
         ],
         "answersIndicate": [[
+            "preservation",
             "collapse into monophthong",
             "mid monophthong e",
-            "high monophthong i",
-            "preservation"
+            "high monophthong i"
         ]],
-        "options": {},
+        "options": {
+            "bet": {"0": [1, 2]},
+            "bayt": {"0": [0]},
+            "bit": {"0": [1, 3]}
+        },
         "examples": {}
     },
     {
@@ -258,17 +327,20 @@
         ],
         "answersIndicate": [
             [
-                "no phonotactic conditioning",
                 "retainment of final m",
-                "vowel insertion after final m"
+                "addition of vowel after final m"
             ],
             [
-                "N/A, does not use 3am OR mma",
-                "replacement with 3am",
+                "replacement with 3am[ma]",
                 "perservation"
             ]
         ],
-        "options": {},
+        "options": {
+            "N/A, would never use 3am[ma]": {"0": [], "1": []},
+            "3am": {"0": [0], "1": [0]},
+            "3amma": {"0": [1], "1": [0]},
+            "mma": {"0": [1], "1": [1]}
+        },
         "examples": {}
     },
     {
@@ -285,12 +357,15 @@
                 "preference toward ba3d"
             ],
             [
-                "N/A, does not use ba3d",
                 "interpretation of negated ba3d to mean 'still have not'",
                 "interpretation of negated ba3d to mean 'have not yet'"
             ]
         ],
-        "options": {},
+        "options": {
+            "I would use [l]issa, not ba3d": {"0": [0], "1": []},
+            "We still haven't started": {"0": [1], "1": [0]},
+            "We haven't started yet": {"0": [1], "1": [1]}
+        },
         "examples": {}
     },
     {
@@ -302,10 +377,13 @@
         ],
         "answersIndicate": [[
             "interpretation of faa3il as invariably a past participle",
-            "interpretation of faa3il as either, depending on situational context",
             "interpretation of faa3il as invariably an adjective"
         ]],
-        "options": {},
+        "options": {
+            "No, it means 'have you just woken up?'. 'Are you still awake?' needs a different adjective": {"0": [0]},
+            "Yes, but it also means 'have you just woken up?'. Depends on context": {"0": [0, 1]},
+            "Yes. To ask 'have you just woken up?', you need to add an adverb to clarify": {"0": [1]}
+        },
         "examples": {}
     },
     {
@@ -316,10 +394,13 @@
             "Raising of historic 3sg.f /-at/ in different contexts"
         ],
         "answersIndicate": [[
-            "no raising",
+            "preservation; no raising",
             "raising"
         ]],
-        "options": {},
+        "options": {
+            "bat": {"0": [0]},
+            "bet/bit": {"0": [1]}
+        },
         "examples": {}
     },
     {
@@ -327,8 +408,10 @@
         "flaws": [
         ],
         "explores": [
-            "Reduction of unstressed 3sg.f /a/",
-            "Tenseness of 3sg.f /-at/[+raising]"
+            "Reduction of unstressed 3sg.f.pst /a/",
+            "Raising of historic 3sg.f.pst /-at/ when unsuffixed",
+            "Tenseness of 3sg.f.pst /-at/[+raising]",
+            "Amount of syllables in Form-I 3sg.f.pst"
         ],
         "answersIndicate": [
             [
@@ -336,11 +419,26 @@
                 "preservation"
             ],
             [
+                "preservation; no raising",
+                "raising"
+            ],
+            [
                 "lax",
                 "tense"
+            ],
+            [
+                "2",
+                "3"
             ]
         ],
-        "options": {},
+        "options": {
+            "KAT-bat": {"0": [0], "1": [0], "2": [], "3": [0]},
+            "KAT-bet": {"0": [0], "1": [1], "2": [0], "3": [0]},
+            "KAT-bit": {"0": [0], "1": [1], "2": [1], "3": [0]},
+            "KA-ta-bat": {"0": [1], "1": [0], "2": [], "3": [1]},
+            "KA-ta-bet": {"0": [1], "1": [1], "2": [0], "3": [1]},
+            "KA-ta-bit": {"0": [1], "1": [1], "2": [1], "3": [1]}
+        },
         "examples": {}
     },
     {
@@ -348,9 +446,10 @@
         "flaws": [
         ],
         "explores": [
-            "Reduction of unstressed 1sg /a/",
-            "Deletion of unstressed -Vt",
-            "Tenseness of /-at/[+raising]"
+            "Reduction of unstressed 1sg.pst /a/",
+            "Deletion of unstressed 1sg.pst -It",
+            "Tenseness of 1sg.pst -It",
+            "Amount of syllables in Form-I 1sg.pst"
         ],
         "answersIndicate": [
             [
@@ -364,9 +463,21 @@
             [
                 "lax",
                 "tense"
+            ],
+            [
+                "1",
+                "2",
+                "3"
             ]
         ],
-        "options": {},
+        "options": {
+            "KTABT": {"0": [0], "1": [0], "2": [], "3": [0]},
+            "KTA-bet": {"0": [0], "1": [1], "2": [0], "3": [1]},
+            "KTA-bit": {"0": [0], "1": [1], "2": [1], "3": [1]},
+            "ka-TABT": {"0": [1], "1": [0], "2": [], "3": [1]},
+            "ka-TA-bet": {"0": [1], "1": [1], "2": [0], "3": [2]},
+            "ka-TA-bit": {"0": [0], "1": [1], "2": [1], "3": [2]}
+        },
         "examples": {}
     },
     {
@@ -378,21 +489,32 @@
         ],
         "answersIndicate": [[
         ]],
-        "options": {},
+        "options": {
+            "la-": {},
+            "ta-": {}
+        },
         "examples": {}
     },
     {
         "question": "Besides those two, which of these other words would you use to say \"I went to the store IN ORDER TO buy some tomatoes?\"",
         "flaws": [
+            "I unknowingly assumed the 'nothing' structure was universal and didn't need asking about, but I probably should've included it. One person gave it as a free response"
         ],
         "explores": [
-            "Other synonymous vocabulary"
+            "Use and spread of other synonymous vocabulary meaning 'in order to'"
         ],
         "answersIndicate": [[
             "semantic broadening of kermel",
+            "use of 7atta rather than or for the same thing as la7attelete/ta7attele",
             "distinction between 7atta and la7attelte/ta7attele"
         ]],
-        "options": {},
+        "options": {
+            "kermel": {"0": [0]},
+            "7atta/la7atta/ta7atta": {"0": [1]},
+            "la7attelte/ta7attele": {"0": [2]},
+            "3ashen": {"0": []},
+            "menshen/mshen": {"0": []}
+        },
         "examples": {}
     },
     {
@@ -407,7 +529,11 @@
             "acceptance of verbal internal passive",
             "acceptance of participial internal passive"
         ]],
-        "options": {},
+        "options": {
+            "byesta3mluwwa/-ouha": {"0": [0]},
+            "btesta3mal": {"0": [1]},
+            "mesta3male": {"0": [2]}
+        },
         "examples": {}
     },
     {
@@ -429,13 +555,18 @@
                 "distinguishing of passive from active via word order"
             ]
         ],
-        "options": {},
+        "options": {
+            "mlawwaniin l7iitaan w msakkara lsyyaara": {"0": [1], "1": [0]},
+            "l7iitaan mlawwaniin w lsyyaara msakkara": {"0": [1], "1": [1]},
+            "mlawniin l7iitaan w msakra lsyyaara": {"0": [0], "1": [0]},
+            "l7iitaan mlawniin w lsyyaara msakra": {"0": [1], "1": [1, 2]}
+        },
         "examples": {}
     },
     {
         "question": "Which of these sounds most like something you'd say?",
         "flaws": [
-            "I forgot about assimilation of the /r/ into the /l/ as in Sallak, which does occur"
+            "I forgot about assimilation of the /r/ into the /l/ as in Sallak, which does occur as well"
         ],
         "explores": [
             "Assimilation of laam-dative into /r/ of Saar",
@@ -448,8 +579,6 @@
                 "no assimilation"
             ],
             [
-                "no semantic distinction",
-                "semantic distinction",
                 "Sarr- for time",
                 "Sarl- for time",
                 "Sarr- for 'happening to'",
@@ -460,7 +589,12 @@
                 "expression of duration with Sarl-"
             ]
         ],
-        "options": {},
+        "options": {
+            "Sarrak shi? Sarrak se3ten": {"0": [0], "1": [0, 2], "2": [1]},
+            "Sarlak shi? Sarrak se3ten": {"0": [0], "1": [0, 3], "2": [1]},
+            "Sarlak shi? Sarlak se3ten": {"0": [1], "1": [1, 3], "2": [1]},
+            "Sarlak shi? Srt se3ten": {"0": [1], "1": [3], "2": [0]}
+        },
         "examples": {}
     },
     {
@@ -471,9 +605,14 @@
             "hayy- vs. a7-/ya7- split"
         ],
         "answersIndicate": [[
-
+            "Preservation of geminate /77/",
+            "Reduction of geminate /77/ to single-length /7/"
         ]],
-        "options": {},
+        "options": {
+            "hayye/hiyye": {"0": []},
+            "ya77uwwe/ya77u/a77uwwe/a77u": {"0": [0]},
+            "ya7uwwe/ya7u/a7uwwe/a7u": {"0": [1]}
+        },
         "examples": {}
     },
     {
@@ -484,10 +623,13 @@
             "Split between different past-perfect constructions"
         ],
         "answersIndicate": [[
-            "that past perfect = ken + simple past",
-            "that past perfect = ken + past participle"
+            "past perfect = ken + simple past",
+            "past perfect = ken + past participle"
         ]],
-        "options": {},
+        "options": {
+            "kenna ketbiin": {"0": [1]},
+            "kenna katabna": {"0": [0]}
+        },
         "examples": {}
     },
     {
@@ -501,7 +643,13 @@
             "/l/ > /d/ stop",
             "/l/ > /D/ fricative"
         ]],
-        "options": {},
+        "options": {
+            "hol": {"0": []},
+            "hole/hawle": {"0": []},
+            "hode/hawde": {"0": [0]},
+            "hodhe/hawdhe": {"0": [1]},
+            "haydol/hadol": {"0": []}
+        },
         "examples": {}
     },
     {
@@ -512,23 +660,31 @@
             "Usage and perception of 'men' (from) in conjunction with prepositions"
         ],
         "answersIndicate": [[
-            "use of men for most prepositions",
-            "use of men for a few prepositions",
+            "use of men",
             "avoidance of men"
         ]],
-        "options": {},
-        "examples": {}
+        "options": {
+            "___ mennak": {"0": [0]},
+            "___ak": {"0": [1]}
+        },
+        "examples": {
+            "//": "Put 7ad and ta7t here separately"
+        }
     },
     {
         "question": "How do you pronounce \u062c\u0627\u064a/\u062c\u0627\u064a\u064a (\"coming\", masculine)?",
         "flaws": [
         ],
         "explores": [
-            "Whether the difference in 'jaa2in' pronunciations is regional"
+            "Whether the difference in 'jaa2n' pronunciations is regional"
         ],
         "answersIndicate": [[
         ]],
-        "options": {},
+        "options": {
+            "je": {},
+            "jey": {},
+            "jeye/jeyi": {}
+        },
         "examples": {}
     },
     {
@@ -536,21 +692,29 @@
         "flaws": [
         ],
         "explores": [
-            "Whether -uul variants of analytic-genitive preposition are perceived as plural",
+            "What variants of analytic-genitive preposition are perceived as plural",
             "Spread of distinct feminine analytic-genitive prepositions"
         ],
         "answersIndicate": [
             [
-                "perception of -uul as plural",
-                "perception of -uul as singular"
+                "uses plural forms",
+                "uses singular forms"
             ],
             [
-                "use of distinct feminine forms",
-                "use of morphologically-masculine forms for feminine possessees"
+                "uses feminine forms",
+                "uses masculine forms"
             ]
         ],
-        "options": {},
-        "examples": {}
+        "options": {
+            "N/A, don't use this": {"0": [], "1": []},
+            "masculine": {"0": [], "1": [0]},
+            "feminine": {"0": [], "1": [1]},
+            "singular": {"0": [1], "1": []},
+            "plural": {"0": [0], "1": []}
+        },
+        "examples": {
+            "//": "...such as '___', a morphologically ___ ___ form"
+        }
     },
     {
         "question": "Your mom's forgotten to tell you about something important. How do you tell her that she could have let you know?",
@@ -566,12 +730,15 @@
                 "use of ken + present subjunctive in this construction"
             ],
             [
-                "N/A",
                 "exhibition of 'vowel harmony'",
                 "no exhibition of 'vowel harmony'"
             ]
         ],
-        "options": {},
+        "options": {
+            "kente 2eltiile": {"0": [0], "1": []},
+            "kente 2uuliile": {"0": [1], "1": [1]},
+            "kente 2iiliile": {"0": [1], "1": [0]},
+        },
         "examples": {}
     },
     {
@@ -579,22 +746,18 @@
         "flaws": [
         ],
         "explores": [
-            "Appearance of epenthetic -n- for fi + 1sg",
-            "Semantic distinction between 'fiini' and 'fiyyi'"
+            "Appearance of epenthetic -n- for fi + 1sg, possibly with different semantics"
         ],
         "answersIndicate": [
             [
                 "uses epenthetic -n-",
                 "does not use epenthetic -n-"
-            ],
-            [
-                "distinction",
-                "no distinction",
-                "use of -n- for 1sg ability",
-                "use of -n- for preposition + object"
             ]
         ],
-        "options": {},
+        "options": {
+            "fiyye": {"0": [1]},
+            "fiine": {"0": [0]}
+        },
         "examples": {}
     },
     {
@@ -607,7 +770,13 @@
         "answersIndicate": [[
 
         ]],
-        "options": {},
+        "options": {
+            "shu biik": {},
+            "shu bek": {},
+            "shu eshbak": {},
+            "shu 2estak/2ostak": {},
+            "shu melak": {}
+        },
         "examples": {}
     },
     {
@@ -618,13 +787,15 @@
             "Use of words relating to returning for 'to end up'"
         ],
         "answersIndicate": [[
-            "use of 3aad",
             "agreement in conjugation of 3aad for subject",
-            "no agreement in conjugation of 3aad",
-            "use of reje3",
-            "use of 3aawid"
+            "no agreement in conjugation of 3aad"
         ]],
-        "options": {},
+        "options": {
+            "rje3et shefta enta?": {"0": []},
+            "3edet shefta enta?": {"0": [0]},
+            "3aad shefta enta?": {"0": [1]},
+            "shefta enta 3aawed?": {"0": []}
+        },
         "examples": {}
     },
     {
@@ -635,14 +806,22 @@
             "Spread of particular vocabulary"
         ],
         "answersIndicate": [[
+            "usage of 'y3ish'",
+            "usage of ba2a"
         ]],
-        "options": {},
+        "options": {
+            "ma ba2 ekol": {"0": []},
+            "ma3ash ekol": {"0": []},
+            "ma 7a-ekol ba3d": {"0": []},
+            "ma 7a-ekol ba2a": {"0": [1]},
+            "ra7 b3ish ekol": {"0": [0]}
+        },
         "examples": {}
     },
     {
         "question": "How would you say \"let's head out\"?",
         "flaws": [
-            "I forgot to include het ta-"
+            "I forgot to include 'het ta-'"
         ],
         "explores": [
             "First-person cohortative construction"
@@ -651,7 +830,11 @@
             "use of het alone",
             "pairing of het with la-"
         ]],
-        "options": {},
+        "options": {
+            "het nDhar": {"0": [0]},
+            "het la-nDhar": {"0": [1]},
+            "khalliina nDhar": {"0": [2]}
+        },
         "examples": {}
     },
     {
@@ -665,7 +848,11 @@
             "leveling of nonverbal negation to ma",
             "preservation of mesh in nonverbal negation"
         ]],
-        "options": {},
+        "options": {
+            "ma": {"0": [0]},
+            "mesh": {"0": [1]},
+            "mu": {"0": []}
+        },
         "examples": {}
     },
     {
@@ -678,7 +865,12 @@
         "answersIndicate": [[
 
         ]],
-        "options": {},
+        "options": {
+            "tshiil": {},
+            "tekol": {},
+            "te3tal": {},
+            "tehkal": {}
+        },
         "examples": {}
     },
     {
@@ -699,7 +891,11 @@
                 "no assimilation"
             ]
         ],
-        "options": {},
+        "options": {
+            "badna": {"0": [1], "1": [1]},
+            "banna": {"0": [0], "1": [1]},
+            "manna": {"0": [1], "1": [1]}
+        },
         "examples": {}
     },
     {
@@ -713,7 +909,10 @@
             "acceptable",
             "unacceptable"
         ]],
-        "options": {},
+        "options": {
+            "miino/miinu": {"0": [0]},
+            "miin huwwe": {"0": [1]}
+        },
         "examples": {}
     },
     {
@@ -722,12 +921,31 @@
         ],
         "explores": [
             "Metathesis",
-            "Assimilation"
+            "Deletion"
         ],
-        "answersIndicate": [[
-
-        ]],
-        "options": {},
+        "answersIndicate": [
+            [
+                "metathesis of /l3/ -> /3l/",
+                "metathesis of /3(a)2/ -> /2(a)3/",
+                "no metathesis"
+            ],
+            [
+                "deletion of 2 / C2C",
+                "deletion of 3 / 23",
+                "deletion of unstressed interconsonantal /a/",
+                "preservation of unstressed interconsonantal /a/"
+            ]
+        ],
+        "options": {
+            "mal3a2a": {"0": [2], "1": [3]},
+            "mal32a": {"0": [2], "1": [2]},
+            "ma3la2a": {"0": [0], "1": [3]},
+            "ma3l2a": {"0": [0], "1": [2]},
+            "mal2a3a": {"0": [1], "1": [3]},
+            "mal23a": {"0": [1], "1": [2]},
+            "mala2a": {"0": [2], "1": [1, 3]},
+            "mal3a": {"0": [1], "1": [0, 2]}
+        },
         "examples": {}
     }
 ]
