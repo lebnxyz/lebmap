@@ -1,0 +1,902 @@
+[
+    {
+        "question": "How do you pronounce the final kasra in these words? Closer to \"e\" (French \u00e9 as in \"le bl\u00e9\") or to \"i\" (French i as in \"le lit\")?",
+        "flaws": [
+            "'yemkin' was added after a few responses had already been submitted"
+        ],
+        "explores": [
+            "High-vowel tenseness in a word-final closed syllable"
+        ],
+        "answersIndicate": [[
+            "tense",
+            "lax"
+        ]],
+        "options": [
+            {"text": "e", "indicates": {"0": [1]}},
+            {"text": "i", "indicates": {"1": [0]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "Similarly, how do you pronounce the \u064a at the end of these words?",
+        "flaws": [],
+        "explores": [
+            "High-vowel tenseness in a word-final open syllable"
+        ],
+        "answersIndicate": [[
+            "tense",
+            "lax"
+        ]],
+        "options": [
+            {"text": "e", "indicates": {"0": [1]}},
+            {"text": "i", "indicates": {"1": [0]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How do you pronounce the \u0648 sound at the end of these words? Closer to \"o\" or to \"u\"?",
+        "flaws": [],
+        "explores": [
+            "Rounded-vowel tenseness at the end of a word, depending on its part of speech"
+        ],
+        "answersIndicate": [[
+            "tense",
+            "lax"
+        ]],
+        "options": [
+            {"text": "o", "indicates": {"0": [1]}},
+            {"text": "u", "indicates": {"1": [0]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How do you pronounce the \u0627 (alif) in these words? Give a quick listen to the recording of \"levels\" 1\u20135 above.",
+        "flaws": [],
+        "explores": [
+            "Pronunciation of long /a/ depending on its phonological environment"
+        ],
+        "answersIndicate": [[
+            "raising",
+            "neutral pronunciation",
+            "lowering",
+            "backing",
+            "rounding"
+        ]],
+        "options": [
+            {"text": "mid front unrounded /e\u031e\u02d0/", "indicates": {"0": [0]}},
+            {"text": "near-open front unrounded /\u00e6\u02d0/", "indicates": {"0": [1]}},
+            {"text": "open front unrounded /a\u02d0/", "indicates": {"0": [2]}},
+            {"text": "open back unrounded /\u0251\u02d0/", "indicates": {"0": [2, 3]}},
+            {"text": "open back rounded /\u0252\u02d0/", "indicates": {"0": [2, 3, 4]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "Try saying these words. Do you pronounce the first vowel as a damme (o/u) or a kasra (e/i)?",
+        "flaws": [],
+        "explores": [
+            "Distribution of unrounded vs. rounded & high short vowels"
+        ],
+        "answersIndicate": [[
+            "rounded",
+            "unrounded",
+            "lax",
+            "tense"
+        ]],
+        "options": [
+            {"text": "o/u", "indicates": {"0": 0}},
+            {"text": "e", "indicates": {"0": [1, 2]}},
+            {"text": "i", "indicates": {"0": [1, 3]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How do you pronounce your \u0642 in 3amiyye?",
+        "flaws": [],
+        "explores": [
+            "Preservation of historic [q]"
+        ],
+        "answersIndicate": [[
+            "unilateral preservation of [q]",
+            "debuccalization to [2]",
+            "preservation of [q] in proper names",
+            "preservation of [q] in some words"
+        ]],
+        "options": [
+            {"text": "always", "indicates": {"0": [0]}},
+            {"text": "interchangeably with 2", "indicates": {"0": [0, 1]}},
+            {"text": "only in some words and proper names", "indicates": {"0": [1, 2, 3]}},
+            {"text": "only in some proper names", "indicates": {"0": [1, 3]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How do you pronounce the word \u0633\u0627\u0626\u0644\u0629 (she has asked) in the following forms?",
+        "flaws": [],
+        "explores": [
+            "Mutation of feminine active participle when suffixed"
+        ],
+        "answersIndicate": [[
+            "mutation to cluster-final VCt-",
+            "no mutation, CVt-",
+            "vowel-lengthening, CVVt-"
+        ]],
+        "options": [
+            {"text": "s\u01132ilt-", "indicates": {"0": [0]}},
+            {"text": "s\u01132lit-", "indicates": {"0": [1]}},
+            {"text": "s\u01132l\u012bt-", "indicates": {"0": [2]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "Do you distinguish \"you(female) have asked him\" from \"she's asked him\"?",
+        "flaws": [
+            "I didn't include a question asking what the 'N/A' folks say instead"
+        ],
+        "explores": [
+            "Preservation of distinct suffixed feminine-active-participle forms"
+        ],
+        "answersIndicate": [[
+            "preservation",
+            "leveling",
+            "preference toward 2nd-person form",
+            "preference toward 3rd-person form",
+            "Complete avoidance"
+        ]],
+        "options": [
+            {"text": "I do; 2sg.f s\u01132ilt\u012b, 3sg.f s\u01132l\u012bto", "indicates": {"0": [0]}},
+            {"text": "No; both s\u01132ilt\u012b", "indicates": {"0": [1, 2]}},
+            {"text": "No; both s\u01132l\u012bto", "indicates": {"0": [1, 3]}},
+            {"text": "N/A, something completely different", "indicates": {"0": [4]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How do you pronounce \"they have bought\"?",
+        "flaws": [],
+        "explores": [
+            "Preservation of participle-final y\u0101 when surrounded by two long vowels"
+        ],
+        "answersIndicate": [[
+            "preservation",
+            "elision into one long vowel"
+        ]],
+        "options": [
+            {"text": "meshtr\u012bn", "indicates": {"0": [0]}},
+            {"text": "meshtriyy\u012bn", "indicates": {"0": [1]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How often do you pronounce the \u0647 (h) of \u0640\u0647\u0627 and \u0640\u0647\u0646 in these words?",
+        "flaws": [],
+        "explores": [
+            "Preservation of suffix-initial /h/ in different contexts"
+        ],
+        "answersIndicate": [[
+            "preservation",
+            "elision/assimilation"
+        ]],
+        "options": [
+            {"text": "always", "indicates": {"0": [0]}},
+            {"text": "sometimes", "indicates": {"0": [0, 1]}},
+            {"text": "never", "indicates": {"0": [1]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "Here are some words that are \"3ala wazn\" \u064a\u0646\u0641\u0639\u0644. How do you tend to pronounce them?",
+        "flaws": [],
+        "explores": [
+            "Leveling of historic stress & voweling in certain verb forms"
+        ],
+        "answersIndicate": [[
+            "preservation of stress",
+            "preservation of voweling",
+            "raising of vowels",
+            "stress-leveling",
+            "elision of newly unstressed vowel"
+        ]],
+        "options": [
+            {"text": "yen-FA-3al", "indicates": {"0": [0, 1]}},
+            {"text": "yen-FE-3el", "indicates": {"0": [0, 2]}},
+            {"text": "YE-nef-3el", "indicates": {"0": [2, 3]}},
+            {"text": "YENF-3el", "indicates": {"0": [2, 3, 4]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How do you say \"I don't know\"?",
+        "flaws": [],
+        "explores": [
+            "Verb-negation strategy & stages of Jespersen's Cycle"
+        ],
+        "answersIndicate": [[
+            "pre-verbal particle",
+            "circumfix",
+            "suffix"
+        ]],
+        "options": [
+            {"text": "ma b3ref", "indicates": {"0": [0]}},
+            {"text": "ma b3refsh", "indicates": {"0": [0, 2]}},
+            {"text": "ab3refsh", "indicates": {"0": [1, 2]}},
+            {"text": "b3refsh", "indicates": {"0": [3]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "Do you prefer \u0645\u062a\u0641\u0639\u0644 \"metfe33el\" or \u0645\u0641\u0639\u0644 \"mfa33al\"?",
+        "flaws": [],
+        "explores": [
+            "Preservation & leveling of historically (but no longer usually) semantically distinct passive-participle form: metfe33el from tfa33al"
+        ],
+        "answersIndicate": [[
+            "preservation",
+            "leveling",
+            "acceptance of non-leveled form",
+            "rejection of non-leveled form"
+        ]],
+        "options": [
+            {"text": "I prefer metfe33el", "indicates": {"0": [0]}},
+            {"text": "No preference, interchangeable", "indicates": {"0": [0, 1, 2]}},
+            {"text": "I prefer mfa33al, but metfe33el sounds OK", "indicates": {"0": [1, 2]}},
+            {"text": "I prefer mfa33al, and metfe33el sounds weird/wrong", "indicates": {"0": [1, 3]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "Do \u0645\u062a\u062e\u0628\u064a \"met5ebbe\" and \u0645\u062e\u0628\u0649 \"m5abba\" mean different things to you?",
+        "flaws": [],
+        "explores": [
+            "Perception of a situation where there is a distinction in these two passive participle forms"
+        ],
+        "answersIndicate": [[
+            "preservation",
+            "leveling",
+            "preference toward metfe33el",
+            "preference toward mfa33al"
+        ]],
+        "options": [
+            {"text": "Yes, met5ebbe means hiding oneself whereas m5abba means hidden by someone else", "indicates": {"0": [0]}},
+            {"text": "'Meh', possible distinction but not salient: they both mean hidden by whoever", "indicates": {"0": [0, 1]}},
+            {"text": "No, they mean the same thing and I prefer met5ebbe", "indicates": {"0": [1, 2]}},
+            {"text": "No, they mean the same thing and I prefer m5abba", "indicates": {"0": [1, 3]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How do you pronounce the double-\u0646 (double \"N\") in these words?",
+        "flaws": [],
+        "explores": [
+            "Phonotactic accomodation for *C:C in light of i -> null / CCiC"
+        ],
+        "answersIndicate": [[
+            "collapse to single geminate consonant, C:",
+            "preservation of intermediate vowel, CiC",
+            "local rejection of i -> null shift, CCiC"
+        ]],
+        "options": [
+            {"text": "nn", "indicates": {"0": [0]}},
+            {"text": "nin", "indicates": {"0": [1]}},
+            {"text": "nnin", "indicates": {"0": [2]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How do you pronounce \u0628\u064a\u062a (house) in the following words?",
+        "flaws": [],
+        "explores": [
+            "Preservation of historic diphthong in different contexts"
+        ],
+        "answersIndicate": [[
+            "preservation",
+            "collapse into monophthong",
+            "mid monophthong \u0113",
+            "high monophthong \u012b"
+        ]],
+        "options": [
+            {"text": "b\u0113t", "indicates": {"0": [1, 2]}},
+            {"text": "bayt", "indicates": {"0": [0]}},
+            {"text": "b\u012bt", "indicates": {"0": [1, 3]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How would you pronounce \u0639\u0645 with the following example words?",
+        "flaws": [],
+        "explores": [
+            "Whether 3am[ma] b- vs. 3am 0- is phonotactically conditioned, and if so, how",
+            "Preservation of historic alternate form of the progressive particle: mma"
+        ],
+        "answersIndicate": [
+            [
+                "retainment of final m",
+                "addition of vowel after final m"
+            ],
+            [
+                "replacement with 3am[ma]",
+                "perservation"
+            ]
+        ],
+        "options": [
+            {"text": "N/A, would never use 3am[ma]", "indicates": {"0": [], "1": []}},
+            {"text": "3am", "indicates": {"0": [0], "1": [0]}},
+            {"text": "3amma", "indicates": {"0": [1], "1": [0]}},
+            {"text": "mma", "indicates": {"0": [1], "1": [1]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How would you usually say \"we haven't started yet\"/\"we still haven't started\"?",
+        "flaws": [],
+        "explores": [
+            "Use of ba3d vs. issa/lissa",
+            "Whether the past participle is seen as semantically distinct from the simple past with ba3ed"
+        ],
+        "answersIndicate": [
+            [
+                "preference toward issa/lissa",
+                "preference toward ba3d"
+            ],
+            [
+                "interpretation of negated ba3d to mean 'still have not'",
+                "interpretation of negated ba3d to mean 'have not yet'"
+            ]
+        ],
+        "options": [
+            {"text": "I would use [l]issa, not ba3d", "indicates": {"0": [0], "1": []}},
+            {"text": "We still haven't started", "indicates": {"0": [1], "1": [0]}},
+            {"text": "We haven't started yet", "indicates": {"0": [1], "1": [1]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "Does the question \u0628\u0639\u062f\u0650\u0643 \u0641\u0627\u064a\u0642\u0629\u061f \"ba3dek f\u0113y2a?\" mean \"are you still awake?\"",
+        "flaws": [],
+        "explores": [
+            "Interpretation of 'ba3d + ambiguous f\u01013il' (the f\u01013il being both an adjective and a past participle)"
+        ],
+        "answersIndicate": [[
+            "interpretation of f\u01013il as invariably a past participle",
+            "interpretation of f\u01013il as invariably an adjective"
+        ]],
+        "options": [
+            {"text": "No, it means 'have you just woken up?'. 'Are you still awake?' needs a different adjective", "indicates": {"0": [0]}},
+            {"text": "Yes, but it also means 'have you just woken up?'. Depends on context", "indicates": {"0": [0, 1]}},
+            {"text": "Yes. To ask 'have you just woken up?', you need to add an adverb to clarify", "indicates": {"0": [1]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How do you pronounce the \"\u0628\u062a\" syllable in the following words?",
+        "flaws": [],
+        "explores": [
+            "Raising of historic 3sg.f /-at/ in different contexts"
+        ],
+        "answersIndicate": [[
+            "preservation; no raising",
+            "raising"
+        ]],
+        "options": [
+            {"text": "bat", "indicates": {"0": [0]}},
+            {"text": "bet/bit", "indicates": {"0": [1]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How do you pronounce \"she wrote\" on its own?",
+        "flaws": [],
+        "explores": [
+            "Reduction of unstressed 3sg.f.pst /a/",
+            "Raising of historic 3sg.f.pst /-at/ when unsuffixed",
+            "Tenseness of 3sg.f.pst /-at/[+raising]",
+            "Amount of syllables in Form-I 3sg.f.pst"
+        ],
+        "answersIndicate": [
+            [
+                "deletion",
+                "preservation"
+            ],
+            [
+                "preservation; no raising",
+                "raising"
+            ],
+            [
+                "lax",
+                "tense"
+            ],
+            [
+                "2",
+                "3"
+            ]
+        ],
+        "options": [
+            {"text": "KAT-bat", "indicates": {"0": [0], "1": [0], "2": [], "3": [0]}},
+            {"text": "KAT-bet", "indicates": {"0": [0], "1": [1], "2": [0], "3": [0]}},
+            {"text": "KAT-bit", "indicates": {"0": [0], "1": [1], "2": [1], "3": [0]}},
+            {"text": "KA-ta-bat", "indicates": {"0": [1], "1": [0], "2": [], "3": [1]}},
+            {"text": "KA-ta-bet", "indicates": {"0": [1], "1": [1], "2": [0], "3": [1]}},
+            {"text": "KA-ta-bit", "indicates": {"0": [1], "1": [1], "2": [1], "3": [1]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How do you pronounce \"I wrote\"?",
+        "flaws": [],
+        "explores": [
+            "Reduction of unstressed 1sg.pst /a/",
+            "Deletion of unstressed 1sg.pst -It",
+            "Tenseness of 1sg.pst -It",
+            "Amount of syllables in Form-I 1sg.pst"
+        ],
+        "answersIndicate": [
+            [
+                "deletion",
+                "preservation"
+            ],
+            [
+                "deletion",
+                "preservation"
+            ],
+            [
+                "lax",
+                "tense"
+            ],
+            [
+                "1",
+                "2",
+                "3"
+            ]
+        ],
+        "options": [
+            {"text": "KTABT", "indicates": {"0": [0], "1": [0], "2": [], "3": [0]}},
+            {"text": "KTA-bet", "indicates": {"0": [0], "1": [1], "2": [0], "3": [1]}},
+            {"text": "KTA-bit", "indicates": {"0": [0], "1": [1], "2": [1], "3": [1]}},
+            {"text": "ka-TABT", "indicates": {"0": [1], "1": [0], "2": [], "3": [1]}},
+            {"text": "ka-TA-bet", "indicates": {"0": [1], "1": [1], "2": [0], "3": [2]}},
+            {"text": "ka-TA-bit", "indicates": {"0": [0], "1": [1], "2": [1], "3": [2]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "Which do you use for the meaning of \"in order to\"?",
+        "flaws": [],
+        "explores": [
+            "/ta-/ vs. /la-/ split"
+        ],
+        "answersIndicate": [[]],
+        "options": [
+            {"text": "la-", "indicates": {}},
+            {"text": "ta-", "indicates": {}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "Besides those two, which of these other words would you use to say \"I went to the store IN ORDER TO buy some tomatoes?\"",
+        "flaws": [
+            "I unknowingly assumed the 'nothing' structure was universal and didn't need asking about, but I probably should've included it. One person gave it as a free response"
+        ],
+        "explores": [
+            "Use and spread of other synonymous vocabulary meaning 'in order to'"
+        ],
+        "answersIndicate": [[
+            "semantic broadening of kermel",
+            "use of 7atta rather than or for the same thing as la7attelete/ta7attele",
+            "distinction between 7atta and la7attelte/ta7attele"
+        ]],
+        "options": [
+            {"text": "kerm\u0113l", "indicates": {"0": [0]}},
+            {"text": "7atta/la7atta/ta7atta", "indicates": {"0": [1]}},
+            {"text": "la7att\u0113lte/ta7attele", "indicates": {"0": [2]}},
+            {"text": "3ash\u0113n", "indicates": {"0": []}},
+            {"text": "mensh\u0113n/msh\u0113n", "indicates": {"0": []}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "Verbs like \u0628\u064a\u0633\u062a\u0639\u0645\u0650\u0644 have a passive-voice form in Lebanese Arabic: \u0628\u064a\u0633\u062a\u0639\u0645\u064e\u0644. Do you use this?",
+        "flaws": [],
+        "explores": [
+            "Preservation and perception of historic 'internal passive' in verbs and participles"
+        ],
+        "answersIndicate": [[
+            "avoidance of internal passive",
+            "acceptance of verbal internal passive",
+            "acceptance of participial internal passive"
+        ]],
+        "options": [
+            {"text": "byesta3mluwwa/-\u016bha", "indicates": {"0": [0]}},
+            {"text": "btesta3mal", "indicates": {"0": [1]}},
+            {"text": "mesta3male", "indicates": {"0": [2]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How would you say \"the walls are colored and the car is closed\"?",
+        "flaws": [],
+        "explores": [
+            "Leveling and perception of unstressed-/a/-distinguished passive participles",
+            "Preferred word order of predicate-adjectival passive participles"
+        ],
+        "answersIndicate": [
+            [
+                "leveling by deletion of distinguishing /a/",
+                "preservation"
+            ],
+            [
+                "before subject",
+                "after subject",
+                "distinguishing of passive from active via word order"
+            ]
+        ],
+        "options": [
+            {"text": "mlawwan\u012bn l7\u012bt\u0101n w msakkara lsyy\u0101ra", "indicates": {"0": [1], "1": [0]}},
+            {"text": "l7\u012bt\u0101n mlawwan\u012bn w lsyy\u0101ra msakkara", "indicates": {"0": [1], "1": [1]}},
+            {"text": "mlawn\u012bn l7\u012bt\u0101n w msakra lsyy\u0101ra", "indicates": {"0": [0], "1": [0]}},
+            {"text": "l7\u012bt\u0101n mlawn\u012bn w lsyy\u0101ra msakra", "indicates": {"0": [1], "1": [1, 2]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "Which of these sounds most like something you'd say?",
+        "flaws": [
+            "I forgot about assimilation of the /r/ into the /l/ as in Sallak, which does occur as well"
+        ],
+        "explores": [
+            "Assimilation of l\u0101m-dative into /r/ of S\u0101r",
+            "Semantic distinction in this assimilation",
+            "Expressing duration with S\u0101r vs. Sarl-"
+        ],
+        "answersIndicate": [
+            [
+                "assimilation to /r/",
+                "no assimilation"
+            ],
+            [
+                "Sarr- for time",
+                "Sarl- for time",
+                "Sarr- for 'happening to'",
+                "Sarl- for 'happening to'"
+            ],
+            [
+                "expressing of duration with S\u0101r",
+                "expression of duration with Sarl-"
+            ]
+        ],
+        "options": [
+            {"text": "Sarrak shi? Sarrak s\u01133t\u0113n", "indicates": {"0": [0], "1": [0, 2], "2": [1]}},
+            {"text": "Sarlak shi? Sarrak s\u01133t\u0113n", "indicates": {"0": [0], "1": [0, 3], "2": [1]}},
+            {"text": "Sarlak shi? Sarlak s\u01133t\u0113n", "indicates": {"0": [1], "1": [1, 3], "2": [1]}},
+            {"text": "Sarlak shi? Srt s\u01133t\u0113n", "indicates": {"0": [1], "1": [3], "2": [0]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How do you say \"here he is\"?",
+        "flaws": [],
+        "explores": [
+            "hayy- vs. a7-/ya7- split"
+        ],
+        "answersIndicate": [[
+            "Preservation of geminate /77/",
+            "Reduction of geminate /77/ to single-length /7/"
+        ]],
+        "options": [
+            {"text": "hayy\u0113/hiyy\u0113", "indicates": {"0": []}},
+            {"text": "ya77uwwe/ya77u/a77uwwe/a77u", "indicates": {"0": [0]}},
+            {"text": "ya7uwwe/ya7u/a7uwwe/a7u", "indicates": {"0": [1]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How do you say \"we had written\"?",
+        "flaws": [],
+        "explores": [
+            "Split between different past-perfect constructions"
+        ],
+        "answersIndicate": [[
+            "past perfect = k\u0113n + simple past",
+            "past perfect = k\u0113n + past participle"
+        ]],
+        "options": [
+            {"text": "kenna k\u0113tb\u012bn", "indicates": {"0": [1]}},
+            {"text": "kenna katabna", "indicates": {"0": [0]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How do you say \"these\"?",
+        "flaws": [],
+        "explores": [
+            "Word-choice split for 'these' (plural proximal demonstrative)"
+        ],
+        "answersIndicate": [[
+            "/l/ > /d/ stop",
+            "/l/ > /D/ fricative"
+        ]],
+        "options": [
+            {"text": "h\u014dl", "indicates": {"0": []}},
+            {"text": "h\u014dle/hawle", "indicates": {"0": []}},
+            {"text": "h\u014dde/hawde", "indicates": {"0": [0]}},
+            {"text": "h\u014ddhe/hawdhe", "indicates": {"0": [1]}},
+            {"text": "hayd\u014dl/had\u014dl", "indicates": {"0": []}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "Which sound like the most-natural ways to say \"next to you\" and \"underneath you\"?",
+        "flaws": [],
+        "explores": [
+            "Usage and perception of 'men' (from) in conjunction with prepositions"
+        ],
+        "answersIndicate": [[
+            "use of men",
+            "avoidance of men"
+        ]],
+        "options": [
+            {"text": "___ mennak", "indicates": {"0": [0]}},
+            {"text": "___ak", "indicates": {"0": [1]}}
+        ],
+        "examples": {
+            "//": "Put 7ad and ta7t here separately"
+        }
+    },
+    {
+        "question": "How do you pronounce \u062c\u0627\u064a/\u062c\u0627\u064a\u064a (\"coming\", masculine)?",
+        "flaws": [],
+        "explores": [
+            "Whether the difference in 'j\u01012n' pronunciations is regional"
+        ],
+        "answersIndicate": [[]],
+        "options": [
+            {"text": "je", "indicates": {}},
+            {"text": "j\u0113y", "indicates": {}},
+            {"text": "j\u0113ye/j\u0113yi", "indicates": {}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "There's a lot of variety in the word meaning \"belonging to\"! For each variant below (if you use it), indicate whether can be used for masculine, feminine, or both -- and also indicate whether it's plural, singular, or both.",
+        "flaws": [],
+        "explores": [
+            "What variants of analytic-genitive preposition are perceived as plural",
+            "Spread of distinct feminine analytic-genitive prepositions"
+        ],
+        "answersIndicate": [
+            [
+                "uses plural forms",
+                "uses singular forms"
+            ],
+            [
+                "uses feminine forms",
+                "uses masculine forms"
+            ]
+        ],
+        "options": [
+            {"text": "N/A, don't use this", "indicates": {"0": [], "1": []}},
+            {"text": "masculine", "indicates": {"0": [], "1": [0]}},
+            {"text": "feminine", "indicates": {"0": [], "1": [1]}},
+            {"text": "singular", "indicates": {"0": [1], "1": []}},
+            {"text": "plural", "indicates": {"0": [0], "1": []}}
+        ],
+        "examples": {
+            "//": "...such as '___', a morphologically ___ ___ form"
+        }
+    },
+    {
+        "question": "Your mom's forgotten to tell you about something important. How do you tell her that she could have let you know?",
+        "flaws": [],
+        "explores": [
+            "Divide in second-person past-optative constructions",
+            "Unrounding assimilation ('vowel harmony') in 2\u016bl + -l\u012b-"
+        ],
+        "answersIndicate": [
+            [
+                "use of ken + simple past in this construction",
+                "use of ken + present subjunctive in this construction"
+            ],
+            [
+                "exhibition of 'vowel harmony'",
+                "no exhibition of 'vowel harmony'"
+            ]
+        ],
+        "options": [
+            {"text": "kente 2elt\u012ble", "indicates": {"0": [0], "1": []}},
+            {"text": "kente 2\u016bl\u012ble", "indicates": {"0": [1], "1": [1]}},
+            {"text": "kente 2\u012bl\u012ble", "indicates": {"0": [1], "1": [0]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How do you say \u0641\u064a + \u064a?",
+        "flaws": [],
+        "explores": [
+            "Appearance of epenthetic -n- for fi + 1sg, possibly with different semantics"
+        ],
+        "answersIndicate": [[
+            "uses epenthetic -n-",
+            "does not use epenthetic -n-"
+        ]],
+        "options": [
+            {"text": "fiyye", "indicates": {"0": [1]}},
+            {"text": "f\u012bne", "indicates": {"0": [0]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How do you say \"what's wrong with you?\" or \"what's your problem?\" to a male?",
+        "flaws": [],
+        "explores": [
+            "Spread of particular expressions"
+        ],
+        "answersIndicate": [[]],
+        "options": [
+            {"text": "shu b\u012bk", "indicates": {}},
+            {"text": "shu b\u0113k", "indicates": {}},
+            {"text": "shu eshbak", "indicates": {}},
+            {"text": "shu 2estak/2ostak", "indicates": {}},
+            {"text": "shu m\u0113lak", "indicates": {}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How would you ask a male, \"did you end up seeing it?\"",
+        "flaws": [],
+        "explores": [
+            "Use of words relating to returning for 'to end up'"
+        ],
+        "answersIndicate": [[
+            "agreement in conjugation of 3\u0101d for subject",
+            "no agreement in conjugation of 3\u0101d"
+        ]],
+        "options": [
+            {"text": "rje3et shefta enta?", "indicates": {"0": []}},
+            {"text": "3edet shefta enta?", "indicates": {"0": [0]}},
+            {"text": "3\u0101d shefta enta?", "indicates": {"0": [1]}},
+            {"text": "shefta enta 3\u0101wed?", "indicates": {"0": []}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "Which ways of saying \"no more\"/\"no longer\" sound natural to you?",
+        "flaws": [],
+        "explores": [
+            "Spread of particular vocabulary"
+        ],
+        "answersIndicate": [[
+            "usage of 'y3ish'",
+            "usage of ba2a"
+        ]],
+        "options": [
+            {"text": "ma ba2 \u0113kol", "indicates": {"0": []}},
+            {"text": "ma3ash \u0113kol", "indicates": {"0": []}},
+            {"text": "ma 7a-\u0113kol ba3d", "indicates": {"0": []}},
+            {"text": "ma 7a-\u0113kol ba2a", "indicates": {"0": [1]}},
+            {"text": "ra7 b3ish \u0113kol", "indicates": {"0": [0]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How would you say \"let's head out\"?",
+        "flaws": [
+            "I forgot to include 'het ta-'"
+        ],
+        "explores": [
+            "First-person cohortative construction"
+        ],
+        "answersIndicate": [[
+            "use of het alone",
+            "pairing of het with la-"
+        ]],
+        "options": [
+            {"text": "h\u0113t nDhar", "indicates": {"0": [0]}},
+            {"text": "h\u0113t la-nDhar", "indicates": {"0": [1]}},
+            {"text": "khall\u012bna nDhar", "indicates": {"0": [2]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "What word do you usually use to negate adjectives & participles (like \u062d\u0644\u0648 \u200e\u200e7elo, \u0634\u0627\u064a\u0641 sh\u0113yef)?",
+        "flaws": [],
+        "explores": [
+            "Nonverbal-negation strategy"
+        ],
+        "answersIndicate": [[
+            "leveling of nonverbal negation to ma",
+            "preservation of mesh in nonverbal negation"
+        ]],
+        "options": [
+            {"text": "ma", "indicates": {"0": [0]}},
+            {"text": "mesh", "indicates": {"0": [1]}},
+            {"text": "mu", "indicates": {"0": []}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "What verbs do you use to say \"don't worry\" to a male?",
+        "flaws": [],
+        "explores": [
+            "Spread of particular vocabulary"
+        ],
+        "answersIndicate": [[]],
+        "options": [
+            {"text": "tsh\u012bl", "indicates": {}},
+            {"text": "t\u0113kol", "indicates": {}},
+            {"text": "te3tal", "indicates": {}},
+            {"text": "tehkal", "indicates": {}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How do you say \"we want\"?",
+        "flaws": [],
+        "explores": [
+            "Assimilation of /d/ into following /n/",
+            "Nasality assimilation of /b/ into /m/"
+        ],
+        "answersIndicate": [
+            [
+                "assimilation",
+                "no assimilation"
+            ],
+            [
+                "assimilation",
+                "no assimilation"
+            ]
+        ],
+        "options": [
+            {"text": "badna", "indicates": {"0": [1], "1": [1]}},
+            {"text": "banna", "indicates": {"0": [0], "1": [1]}},
+            {"text": "manna", "indicates": {"0": [1], "1": [1]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How do you usually say \"who is he?\"",
+        "flaws": [],
+        "explores": [
+            "Acceptance of suffixing 'm\u012bn' (who)"
+        ],
+        "answersIndicate": [[
+            "acceptable",
+            "unacceptable"
+        ]],
+        "options": [
+            {"text": "m\u012bno/m\u012bnu", "indicates": {"0": [0]}},
+            {"text": "m\u012bn huwwe", "indicates": {"0": [1]}}
+        ],
+        "examples": {}
+    },
+    {
+        "question": "How do you say \"spoon\"?",
+        "flaws": [],
+        "explores": [
+            "Metathesis",
+            "Deletion"
+        ],
+        "answersIndicate": [
+            [
+                "metathesis of /l3/ -> /3l/",
+                "metathesis of /3(a)2/ -> /2(a)3/",
+                "no metathesis"
+            ],
+            [
+                "deletion of 2 / C2C",
+                "deletion of 3 / 23",
+                "deletion of unstressed interconsonantal /a/",
+                "preservation of unstressed interconsonantal /a/"
+            ]
+        ],
+        "options": [
+            {"text": "mal3a2a", "indicates": {"0": [2], "1": [3]}},
+            {"text": "mal32a", "indicates": {"0": [2], "1": [2]}},
+            {"text": "ma3la2a", "indicates": {"0": [0], "1": [3]}},
+            {"text": "ma3l2a", "indicates": {"0": [0], "1": [2]}},
+            {"text": "mal2a3a", "indicates": {"0": [1], "1": [3]}},
+            {"text": "mal23a", "indicates": {"0": [1], "1": [2]}},
+            {"text": "mala2a", "indicates": {"0": [2], "1": [1, 3]}},
+            {"text": "mal3a", "indicates": {"0": [1], "1": [0, 2]}}
+        ],
+        "examples": {}
+    }
+]
