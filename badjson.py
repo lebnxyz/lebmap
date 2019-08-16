@@ -762,7 +762,7 @@ class JSONEncoder(object):
         return builder.build()
 
     def __emit_indent(self, builder, _current_indent_level):
-        if self.indent_once == 1 or self.indent is not None and not self.do_not_indent and not self.in_dne_dict:
+        if self.indent != 'no' and (self.indent_once == 1 or self.indent is not None and not self.do_not_indent and not self.in_dne_dict):
             _current_indent_level += 1
             newline_indent = '\n' + self.indent_str * _current_indent_level
             separator = self.item_separator + newline_indent
@@ -773,7 +773,7 @@ class JSONEncoder(object):
         return separator, _current_indent_level
 
     def __emit_unindent(self, builder, _current_indent_level):
-        if self.indent_once == 2 or self.indent is not None and not self.do_not_indent and not self.in_dne_dict:
+        if self.indent != 'no' and (self.indent_once == 2 or self.indent is not None and not self.do_not_indent and not self.in_dne_dict):
             builder.append('\n')
             builder.append(self.indent_str * (_current_indent_level - 1))
         self.indent_once -= 1
@@ -876,15 +876,20 @@ class JSONEncoder(object):
             builder.append(self.__encoder(key))
             builder.append('"')
             builder.append(self.key_separator)
+            if key == 'templateArgs':
+                _old_indent = self.indent
+                self.indent = 'no'
             if key == 'options':
                 _old_dne = self.do_not_indent
                 self.in_dne_dict = True
-                self._do_not_indent = True
+                self.do_not_indent = True
                 self.indent_once = True
             self.__encode(v, markers, builder, _current_indent_level)
+            if key == 'templateArgs':
+                self.indent = _old_indent
             if key == 'options':
                 self.in_dne_dict = False
-                self._do_not_indent = _old_dne
+                self.do_not_indent = _old_dne
             del key
             del v # XXX grumble
         self.__emit_unindent(builder, _current_indent_level)
@@ -1093,3 +1098,6 @@ encode = JSONEncoder(indent=4).encode
 import json
 def reformat(s):
     return encode(json.loads(s))
+def write(obj, path):
+    with open(path, 'w', encoding='utf-8') as f:
+        f.write(encode(obj))
