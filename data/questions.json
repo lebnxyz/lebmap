@@ -15,7 +15,7 @@
             "e": {"0": [1]},
             "i": {"1": [0]}
         },
-        "exampleTemplate": "$1 a(n) $2 (word form: $3)",
+        "exampleTemplate": "in a(n) $2 (word form: $3)",
         "examples": [
             {
                 "transliteration": "5\u0101y?f",
@@ -27,19 +27,25 @@
                 "transliteration": "7\u0101m?l",
                 "english": "holding, carrying",
                 "arabic": "",
-                "templateArgs": ["in", "unremarkable context", "participle"]
+                "templateArgs": ["unremarkable context", "participle"]
             },
             {
                 "transliteration": "kt\u0101b?k",
                 "english": "your.f book",
                 "arabic": "",
-                "templateArgs": ["in", "suffix", "noun+suffix"]
+                "templateArgs": ["suffix", "noun+suffix"]
             },
             {
                 "transliteration": "yemk?n",
                 "english": "maybe",
                 "arabic": "",
-                "templateArgs": ["in", "unremarkable context", "adverb"]
+                "templateArgs": ["unremarkable context", "adverb"]
+            },
+            {
+                "transliteration": "ktb?t",
+                "english": "she wrote",
+                "arabic": "",
+                "templateArgs": ["3sg.f subject suffix", "verb"]
             }
         ]
     },
@@ -57,31 +63,31 @@
             "e": {"0": [1]},
             "i": {"1": [0]}
         },
-        "exampleTemplate": "$1 a(n) $2 (word form: $3)",
+        "exampleTemplate": "in a(n) $2 (word form: $3)",
         "examples": [
             {
                 "transliteration": "ent?",
                 "english": "you.f",
                 "arabic": "",
-                "templateArgs": ["in", "2sg.f suffix", "pronoun"]
+                "templateArgs": ["2sg.f suffix", "pronoun"]
             },
             {
                 "transliteration": "byt?",
                 "english": "my house",
                 "arabic": "",
-                "templateArgs": ["in", "1sg possessive suffix", "noun+possessive"]
+                "templateArgs": ["1sg possessive suffix", "noun+possessive"]
             },
             {
                 "transliteration": "7TT?",
                 "english": "put!.f",
                 "arabic": "",
-                "templateArgs": ["in", "2sg.f subject conjugation", "verb"]
+                "templateArgs": ["2sg.f subject conjugation", "verb"]
             },
             {
                 "transliteration": "m\u0101sh?",
                 "english": "walking",
                 "arabic": "",
-                "templateArgs": ["in", "defective participle -y", "participle"]
+                "templateArgs": ["defective participle -y", "participle"]
             }
         ]
     },
@@ -99,19 +105,19 @@
             "o": {"0": [1]},
             "u": {"1": [0]}
         },
-        "exampleTemplate": "$1 a(n) $2 (word form: $3)",
+        "exampleTemplate": "in a(n) $2 (word form: $3)",
         "examples": [
             {
                 "transliteration": "kt\u0101b?",
                 "english": "his book",
                 "arabic": "",
-                "templateArgs": ["in", "3sg.m possessive suffix", "noun"]
+                "templateArgs": ["3sg.m possessive suffix", "noun"]
             },
             {
                 "transliteration": "r7t?",
                 "english": "you.pl went",
                 "arabic": "",
-                "templateArgs": ["in", "3pl.pst verb conjugation", "verb"]
+                "templateArgs": ["3pl.pst verb conjugation", "verb"]
             }
         ]
     },
@@ -168,6 +174,12 @@
                 "templateArgs": ["after", "7", "voiceless pharyngeal", "by lowering"]
             },
             {
+                "transliteration": "j?T",
+                "english": "bowl",
+                "arabic": "",
+                "templateArgs": ["before", "T", "pharyngealized", "emphatically"]
+            },
+            {
                 "transliteration": "Tyy?ra",
                 "english": "airplane",
                 "arabic": "",
@@ -204,25 +216,37 @@
                 "transliteration": "S?rt",
                 "english": "I became",
                 "arabic": "",
-                "templateArgs": ["after", "S", "pharyngealized", "first syllable", "1sg.pst verb"]
+                "templateArgs": ["after", "S", "pharyngealized", "first syllable", "verb"]
             },
             {
                 "transliteration": "bS?77",
                 "english": "I heal up",
                 "arabic": "",
-                "templateArgs": ["after", "S", "pharyngealized", "first syllable", "1sg present-indicative verb"]
+                "templateArgs": ["after", "S", "pharyngealized", "first syllable", "verb"]
             },
             {
                 "transliteration": "bt?mb?sTe",
                 "english": "you.f enjoy yourself",
                 "arabic": "",
-                "templateArgs": ["before", "emphasis-spreading from T", "pharyngealized", "prefix", "2sg.f present-indicative verb"]
+                "templateArgs": ["before", "emphasis-spreading from T", "pharyngealized", "2sg.f prefix", "present-indicative verb"]
             },
             {
                 "transliteration": "2?SSa",
                 "english": "story",
                 "arabic": "",
-                "templateArgs": ["historically", "an unconditioned /u/ after j", "unremarkable", "first syllable", "noun"]
+                "templateArgs": ["between", "a historically-emphatic q and an S", "pharyngealized", "first syllable", "noun"]
+            },
+            {
+                "transliteration": "mn?f7aS",
+                "english": "we examine",
+                "arabic": "",
+                "templateArgs": ["before", "emphasis-spreading from S", "pharyngealized", "1pl prefix", "present-indicative verb"]
+            },
+            {
+                "transliteration": "j?m3a",
+                "english": "week/Friday",
+                "arabic": "",
+                "templateArgs": ["historically", "an uncnoditioned /u/ after j", "unremarkable", "first syllable", "noun"]
             },
             {
                 "transliteration": "l?8a",
@@ -269,8 +293,27 @@
             "s\u01132lit-": {"0": [1]},
             "s\u01132l\u012bt-": {"0": [2]}
         },
-        "exampleTemplate": "",
-        "examples": []
+        "exampleTemplate": "before $1, a $1-initial suffix",
+        "examples": [
+            {
+                "transliteration": "?-ne",
+                "english": "she's asked me",
+                "arabic": "",
+                "templateArgs": ["-ne", "consonant"]
+            },
+            {
+                "transliteration": "?-(h)a",
+                "english": "she's asked her",
+                "arabic": "",
+                "templateArgs": ["-(h)a", "historically consonant-initial (meaning it still shifts stress) if now usually vowel"]
+            },
+            {
+                "transliteration": "?-k",
+                "english": "she's asked you",
+                "arabic": "",
+                "templateArgs": ["-ak/-ek", "vowel"]
+            }
+        ]
     },
     {
         "question": "Do you distinguish \"you(female) have asked him\" from \"she's asked him\"?",
@@ -370,7 +413,10 @@
     },
     {
         "question": "Here are some words that are \"3ala wazn\" \u064a\u0646\u0641\u0639\u0644. How do you tend to pronounce them?",
-        "flaws": [],
+        "flaws": [
+            "I didn't include another productive passive verb like ynsm3, which would have helped greatly. As is, this data doesn't at all show if ynsm3 is unique among productive ynf3l passives in being predominantly pronounced yen-SA-ma3",
+            "I only used the ينلقى Arabic spelling of 'to be found' rather than writing ينلقى/ينلقي, which *may* have influenced people not to choose the '-el' pronunciations. Hopefully not"
+        ],
         "explores": [
             "Leveling of historic stress & voweling in certain verb forms"
         ],
@@ -387,8 +433,33 @@
             "YE-nef-3el": {"0": [2, 3]},
             "YENF-3el": {"0": [2, 3, 4]}
         },
-        "exampleTemplate": "",
-        "examples": []
+        "exampleTemplate": "a $1 verb $2 the productive passive of $3",
+        "examples": [
+            {
+                "transliteration": "ynksr",
+                "english": "to break",
+                "arabic": "",
+                "templateArgs": ["fossilized", "is also", "yksr"]
+            },
+            {
+                "transliteration": "ynsh8l",
+                "english": "to be busy",
+                "arabic": "",
+                "templateArgs": ["fossilized", "isn't", "*ysh8l"]
+            },
+            {
+                "transliteration": "ynsm3",
+                "english": "to be heard",
+                "arabic": "",
+                "templateArgs": ["passive", "is", "ysm3"]
+            },
+            {
+                "transliteration": "ynl2a",
+                "english": "to be found",
+                "arabic": "",
+                "templateArgs": ["weak-final passive", "is", "yl\u01012y"]
+            }
+        ]
     },
     {
         "question": "How do you say \"I don't know\"?",
@@ -429,7 +500,14 @@
             "I prefer mfa33al, and metfe33el sounds weird/wrong": {"0": [1, 3]}
         },
         "exampleTemplate": "",
-        "examples": []
+        "examples": [
+            {
+                "transliteration": "met2e55er, met3uwwed, metjuwwez OR m2a55ar, m3awwad, mjawwaz",
+                "english": "late, accustomed, married",
+                "arabic": "",
+                "templateArgs": ""
+            }
+        ]
     },
     {
         "question": "Do \u0645\u062a\u062e\u0628\u064a \"met5ebbe\" and \u0645\u062e\u0628\u0649 \"m5abba\" mean different things to you?",
@@ -471,16 +549,16 @@
         "exampleTemplate": "in the $1 '$2'",
         "examples": [
             {
-                "transliteration": "li2a?a",
-                "english": "because we",
-                "arabic": "",
-                "templateArgs": ["complementizer", "inn"]
-            },
-            {
                 "transliteration": "mi?a",
                 "english": "from us",
                 "arabic": "",
                 "templateArgs": ["preposition", "min (+ 'na'), historically only two n's"]
+            },
+            {
+                "transliteration": "li2a?a",
+                "english": "because we",
+                "arabic": "",
+                "templateArgs": ["complementizer", "inn"]
             },
             {
                 "transliteration": "bija?o",
@@ -516,16 +594,16 @@
                 "templateArgs": ["closed", "word end"]
             },
             {
-                "transliteration": "b?tna",
-                "english": "our house",
-                "arabic": "",
-                "templateArgs": ["closed", "suffix"]
-            },
-            {
                 "transliteration": "b?tk",
                 "english": "your",
                 "arabic": "",
                 "templateArgs": ["open", "suffix"]
+            },
+            {
+                "transliteration": "b?tna",
+                "english": "our house",
+                "arabic": "",
+                "templateArgs": ["closed", "suffix"]
             }
         ]
     },
@@ -567,13 +645,13 @@
                 "templateArgs": ["two-consonant cluster", "b2"]
             },
             {
-                "transliteration": "emza7",
+                "transliteration": "imz7",
                 "english": "I'm joking",
                 "arabic": "",
                 "templateArgs": ["single hamza preceding a vowel", "(2)e"]
             },
             {
-                "transliteration": "bemza7",
+                "transliteration": "bimz7",
                 "english": "I'm joking",
                 "arabic": "",
                 "templateArgs": ["single consonant", "b"]
@@ -591,13 +669,13 @@
                 "templateArgs": ["single consonant", "b"]
             },
             {
-                "transliteration": "yemza7",
+                "transliteration": "yimz7",
                 "english": "he's joking",
                 "arabic": "",
                 "templateArgs": ["single consonant (semivowel)", "y"]
             },
             {
-                "transliteration": "byemza7",
+                "transliteration": "byimz7",
                 "english": "he's joking",
                 "arabic": "",
                 "templateArgs": ["two-consonant cluster", "by"]
@@ -606,7 +684,9 @@
     },
     {
         "question": "How would you usually say \"we haven't started yet\"/\"we still haven't started\"?",
-        "flaws": [],
+        "flaws": [
+            "Confusing question-phrasing that doesn't match up with what the answer choices are asking"
+        ],
         "explores": [
             "Use of ba3d vs. issa/lissa",
             "Whether the past participle is seen as semantically distinct from the simple past with ba3ed"
@@ -629,7 +709,7 @@
         "exampleTemplate": "for $1",
         "examples": [
             {
-                "transliteration": "b3dna msh mbalsh\u012bn",
+                "transliteration": "b3dna msh/ma mbalsh\u012bn",
                 "english": "?",
                 "arabic": "",
                 "templateArgs": ["past participle"]
@@ -674,7 +754,7 @@
             "bat": {"0": [0]},
             "bet/bit": {"0": [1]}
         },
-        "exampleTemplate": "in $1 syllable before $2",
+        "exampleTemplate": "in a(n) $1 syllable before $2",
         "examples": [
             {
                 "transliteration": "kt?",
@@ -686,25 +766,28 @@
                 "transliteration": "kt?lo",
                 "english": "she wrote for/to him",
                 "arabic": "",
-                "templateArgs": ["closed", "suffix"]
+                "templateArgs": ["closed", "a suffix"]
             },
             {
                 "transliteration": "kt?o",
                 "english": "she wrote it.m",
                 "arabic": "",
-                "templateArgs": ["open", "suffix"]
+                "templateArgs": ["open", "a suffix"]
             },
             {
                 "transliteration": "kt?tha",
                 "english": "she wrote it.f",
                 "arabic": "",
-                "templateArgs": ["historically closed (but nowadays typically open)", "suffix"]
+                "templateArgs": ["historically closed (but nowadays typically open)", "a suffix"]
             }
         ]
     },
     {
         "question": "How do you pronounce \"she wrote\" on its own?",
-        "flaws": [],
+        "flaws": [
+            "The 'bit' options were added later... but then that distinction wasn't the point of the question, so I could even have just done 'bet/bit'",
+            "There was no distinct -bat option; respondents had to just pick one with the right syllable count and choose '-bat' above"
+        ],
         "explores": [
             "Reduction of unstressed 3sg.f.pst /a/",
             "Raising of historic 3sg.f.pst /-at/ when unsuffixed",
@@ -742,7 +825,9 @@
     },
     {
         "question": "How do you pronounce \"I wrote\"?",
-        "flaws": [],
+        "flaws": [
+            "Again: 'bit' options were added later, but that distinction wasn't what the question was looking for anyway"
+        ],
         "explores": [
             "Reduction of unstressed 1sg.pst /a/",
             "Deletion of unstressed 1sg.pst -It",
@@ -823,7 +908,7 @@
             "Preservation and perception of historic 'internal passive' in verbs and participles"
         ],
         "answersIndicate": [[
-            "avoidance of internal passive",
+            "replacement of internal passive with generic plural",
             "acceptance of verbal internal passive",
             "acceptance of participial internal passive"
         ]],
@@ -934,7 +1019,9 @@
     },
     {
         "question": "How do you say \"these\"?",
-        "flaws": [],
+        "flaws": [
+            "I forgot to include 'ho/haw'. Should have had an Other option!"
+        ],
         "explores": [
             "Word-choice split for 'these' (plural proximal demonstrative)"
         ],
@@ -973,7 +1060,7 @@
         "question": "How do you pronounce \u062c\u0627\u064a/\u062c\u0627\u064a\u064a (\"coming\", masculine)?",
         "flaws": [],
         "explores": [
-            "Whether the difference in 'j\u01012n' pronunciations is regional"
+            "Whether the difference in 'جاءٍ' pronunciations is regional"
         ],
         "answersIndicate": [[]],
         "options": {
