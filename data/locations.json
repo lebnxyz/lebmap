@@ -547,5 +547,50 @@
             "lng": 35.5897893
         },
         "bounds": null
+    },
+    "Sultaniyeh": {
+        "district": "Bint Jbeil",
+        "governorate": "Nabatiyeh Governorate",
+        "location": {
+            "lat": 33.2048244,
+            "lng": 35.4053397
+        },
+        "bounds": null
+    },
+    "Sohmor": {
+        "district": "West Bekaa",
+        "governorate": "Beqaa Governorate",
+        "location": {
+            "lat": 33.5197252,
+            "lng": 35.6862309
+        },
+        "bounds": null
+    },
+    "Ain El Kharroube": {
+        "district": "Matn",
+        "governorate": "Mount Lebanon Governorate",
+        "location": {
+            "lat": 33.9337197,
+            "lng": 35.7010954
+        },
+        "bounds": {
+            "northeast": {
+                "lat": 33.9387569,
+                "lng": 35.710577
+            },
+            "southwest": {
+                "lat": 33.9268398,
+                "lng": 35.6938362
+            }
+        }
+    },
+    "Mechmech": {
+        "district": "Jbeil",
+        "governorate": "Mount Lebanon Governorate",
+        "location": {
+            "lat": 34.1456641,
+            "lng": 35.7814317
+        },
+        "bounds": null
     }
 }
