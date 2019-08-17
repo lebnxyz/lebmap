@@ -333,7 +333,7 @@
         "options": {
             "I do; 2sg.f s\u01132ilt\u012b, 3sg.f s\u01132l\u012bto": {"0": [0]},
             "No; both s\u01132ilt\u012b": {"0": [1, 2]},
-            "No; both s\u01132l\u012bto": {"0": [1, 3]},
+            "No; both the same as my response to the last question": {"0": [1, 3]},
             "N/A, something completely different": {"0": [4]}
         },
         "exampleTemplate": "",

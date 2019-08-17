@@ -126,18 +126,28 @@ def compile_answers(csv_f, json_f):
                     j_question = next(json_it)
             options = j_question['options']
             option_map = dict(zip(range(1, 1 + len(options)), options))
-            print()
+            newline_printed = False
             for option in answer.split(';'):
+                options = []
                 if option and option not in cross_file_answer_map:
+                    if not newline_printed:
+                        print()
+                        newline_printed = True
                     print(*(f'{k}: {v}' for k, v in option_map.items()), sep='\n', end='\n\n')
                     which = input(f'{option}: which #? (blank for other) ')
                     if which:
-                        cross_file_answer_map[option] = option_map[int(which)]
-                        option = option_map[int(which)]
+                        for i in map(int, which):
+                            cross_file_answer_map.setdefault(option, []).append(option_map[i])
+                            options.append(option_map[int(which)])
                     else:
-                        option = f'Other: {option}'
-                question_answered_by_map.setdefault(question_no, {}).setdefault(option, []).append(user_id)
-                user_answered_map[user_id]['answers'].setdefault(question_no, []).append(option)
+                        options = [f'Other: {option}']
+                elif option in cross_file_answer_map:
+                    options = cross_file_answer_map[option]
+                else:
+                    options = [None]
+                for option in options:
+                    question_answered_by_map.setdefault(question_no, {}).setdefault(option, []).append(user_id)
+                    user_answered_map[user_id]['answers'].setdefault(question_no, []).append(option)
                     
     return cross_file_answer_map, user_answered_map, question_answered_by_map
 
