@@ -20,25 +20,25 @@
             {
                 "transliteration": "5\u0101y?f",
                 "english": "scared",
-                "arabic": "",
+                "arabic": "\u062e\u0627\u064a\u0641",
                 "templateArgs": ["after", "yaa semivowel", "participle"]
             },
             {
                 "transliteration": "7\u0101m?l",
                 "english": "holding, carrying",
-                "arabic": "",
+                "arabic": "\u062d\u0627\u0645\u0644",
                 "templateArgs": ["unremarkable context", "participle"]
             },
             {
                 "transliteration": "kt\u0101b?k",
-                "english": "your.f book",
-                "arabic": "",
+                "english": "your book, to a female",
+                "arabic": "\u0643\u062a\u0627\u0628\u0650\u0643",
                 "templateArgs": ["suffix", "noun+suffix"]
             },
             {
                 "transliteration": "yemk?n",
                 "english": "maybe",
-                "arabic": "",
+                "arabic": "\u064a\u0645\u0643\u0646",
                 "templateArgs": ["unremarkable context", "adverb"]
             },
             {
@@ -67,26 +67,26 @@
         "examples": [
             {
                 "transliteration": "ent?",
-                "english": "you.f",
-                "arabic": "",
+                "english": "you, feminine",
+                "arabic": "\u0625\u0646\u062a\u064a",
                 "templateArgs": ["2sg.f suffix", "pronoun"]
             },
             {
                 "transliteration": "byt?",
                 "english": "my house",
-                "arabic": "",
+                "arabic": "\u0628\u064a\u062a\u064a",
                 "templateArgs": ["1sg possessive suffix", "noun+possessive"]
             },
             {
                 "transliteration": "7TT?",
-                "english": "put!.f",
-                "arabic": "",
+                "english": "put!, feminine",
+                "arabic": "\u062d\u0637\u064a",
                 "templateArgs": ["2sg.f subject conjugation", "verb"]
             },
             {
                 "transliteration": "m\u0101sh?",
                 "english": "walking",
-                "arabic": "",
+                "arabic": "\u0645\u0627\u0634\u064a",
                 "templateArgs": ["defective participle -y", "participle"]
             }
         ]
@@ -110,13 +110,13 @@
             {
                 "transliteration": "kt\u0101b?",
                 "english": "his book",
-                "arabic": "",
+                "arabic": "\u0643\u062a\u0627\u0628\u0648\u060c \u0643\u062a\u0627\u0628\u0647",
                 "templateArgs": ["3sg.m possessive suffix", "noun"]
             },
             {
                 "transliteration": "r7t?",
-                "english": "you.pl went",
-                "arabic": "",
+                "english": "y'all went",
+                "arabic": "\u0631\u062d\u062a\u0648\u0627",
                 "templateArgs": ["3pl.pst verb conjugation", "verb"]
             }
         ]
@@ -146,49 +146,49 @@
             {
                 "transliteration": "b?b",
                 "english": "door",
-                "arabic": "",
+                "arabic": "\u0628\u0627\u0628",
                 "templateArgs": ["between", "two b", "non-emphatic", "normally"]
             },
             {
                 "transliteration": "syy?ra",
                 "english": "car",
-                "arabic": "",
+                "arabic": "\u0633\u064a\u0627\u0631\u0629",
                 "templateArgs": ["before", "r", "sometimes-backed", "by lowering and/or backing"]
             },
             {
                 "transliteration": "5?yf",
                 "english": "scared",
-                "arabic": "",
+                "arabic": "\u062e\u0627\u064a\u0641",
                 "templateArgs": ["after", "5", "back", "by lowering"]
             },
             {
                 "transliteration": "3?ml",
-                "english": "done",
-                "arabic": "",
+                "english": "has done",
+                "arabic": "\u0639\u0627\u0645\u0644",
                 "templateArgs": ["after", "3", "voiced pharyngeal", "by lowering and/or backing"]
             },
             {
                 "transliteration": "7?wl",
                 "english": "try",
-                "arabic": "",
+                "arabic": "\u062d\u0627\u0648\u0644",
                 "templateArgs": ["after", "7", "voiceless pharyngeal", "by lowering"]
             },
             {
                 "transliteration": "j?T",
                 "english": "bowl",
-                "arabic": "",
+                "arabic": "\u062c\u0627\u0637",
                 "templateArgs": ["before", "T", "pharyngealized", "emphatically"]
             },
             {
                 "transliteration": "Tyy?ra",
                 "english": "airplane",
-                "arabic": "",
+                "arabic": "\u0637\u064a\u0627\u0631\u0629",
                 "templateArgs": ["between", "T and r, the first of which is", "pharyngealized", "emphatically"]
             },
             {
                 "transliteration": "fDD?",
                 "english": "he emptied it",
-                "arabic": "",
+                "arabic": "\u0641\u0636\u0651\u0627\u0647",
                 "templateArgs": ["between", "D and a suffix", "situation where the suffix might offset the pharyngealized D", "emphatically"]
             }
         ]
@@ -215,43 +215,43 @@
             {
                 "transliteration": "S?rt",
                 "english": "I became",
-                "arabic": "",
+                "arabic": "\u0635\u0631\u062a",
                 "templateArgs": ["after", "S", "pharyngealized", "first syllable", "verb"]
             },
             {
                 "transliteration": "bS?77",
-                "english": "I heal up",
-                "arabic": "",
+                "english": "I heal",
+                "arabic": "\u0628\u0635\u062d",
                 "templateArgs": ["after", "S", "pharyngealized", "first syllable", "verb"]
             },
             {
                 "transliteration": "bt?mb?sTe",
-                "english": "you.f enjoy yourself",
-                "arabic": "",
+                "english": "you enjoy yourself",
+                "arabic": "\u0628\u062a\u0646\u0628\u0633\u0637\u064a",
                 "templateArgs": ["before", "emphasis-spreading from T", "pharyngealized", "2sg.f prefix", "present-indicative verb"]
             },
             {
                 "transliteration": "2?SSa",
                 "english": "story",
-                "arabic": "",
+                "arabic": "\u0642\u0635\u0629",
                 "templateArgs": ["between", "a historically-emphatic q and an S", "pharyngealized", "first syllable", "noun"]
             },
             {
                 "transliteration": "mn?f7aS",
                 "english": "we examine",
-                "arabic": "",
+                "arabic": "\u0645\u0646\u0641\u062d\u064e\u0635",
                 "templateArgs": ["before", "emphasis-spreading from S", "pharyngealized", "1pl prefix", "present-indicative verb"]
             },
             {
                 "transliteration": "j?m3a",
                 "english": "week/Friday",
-                "arabic": "",
+                "arabic": "\u062c\u0645\u0639\u0629",
                 "templateArgs": ["historically", "an uncnoditioned /u/ after j", "unremarkable", "first syllable", "noun"]
             },
             {
                 "transliteration": "l?8a",
-                "english": "lanaguage",
-                "arabic": "",
+                "english": "language",
+                "arabic": "\u0644\u063a\u0629",
                 "templateArgs": ["historically", "an unconditioned /u/ after l", "unremarkable", "first syllable", "noun"]
             }
         ]
@@ -298,19 +298,19 @@
             {
                 "transliteration": "?-ne",
                 "english": "she's asked me",
-                "arabic": "",
+                "arabic": " (\u0647\u064a \u0633\u0627\u0626\u0644\u0629 + \u0646\u064a",
                 "templateArgs": ["-ne", "consonant"]
             },
             {
                 "transliteration": "?-(h)a",
                 "english": "she's asked her",
-                "arabic": "",
+                "arabic": " (\u0647\u064a \u0633\u0627\u0626\u0644\u0629 + \u0647\u0627",
                 "templateArgs": ["-(h)a", "historically consonant-initial (meaning it still shifts stress) if now usually vowel"]
             },
             {
                 "transliteration": "?-k",
                 "english": "she's asked you",
-                "arabic": "",
+                "arabic": " (\u0647\u064a \u0633\u0627\u0626\u0644\u0629 + \u0643",
                 "templateArgs": ["-ak/-ek", "vowel"]
             }
         ]
@@ -375,38 +375,38 @@
         "examples": [
             {
                 "transliteration": "y\u0113ha",
-                "english": "it.f/her",
-                "arabic": "",
+                "english": "it/her",
+                "arabic": "\u064a\u0627\u0647\u0627",
                 "templateArgs": ["long alif"]
             },
             {
                 "transliteration": "f\u012bha",
                 "english": "she can",
-                "arabic": "",
+                "arabic": "\u0641\u064a\u0647\u0627",
                 "templateArgs": ["long \u012b vowel"]
             },
             {
                 "transliteration": "7bbha",
                 "english": "he loved her",
-                "arabic": "",
+                "arabic": "\u062d\u064e\u0628\u0647\u0627",
                 "templateArgs": ["light CVC syllable, historically CVCC"]
             },
             {
                 "transliteration": "7bbython",
                 "english": "I liked them",
-                "arabic": "",
+                "arabic": "\u062d\u0628\u0651\u064a\u062a\u0647\u0646",
                 "templateArgs": ["heavy CVCC syllable"]
             },
             {
                 "transliteration": "byyha",
                 "english": "her dad",
-                "arabic": "",
+                "arabic": "\u0628\u064a\u0651\u0647\u0627",
                 "templateArgs": ["light CVC syllable with diphthong, historically CVCC"]
             },
             {
                 "transliteration": "kt\u0113bhon",
                 "english": "their book",
-                "arabic": "",
+                "arabic": "\u0643\u062a\u0627\u0628\u0647\u0646",
                 "templateArgs": ["heavy CVVC syllable"]
             }
         ]
@@ -415,7 +415,7 @@
         "question": "Here are some words that are \"3ala wazn\" \u064a\u0646\u0641\u0639\u0644. How do you tend to pronounce them?",
         "flaws": [
             "I didn't include another productive passive verb like ynsm3, which would have helped greatly. As is, this data doesn't at all show if ynsm3 is unique among productive ynf3l passives in being predominantly pronounced yen-SA-ma3",
-            "I only used the ينلقى Arabic spelling of 'to be found' rather than writing ينلقى/ينلقي, which *may* have influenced people not to choose the '-el' pronunciations. Hopefully not"
+            "I only used the \u064a\u0646\u0644\u0642\u0649 Arabic spelling of 'to be found' rather than writing \u064a\u0646\u0644\u0642\u0649/\u064a\u0646\u0644\u0642\u064a, which *may* have influenced people not to choose the '-el' pronunciations. Hopefully not"
         ],
         "explores": [
             "Leveling of historic stress & voweling in certain verb forms"
@@ -438,25 +438,25 @@
             {
                 "transliteration": "ynksr",
                 "english": "to break",
-                "arabic": "",
+                "arabic": "\u064a\u0646\u0643\u0633\u0631",
                 "templateArgs": ["fossilized", "is also", "yksr"]
             },
             {
                 "transliteration": "ynsh8l",
                 "english": "to be busy",
-                "arabic": "",
+                "arabic": "\u064a\u0646\u0634\u063a\u0644",
                 "templateArgs": ["fossilized", "isn't", "*ysh8l"]
             },
             {
                 "transliteration": "ynsm3",
                 "english": "to be heard",
-                "arabic": "",
+                "arabic": "\u064a\u0646\u0633\u0645\u0639",
                 "templateArgs": ["passive", "is", "ysm3"]
             },
             {
                 "transliteration": "ynl2a",
                 "english": "to be found",
-                "arabic": "",
+                "arabic": "\u064a\u0646\u0644\u0642\u0649",
                 "templateArgs": ["weak-final passive", "is", "yl\u01012y"]
             }
         ]
@@ -551,19 +551,19 @@
             {
                 "transliteration": "mi?a",
                 "english": "from us",
-                "arabic": "",
+                "arabic": "\u0645\u0646\u0646\u0627/\u0645\u0646\u0627",
                 "templateArgs": ["preposition", "min (+ 'na'), historically only two n's"]
             },
             {
                 "transliteration": "li2a?a",
-                "english": "because we",
-                "arabic": "",
+                "english": "because we (are...",
+                "arabic": "\u0644\u0623\u0646\u0646\u0627/\u0644\u0623\u0646\u0627",
                 "templateArgs": ["complementizer", "inn"]
             },
             {
                 "transliteration": "bija?o",
                 "english": "they make you go crazy",
-                "arabic": "",
+                "arabic": "\u0628\u0650\u062c\u064e\u0646\u0646\u0648\u0627",
                 "templateArgs": ["verb", "bijannin (+ 'o')"]
             }
         ]
@@ -590,19 +590,19 @@
             {
                 "transliteration": "b?t",
                 "english": "house",
-                "arabic": "",
+                "arabic": "\u0628\u064a\u062a",
                 "templateArgs": ["closed", "word end"]
             },
             {
                 "transliteration": "b?tk",
-                "english": "your",
-                "arabic": "",
+                "english": "your house",
+                "arabic": "\u0628\u064a\u062a\u0643",
                 "templateArgs": ["open", "suffix"]
             },
             {
                 "transliteration": "b?tna",
                 "english": "our house",
-                "arabic": "",
+                "arabic": "\u0628\u064a\u062a\u0646\u0627",
                 "templateArgs": ["closed", "suffix"]
             }
         ]
@@ -616,7 +616,7 @@
         ],
         "answersIndicate": [
             [
-                "retainment of final m",
+                "retention of final m",
                 "addition of vowel after final m"
             ],
             [
@@ -636,49 +636,57 @@
                 "transliteration": "2\u016bl",
                 "english": "I'm saying",
                 "arabic": "",
-                "templateArgs": ["single consonant", "2"]
+                "templateArgs": ["single consonant", "2"],
+                "t": "2oul"
             },
             {
                 "transliteration": "b2\u016bl",
                 "english": "I'm saying",
                 "arabic": "",
-                "templateArgs": ["two-consonant cluster", "b2"]
+                "templateArgs": ["two-consonant cluster", "b2"],
+                "t": "b2oul"
             },
             {
                 "transliteration": "imz7",
                 "english": "I'm joking",
                 "arabic": "",
-                "templateArgs": ["single hamza preceding a vowel", "(2)e"]
+                "templateArgs": ["single hamza preceding a vowel", "(2)e"],
+                "t": "emza7"
             },
             {
                 "transliteration": "bimz7",
                 "english": "I'm joking",
                 "arabic": "",
-                "templateArgs": ["single consonant", "b"]
+                "templateArgs": ["single consonant", "b"],
+                "t": "bemza7"
             },
             {
                 "transliteration": "y2\u016bl",
                 "english": "he's saying",
                 "arabic": "",
-                "templateArgs": ["vowel", "y"]
+                "templateArgs": ["vowel", "y"],
+                "t": "y2oul"
             },
             {
                 "transliteration": "bi2\u016bl",
                 "english": "he's saying",
                 "arabic": "",
-                "templateArgs": ["single consonant", "b"]
+                "templateArgs": ["single consonant", "b"],
+                "t": "bi2oul"
             },
             {
                 "transliteration": "yimz7",
                 "english": "he's joking",
                 "arabic": "",
-                "templateArgs": ["single consonant (semivowel)", "y"]
+                "templateArgs": ["single consonant (semivowel)", "y"],
+                "t": "yemza7"
             },
             {
                 "transliteration": "byimz7",
                 "english": "he's joking",
                 "arabic": "",
-                "templateArgs": ["two-consonant cluster", "by"]
+                "templateArgs": ["two-consonant cluster", "by"],
+                "t": "byemza7"
             }
         ]
     },
@@ -711,14 +719,16 @@
             {
                 "transliteration": "b3dna msh/ma mbalsh\u012bn",
                 "english": "?",
-                "arabic": "",
-                "templateArgs": ["past participle"]
+                "arabic": "\u0628\u0639\u062f\u0646\u0627 (\u0645\u0634/\u0645\u0627) \u0645\u0628\u0644\u0634\u064a\u0646",
+                "templateArgs": ["past participle"],
+                "t": " ba3dna {mesh/ma} mbalsh\u012bn"
             },
             {
                 "transliteration": "b3dna ma bllshna",
                 "english": "?",
-                "arabic": "",
-                "templateArgs": ["simple past"]
+                "arabic": "\u0628\u0639\u062f\u0646\u0627 \u0645\u0627 \u0628\u0644\u0634\u0646\u0627",
+                "templateArgs": ["simple past"],
+                "t": " ba3dna ma ballashna"
             }
         ]
     },
@@ -759,25 +769,25 @@
             {
                 "transliteration": "kt?",
                 "english": "she wrote",
-                "arabic": "",
+                "arabic": "\u0647\u064a \u0643\u062a\u0628\u062a",
                 "templateArgs": ["closed", "word end"]
             },
             {
                 "transliteration": "kt?lo",
-                "english": "she wrote for/to him",
-                "arabic": "",
+                "english": "she wrote to him",
+                "arabic": "\u0643\u062a\u0628\u062a\u0644\u0648",
                 "templateArgs": ["closed", "a suffix"]
             },
             {
                 "transliteration": "kt?o",
-                "english": "she wrote it.m",
-                "arabic": "",
+                "english": "she wrote it, masculine",
+                "arabic": "\u0643\u062a\u0628\u062a\u0648",
                 "templateArgs": ["open", "a suffix"]
             },
             {
                 "transliteration": "kt?tha",
-                "english": "she wrote it.f",
-                "arabic": "",
+                "english": "she wrote it, feminine",
+                "arabic": "\u0643\u062a\u0628\u062a\u0647\u0627\u060c \u0643\u062a\u0628\u062a\u0627",
                 "templateArgs": ["historically closed (but nowadays typically open)", "a suffix"]
             }
         ]
@@ -1060,7 +1070,7 @@
         "question": "How do you pronounce \u062c\u0627\u064a/\u062c\u0627\u064a\u064a (\"coming\", masculine)?",
         "flaws": [],
         "explores": [
-            "Whether the difference in 'جاءٍ' pronunciations is regional"
+            "Whether the difference in '\u062c\u0627\u0621\u064d' pronunciations is regional"
         ],
         "answersIndicate": [[]],
         "options": {
@@ -1100,50 +1110,58 @@
             {
                 "transliteration": "taba3",
                 "english": "",
-                "arabic": "",
-                "templateArgs": ["masculine-singular"]
+                "arabic": "\u062a\u0628\u0639",
+                "templateArgs": ["masculine-singular"],
+                "t": " taba3"
             },
             {
                 "transliteration": "tab3\u016bl",
                 "english": "",
-                "arabic": "",
-                "templateArgs": ["masculine and likely plural"]
+                "arabic": "\u062a\u0628\u0639\u0648\u0644",
+                "templateArgs": ["masculine and likely plural"],
+                "t": " tab3\u016bl"
             },
             {
                 "transliteration": "t\u01133",
                 "english": "",
-                "arabic": "",
-                "templateArgs": ["masculine-singular"]
+                "arabic": "\u062a\u0627\u0639",
+                "templateArgs": ["masculine-singular"],
+                "t": " t\u01133"
             },
             {
                 "transliteration": "ta3\u016bl",
                 "english": "",
-                "arabic": "",
-                "templateArgs": ["masculine and likely plural"]
+                "arabic": "\u062a\u0639\u0648\u0644",
+                "templateArgs": ["masculine and likely plural"],
+                "t": " ta3\u016bl"
             },
             {
                 "transliteration": "tab3t",
                 "english": "",
-                "arabic": "",
-                "templateArgs": ["feminine-singular"]
+                "arabic": "\u062a\u0628\u0639\u062a",
+                "templateArgs": ["feminine-singular"],
+                "t": " tab3et"
             },
             {
                 "transliteration": "tab3\u012bt",
                 "english": "",
-                "arabic": "",
-                "templateArgs": ["feminine-singular"]
+                "arabic": "\u062a\u0628\u0639\u0650\u064a\u0652\u062a",
+                "templateArgs": ["feminine-singular"],
+                "t": "  tab3\u012bt"
             },
             {
                 "transliteration": "t\u01133t",
                 "english": "",
-                "arabic": "",
-                "templateArgs": ["feminine-singular"]
+                "arabic": "\u062a\u0627\u0639\u062a",
+                "templateArgs": ["feminine-singular"],
+                "t": " t\u01133et"
             },
             {
                 "transliteration": "ta3\u012bt",
                 "english": "",
-                "arabic": "",
-                "templateArgs": ["feminine-singular"]
+                "arabic": "\u062a\u0639\u0650\u064a\u0652\u062a/\u062a\u0627\u0639\u0650\u064a\u0652\u062a",
+                "templateArgs": ["feminine-singular"],
+                "t": "  ta3\u012bt/t\u01133\u012bt"
             }
         ]
     },

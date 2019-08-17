@@ -1,4 +1,4 @@
-LAST_TIMESTAMP = '2019/08/16 10:06:44 AM MDT'
+LAST_TIMESTAMP = '2019/08/16 11:19:20 PM MDT'
 import csv
 import json
 import requests
@@ -89,6 +89,7 @@ def populate(d, responses, out):
             continue
         if response[0] == LAST_TIMESTAMP:
             found_timestamp = True
+            continue
         if not found_timestamp:
             continue
         last_timestamp = response[0]
@@ -120,7 +121,6 @@ def populate(d, responses, out):
         this_file[0] = f'LAST_TIMESTAMP = {last_timestamp!r}\n'
         with open('utilscripts/populate_locations.py', 'w') as this:
             this.writelines(this_file)
-    del out[0]
 
 
 def update_locations(
