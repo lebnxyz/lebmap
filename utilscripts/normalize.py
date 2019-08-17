@@ -98,3 +98,60 @@ def do_questions(csv_path='results-normalized.csv', json_path='data/questions.js
     #badjson.write(json_li, 'data/questions.json')
     with open(csv_path, 'w', encoding='utf-8', newline='') as csv_f:
         csv.writer(csv_f).writerows(csv_out)
+
+
+def compile_answers(csv_f, json_f):
+    '''assumed to be run after do_questions'''
+    cross_file_answer_map = {}  # {question number: {csv answer: json option}}
+    user_answered_map = {}
+    question_answered_by_map = {}
+    json_it = iter(json_f)
+    j_question = None
+    csv_questions = next(csv_f)[3:]
+    for user_id, (timestamp, location, extra_location, *line) in enumerate(csv_f):
+        user_answered_map[user_id] = {
+          'timeCompleted': timestamp,
+          'location': location,
+          '3a': extra_location,
+          'answers': {}
+        }
+        for question_no, answer in zip(csv_questions, line):
+            if '.' not in question_no or question_no.split('.', 1)[1] == '0':
+                j_question = None
+            if j_question is None:
+                try:
+                    j_question = next(json_it)
+                except StopIteration:
+                    json_it = iter(json_f)
+                    j_question = next(json_it)
+            options = j_question['options']
+            option_map = dict(zip(range(1, 1 + len(options)), options))
+            print()
+            for option in answer.split(';'):
+                if option and option not in cross_file_answer_map:
+                    print(*(f'{k}: {v}' for k, v in option_map.items()), sep='\n', end='\n\n')
+                    which = input(f'{option}: which #? (blank for other) ')
+                    if which:
+                        cross_file_answer_map[option] = option_map[int(which)]
+                        option = option_map[int(which)]
+                    else:
+                        option = f'Other: {option}'
+                question_answered_by_map.setdefault(question_no, {}).setdefault(option, []).append(user_id)
+                user_answered_map[user_id]['answers'].setdefault(question_no, []).append(option)
+                    
+    return cross_file_answer_map, user_answered_map, question_answered_by_map
+
+
+def do_compilation(csv_path='results-normalized.csv', json_path='data/questions.json'):
+    with open(csv_path, encoding='utf-8', newline='') as csv_f, open(json_path, encoding='utf-8') as json_f:
+        cross_file_answer_map, user_answered_map, question_answered_by_map = compile_answers(
+          csv.reader(csv_f),
+          json.load(json_f)
+        )
+    with open('data/cross_file_answer_map.json', 'w', encoding='utf-8') as f:
+        json.dump(cross_file_answer_map, f)
+    with open('data/respondents.json', 'w', encoding='utf-8') as f:
+        json.dump(user_answered_map, f)
+    with open('data/question_answerers.json', 'w', encoding='utf-8') as f:
+        json.dummp(question_answered_by_map, f)
+    print(':)')
