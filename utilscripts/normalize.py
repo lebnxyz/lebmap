@@ -4,6 +4,8 @@ import regex
 
 regex.DEFAULT_VERSION = regex.VERSION1
 
+from utilscripts import badjson
+
 
 def parse(title, current_question):
     print(title)
@@ -38,7 +40,9 @@ def normalize_questions(csv_header, json_li):
         question, current_question, arabic, english_1, english_2 = parse(title, current_question)
         has_examples = any(map(None.__ne__, (arabic, english_1, english_2)))
         if not has_examples:
+            q_idx += 1
             csv_header[idx] = f'{q_idx}'
+            print(q_idx)
             next(json_it)
             continue
         if question is None:
@@ -50,6 +54,7 @@ def normalize_questions(csv_header, json_li):
             assert question == _fug['question'], [question, _fug['question']]
             examples = _fug['examples']
             examples = iter(examples)
+        print(q_idx, example_idx, sep='.')
         try:
             example = next(examples)
         except StopIteration:
@@ -57,14 +62,19 @@ def normalize_questions(csv_header, json_li):
             print(question, current_question, sep='\n')
             raise
         if arabic is not None:
+            '''
             example['arabic'] = arabic
+            '''
         if english_1 is not None:
+            '''
             print(english_1)
             english_1_type = input('[e]nglish or [t]ransliteration? (blank to skip) ')
             if english_1_type:
                 english_1_type = ['english', 'transliteration'][english_1_type == 't']
                 example[english_1_type] = english_1
+            '''
         if english_2 is not None:
+            '''
             print(english_2)
             types = ['english', 'transliteration']
             if english_1_type:
@@ -74,17 +84,17 @@ def normalize_questions(csv_header, json_li):
             if english_2_type and not english_1_type.startswith(english_2_type):
                 english_1_type = ['english', 'transliteration'][english_1_type == 't']
                 example[english_2_type] = english_2
+            '''
         csv_header[idx] = f'{q_idx}.{example_idx}'
     return csv_header, json_li
 
 
-def do(csv_path='results-normalized.csv', json_path='data/questions.json'):
-    with open(csv_path, encoding='utf-8') as csv_f, open(json_path, encoding='utf-8') as json_f:
+def do_questions(csv_path='results-normalized.csv', json_path='data/questions.json'):
+    with open(csv_path, encoding='utf-8', newline='') as csv_f, open(json_path, encoding='utf-8') as json_f:
         csv_header, json_li = normalize_questions(next(iter(csv.reader(csv_f))), json.load(json_f))
         csv_f.seek(0)
         next(csv_f)
         csv_out = [csv_header, *csv.reader(csv_f)]
-    input('done!')
-    with open(csv_path, 'w', encoding='utf-8') as csv_f, open(json_path, 'w', encoding='utf-8') as json_f:
-        json.dump(json_li, json_f)
+    #badjson.write(json_li, 'data/questions.json')
+    with open(csv_path, 'w', encoding='utf-8', newline='') as csv_f:
         csv.writer(csv_f).writerows(csv_out)

@@ -71,7 +71,7 @@
         },
         "bounds": null
     },
-    "Tannourine El Tahta": {
+    "Tannourine": {
         "district": "Batroun",
         "governorate": "North Governorate",
         "location": {
@@ -518,15 +518,6 @@
         "location": {
             "lat": 33.4230066,
             "lng": 35.3989302
-        },
-        "bounds": null
-    },
-    "Kfarhouna": {
-        "district": null,
-        "governorate": "Kfarhouna",
-        "location": {
-            "lat": 33.4901,
-            "lng": 35.5886
         },
         "bounds": null
     },
