@@ -62,19 +62,14 @@ def normalize_questions(csv_header, json_li):
             print(question, current_question, sep='\n')
             raise
         if arabic is not None:
-            '''
             example['arabic'] = arabic
-            '''
         if english_1 is not None:
-            '''
             print(english_1)
             english_1_type = input('[e]nglish or [t]ransliteration? (blank to skip) ')
             if english_1_type:
                 english_1_type = ['english', 'transliteration'][english_1_type == 't']
                 example[english_1_type] = english_1
-            '''
         if english_2 is not None:
-            '''
             print(english_2)
             types = ['english', 'transliteration']
             if english_1_type:
@@ -84,7 +79,6 @@ def normalize_questions(csv_header, json_li):
             if english_2_type and not english_1_type.startswith(english_2_type):
                 english_1_type = ['english', 'transliteration'][english_1_type == 't']
                 example[english_2_type] = english_2
-            '''
         csv_header[idx] = f'{q_idx}.{example_idx}'
     return csv_header, json_li
 
@@ -95,14 +89,17 @@ def do_questions(csv_path='results-normalized.csv', json_path='data/questions.js
         csv_f.seek(0)
         next(csv_f)
         csv_out = [csv_header, *csv.reader(csv_f)]
-    #badjson.write(json_li, 'data/questions.json')
+    badjson.write(json_li, 'data/questions.json')
     with open(csv_path, 'w', encoding='utf-8', newline='') as csv_f:
         csv.writer(csv_f).writerows(csv_out)
 
 
-def compile_answers(csv_f, json_f):
+def compile_answers(csv_f, json_f, cross_file_answer_map=None):
     '''assumed to be run after do_questions'''
-    cross_file_answer_map = {}  # {question number: {csv answer: json option}}
+    answer_map_given = True
+    if cross_file_answer_map is None:
+        answer_map_given = False
+        cross_file_answer_map = {}  # {question number: {csv answer: json option}}
     user_answered_map = {}
     answers = {}
     json_it = iter(json_f)
@@ -124,8 +121,9 @@ def compile_answers(csv_f, json_f):
                 except StopIteration:
                     json_it = iter(json_f)
                     j_question = next(json_it)
-            answers[question_no] = {'indicates': ''}
-            if '.' in question_no:
+            if question_no not in answers:
+                answers[question_no] = {'indicates': ''}
+            if '.' in question_no and 'indicates' not in answers[question_no]:
                 example_no = int(question_no.split('.')[1])
                 answers[question_no]['indicates'] = j_question['exampleTemplate'].format(
                   *j_question['examples'][example_no]['templateArgs']
@@ -139,8 +137,11 @@ def compile_answers(csv_f, json_f):
                     if not newline_printed:
                         print()
                         newline_printed = True
-                    print(*(f'{k}: {v}' for k, v in option_map.items()), sep='\n', end='\n\n')
-                    which = input(f'{option}: which #? (blank for other) ')
+                    if answer_map_given:
+                        which = ''
+                    else:
+                        print(*(f'{k}: {v}' for k, v in option_map.items()), sep='\n', end='\n\n')
+                        which = input(f'{option}: which numbers? (blank for other) ')
                     if which:
                         for i in map(int, which):
                             cross_file_answer_map.setdefault(option, []).append(option_map[i])
@@ -162,11 +163,14 @@ def compile_answers(csv_f, json_f):
     return cross_file_answer_map, user_answered_map, answers
 
 
-def do_compilation(csv_path='results-normalized.csv', json_path='data/questions.json'):
-    with open(csv_path, encoding='utf-8', newline='') as csv_f, open(json_path, encoding='utf-8') as json_f:
+def do_compilation(csv_path='results-normalized.csv', json_path='data/questions.json', answer_map_path='data/cross_file_answer_map.json'):
+    with open(csv_path, encoding='utf-8', newline='') as csv_f, \
+     open(json_path, encoding='utf-8') as json_f, \
+     open(answer_map_path, encoding='utf-8') as answer_map:
         cross_file_answer_map, user_answered_map, question_answered_by_map = compile_answers(
           csv.reader(csv_f),
-          json.load(json_f)
+          json.load(json_f),
+          cross_file_answer_map=json.load(answer_map)
         )
     with open('data/cross_file_answer_map.json', 'w', encoding='utf-8') as f:
         json.dump(cross_file_answer_map, f, indent=4)
@@ -174,4 +178,4 @@ def do_compilation(csv_path='results-normalized.csv', json_path='data/questions.
         json.dump(user_answered_map, f, indent=4)
     with open('data/question_answerers.json', 'w', encoding='utf-8') as f:
         json.dump(question_answered_by_map, f, indent=4)
-    print(':)')
+    print('\n:)')
