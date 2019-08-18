@@ -1,0 +1,1195 @@
+{
+    "0.0": {
+        "indicates": "$1 a(n) yaa semivowel (word form: participle)",
+        "e": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "lax"
+            ]
+        }
+    },
+    "0.1": {
+        "indicates": "$1 a(n) unremarkable context (word form: participle)",
+        "e": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "lax"
+            ]
+        }
+    },
+    "0.2": {
+        "indicates": "$1 a(n) suffix (word form: noun+suffix)",
+        "e": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "lax"
+            ]
+        }
+    },
+    "0.3": {
+        "indicates": "$1 a(n) unremarkable context (word form: adverb)",
+        "e": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "lax"
+            ]
+        }
+    },
+    "1.0": {
+        "indicates": "in a(n) 2sg.f suffix (word form: pronoun)",
+        "e": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "lax"
+            ]
+        }
+    },
+    "1.1": {
+        "indicates": "in a(n) 1sg possessive suffix (word form: noun+possessive)",
+        "e": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "lax"
+            ]
+        }
+    },
+    "1.2": {
+        "indicates": "in a(n) 2sg.f subject conjugation (word form: verb)",
+        "e": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "lax"
+            ]
+        }
+    },
+    "1.3": {
+        "indicates": "in a(n) defective participle -y (word form: participle)",
+        "e": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "lax"
+            ]
+        }
+    },
+    "2.0": {
+        "indicates": "in a(n) 3sg.m possessive suffix (word form: noun)",
+        "u": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "tense"
+            ]
+        }
+    },
+    "2.1": {
+        "indicates": "in a(n) 3pl.pst verb conjugation (word form: verb)",
+        "u": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "tense"
+            ]
+        }
+    },
+    "3.0": {
+        "indicates": "between two b, a(n) non-emphatic consonant that colors alif normally",
+        "open front unrounded /a\u02d0/": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "lowering"
+            ]
+        }
+    },
+    "3.1": {
+        "indicates": "before r, a(n) sometimes-backed consonant that colors alif by lowering and/or backing",
+        "open front unrounded /a\u02d0/": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "lowering"
+            ]
+        }
+    },
+    "3.2": {
+        "indicates": "after 5, a(n) back consonant that colors alif by lowering",
+        "open front unrounded /a\u02d0/": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "lowering"
+            ]
+        }
+    },
+    "3.3": {
+        "indicates": "after 3, a(n) voiced pharyngeal consonant that colors alif by lowering and/or backing",
+        "open front unrounded /a\u02d0/": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "lowering"
+            ]
+        }
+    },
+    "3.4": {
+        "indicates": "after 7, a(n) voiceless pharyngeal consonant that colors alif by lowering",
+        "open front unrounded /a\u02d0/": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "lowering"
+            ]
+        }
+    },
+    "3.5": {
+        "indicates": "before T, a(n) pharyngealized consonant that colors alif emphatically",
+        "open front unrounded /a\u02d0/": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "lowering"
+            ]
+        }
+    },
+    "3.6": {
+        "indicates": "between T and r, the first of which is, a(n) pharyngealized consonant that colors alif emphatically",
+        "open front unrounded /a\u02d0/": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "lowering"
+            ]
+        }
+    },
+    "3.7": {
+        "indicates": "between D and a suffix, a(n) situation where the suffix might offset the pharyngealized D consonant that colors alif emphatically",
+        "open front unrounded /a\u02d0/": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "lowering"
+            ]
+        }
+    },
+    "4.0": {
+        "indicates": "after S, a(n) pharyngealized consonant, in the first syllable of a verb",
+        "e": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "unrounded",
+                "lax"
+            ]
+        }
+    },
+    "4.1": {
+        "indicates": "after S, a(n) pharyngealized consonant, in the first syllable of a verb",
+        "e": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "unrounded",
+                "lax"
+            ]
+        }
+    },
+    "4.2": {
+        "indicates": "before emphasis-spreading from T, a(n) pharyngealized consonant, in the 2sg.f prefix of a present-indicative verb",
+        "e": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "unrounded",
+                "lax"
+            ]
+        }
+    },
+    "4.3": {
+        "indicates": "between a historically-emphatic q and an S, a(n) pharyngealized consonant, in the first syllable of a noun",
+        "e": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "unrounded",
+                "lax"
+            ]
+        }
+    },
+    "4.4": {
+        "indicates": "before emphasis-spreading from S, a(n) pharyngealized consonant, in the 1pl prefix of a present-indicative verb",
+        "e": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "unrounded",
+                "lax"
+            ]
+        }
+    },
+    "4.5": {
+        "indicates": "historically an uncnoditioned /u/ after j, a(n) unremarkable consonant, in the first syllable of a noun",
+        "e": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "unrounded",
+                "lax"
+            ]
+        }
+    },
+    "4.6": {
+        "indicates": "historically an unconditioned /u/ after l, a(n) unremarkable consonant, in the first syllable of a noun",
+        "e": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "unrounded",
+                "lax"
+            ]
+        }
+    },
+    "5": {
+        "indicates": "",
+        "2 except in some words and proper names": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "debuccalization to [2]",
+                "preservation of [q] in proper names",
+                "preservation of [q] in some words"
+            ]
+        }
+    },
+    "6.0": {
+        "indicates": "before -ne, a -ne-initial suffix",
+        "s\u01132lit-": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "no mutation, CVt-"
+            ]
+        }
+    },
+    "6.1": {
+        "indicates": "before -(h)a, a -(h)a-initial suffix",
+        "s\u01132lit-": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "no mutation, CVt-"
+            ]
+        }
+    },
+    "6.2": {
+        "indicates": "before -ak/-ek, a -ak/-ek-initial suffix",
+        "s\u01132lit-": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "no mutation, CVt-"
+            ]
+        }
+    },
+    "7": {
+        "indicates": "",
+        "No; both s\u01132ilt\u012b": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "leveling",
+                "preference toward 2nd-person form"
+            ]
+        }
+    },
+    "8": {
+        "indicates": "",
+        "meshtriyy\u012bn": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "elision into one long vowel"
+            ]
+        }
+    },
+    "9.0": {
+        "indicates": "after long alif",
+        "sometimes": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "preservation",
+                "elision/assimilation"
+            ]
+        }
+    },
+    "9.1": {
+        "indicates": "after long \u012b vowel",
+        "sometimes": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "preservation",
+                "elision/assimilation"
+            ]
+        }
+    },
+    "9.2": {
+        "indicates": "after light CVC syllable, historically CVCC",
+        "sometimes": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "preservation",
+                "elision/assimilation"
+            ]
+        }
+    },
+    "9.3": {
+        "indicates": "after heavy CVCC syllable",
+        "sometimes": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "preservation",
+                "elision/assimilation"
+            ]
+        }
+    },
+    "9.4": {
+        "indicates": "after light CVC syllable with diphthong, historically CVCC",
+        "sometimes": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "preservation",
+                "elision/assimilation"
+            ]
+        }
+    },
+    "9.5": {
+        "indicates": "after heavy CVVC syllable",
+        "sometimes": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "preservation",
+                "elision/assimilation"
+            ]
+        }
+    },
+    "10.0": {
+        "indicates": "a fossilized verb that is also the productive passive of yksr",
+        "yen-FE-3el": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "preservation of stress",
+                "raising of vowels"
+            ]
+        }
+    },
+    "10.1": {
+        "indicates": "a fossilized verb that isn't the productive passive of *ysh8l",
+        "yen-FE-3el": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "preservation of stress",
+                "raising of vowels"
+            ]
+        }
+    },
+    "10.2": {
+        "indicates": "a passive verb that is the productive passive of ysm3",
+        "yen-FE-3el": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "preservation of stress",
+                "raising of vowels"
+            ]
+        }
+    },
+    "10.3": {
+        "indicates": "a weak-final passive verb that is the productive passive of yl\u01012y",
+        "yen-FE-3el": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "preservation of stress",
+                "raising of vowels"
+            ]
+        }
+    },
+    "11": {
+        "indicates": "",
+        "ma b3ref": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "pre-verbal particle"
+            ]
+        }
+    },
+    "12": {
+        "indicates": "",
+        "I prefer metfe33el": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "preservation"
+            ]
+        }
+    },
+    "13": {
+        "indicates": "",
+        "'Meh', possible distinction but not salient: they both mean hidden by whoever": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "preservation",
+                "leveling"
+            ]
+        }
+    },
+    "14.0": {
+        "indicates": "in the preposition 'min (+ 'na'), historically only two n's'",
+        "nn": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "collapse to single geminate consonant, C:"
+            ]
+        }
+    },
+    "14.1": {
+        "indicates": "in the complementizer 'inn'",
+        "nn": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "collapse to single geminate consonant, C:"
+            ]
+        }
+    },
+    "14.2": {
+        "indicates": "in the verb 'bijannin (+ 'o')'",
+        "nn": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "collapse to single geminate consonant, C:"
+            ]
+        }
+    },
+    "15.0": {
+        "indicates": "in a(n) closed syllable before word end",
+        "b\u0113t": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "collapse into monophthong",
+                "mid monophthong \u0113"
+            ]
+        }
+    },
+    "15.1": {
+        "indicates": "in a(n) open syllable before suffix",
+        "bayt": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "preservation"
+            ]
+        }
+    },
+    "15.2": {
+        "indicates": "in a(n) closed syllable before suffix",
+        "b\u0113t": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "collapse into monophthong",
+                "mid monophthong \u0113"
+            ]
+        }
+    },
+    "16.0": {
+        "indicates": "before a single consonant (2)",
+        "3am": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "retention of final m",
+                "replacement with 3am[ma]"
+            ]
+        }
+    },
+    "16.1": {
+        "indicates": "before a two-consonant cluster (b2)",
+        "3am": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "retention of final m",
+                "replacement with 3am[ma]"
+            ]
+        }
+    },
+    "16.2": {
+        "indicates": "before a single hamza preceding a vowel ((2)e)",
+        "3am": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "retention of final m",
+                "replacement with 3am[ma]"
+            ]
+        }
+    },
+    "16.3": {
+        "indicates": "before a single consonant (b)",
+        "3am": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "retention of final m",
+                "replacement with 3am[ma]"
+            ]
+        }
+    },
+    "16.4": {
+        "indicates": "before a vowel (y)",
+        "3am": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "retention of final m",
+                "replacement with 3am[ma]"
+            ]
+        }
+    },
+    "16.5": {
+        "indicates": "before a single consonant (b)",
+        "3am": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "retention of final m",
+                "replacement with 3am[ma]"
+            ]
+        }
+    },
+    "16.6": {
+        "indicates": "before a single consonant (semivowel) (y)",
+        "3am": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "retention of final m",
+                "replacement with 3am[ma]"
+            ]
+        }
+    },
+    "16.7": {
+        "indicates": "before a two-consonant cluster (by)",
+        "3am": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "retention of final m",
+                "replacement with 3am[ma]"
+            ]
+        }
+    },
+    "17.0": {
+        "indicates": "for past participle",
+        "'We haven't started yet'": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "preference toward ba3d",
+                "interpretation of negated ba3d to mean 'have not yet'"
+            ]
+        }
+    },
+    "17.1": {
+        "indicates": "for simple past",
+        "'We still haven't started'": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "preference toward ba3d",
+                "interpretation of negated ba3d to mean 'still have not'"
+            ]
+        }
+    },
+    "18": {
+        "indicates": "",
+        "Yes, but it also means 'have you just woken up?'. Depends on context": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "interpretation of f\u01013il as invariably a past participle",
+                "interpretation of f\u01013il as invariably an adjective"
+            ]
+        }
+    },
+    "19.0": {
+        "indicates": "in a(n) closed syllable before word end",
+        "bet/bit": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "raising"
+            ]
+        }
+    },
+    "19.1": {
+        "indicates": "in a(n) closed syllable before a suffix",
+        "bet/bit": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "raising"
+            ]
+        }
+    },
+    "19.2": {
+        "indicates": "in a(n) open syllable before a suffix",
+        "bet/bit": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "raising"
+            ]
+        }
+    },
+    "19.3": {
+        "indicates": "in a(n) historically closed (but nowadays typically open) syllable before a suffix",
+        "bet/bit": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "raising"
+            ]
+        }
+    },
+    "20": {
+        "indicates": "",
+        "KAT-bet": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "deletion",
+                "raising",
+                "lax",
+                "2"
+            ]
+        }
+    },
+    "21": {
+        "indicates": "",
+        "KTABT": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "deletion",
+                "deletion",
+                "1"
+            ]
+        },
+        "KTA-bet": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "deletion",
+                "preservation",
+                "lax",
+                "2"
+            ]
+        }
+    },
+    "22": {
+        "indicates": "",
+        "la-": {
+            "answered_by": [
+                90
+            ],
+            "indicates": []
+        }
+    },
+    "23": {
+        "indicates": "",
+        "7atta/la7atta/ta7atta": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "use of 7atta rather than or for the same thing as la7attelete/ta7attele"
+            ]
+        }
+    },
+    "24": {
+        "indicates": "",
+        "btesta3mal": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "acceptance of verbal internal passive"
+            ]
+        }
+    },
+    "25": {
+        "indicates": "",
+        "mlawwan\u012bn l7\u012bt\u0101n w msakkara lsyy\u0101ra": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "preservation",
+                "before subject"
+            ]
+        }
+    },
+    "26": {
+        "indicates": "",
+        "Sarlak shi? Sarrak s\u01133t\u0113n": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "assimilation to /r/",
+                "Sarr- for time",
+                "Sarl- for 'happening to'",
+                "expression of duration with Sarl-"
+            ]
+        }
+    },
+    "27": {
+        "indicates": "",
+        "hayy\u0113/hiyy\u0113": {
+            "answered_by": [
+                90
+            ],
+            "indicates": []
+        }
+    },
+    "28": {
+        "indicates": "",
+        "kenna k\u0113tb\u012bn": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "past perfect = k\u0113n + past participle"
+            ]
+        }
+    },
+    "29": {
+        "indicates": "",
+        "h\u014dle/hawle": {
+            "answered_by": [
+                90
+            ],
+            "indicates": []
+        }
+    },
+    "30": {
+        "indicates": "",
+        "7addak, ta7tak": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "avoidance of men"
+            ]
+        }
+    },
+    "31": {
+        "indicates": "",
+        "j\u0113y": {
+            "answered_by": [
+                90
+            ],
+            "indicates": []
+        }
+    },
+    "32.0": {
+        "indicates": "of what's morphologically a masculine-singular form",
+        "masculine": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "uses a feminine meaning"
+            ]
+        },
+        "feminine": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "uses a masculine meaning"
+            ]
+        },
+        "singular": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "uses a singular meaning"
+            ]
+        }
+    },
+    "32.1": {
+        "indicates": "of what's morphologically a masculine and likely plural form",
+        "masculine": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "uses a feminine meaning"
+            ]
+        },
+        "singular": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "uses a singular meaning"
+            ]
+        },
+        "plural": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "uses a plural meaning"
+            ]
+        }
+    },
+    "32.2": {
+        "indicates": "of what's morphologically a masculine-singular form",
+        "feminine": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "uses a masculine meaning"
+            ]
+        },
+        "singular": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "uses a singular meaning"
+            ]
+        }
+    },
+    "32.3": {
+        "indicates": "of what's morphologically a masculine and likely plural form",
+        "masculine": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "uses a feminine meaning"
+            ]
+        },
+        "plural": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "uses a plural meaning"
+            ]
+        }
+    },
+    "32.4": {
+        "indicates": "of what's morphologically a feminine-singular form",
+        "masculine": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "uses a feminine meaning"
+            ]
+        },
+        "singular": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "uses a singular meaning"
+            ]
+        }
+    },
+    "32.5": {
+        "indicates": "of what's morphologically a feminine-singular form",
+        "feminine": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "uses a masculine meaning"
+            ]
+        },
+        "singular": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "uses a singular meaning"
+            ]
+        }
+    },
+    "32.6": {
+        "indicates": "of what's morphologically a feminine-singular form",
+        "feminine": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "uses a masculine meaning"
+            ]
+        },
+        "singular": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "uses a singular meaning"
+            ]
+        }
+    },
+    "32.7": {
+        "indicates": "of what's morphologically a feminine-singular form",
+        "masculine": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "uses a feminine meaning"
+            ]
+        },
+        "plural": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "uses a plural meaning"
+            ]
+        }
+    },
+    "33": {
+        "indicates": "",
+        "kente 2elt\u012ble": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "use of k\u0113n + simple past in this construction"
+            ]
+        }
+    },
+    "34.0": {
+        "indicates": "for the meaning of '",
+        "fiyye": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "does not use epenthetic -n-"
+            ]
+        }
+    },
+    "34.1": {
+        "indicates": "for the meaning of '",
+        "fiyye": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "does not use epenthetic -n-"
+            ]
+        }
+    },
+    "35": {
+        "indicates": "",
+        "shu eshbak": {
+            "answered_by": [
+                90
+            ],
+            "indicates": []
+        },
+        "shu m\u0113lak": {
+            "answered_by": [
+                90
+            ],
+            "indicates": []
+        }
+    },
+    "36": {
+        "indicates": "",
+        "rje3et shefta enta?": {
+            "answered_by": [
+                90
+            ],
+            "indicates": []
+        }
+    },
+    "37": {
+        "indicates": "",
+        "ma3ash \u0113kol": {
+            "answered_by": [
+                90
+            ],
+            "indicates": []
+        }
+    },
+    "38": {
+        "indicates": "",
+        "h\u0113t la-nDhar": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "pairing of het with la-"
+            ]
+        }
+    },
+    "39": {
+        "indicates": "",
+        "mesh": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "preservation of mesh in nonverbal negation"
+            ]
+        }
+    },
+    "40": {
+        "indicates": "",
+        "t\u0113kol": {
+            "answered_by": [
+                90
+            ],
+            "indicates": []
+        }
+    },
+    "41": {
+        "indicates": "",
+        "badna": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "no assimilation",
+                "no assimilation"
+            ]
+        }
+    },
+    "42": {
+        "indicates": "",
+        "m\u012bn huwwe": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "unacceptable"
+            ]
+        }
+    },
+    "43": {
+        "indicates": "",
+        "ma3la2a": {
+            "answered_by": [
+                90
+            ],
+            "indicates": [
+                "metathesis of /l3/ -> /3l/",
+                "preservation of unstressed interconsonantal /a/"
+            ]
+        }
+    }
+}

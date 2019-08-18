@@ -13,9 +13,9 @@
         ]],
         "options": {
             "e": {"0": [1]},
-            "i": {"1": [0]}
+            "i": {"0": [0]}
         },
-        "exampleTemplate": "in a(n) $2 (word form: $3)",
+        "exampleTemplate": "$1 a(n) {1} (word form: {2})",
         "examples": [
             {
                 "transliteration": "5\u0101y?f",
@@ -27,25 +27,25 @@
                 "transliteration": "7\u0101m?l",
                 "english": "holding, carrying",
                 "arabic": "\u062d\u0627\u0645\u0644",
-                "templateArgs": ["unremarkable context", "participle"]
+                "templateArgs": ["in", "unremarkable context", "participle"]
             },
             {
                 "transliteration": "kt\u0101b?k",
                 "english": "your book, to a female",
                 "arabic": "\u0643\u062a\u0627\u0628\u0650\u0643",
-                "templateArgs": ["suffix", "noun+suffix"]
+                "templateArgs": ["in", "suffix", "noun+suffix"]
             },
             {
                 "transliteration": "yemk?n",
                 "english": "maybe",
                 "arabic": "\u064a\u0645\u0643\u0646",
-                "templateArgs": ["unremarkable context", "adverb"]
+                "templateArgs": ["in", "unremarkable context", "adverb"]
             },
             {
                 "transliteration": "ktb?t",
                 "english": "she wrote",
                 "arabic": "",
-                "templateArgs": ["3sg.f subject suffix", "verb"]
+                "templateArgs": ["in", "3sg.f subject suffix", "verb"]
             }
         ]
     },
@@ -61,9 +61,9 @@
         ]],
         "options": {
             "e": {"0": [1]},
-            "i": {"1": [0]}
+            "i": {"0": [0]}
         },
-        "exampleTemplate": "in a(n) $2 (word form: $3)",
+        "exampleTemplate": "in a(n) {0} (word form: {1})",
         "examples": [
             {
                 "transliteration": "ent?",
@@ -103,9 +103,9 @@
         ]],
         "options": {
             "o": {"0": [1]},
-            "u": {"1": [0]}
+            "u": {"0": [0]}
         },
-        "exampleTemplate": "in a(n) $2 (word form: $3)",
+        "exampleTemplate": "in a(n) {0} (word form: {1})",
         "examples": [
             {
                 "transliteration": "kt\u0101b?",
@@ -141,7 +141,7 @@
             "open back unrounded /\u0251\u02d0/": {"0": [2, 3]},
             "open back rounded /\u0252\u02d0/": {"0": [2, 3, 4]}
         },
-        "exampleTemplate": "$1 $2, a(n) $3 consonant that colors alif $4",
+        "exampleTemplate": "{0} {1}, a(n) {2} consonant that colors alif {3}",
         "examples": [
             {
                 "transliteration": "b?b",
@@ -206,11 +206,11 @@
             "tense"
         ]],
         "options": {
-            "o/u": {"0": 0},
+            "o/u": {"0": [0]},
             "e": {"0": [1, 2]},
             "i": {"0": [1, 3]}
         },
-        "exampleTemplate": "$1 $2, a(n) $3 consonant, in the $4 of a $5",
+        "exampleTemplate": "{0} {1}, a(n) {2} consonant, in the {3} of a {4}",
         "examples": [
             {
                 "transliteration": "S?rt",
@@ -260,19 +260,19 @@
         "question": "How do you pronounce your \u0642 in 3amiyye?",
         "flaws": [],
         "explores": [
-            "Preservation of historic [q]"
+            "Pronunciation of historic [q]"
         ],
         "answersIndicate": [[
-            "unilateral preservation of [q]",
+            "preservation of [q]",
             "debuccalization to [2]",
             "preservation of [q] in proper names",
             "preservation of [q] in some words"
         ]],
         "options": {
-            "always": {"0": [0]},
+            "q": {"0": [0]},
             "interchangeably with 2": {"0": [0, 1]},
-            "only in some words and proper names": {"0": [1, 2, 3]},
-            "only in some proper names": {"0": [1, 3]}
+            "2 except in some words and proper names": {"0": [1, 2, 3]},
+            "2 except in some proper names": {"0": [1, 3]}
         },
         "exampleTemplate": "",
         "examples": []
@@ -293,7 +293,7 @@
             "s\u01132lit-": {"0": [1]},
             "s\u01132l\u012bt-": {"0": [2]}
         },
-        "exampleTemplate": "before $1, a $1-initial suffix",
+        "exampleTemplate": "before {0}, a {0}-initial suffix",
         "examples": [
             {
                 "transliteration": "?-ne",
@@ -371,7 +371,7 @@
             "sometimes": {"0": [0, 1]},
             "never": {"0": [1]}
         },
-        "exampleTemplate": "after $1",
+        "exampleTemplate": "after {0}",
         "examples": [
             {
                 "transliteration": "y\u0113ha",
@@ -433,7 +433,7 @@
             "YE-nef-3el": {"0": [2, 3]},
             "YENF-3el": {"0": [2, 3, 4]}
         },
-        "exampleTemplate": "a $1 verb $2 the productive passive of $3",
+        "exampleTemplate": "a {0} verb that {1} the productive passive of {2}",
         "examples": [
             {
                 "transliteration": "ynksr",
@@ -476,7 +476,7 @@
             "ma b3ref": {"0": [0]},
             "ma b3refsh": {"0": [0, 2]},
             "ab3refsh": {"0": [1, 2]},
-            "b3refsh": {"0": [3]}
+            "b3refsh": {"0": [2]}
         },
         "exampleTemplate": "",
         "examples": []
@@ -546,7 +546,7 @@
             "nin": {"0": [1]},
             "nnin": {"0": [2]}
         },
-        "exampleTemplate": "in the $1 '$2'",
+        "exampleTemplate": "in the {0} '{1}'",
         "examples": [
             {
                 "transliteration": "mi?a",
@@ -585,7 +585,7 @@
             "bayt": {"0": [0]},
             "b\u012bt": {"0": [1, 3]}
         },
-        "exampleTemplate": "in a(n) $1 syllable before $2",
+        "exampleTemplate": "in a(n) {0} syllable before {1}",
         "examples": [
             {
                 "transliteration": "b?t",
@@ -630,7 +630,7 @@
             "3amma": {"0": [1], "1": [0]},
             "mma": {"0": [1], "1": [1]}
         },
-        "exampleTemplate": "before a $1 ($2)",
+        "exampleTemplate": "before a {0} ({1})",
         "examples": [
             {
                 "transliteration": "2\u016bl",
@@ -714,7 +714,7 @@
             "'We still haven't started'": {"0": [1], "1": [0]},
             "'We haven't started yet'": {"0": [1], "1": [1]}
         },
-        "exampleTemplate": "for $1",
+        "exampleTemplate": "for {0}",
         "examples": [
             {
                 "transliteration": "b3dna msh/ma mbalsh\u012bn",
@@ -764,7 +764,7 @@
             "bat": {"0": [0]},
             "bet/bit": {"0": [1]}
         },
-        "exampleTemplate": "in a(n) $1 syllable before $2",
+        "exampleTemplate": "in a(n) {0} syllable before {1}",
         "examples": [
             {
                 "transliteration": "kt?",
@@ -1030,7 +1030,7 @@
     {
         "question": "How do you say \"these\"?",
         "flaws": [
-            "I forgot to include 'ho/haw'. Should have had an Other option!"
+            "I forgot to include 'ho/haw'. Should have had an Other option"
         ],
         "explores": [
             "Word-choice split for 'these' (plural proximal demonstrative)"
@@ -1051,17 +1051,21 @@
     },
     {
         "question": "Which sound like the most-natural ways to say \"next to you\" and \"underneath you\"?",
-        "flaws": [],
+        "flaws": [
+            "Two words isn't really enough to go off of"
+        ],
         "explores": [
             "Usage and perception of 'men' (from) in conjunction with prepositions"
         ],
         "answersIndicate": [[
-            "use of men",
+            "use of men with most prepositions",
+            "use of men with some prepositions",
             "avoidance of men"
         ]],
         "options": {
-            "___ mennak": {"0": [0]},
-            "___ak": {"0": [1]}
+            "7ad minnak, ta7t minnak": {"0": [0]},
+            "7ad minnak, ta7tak": {"0": [1, 2]},
+            "7addak, ta7tak": {"0": [2]}
         },
         "exampleTemplate": "",
         "examples": []
@@ -1105,7 +1109,7 @@
             "singular": {"0": [1], "1": []},
             "plural": {"0": [0], "1": []}
         },
-        "exampleTemplate": "of what's morphologically a $1 form",
+        "exampleTemplate": "of what's morphologically a {0} form",
         "examples": [
             {
                 "transliteration": "taba3",
@@ -1204,7 +1208,7 @@
             "fiyye": {"0": [1]},
             "f\u012bne": {"0": [0]}
         },
-        "exampleTemplate": "for the meaning of $1",
+        "exampleTemplate": "for the meaning of {0}",
         "examples": [
             {
                 "transliteration": "?",
@@ -1291,7 +1295,7 @@
         "options": {
             "h\u0113t nDhar": {"0": [0]},
             "h\u0113t la-nDhar": {"0": [1]},
-            "khall\u012bna nDhar": {"0": [2]}
+            "khall\u012bna nDhar": {"0": []}
         },
         "exampleTemplate": "",
         "examples": []

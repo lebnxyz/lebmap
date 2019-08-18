@@ -104,7 +104,7 @@ def compile_answers(csv_f, json_f):
     '''assumed to be run after do_questions'''
     cross_file_answer_map = {}  # {question number: {csv answer: json option}}
     user_answered_map = {}
-    question_answered_by_map = {}
+    answers = {}
     json_it = iter(json_f)
     j_question = None
     csv_questions = next(csv_f)[3:]
@@ -124,8 +124,14 @@ def compile_answers(csv_f, json_f):
                 except StopIteration:
                     json_it = iter(json_f)
                     j_question = next(json_it)
-            options = j_question['options']
-            option_map = dict(zip(range(1, 1 + len(options)), options))
+            answers[question_no] = {'indicates': ''}
+            if '.' in question_no:
+                example_no = int(question_no.split('.')[1])
+                answers[question_no]['indicates'] = j_question['exampleTemplate'].format(
+                  *j_question['examples'][example_no]['templateArgs']
+                )
+            j_options = j_question['options']
+            option_map = dict(zip(range(1, 1 + len(j_options)), j_options))
             newline_printed = False
             for option in answer.split(';'):
                 options = []
@@ -138,7 +144,7 @@ def compile_answers(csv_f, json_f):
                     if which:
                         for i in map(int, which):
                             cross_file_answer_map.setdefault(option, []).append(option_map[i])
-                            options.append(option_map[int(which)])
+                            options.append(option_map[i])
                     else:
                         options = [f'Other: {option}']
                 elif option in cross_file_answer_map:
@@ -146,10 +152,14 @@ def compile_answers(csv_f, json_f):
                 else:
                     options = [None]
                 for option in options:
-                    question_answered_by_map.setdefault(question_no, {}).setdefault(option, []).append(user_id)
+                    answers[question_no].setdefault(option, {}).setdefault('answered_by', []).append(user_id)
+                    if option is not None and not option.startswith('Other') and 'indicates' not in answers[question_no][option]:
+                        answers[question_no][option]['indicates'] = [
+                          j_question['answersIndicate'][int(k)][i] for k, v in j_options[option].items() for i in v
+                        ]
                     user_answered_map[user_id]['answers'].setdefault(question_no, []).append(option)
                     
-    return cross_file_answer_map, user_answered_map, question_answered_by_map
+    return cross_file_answer_map, user_answered_map, answers
 
 
 def do_compilation(csv_path='results-normalized.csv', json_path='data/questions.json'):
@@ -159,9 +169,9 @@ def do_compilation(csv_path='results-normalized.csv', json_path='data/questions.
           json.load(json_f)
         )
     with open('data/cross_file_answer_map.json', 'w', encoding='utf-8') as f:
-        json.dump(cross_file_answer_map, f)
+        json.dump(cross_file_answer_map, f, indent=4)
     with open('data/respondents.json', 'w', encoding='utf-8') as f:
-        json.dump(user_answered_map, f)
+        json.dump(user_answered_map, f, indent=4)
     with open('data/question_answerers.json', 'w', encoding='utf-8') as f:
-        json.dummp(question_answered_by_map, f)
+        json.dump(question_answered_by_map, f, indent=4)
     print(':)')
