@@ -122,10 +122,10 @@ def compile_answers(csv_f, json_f, cross_file_answer_map=None):
                     json_it = iter(json_f)
                     j_question = next(json_it)
             if question_no not in answers:
-                answers[question_no] = {'indicates': ''}
-            if '.' in question_no and 'indicates' not in answers[question_no]:
+                answers[question_no] = {'environment': ''}
+            if '.' in question_no and not answers[question_no]['environment']:
                 example_no = int(question_no.split('.')[1])
-                answers[question_no]['indicates'] = j_question['exampleTemplate'].format(
+                answers[question_no]['environment'] = j_question['exampleTemplate'].format(
                   *j_question['examples'][example_no]['templateArgs']
                 )
             j_options = j_question['options']
@@ -175,7 +175,7 @@ def do_compilation(csv_path='results-normalized.csv', json_path='data/questions.
     with open('data/cross_file_answer_map.json', 'w', encoding='utf-8') as f:
         json.dump(cross_file_answer_map, f, indent=4)
     with open('data/respondents.json', 'w', encoding='utf-8') as f:
-        json.dump(user_answered_map, f, indent=4)
+        f.write(regex.sub(r'\[\n\s+(.+?)\n\s*]', r'[\1]', json.dumps(user_answered_map, indent=4)))
     with open('data/question_answerers.json', 'w', encoding='utf-8') as f:
-        json.dump(question_answered_by_map, f, indent=4)
+        f.write(regex.sub(r'(\d),\n\s*', r'\1, ', json.dumps(question_answered_by_map, indent=4)))
     print('\n:)')

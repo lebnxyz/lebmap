@@ -15,37 +15,37 @@
             "e": {"0": [1]},
             "i": {"0": [0]}
         },
-        "exampleTemplate": "$1 a(n) {1} (word form: {2})",
+        "exampleTemplate": "{0} {1} (word form: {2})",
         "examples": [
             {
                 "transliteration": "5\u0101y?f",
                 "english": "scared",
                 "arabic": "\u062e\u0627\u064a\u0641",
-                "templateArgs": ["after", "yaa semivowel", "participle"]
+                "templateArgs": ["after", "a yaa semivowel", "participle"]
             },
             {
                 "transliteration": "7\u0101m?l",
                 "english": "holding, carrying",
                 "arabic": "\u062d\u0627\u0645\u0644",
-                "templateArgs": ["in", "unremarkable context", "participle"]
+                "templateArgs": ["in", "an unremarkable context", "participle"]
             },
             {
                 "transliteration": "kt\u0101b?k",
                 "english": "your book, to a female",
                 "arabic": "\u0643\u062a\u0627\u0628\u0650\u0643",
-                "templateArgs": ["in", "suffix", "noun+suffix"]
+                "templateArgs": ["in", "a suffix", "noun+suffix"]
             },
             {
                 "transliteration": "yemk?n",
                 "english": "maybe",
                 "arabic": "\u064a\u0645\u0643\u0646",
-                "templateArgs": ["in", "unremarkable context", "adverb"]
+                "templateArgs": ["in", "an unremarkable context", "adverb"]
             },
             {
                 "transliteration": "ktb?t",
                 "english": "she wrote",
                 "arabic": "",
-                "templateArgs": ["in", "3sg.f subject suffix", "verb"]
+                "templateArgs": ["in", "a 3sg.f subject suffix", "verb"]
             }
         ]
     },
@@ -63,7 +63,7 @@
             "e": {"0": [1]},
             "i": {"0": [0]}
         },
-        "exampleTemplate": "in a(n) {0} (word form: {1})",
+        "exampleTemplate": "in a {0} (word form: {1})",
         "examples": [
             {
                 "transliteration": "ent?",
@@ -105,7 +105,7 @@
             "o": {"0": [1]},
             "u": {"0": [0]}
         },
-        "exampleTemplate": "in a(n) {0} (word form: {1})",
+        "exampleTemplate": "in a {0} (word form: {1})",
         "examples": [
             {
                 "transliteration": "kt\u0101b?",
@@ -123,7 +123,9 @@
     },
     {
         "question": "How do you pronounce the \u0627 (alif) in these words? Give a quick listen to the recording of \"levels\" 1\u20135 above.",
-        "flaws": [],
+        "flaws": [
+            "I really, really, really should have asked about the word 2aal"
+        ],
         "explores": [
             "Pronunciation of long /a/ depending on its phonological environment"
         ],
@@ -141,13 +143,13 @@
             "open back unrounded /\u0251\u02d0/": {"0": [2, 3]},
             "open back rounded /\u0252\u02d0/": {"0": [2, 3, 4]}
         },
-        "exampleTemplate": "{0} {1}, a(n) {2} consonant that colors alif {3}",
+        "exampleTemplate": "{0} {1}, a {2} consonant that colors alif {3}",
         "examples": [
             {
                 "transliteration": "b?b",
                 "english": "door",
                 "arabic": "\u0628\u0627\u0628",
-                "templateArgs": ["between", "two b", "non-emphatic", "normally"]
+                "templateArgs": ["between", "two 'b'", "non-emphatic", "normally"]
             },
             {
                 "transliteration": "syy?ra",
@@ -210,49 +212,49 @@
             "e": {"0": [1, 2]},
             "i": {"0": [1, 3]}
         },
-        "exampleTemplate": "{0} {1}, a(n) {2} consonant, in the {3} of a {4}",
+        "exampleTemplate": "{0} {1}, {2} consonant, in the {3} of a {4}",
         "examples": [
             {
                 "transliteration": "S?rt",
                 "english": "I became",
                 "arabic": "\u0635\u0631\u062a",
-                "templateArgs": ["after", "S", "pharyngealized", "first syllable", "verb"]
+                "templateArgs": ["after", "S", "a pharyngealized", "first syllable", "verb"]
             },
             {
                 "transliteration": "bS?77",
                 "english": "I heal",
                 "arabic": "\u0628\u0635\u062d",
-                "templateArgs": ["after", "S", "pharyngealized", "first syllable", "verb"]
+                "templateArgs": ["after", "S", "a pharyngealized", "first syllable", "verb"]
             },
             {
                 "transliteration": "bt?mb?sTe",
                 "english": "you enjoy yourself",
                 "arabic": "\u0628\u062a\u0646\u0628\u0633\u0637\u064a",
-                "templateArgs": ["before", "emphasis-spreading from T", "pharyngealized", "2sg.f prefix", "present-indicative verb"]
+                "templateArgs": ["before", "emphasis-spreading from T", "a pharyngealized", "2sg.f prefix", "present-indicative verb"]
             },
             {
                 "transliteration": "2?SSa",
                 "english": "story",
                 "arabic": "\u0642\u0635\u0629",
-                "templateArgs": ["between", "a historically-emphatic q and an S", "pharyngealized", "first syllable", "noun"]
+                "templateArgs": ["between", "a historically-emphatic q and an S", "a pharyngealized", "first syllable", "noun"]
             },
             {
                 "transliteration": "mn?f7aS",
                 "english": "we examine",
                 "arabic": "\u0645\u0646\u0641\u062d\u064e\u0635",
-                "templateArgs": ["before", "emphasis-spreading from S", "pharyngealized", "1pl prefix", "present-indicative verb"]
+                "templateArgs": ["before", "emphasis-spreading from S", "a pharyngealized", "1pl prefix", "present-indicative verb"]
             },
             {
                 "transliteration": "j?m3a",
                 "english": "week/Friday",
                 "arabic": "\u062c\u0645\u0639\u0629",
-                "templateArgs": ["historically", "an uncnoditioned /u/ after j", "unremarkable", "first syllable", "noun"]
+                "templateArgs": ["replacing", "a historically unconditioned /u/ after j", "an unremarkable", "first syllable", "noun"]
             },
             {
                 "transliteration": "l?8a",
                 "english": "language",
                 "arabic": "\u0644\u063a\u0629",
-                "templateArgs": ["historically", "an unconditioned /u/ after l", "unremarkable", "first syllable", "noun"]
+                "templateArgs": ["replacing", "a historically unconditioned /u/ after l", "an unremarkable", "first syllable", "noun"]
             }
         ]
     },
@@ -585,25 +587,25 @@
             "bayt": {"0": [0]},
             "b\u012bt": {"0": [1, 3]}
         },
-        "exampleTemplate": "in a(n) {0} syllable before {1}",
+        "exampleTemplate": "in {0} syllable before {1}",
         "examples": [
             {
                 "transliteration": "b?t",
                 "english": "house",
                 "arabic": "\u0628\u064a\u062a",
-                "templateArgs": ["closed", "word end"]
+                "templateArgs": ["a closed", "word end"]
             },
             {
                 "transliteration": "b?tk",
                 "english": "your house",
                 "arabic": "\u0628\u064a\u062a\u0643",
-                "templateArgs": ["open", "suffix"]
+                "templateArgs": ["an open", "suffix"]
             },
             {
                 "transliteration": "b?tna",
                 "english": "our house",
                 "arabic": "\u0628\u064a\u062a\u0646\u0627",
-                "templateArgs": ["closed", "suffix"]
+                "templateArgs": ["a closed", "suffix"]
             }
         ]
     },
@@ -764,31 +766,31 @@
             "bat": {"0": [0]},
             "bet/bit": {"0": [1]}
         },
-        "exampleTemplate": "in a(n) {0} syllable before {1}",
+        "exampleTemplate": "in a {0} syllable before {1}",
         "examples": [
             {
                 "transliteration": "kt?",
                 "english": "she wrote",
                 "arabic": "\u0647\u064a \u0643\u062a\u0628\u062a",
-                "templateArgs": ["closed", "word end"]
+                "templateArgs": ["a closed", "word end"]
             },
             {
                 "transliteration": "kt?lo",
                 "english": "she wrote to him",
                 "arabic": "\u0643\u062a\u0628\u062a\u0644\u0648",
-                "templateArgs": ["closed", "a suffix"]
+                "templateArgs": ["a closed", "a suffix"]
             },
             {
                 "transliteration": "kt?o",
                 "english": "she wrote it, masculine",
                 "arabic": "\u0643\u062a\u0628\u062a\u0648",
-                "templateArgs": ["open", "a suffix"]
+                "templateArgs": ["an open", "a suffix"]
             },
             {
                 "transliteration": "kt?tha",
                 "english": "she wrote it, feminine",
                 "arabic": "\u0643\u062a\u0628\u062a\u0647\u0627\u060c \u0643\u062a\u0628\u062a\u0627",
-                "templateArgs": ["historically closed (but nowadays typically open)", "a suffix"]
+                "templateArgs": ["a historically closed (but nowadays typically open)", "a suffix"]
             }
         ]
     },
