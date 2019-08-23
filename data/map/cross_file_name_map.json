@@ -1,0 +1,38 @@
+{
+    "districts": {
+        "Bent Jbayl": "Bint Jbeil",
+        "Nabatiyeh": "Nabatiyeh",
+        "Beirut-three": "Beirut",
+        "Zahleh": "Zahle",
+        "Aley": "Aalay",
+        "Baabda": "Baabda",
+        "Chouf": "Chouf",
+        "Jbayl": "Jbeil",
+        "Kesrouan": "Kesrouane",
+        "Matn": "Matn",
+        "Akkar": "Aakkar",
+        "Batroun": "Batroun",
+        "Bcharreh": "Bsharri",
+        "Koura": "Koura",
+        "Miniyeh-Danniyeh": "Miniyeh-Danniyeh",
+        "Tripoli": "Tripoli",
+        "Zgharta": "Zgharta",
+        "Jezzine": "Jezzine",
+        "Saida": "Saida",
+        "Sour": "Tyre",
+        "Zahrany": "Zahrany",
+        "Beirut-two": "Beirut",
+        "Beirut-one": "Beirut",
+        "Baalbek-Hermel": "Baalbek",
+        "WestBekaa-Rachaya": "West Bekaa",
+        "Marjayoun-Hasbaya": "Marjaayoun"
+    },
+    "governorates": {
+        "An Nabatiyah": "Nabatiyeh",
+        "Beirut": "Beirut",
+        "Beqaa": "Beqaa",
+        "Mount Lebanon": "Mount Lebanon",
+        "North Lebanon": "North Governorate",
+        "South Lebanon": "South Governorate"
+    }
+}

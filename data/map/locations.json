@@ -28,16 +28,16 @@
     },
     "Kfarshima": {
         "district": "Baabda",
-        "governorate": "Mount Lebanon Governorate",
+        "governorate": "Mount Lebanon",
         "location": {
             "lat": 33.8168657,
             "lng": 35.5360583
         },
         "bounds": null
     },
-    "Zahl\\u00e9": {
-        "district": "Zahl\\u00e9",
-        "governorate": "Beqaa Governorate",
+    "Zahle": {
+        "district": "Zahle",
+        "governorate": "Beqaa",
         "location": {
             "lat": 33.8462304,
             "lng": 35.9019775
@@ -127,7 +127,7 @@
     },
     "Aalay": {
         "district": "Aalay",
-        "governorate": "Mount Lebanon Governorate",
+        "governorate": "Mount Lebanon",
         "location": {
             "lat": 33.8100863,
             "lng": 35.5973259
@@ -163,7 +163,7 @@
     },
     "Btekhnay": {
         "district": "Baabda",
-        "governorate": "Mount Lebanon Governorate",
+        "governorate": "Mount Lebanon",
         "location": {
             "lat": 33.8407655,
             "lng": 35.7180176
@@ -226,7 +226,7 @@
     },
     "Kherbet Qanafar": {
         "district": "West Bekaa",
-        "governorate": "Beqaa Governorate",
+        "governorate": "Beqaa",
         "location": {
             "lat": 33.6375916,
             "lng": 35.7254647
@@ -244,7 +244,7 @@
     },
     "Baskinta": {
         "district": "Matn",
-        "governorate": "Mount Lebanon Governorate",
+        "governorate": "Mount Lebanon",
         "location": {
             "lat": 33.9440185,
             "lng": 35.7865408
@@ -270,8 +270,8 @@
         }
     },
     "Ain Kfar Zabad": {
-        "district": "Zahl\\u00e9",
-        "governorate": "Beqaa Governorate",
+        "district": "Zahle",
+        "governorate": "Beqaa",
         "location": {
             "lat": 33.7956852,
             "lng": 36.0062037
@@ -280,7 +280,7 @@
     },
     "Hrajel": {
         "district": "Kesrouane",
-        "governorate": "Mount Lebanon Governorate",
+        "governorate": "Mount Lebanon",
         "location": {
             "lat": 34.0140693,
             "lng": 35.79493739999999
@@ -289,7 +289,7 @@
     },
     "Bednayel": {
         "district": "Baalbek",
-        "governorate": "Beqaa Governorate",
+        "governorate": "Beqaa",
         "location": {
             "lat": 33.9124161,
             "lng": 36.0143559
@@ -298,7 +298,7 @@
     },
     "Biyada": {
         "district": "Aalay",
-        "governorate": "Mount Lebanon Governorate",
+        "governorate": "Mount Lebanon",
         "location": {
             "lat": 33.7894444,
             "lng": 35.5902778
@@ -316,7 +316,7 @@
     },
     "Chouaifet El Aamroussieh": {
         "district": "Aalay",
-        "governorate": "Mount Lebanon Governorate",
+        "governorate": "Mount Lebanon",
         "location": {
             "lat": 33.816667,
             "lng": 35.516667
@@ -325,7 +325,7 @@
     },
     "Charoun": {
         "district": "Aalay",
-        "governorate": "Mount Lebanon Governorate",
+        "governorate": "Mount Lebanon",
         "location": {
             "lat": 33.7717906,
             "lng": 35.6864066
@@ -352,7 +352,7 @@
     },
     "Joun": {
         "district": "Chouf",
-        "governorate": "Mount Lebanon Governorate",
+        "governorate": "Mount Lebanon",
         "location": {
             "lat": 33.5808902,
             "lng": 35.4611653
@@ -370,7 +370,7 @@
     },
     "Byblos": {
         "district": "Jbeil",
-        "governorate": "Mount Lebanon Governorate",
+        "governorate": "Mount Lebanon",
         "location": {
             "lat": 34.1230021,
             "lng": 35.6519282
@@ -379,7 +379,7 @@
     },
     "Rasm El Hadath": {
         "district": "Baalbek",
-        "governorate": "Beqaa Governorate",
+        "governorate": "Beqaa",
         "location": {
             "lat": 34.1385127,
             "lng": 36.276776
@@ -388,7 +388,7 @@
     },
     "Aamchit": {
         "district": "Jbeil",
-        "governorate": "Mount Lebanon Governorate",
+        "governorate": "Mount Lebanon",
         "location": {
             "lat": 34.14890440000001,
             "lng": 35.6379896
@@ -406,7 +406,7 @@
     },
     "Ghadir": {
         "district": "Kesrouane",
-        "governorate": "Mount Lebanon Governorate",
+        "governorate": "Mount Lebanon",
         "location": {
             "lat": 33.9794609,
             "lng": 35.6376806
@@ -415,7 +415,7 @@
     },
     "Ashqout": {
         "district": "Kesrouane",
-        "governorate": "Mount Lebanon Governorate",
+        "governorate": "Mount Lebanon",
         "location": {
             "lat": 33.9851074,
             "lng": 35.7108291
@@ -442,7 +442,7 @@
     },
     "Dbayeh": {
         "district": "Matn",
-        "governorate": "Mount Lebanon Governorate",
+        "governorate": "Mount Lebanon",
         "location": {
             "lat": 33.9329151,
             "lng": 35.5892181
@@ -469,7 +469,7 @@
     },
     "Daraaoun": {
         "district": "Kesrouane",
-        "governorate": "Mount Lebanon Governorate",
+        "governorate": "Mount Lebanon",
         "location": {
             "lat": 33.984198,
             "lng": 35.662867
@@ -523,7 +523,7 @@
     },
     "Deir El Qamar": {
         "district": "Chouf",
-        "governorate": "Mount Lebanon Governorate",
+        "governorate": "Mount Lebanon",
         "location": {
             "lat": 33.6972116,
             "lng": 35.5605832
@@ -550,7 +550,7 @@
     },
     "Sohmor": {
         "district": "West Bekaa",
-        "governorate": "Beqaa Governorate",
+        "governorate": "Beqaa",
         "location": {
             "lat": 33.5197252,
             "lng": 35.6862309
@@ -559,7 +559,7 @@
     },
     "Ain El Kharroube": {
         "district": "Matn",
-        "governorate": "Mount Lebanon Governorate",
+        "governorate": "Mount Lebanon",
         "location": {
             "lat": 33.9337197,
             "lng": 35.7010954
@@ -577,7 +577,7 @@
     },
     "Mechmech": {
         "district": "Jbeil",
-        "governorate": "Mount Lebanon Governorate",
+        "governorate": "Mount Lebanon",
         "location": {
             "lat": 34.1456641,
             "lng": 35.7814317

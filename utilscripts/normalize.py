@@ -248,3 +248,25 @@ def do_special_cases(json_questions_path='data/question_answerers.json', json_us
      open(json_questions_path, 'w', encoding='utf-8') as q_f:
         user_f.write(regex.sub(r'\[\n\s+(.+?)\n\s*]', r'[\1]', json.dumps(userj, indent=4)))
         q_f.write(regex.sub(r'(\d),\n\s*', r'\1, ', json.dumps(qj, indent=4)))
+
+
+def normalize_map_names(map_path='data/map/lb_2009_administrative_districts.geojson', locations_path='data/map/locations.json'):
+    with open(map_path) as map_f, open(locations_path) as locations_f:
+        lb_map, locations = json.load(map_f), json.load(locations_f)
+    cross_file_name_map = {'districts': {}, 'governorates': {}}
+    districts = cross_file_name_map['districts']
+    governorates = cross_file_name_map['governorates']
+    # prompt for entry of locations.json names
+    for feature in lb_map['features']:
+        props = feature['properties']
+        if props['GOVERNORATE'] not in governorates:
+            governorates[props['GOVERNORATE']] = input(f"'{props['GOVERNORATE']}' (governorate): ") or props['GOVERNORATE']
+        props['GOVERNORATE'] = governorates[props['GOVERNORATE']]
+        if props['DISTRICT'] not in districts:
+            districts[props['DISTRICT']] = input(f"'{props['DISTRICT']}' (district): ") or props['DISTRICT']
+        props['DISTRICT'] = districts[props['DISTRICT']]
+    with open(map_path, 'w') as f:
+        json.dump(lb_map, f)
+    with open('data/map/cross_file_name_map.json', 'w') as f:
+        json.dump(cross_file_name_map, f, indent=4)
+
