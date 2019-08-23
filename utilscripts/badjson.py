@@ -876,18 +876,18 @@ class JSONEncoder(object):
             builder.append(self.__encoder(key))
             builder.append('"')
             builder.append(self.key_separator)
-            if key == 'templateArgs':
+            if key == 'environmentArgs':
                 _old_indent = self.indent
                 self.indent = 'no'
-            if key == 'options':
+            if key == 'optionsIndicate':
                 _old_dne = self.do_not_indent
                 self.in_dne_dict = True
                 self.do_not_indent = True
                 self.indent_once = True
             self.__encode(v, markers, builder, _current_indent_level)
-            if key == 'templateArgs':
+            if key == 'environmentArgs':
                 self.indent = _old_indent
-            if key == 'options':
+            if key == 'optionsIndicate':
                 self.in_dne_dict = False
                 self.do_not_indent = _old_dne
             del key

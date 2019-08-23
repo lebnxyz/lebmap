@@ -1,6 +1,7 @@
 import csv
 import json
 import regex
+from contextlib import suppress
 
 regex.DEFAULT_VERSION = regex.VERSION1
 
@@ -100,18 +101,20 @@ def compile_answers(csv_f, json_f, cross_file_answer_map=None):
     if cross_file_answer_map is None:
         answer_map_given = False
         cross_file_answer_map = {}  # {question number: {csv answer: json option}}
-    user_answered_map = {}
+    respondents = []
     answers = {}
     json_it = iter(json_f)
     j_question = None
     csv_questions = next(csv_f)[3:]
     for user_id, (timestamp, location, extra_location, *line) in enumerate(csv_f):
-        user_answered_map[user_id] = {
+        respondents.append({
           'timeCompleted': timestamp,
+          'number': user_id,
           'location': location,
           '3a': extra_location,
-          'answers': {}
-        }
+          'answers': {},
+          'otherAnswers': {}
+        })
         for question_no, answer in zip(csv_questions, line):
             if '.' not in question_no or question_no.split('.', 1)[1] == '0':
                 j_question = None
@@ -122,14 +125,13 @@ def compile_answers(csv_f, json_f, cross_file_answer_map=None):
                     json_it = iter(json_f)
                     j_question = next(json_it)
             if question_no not in answers:
-                answers[question_no] = {'environment': ''}
+                answers[question_no] = {'number': question_no, 'environment': '', 'options': {}, 'otherOptions': {}}
             if '.' in question_no and not answers[question_no]['environment']:
                 example_no = int(question_no.split('.')[1])
-                answers[question_no]['environment'] = j_question['exampleTemplate'].format(
-                  *j_question['examples'][example_no]['templateArgs']
+                answers[question_no]['environment'] = j_question['environmentTemplate'].format(
+                  *j_question['examples'][example_no]['environmentArgs']
                 )
-            j_options = j_question['options']
-            option_map = dict(zip(range(1, 1 + len(j_options)), j_options))
+            option_map = dict(zip(range(1, 1 + len(j_question['optionsList'])), j_question['optionsList']))
             newline_printed = False
             for option in answer.split(';'):
                 options = []
@@ -153,21 +155,28 @@ def compile_answers(csv_f, json_f, cross_file_answer_map=None):
                 else:
                     options = [None]
                 for option in options:
-                    answers[question_no].setdefault(option, {}).setdefault('answered_by', []).append(user_id)
-                    if option is not None and not option.startswith('Other') and 'indicates' not in answers[question_no][option]:
-                        answers[question_no][option]['indicates'] = [
-                          j_question['answersIndicate'][int(k)][i] for k, v in j_options[option].items() for i in v
-                        ]
-                    user_answered_map[user_id]['answers'].setdefault(question_no, []).append(option)
-                    
-    return cross_file_answer_map, user_answered_map, answers
+                    if option is None or option.startswith('Other'):
+                        answers[question_no]['otherOptions'].setdefault(option, {}).setdefault('answeredBy', []).append(user_id)
+                        respondents[-1]['answers'].setdefault(question_no, []).append(-1)
+                        respondents[-1]['otherAnswers'].setdefault(question_no, []).append(option)
+                    else:
+                        number = j_question['options'][option]
+                        answers[question_no]['options'].setdefault(number, {}).setdefault('answeredBy', []).append(user_id)
+                        if 'indicates' not in answers[question_no]['options'][number]:
+                            answers[question_no]['options'][number]['indicates'] = [
+                            j_question['insights'][primary][secondary]
+                            for primary, primary_li in enumerate(j_question['optionsIndicate'][number])
+                            for secondary in primary_li
+                            ]
+                        respondents[-1]['answers'].setdefault(question_no, []).append(number)
+    return cross_file_answer_map, respondents, answers
 
 
 def do_compilation(csv_path='results-normalized.csv', json_path='data/questions.json', answer_map_path='data/cross_file_answer_map.json'):
     with open(csv_path, encoding='utf-8', newline='') as csv_f, \
      open(json_path, encoding='utf-8') as json_f, \
      open(answer_map_path, encoding='utf-8') as answer_map:
-        cross_file_answer_map, user_answered_map, question_answered_by_map = compile_answers(
+        cross_file_answer_map, respondents, question_answered_by_map = compile_answers(
           csv.reader(csv_f),
           json.load(json_f),
           cross_file_answer_map=json.load(answer_map)
@@ -175,7 +184,67 @@ def do_compilation(csv_path='results-normalized.csv', json_path='data/questions.
     with open('data/cross_file_answer_map.json', 'w', encoding='utf-8') as f:
         json.dump(cross_file_answer_map, f, indent=4)
     with open('data/respondents.json', 'w', encoding='utf-8') as f:
-        f.write(regex.sub(r'\[\n\s+(.+?)\n\s*]', r'[\1]', json.dumps(user_answered_map, indent=4)))
+        f.write(regex.sub(r'\[\n\s+(.+?)\n\s*]', r'[\1]', json.dumps(respondents, indent=4)))
     with open('data/question_answerers.json', 'w', encoding='utf-8') as f:
         f.write(regex.sub(r'(\d),\n\s*', r'\1, ', json.dumps(question_answered_by_map, indent=4)))
     print('\n:)')
+
+
+def do_special_cases(json_questions_path='data/question_answerers.json', json_users_path='data/respondents.json'):
+    '''assumed to be run after do_compilation()'''
+    with open(json_users_path, encoding='utf-8') as user_f, \
+     open(json_questions_path, encoding='utf-8') as q_f:
+        userj = json.load(user_f)
+        qj = json.load(q_f)
+        for user in userj:
+            user_answers = user['answers']
+            user_id = user['number']
+            '''
+            take care of ka-ta-b?t: -bat was not included in the survey,
+            with question 19 saying "if you say -bat, just pick one of
+            the options that has the correct syllable count, and your answer
+            to how you pronounce 'ktbt' in isolation (#20) will clarify"
+            '''
+            if 0 in user_answers['19.0']:
+                # surprisingly, nobody answered more than one thing for 20
+                # but that could still change ofc
+                original_20 = user_answers['20']
+                adjusted_20 = [0 if i < 3 else 3 for i in original_20]
+                # if, for 19.0, they answered both "bat" and "bet", then combine the answers for 20
+                # in order to get both e.g. "kat-bat" and "kat-bet". Otherwise if they only answered
+                # "bat" for 19.0 then use only the adjusted answers for 20 so only use "kat-bat"
+                if len(user_answers['19.0']) == 1:
+                    user_answers['20'] = adjusted_20
+                    for option in original_20:
+                        if option in qj['19.0']['options'] and user_id in qj['19.0']['options'][option]['answeredBy']:
+                            qj['19.0']['options'][option]['answeredBy'].remove(user_id)
+                else:
+                    user_answers['20'] = list(dict.fromkeys(original_20 + adjusted_20))
+                for option in adjusted_20:
+                    if option in qj['20']['options'] and user_id not in qj['20']['options'][option]['answeredBy']:
+                        qj['20']['options'][option]['answeredBy'].append(user_id)
+            '''
+            take care of the fact that "N/A, I'd never say 3am here" should XOR with the other '3amma'
+            options in question 16
+            '''
+            for qno in (f'16.{minor}' for minor in range(8)):
+                if 0 in user_answers[qno]:
+                    user_answers[qno] = [0]
+                    for i in range(1, 4):
+                        if i in qj[qno]['options'] and user_id in qj[qno]['options'][i]['answeredBy']:
+                            qj[qno]['options'][i]['answeredBy'].remove(user_id)
+            '''
+            take care of the fact that "N/A, I don't say this" should XOR with the other 'taba3' options
+            in question 32
+            '''
+            for qno in (f'32.{minor}' for minor in range(8)):
+                if 0 in user_answers[qno]:
+                    user_answers[qno] = [0]
+                    for i in range(1, 5):
+                        if i in qj[qno]['options'] and user_id in qj[qno]['options'][i]['answeredBy']:
+                            qj[qno]['options'][i]['answeredBy'].remove(user_id)
+    
+    with open(json_users_path, 'w', encoding='utf-8') as user_f, \
+     open(json_questions_path, 'w', encoding='utf-8') as q_f:
+        user_f.write(regex.sub(r'\[\n\s+(.+?)\n\s*]', r'[\1]', json.dumps(userj, indent=4)))
+        q_f.write(regex.sub(r'(\d),\n\s*', r'\1, ', json.dumps(qj, indent=4)))
