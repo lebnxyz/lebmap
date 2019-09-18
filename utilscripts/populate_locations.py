@@ -1,4 +1,4 @@
-LAST_TIMESTAMP = '2019/08/16 11:19:20 PM MDT'
+LAST_TIMESTAMP = '2019/09/07 7:37:45 PM MDT'
 import csv
 import json
 import requests
@@ -100,7 +100,7 @@ def populate(d, responses, out):
         elif info is not None:
             _, governorate, district, city, *_ = *(i['long_name'] for i in info['address_components'][::-1]), *[None]*4
             if city is None or isinstance(info, RenameCity):
-                city = input(f'Renaming city. Enter nothing to use {name}, . to use"unknown", else enter new name: ')
+                city = input(f'Renaming city. Enter nothing to use {name}, . to use "unknown", else enter new name: ')
                 if not city:
                     city = name
                 elif city == '.':
@@ -126,7 +126,7 @@ def populate(d, responses, out):
 def update_locations(
     new_csv_path='Lebanon_ Dialect Survey.csv',
     old_csv_path='results-normalized.csv',
-    json_path='data/locations.json'
+    json_path='data/map/locations.json'
   ):
     with open(new_csv_path, 'r', encoding='utf-8') as new_csv_f, \
      open(json_path, 'r', encoding='utf-8') as json_f:

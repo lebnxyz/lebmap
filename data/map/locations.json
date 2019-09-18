@@ -156,10 +156,19 @@
         "district": "Tripoli",
         "governorate": "North Governorate",
         "location": {
-            "lat": 34.4259141,
-            "lng": 35.8421541
+            "lat": 34.4345947,
+            "lng": 35.8361633
         },
-        "bounds": null
+        "bounds": {
+            "northeast": {
+                "lat": 34.4668712,
+                "lng": 35.8748053
+            },
+            "southwest": {
+                "lat": 34.3885327,
+                "lng": 35.8179455
+            }
+        }
     },
     "Btekhnay": {
         "district": "Baabda",
