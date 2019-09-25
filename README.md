@@ -1,5 +1,5 @@
-# lebanon
-Interactive dialectal-feature map for Lebanese Arabic. Based on the results of
+# lebanese
+An interactive map charting dialectal features of Lebanese Arabic. Based on the results of
 [this survey](https://forms.gle/U4h1xtSJZ5nnv5Ku7) posted to /r/Lebanon on 8/13/19.
 
 This project is starting its second phase, as the survey data's all been normalized and

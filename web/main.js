@@ -7,7 +7,7 @@ const map = d3.select('#map')
 const chart = d3.select('#chart');
 
 d3.json('../data/map/lb_2009_administrative_districts.geojson').then(function(lb) {
-    const projection = d3.geoEqualEarth()
+    const projection = d3.geoMercator()
       .fitSize([width, height], lb);
     const path = d3.geoPath(projection);
 
