@@ -1,5 +1,5 @@
-const width = 500;
-const height = 500;
+const width = 600;
+const height = 600;
 
 const map = d3.select('#map')
   .attr('width', width)
@@ -12,8 +12,6 @@ d3.json('../data/map/lb_2009_administrative_districts.geojson').then(function(lb
     const path = d3.geoPath(projection);
 
     map.append('path')
-      .attr('d', path(lb))
-      .attr('fill', 'black')
-      .attr('stroke', 'white');
+      .attr('d', path(lb));
 });
 

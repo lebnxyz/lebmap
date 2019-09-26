@@ -1,0 +1,10 @@
+body {
+    background-color: black;
+}
+
+#map {
+    fill: black;
+    stroke: gray;
+    stroke-width: 3px;
+    stroke-linejoin: round;
+}
