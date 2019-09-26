@@ -4,7 +4,7 @@ body {
 
 #map {
     fill: black;
-    stroke: gray;
-    stroke-width: 3px;
+    stroke: darkgray;
+    stroke-width: 5px;
     stroke-linejoin: round;
 }
