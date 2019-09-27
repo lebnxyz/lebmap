@@ -22,6 +22,14 @@ def pprint(*args, **kwargs):
     print(*map(pformat, args), **kwargs)
 
 
+def transform_location(d):
+    """
+    {'lat': a, 'lng': b} -> [b, a]
+    ...for easy d3.js compatibility.
+    """
+    return [d['lng'], d['lat']]
+
+
 def get(name, *, url='https://maps.googleapis.com/maps/api/geocode', format='json', api_key=secret_config['GMAPS_API_KEY']):
     while True:
         r = requests.get(f'{url}/{format}', {'address': name, 'key': api_key})
@@ -110,7 +118,7 @@ def populate(d, responses, out):
             d[city] = {
                 'district': district,
                 'governorate': governorate,
-                'location': info['geometry'].get('location', None),
+                'location': transform_location(info['geometry'].get('location', None)),
                 'bounds': info['geometry'].get('bounds', None)
             }
         response[1] = city

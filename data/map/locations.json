@@ -3,8 +3,8 @@
         "district": "Hasbaiyya",
         "governorate": "Nabatiyeh Governorate",
         "location": [
-            33.4159965,
-            35.739317
+            35.739317,
+            33.4159965
         ],
         "bounds": null,
         "name": "Khalwat"
@@ -13,8 +13,8 @@
         "district": "Aakkar",
         "governorate": "North Governorate",
         "location": [
-            34.5440368,
-            36.0798357
+            36.0798357,
+            34.5440368
         ],
         "bounds": null,
         "name": "Halba"
@@ -23,8 +23,8 @@
         "district": "Marjaayoun",
         "governorate": "Nabatiyeh Governorate",
         "location": [
-            33.3594755,
-            35.5889282
+            35.5889282,
+            33.3594755
         ],
         "bounds": null,
         "name": "Marjaayoun"
@@ -33,8 +33,8 @@
         "district": "Baabda",
         "governorate": "Mount Lebanon",
         "location": [
-            33.8168657,
-            35.5360583
+            35.5360583,
+            33.8168657
         ],
         "bounds": null,
         "name": "Kfarshima"
@@ -43,8 +43,8 @@
         "district": "Zahle",
         "governorate": "Beqaa",
         "location": [
-            33.8462304,
-            35.9019775
+            35.9019775,
+            33.8462304
         ],
         "bounds": {
             "northeast": {
@@ -62,8 +62,8 @@
         "district": "Aakkar",
         "governorate": "North Governorate",
         "location": [
-            34.571583,
-            36.2815234
+            36.2815234,
+            34.571583
         ],
         "bounds": null,
         "name": "Qoubaiyat"
@@ -72,8 +72,8 @@
         "district": "Batroun",
         "governorate": "North Governorate",
         "location": [
-            34.2246575,
-            35.8659118
+            35.8659118,
+            34.2246575
         ],
         "bounds": null,
         "name": "Kfour El Arabi"
@@ -82,8 +82,8 @@
         "district": "Batroun",
         "governorate": "North Governorate",
         "location": [
-            34.2096334,
-            35.8778671
+            35.8778671,
+            34.2096334
         ],
         "bounds": null,
         "name": "Tannourine"
@@ -92,8 +92,8 @@
         "district": "Beirut",
         "governorate": "Beirut Governorate",
         "location": [
-            33.8937913,
-            35.5017767
+            35.5017767,
+            33.8937913
         ],
         "bounds": {
             "northeast": {
@@ -111,8 +111,8 @@
         "district": "Nabatiyeh",
         "governorate": "South Governorate",
         "location": [
-            33.3607344,
-            35.4011052
+            35.4011052,
+            33.3607344
         ],
         "bounds": null,
         "name": "Ebba"
@@ -121,8 +121,8 @@
         "district": "Nabatiyeh",
         "governorate": "Nabatiyeh Governorate",
         "location": [
-            33.3771898,
-            35.4835902
+            35.4835902,
+            33.3771898
         ],
         "bounds": {
             "northeast": {
@@ -140,8 +140,8 @@
         "district": "Aalay",
         "governorate": "Mount Lebanon",
         "location": [
-            33.8100863,
-            35.5973259
+            35.5973259,
+            33.8100863
         ],
         "bounds": {
             "northeast": {
@@ -159,8 +159,8 @@
         "district": "Tyre",
         "governorate": "South Governorate",
         "location": [
-            33.2083135,
-            35.3002132
+            35.3002132,
+            33.2083135
         ],
         "bounds": null,
         "name": "Qana"
@@ -169,8 +169,8 @@
         "district": "Tripoli",
         "governorate": "North Governorate",
         "location": [
-            34.4345947,
-            35.8361633
+            35.8361633,
+            34.4345947
         ],
         "bounds": {
             "northeast": {
@@ -188,8 +188,8 @@
         "district": "Baabda",
         "governorate": "Mount Lebanon",
         "location": [
-            33.8407655,
-            35.7180176
+            35.7180176,
+            33.8407655
         ],
         "bounds": null,
         "name": "Btekhnay"
@@ -198,8 +198,8 @@
         "district": "Saida",
         "governorate": "South Governorate",
         "location": [
-            33.5570691,
-            35.372948
+            35.372948,
+            33.5570691
         ],
         "bounds": {
             "northeast": {
@@ -217,8 +217,8 @@
         "district": "Tyre",
         "governorate": "South Governorate",
         "location": [
-            33.2704888,
-            35.2037641
+            35.2037641,
+            33.2704888
         ],
         "bounds": {
             "northeast": {
@@ -236,8 +236,8 @@
         "district": "Koura",
         "governorate": "North Governorate",
         "location": [
-            34.2990173,
-            35.808876
+            35.808876,
+            34.2990173
         ],
         "bounds": {
             "northeast": {
@@ -255,8 +255,8 @@
         "district": "West Bekaa",
         "governorate": "Beqaa",
         "location": [
-            33.6375916,
-            35.7254647
+            35.7254647,
+            33.6375916
         ],
         "bounds": null,
         "name": "Kherbet Qanafar"
@@ -265,8 +265,8 @@
         "district": "Zgharta",
         "governorate": "North Governorate",
         "location": [
-            34.3331857,
-            35.9324366
+            35.9324366,
+            34.3331857
         ],
         "bounds": null,
         "name": "Miziara"
@@ -275,8 +275,8 @@
         "district": "Matn",
         "governorate": "Mount Lebanon",
         "location": [
-            33.9440185,
-            35.7865408
+            35.7865408,
+            33.9440185
         ],
         "bounds": null,
         "name": "Baskinta"
@@ -285,8 +285,8 @@
         "district": "Batroun",
         "governorate": "North Governorate",
         "location": [
-            34.249832,
-            35.6642904
+            35.6642904,
+            34.249832
         ],
         "bounds": {
             "northeast": {
@@ -304,8 +304,8 @@
         "district": "Zahle",
         "governorate": "Beqaa",
         "location": [
-            33.7956852,
-            36.0062037
+            36.0062037,
+            33.7956852
         ],
         "bounds": null,
         "name": "Ain Kfar Zabad"
@@ -314,8 +314,8 @@
         "district": "Kesrouane",
         "governorate": "Mount Lebanon",
         "location": [
-            34.0140693,
-            35.79493739999999
+            35.79493739999999,
+            34.0140693
         ],
         "bounds": null,
         "name": "Hrajel"
@@ -324,8 +324,8 @@
         "district": "Baalbek",
         "governorate": "Beqaa",
         "location": [
-            33.9124161,
-            36.0143559
+            36.0143559,
+            33.9124161
         ],
         "bounds": null,
         "name": "Bednayel"
@@ -334,8 +334,8 @@
         "district": "Aalay",
         "governorate": "Mount Lebanon",
         "location": [
-            33.7894444,
-            35.5902778
+            35.5902778,
+            33.7894444
         ],
         "bounds": null,
         "name": "Biyada"
@@ -344,8 +344,8 @@
         "district": "Nabatiyeh",
         "governorate": "Nabatiyeh Governorate",
         "location": [
-            33.4074237,
-            35.4785881
+            35.4785881,
+            33.4074237
         ],
         "bounds": null,
         "name": "Habbouch"
@@ -354,8 +354,8 @@
         "district": "Aalay",
         "governorate": "Mount Lebanon",
         "location": [
-            33.816667,
-            35.516667
+            35.516667,
+            33.816667
         ],
         "bounds": null,
         "name": "Chouaifet El Aamroussieh"
@@ -364,8 +364,8 @@
         "district": "Aalay",
         "governorate": "Mount Lebanon",
         "location": [
-            33.7717906,
-            35.6864066
+            35.6864066,
+            33.7717906
         ],
         "bounds": null,
         "name": "Charoun"
@@ -374,8 +374,8 @@
         "district": "Bint Jbeil",
         "governorate": "Nabatiyeh Governorate",
         "location": [
-            33.120548,
-            35.4335263
+            35.4335263,
+            33.120548
         ],
         "bounds": {
             "northeast": {
@@ -393,8 +393,8 @@
         "district": "Chouf",
         "governorate": "Mount Lebanon",
         "location": [
-            33.5808902,
-            35.4611653
+            35.4611653,
+            33.5808902
         ],
         "bounds": null,
         "name": "Joun"
@@ -403,8 +403,8 @@
         "district": "Hasbaiyya",
         "governorate": "Nabatiyeh Governorate",
         "location": [
-            33.3431879,
-            35.6783777
+            35.6783777,
+            33.3431879
         ],
         "bounds": null,
         "name": "Kfarhamam"
@@ -413,8 +413,8 @@
         "district": "Jbeil",
         "governorate": "Mount Lebanon",
         "location": [
-            34.1230021,
-            35.6519282
+            35.6519282,
+            34.1230021
         ],
         "bounds": null,
         "name": "Byblos"
@@ -423,8 +423,8 @@
         "district": "Baalbek",
         "governorate": "Beqaa",
         "location": [
-            34.1385127,
-            36.276776
+            36.276776,
+            34.1385127
         ],
         "bounds": null,
         "name": "Rasm El Hadath"
@@ -433,8 +433,8 @@
         "district": "Jbeil",
         "governorate": "Mount Lebanon",
         "location": [
-            34.14890440000001,
-            35.6379896
+            35.6379896,
+            34.14890440000001
         ],
         "bounds": null,
         "name": "Aamchit"
@@ -443,8 +443,8 @@
         "district": "Aakkar",
         "governorate": "North Governorate",
         "location": [
-            34.5970643,
-            36.2875492
+            36.2875492,
+            34.5970643
         ],
         "bounds": null,
         "name": "Aaidmoun"
@@ -453,8 +453,8 @@
         "district": "Kesrouane",
         "governorate": "Mount Lebanon",
         "location": [
-            33.9794609,
-            35.6376806
+            35.6376806,
+            33.9794609
         ],
         "bounds": null,
         "name": "Ghadir"
@@ -463,8 +463,8 @@
         "district": "Kesrouane",
         "governorate": "Mount Lebanon",
         "location": [
-            33.9851074,
-            35.7108291
+            35.7108291,
+            33.9851074
         ],
         "bounds": {
             "northeast": {
@@ -482,8 +482,8 @@
         "district": "Saida",
         "governorate": "South Governorate",
         "location": [
-            33.3325408,
-            35.2988662
+            35.2988662,
+            33.3325408
         ],
         "bounds": null,
         "name": "Irzay"
@@ -492,8 +492,8 @@
         "district": "Matn",
         "governorate": "Mount Lebanon",
         "location": [
-            33.9329151,
-            35.5892181
+            35.5892181,
+            33.9329151
         ],
         "bounds": {
             "northeast": {
@@ -511,8 +511,8 @@
         "district": "Tyre",
         "governorate": "South Governorate",
         "location": [
-            33.2935928,
-            35.2976279
+            35.2976279,
+            33.2935928
         ],
         "bounds": null,
         "name": "Toura"
@@ -521,8 +521,8 @@
         "district": "Kesrouane",
         "governorate": "Mount Lebanon",
         "location": [
-            33.984198,
-            35.662867
+            35.662867,
+            33.984198
         ],
         "bounds": null,
         "name": "Daraaoun"
@@ -531,8 +531,8 @@
         "district": "Bint Jbeil",
         "governorate": "Nabatiyeh Governorate",
         "location": [
-            33.1932564,
-            35.46905
+            35.46905,
+            33.1932564
         ],
         "bounds": null,
         "name": "Chaqra"
@@ -541,8 +541,8 @@
         "district": "Bint Jbeil",
         "governorate": "Nabatiyeh Governorate",
         "location": [
-            33.2302093,
-            35.4254856
+            35.4254856,
+            33.2302093
         ],
         "bounds": {
             "northeast": {
@@ -560,8 +560,8 @@
         "district": "Bint Jbeil",
         "governorate": "Nabatiyeh Governorate",
         "location": [
-            33.1746846,
-            35.3766108
+            35.3766108,
+            33.1746846
         ],
         "bounds": null,
         "name": "Haris"
@@ -570,8 +570,8 @@
         "district": "Nabatiyeh",
         "governorate": "South Governorate",
         "location": [
-            33.4230066,
-            35.3989302
+            35.3989302,
+            33.4230066
         ],
         "bounds": null,
         "name": "Nmairiyeh"
@@ -580,8 +580,8 @@
         "district": "Chouf",
         "governorate": "Mount Lebanon",
         "location": [
-            33.6972116,
-            35.5605832
+            35.5605832,
+            33.6972116
         ],
         "bounds": null,
         "name": "Deir El Qamar"
@@ -590,8 +590,8 @@
         "district": "Jezzine",
         "governorate": "South Governorate",
         "location": [
-            33.4923967,
-            35.5897893
+            35.5897893,
+            33.4923967
         ],
         "bounds": null,
         "name": "Kfar Houneh"
@@ -600,8 +600,8 @@
         "district": "Bint Jbeil",
         "governorate": "Nabatiyeh Governorate",
         "location": [
-            33.2048244,
-            35.4053397
+            35.4053397,
+            33.2048244
         ],
         "bounds": null,
         "name": "Sultaniyeh"
@@ -610,8 +610,8 @@
         "district": "West Bekaa",
         "governorate": "Beqaa",
         "location": [
-            33.5197252,
-            35.6862309
+            35.6862309,
+            33.5197252
         ],
         "bounds": null,
         "name": "Sohmor"
@@ -620,8 +620,8 @@
         "district": "Matn",
         "governorate": "Mount Lebanon",
         "location": [
-            33.9337197,
-            35.7010954
+            35.7010954,
+            33.9337197
         ],
         "bounds": {
             "northeast": {
@@ -639,8 +639,8 @@
         "district": "Jbeil",
         "governorate": "Mount Lebanon",
         "location": [
-            34.1456641,
-            35.7814317
+            35.7814317,
+            34.1456641
         ],
         "bounds": null,
         "name": "Mechmech"
