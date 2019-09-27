@@ -12,22 +12,21 @@ Promise.all([
   d3.json('../data/map/lb_2009_administrative_districts.geojson'),
   d3.json('../data/map/locations.json')
 ]).then(function([mapJSON, locJSON]) {
-    const projection = customScaledProjection(1.1)
+    const projection = customScaledProjection()
       .fitSize([width, height], mapJSON);
     const path = d3.geoPath(projection);
 
     mapSVG.append('path')
       .attr('d', path(mapJSON));
     
-    console.log('L', locJSON);
-    
     mapSVG.selectAll('circle')
-      .data(locJSON, function(o) { console.log(o); return o.name; })
+      .data(d3.values(locJSON), function(o) { return o.name; })
       .enter()
       .append('circle')
-      .attr('cx', function(o) { console.log('cx', o); return customScaledProjection(o.location)[0]; })
-      .attr('cy', function(o) { console.log('cy', o); return customScaledProjection(o.location)[1]; })
+      .attr('cx', function(o) { return customScaledProjection(o.location)[0]; })
+      .attr('cy', function(o) { return customScaledProjection(o.location)[1]; })
       .attr('r', '8px')
-      .attr('fill', 'green');
+      .attr('fill', 'green')
+      .attr('stroke', 'none');
 });
 
