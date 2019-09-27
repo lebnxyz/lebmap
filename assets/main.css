@@ -8,3 +8,10 @@ body {
     stroke-width: 5px;
     stroke-linejoin: round;
 }
+
+svg circle {
+    r: 6px;
+    stroke-width: 6px;
+    fill: #3f3;
+    stroke: #151;
+}

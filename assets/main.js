@@ -24,9 +24,6 @@ Promise.all([
       .enter()
       .append('circle')
       .attr('cx', function(o) { return projection(o.location)[0]; })
-      .attr('cy', function(o) { return projection(o.location)[1]; })
-      .attr('r', '8px')
-      .attr('fill', 'green')
-      .attr('stroke', 'none');
+      .attr('cy', function(o) { return projection(o.location)[1]; });
 });
 
