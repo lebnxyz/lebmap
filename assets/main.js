@@ -9,8 +9,8 @@ const mapSVG = d3.select('#map')
 const chartSVG = d3.select('#chart');
 
 Promise.all([
-  d3.json('../data/map/lb_2009_administrative_districts.geojson'),
-  d3.json('../data/map/locations.json')
+  d3.json('./assets/data/map/lb_2009_administrative_districts.geojson'),
+  d3.json('./assets/data/map/locations.json')
 ]).then(function([mapJSON, locJSON]) {
     const projection = customScaledProjection(1.1, 1, d3.geoMercatorRaw)
       .fitSize([width, height], mapJSON);
