@@ -18,5 +18,16 @@ Promise.all([
 
     mapSVG.append('path')
       .attr('d', path(mapJSON));
+    
+    console.log('L', locJSON);
+    
+    mapSVG.selectAll('circle')
+      .data(locJSON, function(o) { console.log(o); return o.name; })
+      .enter()
+      .append('circle')
+      .attr('cx', function(o) { console.log('cx', o); return customScaledProjection(o.location)[0]; })
+      .attr('cy', function(o) { console.log('cy', o); return customScaledProjection(o.location)[1]; })
+      .attr('r', '8px')
+      .attr('fill', 'green');
 });
 
