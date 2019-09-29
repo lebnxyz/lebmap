@@ -37,7 +37,6 @@ def get(name, *, url='https://maps.googleapis.com/maps/api/geocode', format='jso
             break
         elif 'y'.casefold() != input(f'retry? Y/* ({r.status_code}, {r.reason}) ').casefold():
             return None
-
         time.sleep(1)
     return r.json()
 
@@ -116,6 +115,7 @@ def populate(d, responses, out):
             if name.casefold() != city:
                 transformations[name.casefold()] = city
             d[city] = {
+                'name': city,
                 'district': district,
                 'governorate': governorate,
                 'location': transform_location(info['geometry'].get('location', None)),

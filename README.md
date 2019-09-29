@@ -8,7 +8,7 @@ of Lebanon in the browser, complete with clickable response locations and easily
 statistical analysis. Hopefully, I can learn to use d3.js in a timely fashion :)
 
 ## The Joke
-You already know what The Joke is. We all know what The Joke is. You aren't the first to make The Joke,
+You know what The Joke is. We all know what The Joke is. You were never the first to make The Joke,
 nobody was ever the first to make The Joke, The Joke is eternal and undying and came into being nearly
 twenty-four whole hours before Time itself, not that we could measure. But it's clearly gotten a little
 too comfortable being immortal, feisty thing, so it probably shouldn't be encouraged any more than it's

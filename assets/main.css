@@ -4,7 +4,7 @@ body {
 
 #map {
     fill: black;
-    stroke: darkgray;
+    stroke: gray;
     stroke-width: 5px;
     stroke-linejoin: round;
 }
@@ -14,4 +14,10 @@ svg circle {
     stroke-width: 6px;
     fill: #3f3;
     stroke: #151;
+}
+
+svg path.hover {
+    fill: lightgray;
+    stroke: white;
+    z-index: 1;
 }
