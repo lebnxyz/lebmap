@@ -4,8 +4,11 @@
   "description": "Interactive dialectal-feature map for Lebanese Arabic",
   "private": true,
   "scripts": {
-    "build": "parcel build index.html -d docs/ && rem ABUSING GITHUB PAGES' BUILD-DIRECTORY OPTIONS IS FUN",
-    "dev": "parcel index.html"
+    "build": "parcel build index.html -d docs/ --public-url ./lebanese/",
+    "dev": "parcel index.html",
+    "prep": "SETLOCAL && FOR /F \"tokens=* USEBACKQ\" %g IN (`git lastmsg`) do (set \"COMMITMSG=%g\") && git reset HEAD~1 && npm run build && CALL git commit -am \"%COMMITMSG%\" && ENDLOCAL",
+    "push": "npm run prep && git push",
+    "pushf": "npm run prep && git push -f"
   },
   "repository": {
     "type": "git",
