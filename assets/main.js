@@ -1,4 +1,7 @@
 import { customScaledProjection } from './scripts/d3-funcs.js';
+import mapJSON from './data/map/lb_2009_administrative_districts.geojson';
+import locJSON from './data/map/locations.json';
+import * as d3 from 'd3';
 
 const width = 600;
 const height = 600;
@@ -12,8 +15,8 @@ mapSVG.append('g').attr('id', 'path-group');
 mapSVG.append('g').attr('id', 'circle-group');
 
 Promise.all([
-  d3.json('./assets/data/map/lb_2009_administrative_districts.geojson'),
-  d3.json('./assets/data/map/locations.json')
+  d3.json(mapJSON),
+  d3.json(locJSON)
 ]).then(function([mapJSON, locJSON]) {
     const projection = customScaledProjection(1.1, 1, d3.geoMercatorRaw)
       .fitSize([width, height], mapJSON);
@@ -24,6 +27,7 @@ Promise.all([
       .enter()
       .append('path')
       .attr('d', path)
+      // class .hover rather pseudo :hover required because Firefox is lame
       .on('mouseover', function() { d3.select(this).raise().classed('hover', true); })
       .on('mouseout', function() { d3.select(this).lower().classed('hover', false); });
     

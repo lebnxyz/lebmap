@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "description": "Interactive dialectal-feature map for Lebanese Arabic",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "build": "parcel build index.html -d docs/ && rem ABUSING GITHUB PAGES' BUILD-DIRECTORY OPTIONS IS FUN",
+    "dev": "parcel index.html"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/supposedly/lebanon.git"
@@ -13,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/supposedly/lebanon/issues"
   },
-  "homepage": "https://github.com/supposedly/lebanon#readme"
+  "homepage": "https://github.com/supposedly/lebanon#readme",
+  "dependencies": {
+    "d3": "^5.12.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-json-url-loader": "^0.1.2"
+  }
 }
