@@ -10,8 +10,8 @@ body {
 }
 
 svg circle {
-    r: 6px;
-    stroke-width: 6px;
+    r: 5px;
+    stroke-width: 2px;
     fill: #3f3;
     stroke: #151;
 }
