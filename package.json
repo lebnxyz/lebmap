@@ -1,5 +1,5 @@
 {
-  "name": "lebanon",
+  "name": "lebanese",
   "version": "0.0.0",
   "description": "Interactive dialectal-feature map for Lebanese Arabic",
   "private": true,
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/supposedly/lebanon.git"
+    "url": "git+https://github.com/supposedly/lebanese.git"
   },
   "author": "Hadi Tarhini",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/supposedly/lebanon/issues"
+    "url": "https://github.com/supposedly/lebanese/issues"
   },
-  "homepage": "https://github.com/supposedly/lebanon#readme",
+  "homepage": "https://github.com/supposedly/lebanese#readme",
   "dependencies": {
     "d3": "^5.12.0"
   },
