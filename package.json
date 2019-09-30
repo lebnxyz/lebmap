@@ -4,7 +4,7 @@
   "description": "Interactive dialectal-feature map for Lebanese Arabic",
   "private": true,
   "scripts": {
-    "build": "parcel build index.html -d docs/ --public-url ./lebanese/",
+    "build": "parcel build index.html -d docs/ --public-url ./",
     "dev": "parcel index.html",
     "prep": "SETLOCAL && FOR /F \"tokens=* USEBACKQ\" %g IN (`git lastmsg`) do (set \"COMMITMSG=%g\") && git reset HEAD~1 && npm run build && CALL git commit -am \"%COMMITMSG%\" && ENDLOCAL",
     "push": "npm run prep && git push",
