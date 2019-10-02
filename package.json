@@ -6,7 +6,7 @@
   "scripts": {
     "build": "parcel build index.html -d docs/ --public-url ./",
     "dev": "parcel index.html",
-    "prep": "SETLOCAL && FOR /F \"tokens=* USEBACKQ\" %g IN (`git lastmsg`) do (set \"COMMITMSG=%g\") && git reset HEAD~1 && npm run build && git add docs/ && CALL git commit -am \"%COMMITMSG%\" && ENDLOCAL",
+    "prep": "SETLOCAL && FOR /F \"tokens=* USEBACKQ\" %g IN (`git lastmsg`) do (set \"COMMITMSG=%g\") && git reset HEAD~1 && del docs\\* /Q && npm run build && git add docs\\ && CALL git commit -am \"%COMMITMSG%\" && ENDLOCAL",
     "push": "npm run prep && git push",
     "pushf": "npm run prep && git push -f"
   },
