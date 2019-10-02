@@ -1,6 +1,6 @@
 import { customScaledProjection } from './scripts/d3-funcs.js';
-import mapJSON from './data/map/lb_2009_administrative_districts.geojson';
-import locJSON from './data/map/locations.json';
+import { url as mapJSON } from './data/map/lb_2009_administrative_districts.geojson';
+import { url as locJSON } from './data/map/locations.json';
 import * as d3 from 'd3';
 
 const width = 600;
