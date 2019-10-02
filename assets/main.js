@@ -30,6 +30,7 @@ Promise.all([
         .enter()
         .append('path')
         .attr('d', path)
+        .on('click', function() { const o = d3.select(this); o.classed('clicked', !o.classed('clicked')); })
         // class .hover rather pseudo :hover required because Firefox is lame
         .on('mouseover', function() { d3.select(this).raise().classed('hover', true); })
         .on('mouseout', function() { d3.select(this).classed('hover', false); });

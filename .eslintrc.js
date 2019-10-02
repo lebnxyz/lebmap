@@ -21,10 +21,6 @@ module.exports = {
                 'ignoredNodes': ['MemberExpression']
             }
         ],
-        'linebreak-style': [
-            'error',
-            'windows'
-        ],
         'quotes': [
             'error',
             'single'

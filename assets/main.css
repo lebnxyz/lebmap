@@ -21,3 +21,7 @@ svg path.hover {
     stroke: white;
     z-index: 1;
 }
+
+svg path.clicked {
+    fill: red;
+}
