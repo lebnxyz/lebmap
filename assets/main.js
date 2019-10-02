@@ -32,7 +32,7 @@ Promise.all([
         .attr('d', path)
         // class .hover rather pseudo :hover required because Firefox is lame
         .on('mouseover', function() { d3.select(this).raise().classed('hover', true); })
-        .on('mouseout', function() { d3.select(this).lower().classed('hover', false); });
+        .on('mouseout', function() { d3.select(this).classed('hover', false); });
     
     mapSVG.select('#circle-group').selectAll('circle')
         .data(d3.values(locJSON), function(o) { return o.name; })

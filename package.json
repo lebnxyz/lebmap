@@ -24,7 +24,24 @@
     "d3": "^5.12.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "browserslist": "^4.7.0",
     "parcel-bundler": "^1.12.3",
     "parcel-plugin-json-url-loader": "^0.1.2"
+  },
+  "browserslist": [
+    "> .5% and last 2 versions",
+    "> .5% in LB"
+  ],
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "usage"
+        }
+      ]
+    ]
   }
 }

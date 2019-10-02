@@ -8,6 +8,7 @@ __pycache__/
 # js
 node_modules/
 .cache/
+dist/
 
 # data files
 secret-config.json
