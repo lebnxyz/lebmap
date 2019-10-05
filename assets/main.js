@@ -1,11 +1,10 @@
 import { customScaledProjection } from './scripts/d3-funcs.js';
-import { url as mapJSON } from './data/map/lb_2009_administrative_districts.geojson';
+import mapJSON from './data/map/lb_2009_administrative_districts.geojson';
 import { url as locJSON } from './data/map/locations.json';
+import { data as respondentsJSON } from './data/respondents.json';
 import * as d3 from 'd3';
-
 const width = 600;
 const height = 600;
-
 
 const mapSVG = d3.select('body').append('svg')
   .attr('id', 'map')
