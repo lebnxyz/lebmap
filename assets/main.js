@@ -1,12 +1,13 @@
-import { customScaledProjection } from './scripts/utils.js';
+import { customScaledProjection, makeDB } from './scripts/utils.js';
 import { countLocation } from './scripts/oneOffHelpers.js'
 import mapJSON from './data/map/lb_2009_administrative_districts.geojson';
 import { url as locJSON } from './data/map/locations.json';
 import { data as respondentsJSON } from './data/respondents.json';
 import * as d3 from 'd3';
-import alasql from 'alasql';
 const width = 600;
 const height = 600;
+
+const respondents = makeDB(respondentsJSON);
 
 const mapSVG = d3.select('body').append('svg')
   .attr('id', 'map')
@@ -40,7 +41,7 @@ Promise.all([
         .data(d3.values(locJSON), function(o) { return o.name; })
         .enter()
         .append('circle')
-        .attr('cx', function(o) { return projection(o.location)[0]; })
-        .attr('cy', function(o) { return projection(o.location)[1]; })
-        .attr('r', function(o) { console.log(o.name, countLocation(o.name, respondentsJSON, alasql)); });
+        .attr('cx', function(place) { return projection(place.location)[0]; })
+        .attr('cy', function(place) { return projection(place.location)[1]; })
+        .attr('r', function(place) { return countLocation(place.name, respondents); });
 });
