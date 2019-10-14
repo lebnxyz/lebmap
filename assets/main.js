@@ -22,8 +22,8 @@ const mapSVG = d3.select('body').append('svg')
 const chartSVG = d3.select('body').append('svg')
   .attr('id', 'chart');
 
-mapSVG.append('g').attr('id', 'path-group');
-mapSVG.append('g').attr('id', 'circle-group');
+const PATH_GROUP = mapSVG.append('g').attr('id', 'path-group');
+const CIRCLE_GROUP = mapSVG.append('g').attr('id', 'circle-group');
 
 Promise.all([
     d3.json(mapJSON),
@@ -33,21 +33,27 @@ Promise.all([
       .fitSize([SVG_WIDTH, SVG_HEIGHT], mapJSON);
     const path = d3.geoPath(projection);
 
-    mapSVG.select('#path-group').selectAll('path')
+    PATH_GROUP.selectAll('path')
       .data(mapJSON.features)
       .enter()
       .append('path')
       .attr('d', path)
+      .attr('id', function(d) { return `path-${d.properties.DISTRICT.replace(/\s/, '-').toLowerCase()}`; })
       .on('click', function() { const o = d3.select(this); o.classed('clicked', !o.classed('clicked')); })
       // class .hover rather pseudo :hover required because Firefox is lame
       .on('mouseover', function() { d3.select(this).raise().classed('hover', true); })
       .on('mouseout', function() { d3.select(this).classed('hover', false); });
     
-    mapSVG.select('#circle-group').selectAll('circle')
+    CIRCLE_GROUP.selectAll('circle')
       .data(d3.values(locJSON), function(o) { return o.name; })
       .enter()
       .append('circle')
       .attr('cx', place => projection(place.location)[0])
       .attr('cy', place => projection(place.location)[1])
       .attr('r', place => oneOff.countLocationNormalized(place.name, respondents, MIN_RAD, MAX_RAD));
+    
+    CIRCLE_GROUP.selectAll('circle')
+      .data(mapJSON.features)
+      .enter();
+    // TODO: select path by ID and bind
 });
