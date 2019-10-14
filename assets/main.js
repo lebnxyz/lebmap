@@ -54,5 +54,7 @@ Promise.all([
       .on('mouseover', place => {
           d3.select(`#path-${place.district.replace(/\s/, '-').toLowerCase()}`).raise().classed('hover', true);
           // FIXME: would prefer to call .on('mouseover')(); but doesn't work presumably because of mouseout interference
-      });
+      })
+      .on('click', place => console.log(respondents('SELECT * from $0 WHERE location = $1', place.name)));
+    // TODO: change from console.log() to proper on-page display
 });
