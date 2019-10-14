@@ -18,3 +18,11 @@ export function countLocationNormalized(loc, query, lower, upper) {
     }
     return Math.ceil(normalize(countLocation(loc, query), 1, MAX_LOCATION, lower, upper));
 }
+
+
+export function clearMousedOvers(set) {
+    const arr = Array.from(set);
+    while (arr.length) {
+        arr.pop().dispatch('mouseout');
+    }
+}
