@@ -24,7 +24,7 @@ const chartSVG = d3.select('body').append('svg')
 
 const PATH_GROUP = mapSVG.append('g').attr('id', 'path-group');
 const CIRCLE_GROUP = mapSVG.append('g').attr('id', 'circle-group');
-const MOUSED_OVER = new Set();  // for O(1) removal (or at least sublinear, as mandated by spec)
+const MOUSED_OVER = new Set();  // for removal in O(1) (or at least sublinear time, as mandated by spec)
 
 Promise.all([
     d3.json(mapJSON),
@@ -40,7 +40,7 @@ Promise.all([
       .append('path')
       .attr('d', path)
       .attr('id', function(d) { return utils.toID('path', d.properties.DISTRICT); })
-      .on('click', function() {  const el = d3.select(this); el.classed('clicked', !o.classed('clicked')); })
+      .on('click', function() {  const el = d3.select(this); el.classed('clicked', !el.classed('clicked')); })
       // class .hover rather pseudo :hover required because Firefox is lame
       .on('mouseover', function() {
           const el = d3.select(this);
@@ -61,11 +61,11 @@ Promise.all([
       .attr('cy', place => projection(place.location)[1])
       .attr('r', place => oneOff.countLocationNormalized(place.name, respondentQuery, MIN_RAD, MAX_RAD))
       .on('mouseover', place => {
-          oneOff.clearMousedOvers(MOUSED_OVER);
           d3.select(utils.toID('path', place.district, true)).dispatch('mouseover');
       })
-      .on('mouseout', place => {
-          d3.select(utils.toID('path', place.district, true)).dispatch('mouseout');
-      })
+      // Instead of selecting the specific location's region and dispatching mouseout on it,
+      // do it for all potentially moused-over elements so that no region stays hovered over
+      // if the mouse leaves via a circle rather than via the region itself
+      .on('mouseout', () => oneOff.clearMousedOvers(MOUSED_OVER))
       .on('click', place => console.log(respondentQuery('SELECT * from $0 WHERE location = $1', place.name)));
 });

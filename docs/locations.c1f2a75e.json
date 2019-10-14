@@ -479,7 +479,8 @@
         "name": "Ashqout"
     },
     "Irzay": {
-        "district": "Saida",
+        "//": "It's officially in Saida but for some reason my map data makes like there's a Zahrany district",
+        "district": "Zahrany",
         "governorate": "South Governorate",
         "location": [
             35.2988662,

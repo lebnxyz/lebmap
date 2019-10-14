@@ -21,8 +21,8 @@ export function countLocationNormalized(loc, query, lower, upper) {
 
 
 export function clearMousedOvers(set) {
-    const arr = Array.from(set);
-    while (arr.length) {
-        arr.pop().dispatch('mouseout');
+    for (const el of set) {
+        el.dispatch('mouseout');
     }
+    set.clear();
 }
