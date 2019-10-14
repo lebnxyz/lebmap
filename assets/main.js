@@ -50,10 +50,9 @@ Promise.all([
       .append('circle')
       .attr('cx', place => projection(place.location)[0])
       .attr('cy', place => projection(place.location)[1])
-      .attr('r', place => oneOff.countLocationNormalized(place.name, respondents, MIN_RAD, MAX_RAD));
-    
-    CIRCLE_GROUP.selectAll('circle')
-      .data(mapJSON.features)
-      .enter();
-    // TODO: select path by ID and bind
+      .attr('r', place => oneOff.countLocationNormalized(place.name, respondents, MIN_RAD, MAX_RAD))
+      .on('mouseover', place => {
+          d3.select(`#path-${place.district.replace(/\s/, '-').toLowerCase()}`).raise().classed('hover', true);
+          // FIXME: would prefer to call .on('mouseover')(); but doesn't work presumably because of mouseout interference
+      });
 });
