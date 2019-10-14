@@ -18,3 +18,8 @@ export function makeQueryFunc(obj) {
 export function normalize(value, min, max, lower, upper) {
     return (value - min) / (max - min) * (upper - lower) + lower;
 }
+
+
+export function toID(prefix, s, use_hash = false) {
+    return `${use_hash ? '#' : ''}${prefix}-${s.replace(/\s/, '-').toLowerCase()}`;
+}

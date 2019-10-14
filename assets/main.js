@@ -1,6 +1,6 @@
 import * as d3 from 'd3';
 
-import { customScaledProjection, makeQueryFunc } from './scripts/utils.js';
+import * as utils from './scripts/utils.js';
 import * as oneOff from './scripts/oneOffHelpers.js';
 
 import mapJSON from './data/map/lb_2009_administrative_districts.geojson';
@@ -13,7 +13,7 @@ const SVG_HEIGHT = 600;
 const MIN_RAD = 4;
 const MAX_RAD = 10;
 
-const respondents = makeQueryFunc(respondentsJSON);
+const respondents = utils.makeQueryFunc(respondentsJSON);
 
 const mapSVG = d3.select('body').append('svg')
   .attr('id', 'map')
@@ -24,12 +24,13 @@ const chartSVG = d3.select('body').append('svg')
 
 const PATH_GROUP = mapSVG.append('g').attr('id', 'path-group');
 const CIRCLE_GROUP = mapSVG.append('g').attr('id', 'circle-group');
+const MOUSED_OVER = [];
 
 Promise.all([
     d3.json(mapJSON),
     d3.json(locJSON)
 ]).then(function([mapJSON, locJSON]) {
-    const projection = customScaledProjection(1.1, 1, d3.geoMercatorRaw)
+    const projection = utils.customScaledProjection(1.1, 1, d3.geoMercatorRaw)
       .fitSize([SVG_WIDTH, SVG_HEIGHT], mapJSON);
     const path = d3.geoPath(projection);
 
@@ -38,10 +39,17 @@ Promise.all([
       .enter()
       .append('path')
       .attr('d', path)
-      .attr('id', function(d) { return `path-${d.properties.DISTRICT.replace(/\s/, '-').toLowerCase()}`; })
+      .attr('id', function(d) { return utils.toID('path', d.properties.DISTRICT); })
       .on('click', function() { const o = d3.select(this); o.classed('clicked', !o.classed('clicked')); })
       // class .hover rather pseudo :hover required because Firefox is lame
-      .on('mouseover', function() { d3.select(this).raise().classed('hover', true); })
+      .on('mouseover', function() {
+          while (MOUSED_OVER.length) {
+              MOUSED_OVER.pop().dispatch('mouseout');
+          }
+          const el = d3.select(this);
+          el.raise().classed('hover', true);
+          MOUSED_OVER.push(el);
+      })
       .on('mouseout', function() { d3.select(this).classed('hover', false); });
     
     CIRCLE_GROUP.selectAll('circle')
@@ -52,8 +60,7 @@ Promise.all([
       .attr('cy', place => projection(place.location)[1])
       .attr('r', place => oneOff.countLocationNormalized(place.name, respondents, MIN_RAD, MAX_RAD))
       .on('mouseover', place => {
-          d3.select(`#path-${place.district.replace(/\s/, '-').toLowerCase()}`).raise().classed('hover', true);
-          // FIXME: would prefer to call .on('mouseover')(); but doesn't work presumably because of mouseout interference
+          d3.select(utils.toID('path', place.district, true)).dispatch('mouseover');
       })
       .on('click', place => console.log(respondents('SELECT * from $0 WHERE location = $1', place.name)));
     // TODO: change from console.log() to proper on-page display
