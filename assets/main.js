@@ -33,6 +33,7 @@ Promise.all([
     const projection = utils.customScaledProjection(1.1, 1, d3.geoMercatorRaw)
       .fitSize([SVG_WIDTH, SVG_HEIGHT], mapJSON);
     const path = d3.geoPath(projection);
+    const locObjects = Object.values(locJSON);
 
     PATH_GROUP.selectAll('path')
       .data(mapJSON.features)
@@ -40,7 +41,17 @@ Promise.all([
       .append('path')
       .attr('d', path)
       .attr('id', function(d) { return utils.toID('path', d.properties.DISTRICT); })
-      .on('click', function() {  const el = d3.select(this); el.classed('clicked', !el.classed('clicked')); })
+      .on('click', function(d) {
+          const el = d3.select(this);
+          const clicked = !el.classed('clicked');
+          el.classed('clicked', clicked);
+          if (clicked) {
+              console.log(respondentQuery(
+                  'SELECT ans.* FROM $0 ans JOIN $1 loc ON ans.location = loc.name WHERE loc.district = $2',
+                  locObjects, d.properties.DISTRICT
+              ));
+          }
+      })
       // class .hover rather pseudo :hover required because Firefox is lame
       .on('mouseover', function() {
           const el = d3.select(this);
@@ -62,7 +73,7 @@ Promise.all([
       .attr('data-default-rad', place => oneOff.countLocationNormalized(place.name, respondentQuery, MIN_RAD, MAX_RAD))
       .attr('r', function() { return d3.select(this).attr('data-default-rad'); })
       .on('mouseover', function(place) {
-          d3.select(utils.toID('path', place.district, true)).dispatch('mouseover');
+          d3.select(utils.toID('path', place.district == 'Hasbaiyya' ? 'Marjaayoun' : place.district, true)).dispatch('mouseover');
           const el = d3.select(this);
           el.attr('r', el.attr('data-default-rad') * 1.4);
       })
