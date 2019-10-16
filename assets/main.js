@@ -59,13 +59,20 @@ Promise.all([
       .append('circle')
       .attr('cx', place => projection(place.location)[0])
       .attr('cy', place => projection(place.location)[1])
-      .attr('r', place => oneOff.countLocationNormalized(place.name, respondentQuery, MIN_RAD, MAX_RAD))
-      .on('mouseover', place => {
+      .attr('data-default-rad', place => oneOff.countLocationNormalized(place.name, respondentQuery, MIN_RAD, MAX_RAD))
+      .attr('r', function() { return d3.select(this).attr('data-default-rad'); })
+      .on('mouseover', function(place) {
           d3.select(utils.toID('path', place.district, true)).dispatch('mouseover');
+          const el = d3.select(this);
+          el.attr('r', el.attr('data-default-rad') * 1.4);
       })
       // Instead of selecting the specific location's region and dispatching mouseout on it,
       // do it for all potentially moused-over elements so that no region stays hovered over
       // if the mouse leaves via a circle rather than via the region itself
-      .on('mouseout', () => oneOff.clearMousedOvers(MOUSED_OVER))
+      .on('mouseout', function() {
+          oneOff.clearMousedOvers(MOUSED_OVER); 
+          const el = d3.select(this);
+          el.attr('r', el.attr('data-default-rad'));
+      })
       .on('click', place => console.log(respondentQuery('SELECT * from $0 WHERE location = $1', place.name)));
 });
