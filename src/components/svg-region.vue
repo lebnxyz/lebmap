@@ -10,12 +10,12 @@ import * as utils from '../scripts/utils.js';
 export default {
   name: 'SVGRegion',
   props: {
-    id: String,
+    d: GeoPath,
     district: String
   },
   data() {
     return {
-      id: utils.toID('path', d.properties.DISTRICT)
+      id: utils.toID('path', this.district)
     }
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <g id="pins">
-    <svg-pin v-for="p in pins" :key="p" :coords="p"></svg-pin>
+    <svg-pin v-for="p in pins" :key="p.place.name" :coords="p.coords" :place="p.place"></svg-pin>
   </g>
 </template>
 
@@ -10,10 +10,10 @@ import SVGPin from './svg-pin.vue';
 import { geoPath, GeoProjection } from 'd3';
 
 export default {
-  name: 'Pins',
+  name: 'SVGPins',
   components: {
     SVGPin
-  }
+  },
   props: {
     locations: Object,
     projection: GeoProjection
@@ -22,10 +22,13 @@ export default {
     return {
       pins: []
     }
-  }
+  },
   mounted() {
     this.pins = Object.values(this.locations).forEach(
-      place => this.projection(place.location)
+      place => ({
+        coords: this.projection(place.location),
+        place: place
+      })
     )
   }
 }
