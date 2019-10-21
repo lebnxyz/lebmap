@@ -36,8 +36,8 @@ export default {
   },
   async mounted() {
     this.mapJSON = await d3.json(mapDataPath);
-    this.projection = utils.customScaledProjection(1.1, 1.1, d3.geoMercatorRaw)
-      .fitSize([this.WIDTH, this.HEGIHT], this.mapJSON);
+    this.projection = utils.customScaledProjection(1.1, 1, d3.geoMercatorRaw)
+      .fitSize([this.WIDTH, this.HEIGHT], this.mapJSON);
   }
 }
 </script>

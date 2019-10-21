@@ -23,7 +23,7 @@ export default {
     paths() {
       const arr = [];
       this.mapData.features.forEach(
-        o => console.log(o) || arr.push({
+        o => arr.push({
           d: this.path(o),
           district: o.properties.DISTRICT,
           _o: o
