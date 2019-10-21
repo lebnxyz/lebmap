@@ -32,11 +32,9 @@ export default {
       return arr;
     },
     path() {
-      window.path = geoPath(this.projection);
       return geoPath(this.projection);
     }
-  },
-  mounted() {}
+  }
 }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <g id="pins">
-    <svg-pin v-for="p in pins" :key="p.place.name" :coords="p.coords" :place="p.place"></svg-pin>
+    <SVGPin v-for="p in pins" :key="p.place.name" :coords="p.coords" :place="p.place"></SVGPin>
   </g>
 </template>
 
@@ -18,18 +18,17 @@ export default {
     locations: Object,
     projection: GeoProjection
   },
-  data() {
-    return {
-      pins: []
+  computed: {
+    pins() {
+      const arr = [];
+      Object.values(this.locations).forEach(
+        place => arr.push({
+          coords: this.projection(place.location),
+          place: place
+        })
+      );
+      return arr;
     }
-  },
-  mounted() {
-    this.pins = Object.values(this.locations).forEach(
-      place => ({
-        coords: this.projection(place.location),
-        place: place
-      })
-    )
   }
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <svg v-if="mapJSON.features.length" :width="WIDTH" :height="HEIGHT">
+  <svg :width="WIDTH" :height="HEIGHT">
     <SVGMap :map-data="mapJSON" :projection="projection"></SVGMap>
     <SVGPins :locations="locations" :projection="projection"></SVGPins>
   </svg>
@@ -15,7 +15,6 @@ import * as utils from './scripts/utils.js';
 // I don't feel like there's any benefit to instead importing the filepaths
 // and doing `this.foo = await d3.json(path)` on them...???
 import { data as locations } from './data/map/locations.json';
-import { data as respondents } from './data/respondents.json';
 import mapDataPath from './data/map/lb_2009_administrative_districts.geojson';
 
 export default {
@@ -27,11 +26,9 @@ export default {
     return {
       WIDTH: 600,
       HEIGHT: 600,
-      respondentQuery: utils.makeQueryFunc(respondents),
       projection: d3.geoMercator(),  // good enough for a default
       mapJSON: {features: []},
-      locations,
-      respondents
+      locations
     }
   },
   async mounted() {

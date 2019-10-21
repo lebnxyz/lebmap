@@ -1,5 +1,5 @@
 <template>
-  <circle cx="x" cy="y" r="defaultRadius"></circle>
+  <circle :cx="x" :cy="y" :r="defaultRadius"></circle>
 </template>
 
 <script>
@@ -23,9 +23,13 @@ export default {
     return {
       x: this.coords[0],
       y: this.coords[1],
-      defaultRadius: oneOff.countLocationNormalized(
+    }
+  },
+  computed: {
+    defaultRadius() {
+      return oneOff.countLocationNormalized(
         this.place.name, this.$root.respondentQuery, this.MIN_RAD, this.MAX_RAD
-      )
+      );
     }
   }
 }
