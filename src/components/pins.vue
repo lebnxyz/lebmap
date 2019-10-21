@@ -18,17 +18,17 @@ export default {
     locations: Object,
     projection: GeoProjection
   },
-  computed: {
-    pins() {
-      const arr = [];
-      Object.values(this.locations).forEach(
-        place => arr.push({
-          coords: this.projection(place.location),
-          place: place
-        })
-      );
-      return arr;
-    }
+  data() {
+    const arr = [];
+    Object.values(this.locations).forEach(
+      place => arr.push({
+        coords: this.projection(place.location),
+        place: place
+      })
+    );
+    return {
+      pins: arr
+    };
   }
 }
 </script>

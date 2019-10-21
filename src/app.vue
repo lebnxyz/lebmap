@@ -1,5 +1,5 @@
 <template>
-  <svg :width="WIDTH" :height="HEIGHT">
+  <svg v-if="mapJSON.features.length" :width="WIDTH" :height="HEIGHT">
     <SVGMap :map-data="mapJSON" :projection="projection"></SVGMap>
     <SVGPins :locations="locations" :projection="projection"></SVGPins>
   </svg>

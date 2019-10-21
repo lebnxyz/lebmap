@@ -1,5 +1,10 @@
 <template>
-  <path :id="id" :d="d"></path>
+  <path
+    class="region"
+    :id="id"
+    :d="d"
+    @mouseenter="raise"
+  ></path>
 </template>
 
 <script>
@@ -16,11 +21,27 @@ export default {
   data() {
     return {
       id: utils.toID('path', this.district)
+    };
+  },
+  methods: {
+    raise() {
+      this.$emit('raise', this);
     }
   }
 }
 </script>
 
-<style>
+<style scoped>
+.region {
+  fill: black;
+  stroke: gray;
+  stroke-width: 5px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
 
+.region:hover {
+  fill: lightgray;
+  stroke: white;
+}
 </style>

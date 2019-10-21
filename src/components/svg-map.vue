@@ -1,6 +1,11 @@
 <template>
   <g id="map">
-    <SVGRegion v-for="p in paths" :key="p._o.ID_2" :district="p.district" :d="p.d"></SVGRegion>
+    <SVGRegion
+      v-for="(p, index) in paths" :key="p._o.ID_2"
+      :district="p.district"
+      :d="p.d"
+      @raise="raise(index)"
+    ></SVGRegion>
   </g>
 </template>
 
@@ -19,25 +24,29 @@ export default {
     mapData: Object,
     projection: GeoProjection
   },
-  computed: {
-    paths() {
-      const arr = [];
-      this.mapData.features.forEach(
-        o => arr.push({
-          d: this.path(o),
-          district: o.properties.DISTRICT,
-          _o: o
-        })
-      );
-      return arr;
-    },
-    path() {
-      return geoPath(this.projection);
+  data() {
+    const arr = [], path = geoPath(this.projection);
+    this.mapData.features.forEach(
+      o => arr.push({
+        d: path(o),
+        district: o.properties.DISTRICT,
+        _o: o
+      })
+    );
+    return {
+      paths: arr,
+      path: path
+    };
+  },
+  methods: {
+    raise(index) {
+      const temp = this.paths[this.paths.length - 1];
+      this.paths[this.paths.length - 1] = this.paths[index];
+      this.$set(this.paths, index, temp);
     }
   }
 }
 </script>
 
-<style>
-
+<style scoped>
 </style>

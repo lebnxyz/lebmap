@@ -1,5 +1,5 @@
 <template>
-  <circle :cx="coords[0]" :cy="coords[1]" :r="defaultRadius"></circle>
+  <circle class="pin" :cx="coords[0]" :cy="coords[1]" :r="defaultRadius"></circle>
 </template>
 
 <script>
@@ -29,6 +29,12 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.pin {
+  stroke-width: 2px;
+  fill: #9ed;
+  stroke: #005;
+  cursor: pointer;
+  transition: 0.05s;
+}
 </style>
