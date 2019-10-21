@@ -1,5 +1,5 @@
 <template>
-  <circle :cx="x" :cy="y" :r="defaultRadius"></circle>
+  <circle :cx="coords[0]" :cy="coords[1]" :r="defaultRadius"></circle>
 </template>
 
 <script>
@@ -17,12 +17,6 @@ export default {
     MAX_RAD: {
       type: Number,
       default: 10
-    }
-  },
-  data() {
-    return {
-      x: this.coords[0],
-      y: this.coords[1],
     }
   },
   computed: {
