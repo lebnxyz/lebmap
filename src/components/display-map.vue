@@ -1,24 +1,24 @@
 <template>
   <g id="map">
-    <SVGRegion
-      v-for="(p, index) in paths" :key="p._o.ID_2"
+    <region v-for="(p, index) in paths" :key="p.district + index"
       :district="p.district"
       :d="p.d"
+      :projection="projection"
       @raise="raise(index)"
-    ></SVGRegion>
+    ></region>
   </g>
 </template>
 
 <script>
-import SVGRegion from './svg-region.vue';
+import Region from './region.vue';
 
 import { geoPath, GeoProjection } from 'd3';
 import * as utils from '../scripts/utils.js';
 
 export default {
-  name: 'SVGMap',
+  name: 'DisplayMap',
   components: {
-    SVGRegion
+    Region
   },
   props: {
     mapData: Object,
@@ -45,7 +45,7 @@ export default {
       this.$set(this.paths, index, temp);
     }
   }
-}
+};
 </script>
 
 <style scoped>

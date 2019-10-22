@@ -6,7 +6,7 @@
 import * as oneOff from '../scripts/oneOffHelpers.js';
 
 export default {
-  name: 'SVGPin',
+  name: 'Pin',
   props: {
     coords: Array,
     place: Object,
@@ -26,13 +26,13 @@ export default {
       );
     }
   }
-}
+};
 </script>
 
 <style scoped>
 .pin {
   stroke-width: 2px;
-  fill: #9ed;
+  fill: #fff;
   stroke: #005;
   cursor: pointer;
   transition: 0.05s;

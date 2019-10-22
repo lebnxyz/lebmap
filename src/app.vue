@@ -1,34 +1,30 @@
 <template>
   <svg v-if="mapJSON.features.length" :width="WIDTH" :height="HEIGHT">
-    <SVGMap :map-data="mapJSON" :projection="projection"></SVGMap>
-    <SVGPins :locations="locations" :projection="projection"></SVGPins>
+    <display-map :map-data="mapJSON" :projection="projection"></display-map>
+    <!--pins :locations="locations" :projection="projection"></pins-->
   </svg>
 </template>
 
 <script>
-import SVGMap from './components/svg-map.vue';
-import SVGPins from './components/pins.vue';
+import DisplayMap from './components/display-map.vue';
+import Pins from './components/pins.vue';
 
 import * as d3 from 'd3';
 import * as utils from './scripts/utils.js';
 
-// I don't feel like there's any benefit to instead importing the filepaths
-// and doing `this.foo = await d3.json(path)` on them...???
-import { data as locations } from './data/map/locations.json';
 import mapDataPath from './data/map/lb_2009_administrative_districts.geojson';
 
 export default {
   components: {
-    SVGMap,
-    SVGPins
+    DisplayMap,
+    Pins
   },
   data() {
     return {
       WIDTH: 600,
       HEIGHT: 600,
       projection: d3.geoMercator(),  // good enough for a default
-      mapJSON: {features: []},
-      locations
+      mapJSON: {features: []}
     }
   },
   async mounted() {
