@@ -3,6 +3,7 @@
   <pin v-for="p in pins" :key="p.place.name"
     :coords="p.coords"
     :place="p.place"
+    :parent-clicked="clicked"
   ></pin>
 </svg>
 </template>
@@ -19,7 +20,8 @@ export default {
   },
   props: {
     locations: Array,
-    projection: GeoProjection
+    projection: GeoProjection,
+    clicked: Boolean
   },
   data() {
     const arr = [];

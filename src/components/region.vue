@@ -1,14 +1,20 @@
 <template>
 <g
-  @mouseover="isHovered = true"
-  @mouseout="isHovered = false"
+  v-if="district !== undefined"
+  @mouseover="hover = true"
+  @mouseout="hover = false"
 >
   <path
-    :class="{region: true, hover: isHovered}"
+    :class="{hover, clicked, region: true}"
     :id="id"
     :d="d"
+    @click="click"
   ></path>
-  <pins :locations="$root.locationsByDistrict['$' + district]" :projection="projection"></pins>
+  <pins
+    :locations="$root.locationsByDistrict['$' + district]"
+    :projection="projection"
+    :clicked="clicked"
+  ></pins>
 </g>
 </template>
 
@@ -32,8 +38,17 @@ export default {
   data() {
     return {
       id: utils.toID('path', this.district),
-      isHovered: false
+      hover: false,
+      clicked: false
     };
+  },
+  methods: {
+    click() {
+      this.clicked = !this.clicked;
+      if (this.clicked) {
+        // TODO: emit stuff
+      }
+    }
   }
 };
 </script>
@@ -50,8 +65,15 @@ export default {
 }
 
 .region.hover {
-  fill: #d3d3d3;
+  fill: #666;
+  fill-opacity: 1;
   stroke: white;
   stroke-opacity: 1;
+}
+
+.region.clicked {
+  fill: red;
+  fill-opacity: 1;
+  stroke-width: 2px;
 }
 </style>

@@ -10,19 +10,13 @@ import Pins from './pins.vue';
 import * as utils from '../scripts/utils.js';
 
 export default {
-  name: 'Region',
+  name: 'DummyRegion',
   components: {
     Pins
   },
   props: {
     d: GeoPath,
     projection: GeoProjection
-  },
-  data() {
-    return {
-      id: utils.toID('path', this.district),
-      isHovered: false
-    };
   }
 };
 </script>
