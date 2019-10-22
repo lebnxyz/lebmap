@@ -86,7 +86,7 @@ export default {
 }
 
 .pin.parentClicked {
-  fill-opacity: 0.8;
-  stroke-width: 2px;
+  fill-opacity: 0.6;
+  stroke-width: 1px;
 }
 </style>

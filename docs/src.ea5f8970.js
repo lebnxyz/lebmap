@@ -69504,16 +69504,32 @@ var _default = {
     DisplayMap: _displayMap.default,
     Pins: _pins.default
   },
+  props: {
+    defaultWidth: {
+      type: Number,
+      default: 600
+    },
+    defaultHeight: {
+      type: Number,
+      default: 600
+    }
+  },
   data: function data() {
     return {
-      WIDTH: 600,
-      HEIGHT: 600,
       projection: d3.geoMercator(),
       // good enough for a default
       mapJSON: {
         features: []
       }
     };
+  },
+  computed: {
+    width: function width() {
+      return this.defaultWidth;
+    },
+    height: function height() {
+      return this.defaultHeight;
+    }
   },
   mounted: function () {
     var _mounted = (0, _asyncToGenerator2.default)(
@@ -69528,7 +69544,7 @@ var _default = {
 
             case 2:
               this.mapJSON = _context.sent;
-              this.projection = utils.customScaledProjection(1.1, 1, d3.geoMercatorRaw).fitSize([this.WIDTH, this.HEIGHT], this.mapJSON);
+              this.projection = utils.customScaledProjection(1.1, 1, d3.geoMercatorRaw).fitSize([this.width, this.height], this.mapJSON);
 
             case 4:
             case "end":
@@ -69554,14 +69570,14 @@ exports.default = _default;
     
         /* template */
         Object.assign($4e3a0b, (function () {
-          var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.mapJSON.features.length)?_c('svg',{attrs:{"width":_vm.WIDTH,"height":_vm.HEIGHT}},[_c('display-map',{attrs:{"map-data":_vm.mapJSON,"projection":_vm.projection}})],1):_vm._e()}
+          var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.mapJSON.features.length)?_c('svg',{attrs:{"width":"600","height":"600"}},[_c('display-map',{attrs:{"map-data":_vm.mapJSON,"projection":_vm.projection}})],1):_vm._e()}
 var staticRenderFns = []
 
           return {
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: null,
+            _scopeId: "data-v-4e3a0b",
             functional: undefined
           };
         })());
@@ -84777,4 +84793,4 @@ new _vue.default({
   }
 });
 },{"d3":"BG5c","vue":"4673","./app.vue":"wlok","./data/respondents.json":"y5NW","./data/map/locations.json":"MjNq","./scripts/utils.js":"E/Os"}]},{},["H99C"], null)
-//# sourceMappingURL=src.f08cf6f4.js.map
+//# sourceMappingURL=src.ea5f8970.js.map

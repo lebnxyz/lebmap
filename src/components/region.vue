@@ -65,7 +65,7 @@ export default {
 }
 
 .region.hover {
-  fill: #666;
+  fill: #444;
   fill-opacity: 1;
   stroke: white;
   stroke-opacity: 1;

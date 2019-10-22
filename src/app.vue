@@ -1,5 +1,5 @@
 <template>
-  <svg v-if="mapJSON.features.length" :width="WIDTH" :height="HEIGHT">
+  <svg v-if="mapJSON.features.length" width="600" height="600">
     <display-map :map-data="mapJSON" :projection="projection"></display-map>
     <!--pins :locations="locations" :projection="projection"></pins-->
   </svg>
@@ -19,22 +19,33 @@ export default {
     DisplayMap,
     Pins
   },
+  props: {
+    defaultWidth: {
+      type: Number,
+      default: 600
+    },
+    defaultHeight: {
+      type: Number,
+      default: 600
+    }
+  },
   data() {
     return {
-      WIDTH: 600,
-      HEIGHT: 600,
       projection: d3.geoMercator(),  // good enough for a default
       mapJSON: {features: []}
     }
   },
+  computed: {
+    width() { return this.defaultWidth; },
+    height() { return this.defaultHeight; }
+  },
   async mounted() {
     this.mapJSON = await d3.json(mapDataPath);
     this.projection = utils.customScaledProjection(1.1, 1, d3.geoMercatorRaw)
-      .fitSize([this.WIDTH, this.HEIGHT], this.mapJSON);
+      .fitSize([this.width, this.height], this.mapJSON);
   }
 }
 </script>
 
-<style>
-
+<style scoped>
 </style>
