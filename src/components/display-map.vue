@@ -1,16 +1,24 @@
 <template>
-  <g id="map">
+<g id="map">
+  <g>
+    <dummy-region v-for="p in paths" :key="p._o.ID_2"
+      :d="p.d"
+      :projection="projection"
+    ></dummy-region>
+  </g>
+  <g>
     <region v-for="(p, index) in paths" :key="p.district + index"
       :district="p.district"
       :d="p.d"
       :projection="projection"
-      @raise="raise(index)"
     ></region>
   </g>
+</g>
 </template>
 
 <script>
 import Region from './region.vue';
+import DummyRegion from './dummy-region.vue';
 
 import { geoPath, GeoProjection } from 'd3';
 import * as utils from '../scripts/utils.js';
@@ -18,7 +26,8 @@ import * as utils from '../scripts/utils.js';
 export default {
   name: 'DisplayMap',
   components: {
-    Region
+    Region,
+    DummyRegion
   },
   props: {
     mapData: Object,
@@ -37,13 +46,6 @@ export default {
       paths: arr,
       path: path
     };
-  },
-  methods: {
-    raise(index) {
-      const temp = this.paths[this.paths.length - 1];
-      this.paths[this.paths.length - 1] = this.paths[index];
-      this.$set(this.paths, index, temp);
-    }
   }
 };
 </script>

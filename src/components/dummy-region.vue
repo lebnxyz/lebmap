@@ -1,15 +1,5 @@
 <template>
-<g
-  @mouseover="isHovered = true"
-  @mouseout="isHovered = false"
->
-  <path
-    :class="{region: true, hover: isHovered}"
-    :id="id"
-    :d="d"
-  ></path>
-  <pins :locations="$root.locationsByDistrict['$' + district]" :projection="projection"></pins>
-</g>
+<path class="region" :d="d"></path>
 </template>
 
 <script>
@@ -26,7 +16,6 @@ export default {
   },
   props: {
     d: GeoPath,
-    district: String,
     projection: GeoProjection
   },
   data() {
@@ -41,17 +30,10 @@ export default {
 <style scoped>
 .region {
   fill: black;
-  fill-opacity: 0;
   stroke: gray;
-  stroke-opacity: 0;
   stroke-width: 1px;
   stroke-linejoin: round;
   stroke-linecap: round;
 }
 
-.region.hover {
-  fill: #d3d3d3;
-  stroke: white;
-  stroke-opacity: 1;
-}
 </style>
