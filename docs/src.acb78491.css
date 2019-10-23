@@ -1,3 +1,10 @@
+.region[data-v-99ea80] {
+  fill: black;
+  stroke: gray;
+  stroke-width: 1px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
 .region[data-v-81196e] {
   fill: black;
   fill-opacity: 0;
@@ -33,11 +40,4 @@
 .pin.parentClicked[data-v-a71f5c] {
   fill-opacity: 0.6;
   stroke-width: 1px;
-}
-.region[data-v-99ea80] {
-  fill: black;
-  stroke: gray;
-  stroke-width: 1px;
-  stroke-linejoin: round;
-  stroke-linecap: round;
 }

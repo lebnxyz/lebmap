@@ -1,21 +1,21 @@
 <template>
-<g
-  v-if="district !== undefined"
-  @mouseover="hover = true"
-  @mouseout="hover = false"
->
-  <path
-    :class="{hover, clicked, region: true}"
-    :id="id"
-    :d="d"
-    @click="click"
-  ></path>
-  <pins
-    :locations="$root.locationsByDistrict['$' + district]"
-    :projection="projection"
-    :clicked="clicked"
-  ></pins>
-</g>
+  <g
+    v-if="district !== undefined"
+    @mouseover="hover = true"
+    @mouseout="hover = false"
+  >
+    <path
+      :class="{hover, clicked, region: true}"
+      :id="id"
+      :d="d"
+      @click="click"
+    ></path>
+    <pins
+      :locations="$root.locationsByDistrict['$' + district]"
+      :projection="projection"
+      :clicked="clicked"
+    ></pins>
+  </g>
 </template>
 
 <script>

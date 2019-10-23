@@ -1,11 +1,11 @@
 <template>
-<svg>
-  <pin v-for="p in pins" :key="p.place.name"
-    :coords="p.coords"
-    :place="p.place"
-    :parent-clicked="clicked"
-  ></pin>
-</svg>
+  <g>
+    <pin v-for="p in pins" :key="p.place.name"
+      :coords="p.coords"
+      :place="p.place"
+      :parent-clicked="clicked"
+    ></pin>
+  </g>
 </template>
 
 <script>

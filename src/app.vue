@@ -1,13 +1,23 @@
 <template>
-  <svg v-if="mapJSON.features.length" width="600" height="600">
-    <display-map :map-data="mapJSON" :projection="projection"></display-map>
-    <!--pins :locations="locations" :projection="projection"></pins-->
+  <svg v-if="regionPaths.length" width="600" height="600">
+    <g>
+      <dummy-region v-for="p in regionPaths" :key="p._o.ID_2"
+        :d="p.d"
+      ></dummy-region>
+    </g>
+    <g>
+      <region v-for="(p, index) in regionPaths" :key="p.district + index"
+        :district="p.district"
+        :d="p.d"
+        :projection="projection"
+      ></region>
+    </g>
   </svg>
 </template>
 
 <script>
-import DisplayMap from './components/display-map.vue';
-import Pins from './components/pins.vue';
+import DummyRegion from './components/dummy-region.vue';
+import Region from './components/region.vue';
 
 import * as d3 from 'd3';
 import * as utils from './scripts/utils.js';
@@ -15,9 +25,10 @@ import * as utils from './scripts/utils.js';
 import mapDataPath from './data/map/lb_2009_administrative_districts.geojson';
 
 export default {
+  name: 'App',
   components: {
-    DisplayMap,
-    Pins
+    DummyRegion,
+    Region
   },
   props: {
     defaultWidth: {
@@ -31,18 +42,37 @@ export default {
   },
   data() {
     return {
-      projection: d3.geoMercator(),  // good enough for a default
-      mapJSON: {features: []}
+      mapJSON: {features: []},
+      regionPaths: []
     }
   },
   computed: {
-    width() { return this.defaultWidth; },
-    height() { return this.defaultHeight; }
+    width() {
+      return this.defaultWidth;
+    },
+    height() {
+      return this.defaultHeight;
+    },
+    projection() {
+      if (!this.mapJSON.features.length) {
+        return d3.geoMercator();
+      }
+      return utils.customScaledProjection(1.1, 1, d3.geoMercatorRaw)
+        .fitSize([this.width, this.height], this.mapJSON);
+    },
+    path() {
+      return d3.geoPath(this.projection);
+    }
   },
   async mounted() {
     this.mapJSON = await d3.json(mapDataPath);
-    this.projection = utils.customScaledProjection(1.1, 1, d3.geoMercatorRaw)
-      .fitSize([this.width, this.height], this.mapJSON);
+    this.mapJSON.features.forEach(
+      o => this.regionPaths.push({
+        d: this.path(o),
+        district: o.properties.DISTRICT,
+        _o: o
+      })
+    );
   }
 }
 </script>

@@ -1,22 +1,14 @@
 <template>
-<path class="region" :d="d"></path>
+  <path class="region" :d="d"></path>
 </template>
 
 <script>
-import { GeoPath, GeoProjection } from 'd3';
-
-import Pins from './pins.vue';
-
-import * as utils from '../scripts/utils.js';
+import { GeoPath } from 'd3';
 
 export default {
   name: 'DummyRegion',
-  components: {
-    Pins
-  },
   props: {
     d: GeoPath,
-    projection: GeoProjection
   }
 };
 </script>
@@ -29,5 +21,4 @@ export default {
   stroke-linejoin: round;
   stroke-linecap: round;
 }
-
 </style>

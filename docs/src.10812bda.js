@@ -37671,7 +37671,48 @@ function _asyncToGenerator(fn) {
 }
 
 module.exports = _asyncToGenerator;
-},{}],"e7Sb":[function(require,module,exports) {
+},{}],"IKrb":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _d = require("d3");
+
+//
+//
+//
+//
+var _default = {
+  name: 'DummyRegion',
+  props: {
+    d: _d.GeoPath
+  }
+};
+exports.default = _default;
+        var $99ea80 = exports.default || module.exports;
+      
+      if (typeof $99ea80 === 'function') {
+        $99ea80 = $99ea80.options;
+      }
+    
+        /* template */
+        Object.assign($99ea80, (function () {
+          var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('path',{staticClass:"region",attrs:{"d":_vm.d}})}
+var staticRenderFns = []
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-99ea80",
+            functional: undefined
+          };
+        })());
+      
+},{"d3":"BG5c"}],"e7Sb":[function(require,module,exports) {
 function _arrayWithHoles(arr) {
   if (Array.isArray(arr)) return arr;
 }
@@ -69221,7 +69262,7 @@ exports.default = _default;
     
         /* template */
         Object.assign($fbe4c4, (function () {
-          var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('svg',_vm._l((_vm.pins),function(p){return _c('pin',{key:p.place.name,attrs:{"coords":p.coords,"place":p.place,"parent-clicked":_vm.clicked}})}),1)}
+          var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('g',_vm._l((_vm.pins),function(p){return _c('pin',{key:p.place.name,attrs:{"coords":p.coords,"place":p.place,"parent-clicked":_vm.clicked}})}),1)}
 var staticRenderFns = []
 
           return {
@@ -69320,150 +69361,8 @@ var staticRenderFns = []
           };
         })());
       
-},{"d3":"BG5c","./pins.vue":"9R3g","../scripts/utils.js":"E/Os"}],"IKrb":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _d = require("d3");
-
-var _pins = _interopRequireDefault(require("./pins.vue"));
-
-var utils = _interopRequireWildcard(require("../scripts/utils.js"));
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-//
-//
-//
-//
-var _default = {
-  name: 'DummyRegion',
-  components: {
-    Pins: _pins.default
-  },
-  props: {
-    d: _d.GeoPath,
-    projection: _d.GeoProjection
-  }
-};
-exports.default = _default;
-        var $99ea80 = exports.default || module.exports;
-      
-      if (typeof $99ea80 === 'function') {
-        $99ea80 = $99ea80.options;
-      }
-    
-        /* template */
-        Object.assign($99ea80, (function () {
-          var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('path',{staticClass:"region",attrs:{"d":_vm.d}})}
-var staticRenderFns = []
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: "data-v-99ea80",
-            functional: undefined
-          };
-        })());
-      
-},{"d3":"BG5c","./pins.vue":"9R3g","../scripts/utils.js":"E/Os"}],"Yt6G":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _region = _interopRequireDefault(require("./region.vue"));
-
-var _dummyRegion = _interopRequireDefault(require("./dummy-region.vue"));
-
-var _d = require("d3");
-
-var utils = _interopRequireWildcard(require("../scripts/utils.js"));
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default = {
-  name: 'DisplayMap',
-  components: {
-    Region: _region.default,
-    DummyRegion: _dummyRegion.default
-  },
-  props: {
-    mapData: Object,
-    projection: _d.GeoProjection
-  },
-  data: function data() {
-    var arr = [],
-        path = (0, _d.geoPath)(this.projection);
-    this.mapData.features.forEach(function (o) {
-      return arr.push({
-        d: path(o),
-        district: o.properties.DISTRICT,
-        _o: o
-      });
-    });
-    return {
-      paths: arr,
-      path: path
-    };
-  }
-};
-exports.default = _default;
-        var $9c66bd = exports.default || module.exports;
-      
-      if (typeof $9c66bd === 'function') {
-        $9c66bd = $9c66bd.options;
-      }
-    
-        /* template */
-        Object.assign($9c66bd, (function () {
-          var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('g',{attrs:{"id":"map"}},[_c('g',_vm._l((_vm.paths),function(p){return _c('dummy-region',{key:p._o.ID_2,attrs:{"d":p.d,"projection":_vm.projection}})}),1),_vm._v(" "),_c('g',_vm._l((_vm.paths),function(p,index){return _c('region',{key:p.district + index,attrs:{"district":p.district,"d":p.d,"projection":_vm.projection}})}),1)])}
-var staticRenderFns = []
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: "data-v-9c66bd",
-            functional: undefined
-          };
-        })());
-      
-},{"./region.vue":"9rak","./dummy-region.vue":"IKrb","d3":"BG5c","../scripts/utils.js":"E/Os"}],"e4Hw":[function(require,module,exports) {
-module.exports = "lb_2009_administrative_districts.91c5dacf.geojson";
+},{"d3":"BG5c","./pins.vue":"9R3g","../scripts/utils.js":"E/Os"}],"e4Hw":[function(require,module,exports) {
+module.exports = "lb_2009_administrative_districts.28577fb1.geojson";
 },{}],"wlok":[function(require,module,exports) {
 "use strict";
 
@@ -69476,9 +69375,9 @@ var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"))
 
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
-var _displayMap = _interopRequireDefault(require("./components/display-map.vue"));
+var _dummyRegion = _interopRequireDefault(require("./components/dummy-region.vue"));
 
-var _pins = _interopRequireDefault(require("./components/pins.vue"));
+var _region = _interopRequireDefault(require("./components/region.vue"));
 
 var d3 = _interopRequireWildcard(require("d3"));
 
@@ -69499,10 +69398,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
+  name: 'App',
   components: {
-    DisplayMap: _displayMap.default,
-    Pins: _pins.default
+    DummyRegion: _dummyRegion.default,
+    Region: _region.default
   },
   props: {
     defaultWidth: {
@@ -69516,11 +69426,10 @@ var _default = {
   },
   data: function data() {
     return {
-      projection: d3.geoMercator(),
-      // good enough for a default
       mapJSON: {
         features: []
-      }
+      },
+      regionPaths: []
     };
   },
   computed: {
@@ -69529,12 +69438,24 @@ var _default = {
     },
     height: function height() {
       return this.defaultHeight;
+    },
+    projection: function projection() {
+      if (!this.mapJSON.features.length) {
+        return d3.geoMercator();
+      }
+
+      return utils.customScaledProjection(1.1, 1, d3.geoMercatorRaw).fitSize([this.width, this.height], this.mapJSON);
+    },
+    path: function path() {
+      return d3.geoPath(this.projection);
     }
   },
   mounted: function () {
     var _mounted = (0, _asyncToGenerator2.default)(
     /*#__PURE__*/
     _regenerator.default.mark(function _callee() {
+      var _this = this;
+
       return _regenerator.default.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -69544,7 +69465,13 @@ var _default = {
 
             case 2:
               this.mapJSON = _context.sent;
-              this.projection = utils.customScaledProjection(1.1, 1, d3.geoMercatorRaw).fitSize([this.width, this.height], this.mapJSON);
+              this.mapJSON.features.forEach(function (o) {
+                return _this.regionPaths.push({
+                  d: _this.path(o),
+                  district: o.properties.DISTRICT,
+                  _o: o
+                });
+              });
 
             case 4:
             case "end":
@@ -69570,7 +69497,7 @@ exports.default = _default;
     
         /* template */
         Object.assign($4e3a0b, (function () {
-          var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.mapJSON.features.length)?_c('svg',{attrs:{"width":"600","height":"600"}},[_c('display-map',{attrs:{"map-data":_vm.mapJSON,"projection":_vm.projection}})],1):_vm._e()}
+          var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.regionPaths.length)?_c('svg',{attrs:{"width":"600","height":"600"}},[_c('g',_vm._l((_vm.regionPaths),function(p){return _c('dummy-region',{key:p._o.ID_2,attrs:{"d":p.d}})}),1),_vm._v(" "),_c('g',_vm._l((_vm.regionPaths),function(p,index){return _c('region',{key:p.district + index,attrs:{"district":p.district,"d":p.d,"projection":_vm.projection}})}),1)]):_vm._e()}
 var staticRenderFns = []
 
           return {
@@ -69582,7 +69509,7 @@ var staticRenderFns = []
           };
         })());
       
-},{"@babel/runtime/regenerator":"8m4e","@babel/runtime/helpers/asyncToGenerator":"2fws","./components/display-map.vue":"Yt6G","./components/pins.vue":"9R3g","d3":"BG5c","./scripts/utils.js":"E/Os","./data/map/lb_2009_administrative_districts.geojson":"e4Hw"}],"y5NW":[function(require,module,exports) {
+},{"@babel/runtime/regenerator":"8m4e","@babel/runtime/helpers/asyncToGenerator":"2fws","./components/dummy-region.vue":"IKrb","./components/region.vue":"9rak","d3":"BG5c","./scripts/utils.js":"E/Os","./data/map/lb_2009_administrative_districts.geojson":"e4Hw"}],"y5NW":[function(require,module,exports) {
 module.exports={url: "respondents.7d2067cc.json", data: [
     {
         "timeCompleted": "2019/08/13 5:15:44 AM MDT",
@@ -84793,4 +84720,4 @@ new _vue.default({
   }
 });
 },{"d3":"BG5c","vue":"4673","./app.vue":"wlok","./data/respondents.json":"y5NW","./data/map/locations.json":"MjNq","./scripts/utils.js":"E/Os"}]},{},["H99C"], null)
-//# sourceMappingURL=src.ea5f8970.js.map
+//# sourceMappingURL=src.10812bda.js.map
