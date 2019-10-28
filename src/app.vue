@@ -19,10 +19,10 @@
 import DummyRegion from './components/dummy-region.vue';
 import Region from './components/region.vue';
 
-import * as d3 from 'd3';
+import { geoMercator, geoPath, geoMercatorRaw } from 'd3';
 import * as utils from './scripts/utils.js';
 
-import mapDataPath from './data/map/lb_2009_administrative_districts.geojson';
+import mapData from './data/map/lb_2009_administrative_districts.json';
 
 export default {
   name: 'App',
@@ -55,17 +55,17 @@ export default {
     },
     projection() {
       if (!this.mapJSON.features.length) {
-        return d3.geoMercator();
+        return geoMercator();
       }
-      return utils.customScaledProjection(1.1, 1, d3.geoMercatorRaw)
+      return utils.customScaledProjection(1.1, 1, geoMercatorRaw)
         .fitSize([this.width, this.height], this.mapJSON);
     },
     path() {
-      return d3.geoPath(this.projection);
+      return geoPath(this.projection);
     }
   },
-  async mounted() {
-    this.mapJSON = await d3.json(mapDataPath);
+  mounted() {
+    this.mapJSON = mapData;
     this.mapJSON.features.forEach(
       o => this.regionPaths.push({
         d: this.path(o),

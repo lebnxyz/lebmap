@@ -1,10 +1,10 @@
-import * as d3 from 'd3';
+import { nest, values } from 'd3';
 import Vue from 'vue';
 
 import App from './app.vue';
 
-import { data as respondents } from './data/respondents.json';
-import { data as locations } from './data/map/locations.json';
+import respondents from './data/respondents.json';
+import locations from './data/map/locations.json';
 import { makeQueryFunc } from './scripts/utils.js';
 
 new Vue({
@@ -12,7 +12,7 @@ new Vue({
     return {
       locations,
       respondents,
-      locationsByDistrict: d3.nest().key(d => d.district).map(d3.values(locations)),
+      locationsByDistrict: nest().key(d => d.district).map(values(locations)),
       respondentQuery: makeQueryFunc(respondents)
     }
   },

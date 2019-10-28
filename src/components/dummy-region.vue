@@ -3,13 +3,9 @@
 </template>
 
 <script>
-import { GeoPath } from 'd3';
-
 export default {
   name: 'DummyRegion',
-  props: {
-    d: GeoPath,
-  }
+  props: ['d']
 };
 </script>
 

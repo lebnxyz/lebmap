@@ -11,8 +11,6 @@
 <script>
 import Pin from './pin.vue';
 
-import { geoPath, GeoProjection } from 'd3';
-
 export default {
   name: 'Pins',
   components: {
@@ -20,7 +18,7 @@ export default {
   },
   props: {
     locations: Array,
-    projection: GeoProjection,
+    projection: null,  // geoprojection
     clicked: Boolean
   },
   data() {

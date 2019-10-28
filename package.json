@@ -4,9 +4,12 @@
   "description": "Interactive dialectal-feature map for Lebanese Arabic",
   "private": true,
   "scripts": {
-    "build": "parcel build index.html -d docs/ --public-url ./ --no-minify",
-    "dev": "parcel index.html",
-    "prep": "SETLOCAL && FOR /F \"tokens=* USEBACKQ\" %g IN (`git lastmsg`) do (set \"COMMITMSG=%g\") && git reset HEAD~1 && del docs\\* /Q && npm run build && git add docs\\ && CALL git commit -am \"%COMMITMSG%\" && ENDLOCAL",
+    "prod": "webpack --mode production",
+    "dev": "webpack --mode development",
+    "serve": "live-server docs",
+    "sdev": "npm run dev && npm run serve",
+    "sprod": "npm run prod && npm run serve",
+    "prep": "SETLOCAL && FOR /F \"tokens=* USEBACKQ\" %g IN (`git lastmsg`) do (set \"COMMITMSG=%g\") && git reset HEAD~1 && npm run prod && git add docs\\ && CALL git commit -am \"%COMMITMSG%\" && ENDLOCAL",
     "push": "npm run prep && git push",
     "pushf": "npm run prep && git push -f"
   },
@@ -21,42 +24,35 @@
   },
   "homepage": "https://github.com/supposedly/leb#readme",
   "dependencies": {
-    "@babel/runtime": "^7.6.3",
     "alasql": "^0.5.1",
+    "core-js": "^3.3.4",
     "d3": "^5.12.0",
     "vue": "^2.6.10",
     "vue-hot-reload-api": "^2.3.4"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
-    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.6.2",
     "@vue/component-compiler-utils": "^3.0.0",
+    "@webpack-cli/serve": "^0.1.8",
+    "babel-loader": "^8.0.6",
     "browserslist": "^4.7.0",
-    "parcel-bundler": "^1.12.3",
-    "parcel-plugin-json-extended": "^0.1.2",
-    "vue-template-compiler": "^2.6.10"
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "json-loader": "^0.5.7",
+    "url-loader": "^2.2.0",
+    "vue-loader": "^15.7.1",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
   },
   "browserslist": [
     "> .5% and last 2 versions",
     "> .5% in LB"
-  ],
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "useBuiltIns": "usage"
-        }
-      ]
-    ],
-    "plugins": [
-      [
-        "@babel/plugin-transform-runtime",
-        {
-          "regenerator": true
-        }
-      ]
-    ]
-  }
+  ]
 }

@@ -19,8 +19,6 @@
 </template>
 
 <script>
-import { GeoPath, GeoProjection } from 'd3';
-
 import Pins from './pins.vue';
 
 import * as utils from '../scripts/utils.js';
@@ -31,9 +29,9 @@ export default {
     Pins
   },
   props: {
-    d: GeoPath,
+    d: null,  // geopath
     district: String,
-    projection: GeoProjection
+    projection: null  // geoprojection
   },
   data() {
     return {
