@@ -1,7 +1,7 @@
 <template>
   <g>
     <pin v-for="p in pins" :key="p.place.name"
-      :coords="p.coords"
+      :coords="projection(p.coords)"
       :place="p.place"
       :parent-clicked="clicked"
     ></pin>
@@ -25,7 +25,7 @@ export default {
     const arr = [];
     Object.values(this.locations || {}).forEach(
       place => arr.push({
-        coords: this.projection(place.location),
+        coords: place.location,
         place: place
       })
     );
