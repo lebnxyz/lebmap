@@ -62,9 +62,7 @@ export default {
         return;
       }
       this.clicked = !this.clicked;
-      if (this.clicked) {
-        // TODO: emit stuff
-      }
+      this.$emit(this.clicked ? 'select-pin' : 'unselect-pin', this);
     }
   }
 };

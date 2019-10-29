@@ -75,6 +75,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
+      title: 'Lebanon',
       template: './index.html'
     })
   ],

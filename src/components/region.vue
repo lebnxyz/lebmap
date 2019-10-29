@@ -11,9 +11,11 @@
       @click="click"
     ></path>
     <pins
-      :locations="$root.locationsByDistrict['$' + district]"
+      :locations="locations"
       :projection="projection"
       :clicked="clicked"
+      @select-pin="selectPin"
+      @unselect-pin="unselectPin"
     ></pins>
   </g>
 </template>
@@ -36,6 +38,7 @@ export default {
   data() {
     return {
       id: utils.toID('path', this.district),
+      locations: this.$root.locationsByDistrict['$' + this.district],
       hover: false,
       clicked: false
     };
@@ -43,9 +46,13 @@ export default {
   methods: {
     click() {
       this.clicked = !this.clicked;
-      if (this.clicked) {
-        // TODO: emit stuff
-      }
+      this.$emit(this.clicked ? 'select' : 'unselect', this.$children[0].$children);
+    },
+    selectPin(pin) {
+      this.$emit('select', [pin]);
+    },
+    unselectPin(pin) {
+      this.$emit('unselect', [pin]);
     }
   }
 };

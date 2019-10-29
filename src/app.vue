@@ -10,6 +10,8 @@
         :district="p.district"
         :d="path(p.o)"
         :projection="projection"
+        @select="select"
+        @unselect="unselect"
       ></region>
     </g>
   </svg>
@@ -54,7 +56,8 @@ export default {
       window: {
         width: this.defaultWidth,
         height: this.defaultHeight
-      }
+      },
+      selection: {}
     }
   },
   computed: {
@@ -83,6 +86,12 @@ export default {
     resize() {
       this.window.width = window.innerWidth;
       this.window.height = window.innerHeight;
+    },
+    select(pins) {
+      pins.map(pin => this.selection[pin.place.name] = pin);
+    },
+    unselect(pins) {
+      pins.map(pin => delete this.selection[pin.place.name]);
     }
   }
 };

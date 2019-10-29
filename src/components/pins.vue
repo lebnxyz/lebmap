@@ -4,6 +4,7 @@
       :coords="projection(p.coords)"
       :place="p.place"
       :parent-clicked="clicked"
+      v-on="$listeners"
     ></pin>
   </g>
 </template>
@@ -22,16 +23,14 @@ export default {
     clicked: Boolean
   },
   data() {
-    const arr = [];
+    const pins = [];
     Object.values(this.locations || {}).forEach(
-      place => arr.push({
+      place => pins.push({
         coords: place.location,
         place: place
       })
     );
-    return {
-      pins: arr
-    };
+    return {pins};
   }
 };
 </script>
