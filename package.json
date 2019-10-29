@@ -4,12 +4,11 @@
   "description": "Interactive dialectal-feature map for Lebanese Arabic",
   "private": true,
   "scripts": {
-    "prod": "webpack --mode production",
-    "dev": "webpack --mode development",
-    "serve": "live-server docs",
-    "sdev": "npm run dev && npm run serve",
-    "sprod": "npm run prod && npm run serve",
-    "prep": "SETLOCAL && FOR /F \"tokens=* USEBACKQ\" %g IN (`git lastmsg`) do (set \"COMMITMSG=%g\") && git reset HEAD~1 && npm run prod && git add docs\\ && CALL git commit -am \"%COMMITMSG%\" && ENDLOCAL",
+    "dev": "webpack --mode development --devtool eval-source-map serve",
+    "prodserve": "webpack --mode production serve",
+    "build": "webpack --mode production",
+    "devbuild": "webpack --mode development --devtool eval-source-map",
+    "prep": "SETLOCAL && FOR /F \"tokens=* USEBACKQ\" %g IN (`git lastmsg`) do (set \"COMMITMSG=%g\") && git reset HEAD~1 && npm run build && git add docs\\ && CALL git commit -am \"%COMMITMSG%\" && ENDLOCAL",
     "push": "npm run prep && git push",
     "pushf": "npm run prep && git push -f"
   },

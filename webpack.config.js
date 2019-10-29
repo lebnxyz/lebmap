@@ -22,6 +22,11 @@ module.exports = {
       chunks: 'all'
     }
   },
+  devServer: {
+    publicPath: '/docs/',
+    open: true,
+    openPage: 'docs/'
+  },
   module: {
     rules: [
       {

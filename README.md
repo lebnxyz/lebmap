@@ -13,15 +13,14 @@ The issues at [parcel-bundler#501](https://github.com/parcel-bundler/parcel/issu
 third being the absolute last straw, so I switched to Webpack... everything about the build process is ickier as a result,
 but I'll gladly (if reulctantly) take icky over broken.
 
-So if you'd like to tinker with the project yourself, the following NPM scripts are relevant:
+So if you'd like to tinker with the project yourself, the following four NPM scripts are relevant:
 
-- `dev`: Build for development.
-- `prod`: Build for production.
-- `serve`: Serve whatever's in `docs/`, the output directory. (I can't currently get Webpack's dev server to work, so this is important.)
-- `sdev`: `dev` -> `serve`.
-- `sprod`: `prod` -> `serve.`
+- `dev`: Serve a development build. Automatically opens in default browser.
+- `prodserve`: Ditto, but serves a production build (just in case).
+- `build`: Builds for production.
+- `devbuild`: Bulids for development (just in case).
 
-(But don't look too hard at the remaining scripts. Please. It's for your own good.)
+(And don't look at the remaining scripts. Please. It's for your own good.)
 
 Of note is my *patent* abuse of Pages' "build from `docs/`" feature, allowing for local debugging from the project
 root without requiring maintenance of a separate `gh-pages` branch to deploy from. If it works...!

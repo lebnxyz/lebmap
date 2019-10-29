@@ -62,7 +62,7 @@ export default {
       return this.window.width / 2;
     },
     height() {
-      return this.window.height;
+      return this.window.height * .95;
     },
     projection() {
       return utils.customScaledProjection(1.1, 1, geoMercatorRaw)
