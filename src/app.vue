@@ -1,22 +1,26 @@
 <template>
-  <div>
-    <svg v-if="regionPaths.length" :width="width" :height="height">
-      <g>
-        <dummy-region v-for="p in regionPaths" :key="p.o.ID_2"
-          :d="path(p.o)"
-        ></dummy-region>
-      </g>
-      <g>
-        <region v-for="(p, index) in regionPaths" :key="p.district + index"
-          :district="p.district"
-          :d="path(p.o)"
-          :projection="projection"
-          @select="select"
-          @unselect="unselect"
-        ></region>
-      </g>
-    </svg>
-    <answer-list :selection="selection"></answer-list>
+  <div id="container">
+    <div id="map" class="column">
+      <svg v-if="regionPaths.length" :width="width" :height="height">
+        <g>
+          <dummy-region v-for="p in regionPaths" :key="p.o.ID_2"
+            :d="path(p.o)"
+          ></dummy-region>
+        </g>
+        <g>
+          <region v-for="(p, index) in regionPaths" :key="p.district + index"
+            :district="p.district"
+            :d="path(p.o)"
+            :projection="projection"
+            @select="select"
+            @unselect="unselect"
+          ></region>
+        </g>
+      </svg>
+    </div>
+    <div id="info" class="column">
+      <answer-list :selection="selection"></answer-list>
+    </div>
   </div>
 </template>
 
@@ -37,16 +41,6 @@ export default {
     Region,
     AnswerList
   },
-  props: {
-    defaultWidth: {
-      type: Number,
-      default: window.innerWidth / 2
-    },
-    defaultHeight: {
-      type: Number,
-      default: window.innerHeight
-    }
-  },
   data() {
     const regionPaths = [];
     mapJSON.features.forEach(
@@ -59,15 +53,15 @@ export default {
       mapJSON,
       regionPaths,
       window: {
-        width: this.defaultWidth,
-        height: this.defaultHeight
+        width: null,
+        height: null
       },
       selection: {}
     }
   },
   computed: {
     width() {
-      return this.window.width / 2;
+      return this.window.width / 2.5;
     },
     height() {
       return this.window.height * .95;
@@ -103,4 +97,16 @@ export default {
 </script>
 
 <style scoped>
+#container {
+  display: flex;
+  height: 100%;
+  flex: none;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: auto;
+}
 </style>
