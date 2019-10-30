@@ -10,8 +10,21 @@ export function customScaledProjection(xMult, yMult, rawProjection) {
 }
 
 
-export function makeQueryFunc(obj) {
-    return (query, ...params) => alasql(query, [obj, ...params]);
+export class Query extends Function {
+    constructor(queryObj) {
+        super('...args', 'return this.$self.$call(...args)');
+        this.$self = this.bind(this);
+        this.$self.queryObj = queryObj;
+        return this.$self;
+    }
+
+    $call(query, ...params) {
+        return alasql(query, [this.queryObj, ...params]);
+    }
+
+    count(query, ...params) {
+        return this.$call('SELECT COUNT(*) FROM $0 ' + query, ...params)[0]['COUNT(*)'];
+    }
 }
 
 

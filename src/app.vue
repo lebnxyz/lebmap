@@ -1,7 +1,7 @@
 <template>
   <div id="container">
     <div id="map" class="column">
-      <svg v-if="regionPaths.length" :width="width" :height="height">
+      <svg v-if="regionPaths.length" width="100%" height="100%">
         <g>
           <dummy-region v-for="p in regionPaths" :key="p.o.ID_2"
             :d="path(p.o)"

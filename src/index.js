@@ -5,7 +5,10 @@ import App from './app.vue';
 
 import respondents from './data/respondents.json';
 import locations from './data/map/locations.json';
-import { makeQueryFunc } from './scripts/utils.js';
+import { Query } from './scripts/utils.js';
+
+const r = new Query(respondents);
+window.rq = r;
 
 new Vue({
   data() {
@@ -13,7 +16,7 @@ new Vue({
       locations,
       respondents,
       locationsByDistrict: nest().key(d => d.district).map(values(locations)),
-      respondentQuery: makeQueryFunc(respondents)
+      respondentQuery: r
     }
   },
   el: '#app',
