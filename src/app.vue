@@ -1,25 +1,29 @@
 <template>
-  <svg v-if="regionPaths.length" :width="width" :height="height">
-    <g>
-      <dummy-region v-for="p in regionPaths" :key="p.o.ID_2"
-        :d="path(p.o)"
-      ></dummy-region>
-    </g>
-    <g>
-      <region v-for="(p, index) in regionPaths" :key="p.district + index"
-        :district="p.district"
-        :d="path(p.o)"
-        :projection="projection"
-        @select="select"
-        @unselect="unselect"
-      ></region>
-    </g>
-  </svg>
+  <div>
+    <svg v-if="regionPaths.length" :width="width" :height="height">
+      <g>
+        <dummy-region v-for="p in regionPaths" :key="p.o.ID_2"
+          :d="path(p.o)"
+        ></dummy-region>
+      </g>
+      <g>
+        <region v-for="(p, index) in regionPaths" :key="p.district + index"
+          :district="p.district"
+          :d="path(p.o)"
+          :projection="projection"
+          @select="select"
+          @unselect="unselect"
+        ></region>
+      </g>
+    </svg>
+    <answer-list :selection="selection"></answer-list>
+  </div>
 </template>
 
 <script>
 import DummyRegion from './components/dummy-region.vue';
 import Region from './components/region.vue';
+import AnswerList from './components/answer-list.vue';
 
 import { geoMercator, geoPath, geoMercatorRaw } from 'd3';
 import * as utils from './scripts/utils.js';
@@ -30,7 +34,8 @@ export default {
   name: 'App',
   components: {
     DummyRegion,
-    Region
+    Region,
+    AnswerList
   },
   props: {
     defaultWidth: {
@@ -88,10 +93,10 @@ export default {
       this.window.height = window.innerHeight;
     },
     select(pins) {
-      pins.map(pin => this.selection[pin.place.name] = pin);
+      pins.map(pin => this.$set(this.selection, pin.place.name, pin.place));
     },
     unselect(pins) {
-      pins.map(pin => delete this.selection[pin.place.name]);
+      pins.map(pin => this.$delete(this.selection, pin.place.name));
     }
   }
 };
