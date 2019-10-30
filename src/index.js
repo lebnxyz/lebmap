@@ -1,8 +1,9 @@
 import { nest, values } from 'd3';
 import Vue from 'vue';
 
-import App from './app.vue';
+import 'typeface-montserrat';
 
+import App from './app.vue';
 import respondents from './data/respondents.json';
 import locations from './data/map/locations.json';
 import { Query } from './scripts/utils.js';
