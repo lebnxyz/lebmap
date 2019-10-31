@@ -1,6 +1,7 @@
 MIT License
 
 Copyright (c) 2019 Rasmus Schlünsen
+Copyright (c) 2019 Hadi Tarhini (use default slot, implement listeners)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -33,8 +34,14 @@ export default {
   name: "Fitty",
   props: {
     options: Object,
-    createListener: Function,
-    destroyListener: Function
+    createListener: {
+      type: Function,
+      default: () => {}
+    },
+    destroyListener: {
+      type: Function,
+      default: () => {}
+    }
   },
   computed: {
     contentID() {
