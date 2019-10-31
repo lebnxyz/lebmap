@@ -31,7 +31,11 @@ import fitty from "fitty";
 
 export default {
   name: "Fitty",
-  props: ["options"],
+  props: {
+    options: Object,
+    createListener: Function,
+    destroyListener: Function
+  },
   computed: {
     contentID() {
       return "fitty-" + this._uid;
@@ -39,14 +43,23 @@ export default {
   },
   data() {
     return {
-      $fitty: null
+      $fitty: null,
     };
   },
+  methods: {
+    refit() {
+      this.$fitty.fit();
+    }
+  },
   mounted() {
-    this.$nextTick(() => this.$fitty = fitty("#" + this.contentID, this.options)[0]);
+    this.$nextTick(() => [this.$fitty] = fitty("#" + this.contentID, this.options));
+    this.createListener(this.refit);
   },
   beforeDestroy() {
     this.$fitty.unsubscribe();
+  },
+  destroyed() {
+    this.destroyListener(this.refit);
   }
 };
 </script>
