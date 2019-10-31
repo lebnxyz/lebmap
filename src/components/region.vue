@@ -1,11 +1,7 @@
 <template>
-  <g
-    v-if="district !== undefined"
-    @mouseover="hover = true"
-    @mouseout="hover = false"
-  >
+  <g v-if="district !== undefined">
     <path
-      :class="{hover, clicked, region: true}"
+      :class="{clicked, region: true}"
       :id="id"
       :d="d"
       @click="click"
@@ -69,7 +65,7 @@ export default {
   stroke-linecap: round;
 }
 
-.region.hover {
+.region:hover {
   fill: #444;
   fill-opacity: 1;
   stroke: white;

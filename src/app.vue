@@ -50,7 +50,6 @@ export default {
       })
     );
     return {
-      mapJSON,
       regionPaths,
       window: {
         width: null,
@@ -90,7 +89,8 @@ export default {
       pins.map(pin => this.$set(this.selection, pin.place.name, pin.place));
     },
     unselect(pins) {
-      pins.map(pin => this.$delete(this.selection, pin.place.name));
+      // better for performance than deleting (much faster, especially on later re-selects)
+      pins.map(pin => this.$set(this.selection, pin.place.name, undefined));
     }
   }
 };

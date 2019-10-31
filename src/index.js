@@ -8,8 +8,6 @@ import respondents from './data/respondents.json';
 import locations from './data/map/locations.json';
 import { Query } from './scripts/utils.js';
 
-const r = new Query(respondents);
-window.rq = r;
 
 new Vue({
   data() {
@@ -17,7 +15,7 @@ new Vue({
       locations,
       respondents,
       locationsByDistrict: nest().key(d => d.district).map(values(locations)),
-      respondentQuery: r
+      respondentQuery: new Query(respondents)
     }
   },
   el: '#app',

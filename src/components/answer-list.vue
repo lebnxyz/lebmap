@@ -1,6 +1,6 @@
 <template>
   <div>
-    <location v-for="place in Object.values(selection)" :key="place.name"
+    <location v-for="place in Object.values(selection).filter(p => p !== undefined)" :key="place.name"
       :name="place.name"
       :district="place.district"
       :responses="$root.respondentQuery.count('WHERE location = $1', place.name)"
