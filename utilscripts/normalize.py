@@ -84,13 +84,13 @@ def normalize_questions(csv_header, json_li):
     return csv_header, json_li
 
 
-def do_questions(csv_path='results-normalized.csv', json_path='data/questions.json'):
+def do_questions(csv_path='results-normalized.csv', json_path='src/data/questions.json'):
     with open(csv_path, encoding='utf-8', newline='') as csv_f, open(json_path, encoding='utf-8') as json_f:
         csv_header, json_li = normalize_questions(next(iter(csv.reader(csv_f))), json.load(json_f))
         csv_f.seek(0)
         next(csv_f)
         csv_out = [csv_header, *csv.reader(csv_f)]
-    badjson.write(json_li, 'data/questions.json')
+    badjson.write(json_li, 'src/data/questions.json')
     with open(csv_path, 'w', encoding='utf-8', newline='') as csv_f:
         csv.writer(csv_f).writerows(csv_out)
 
@@ -111,7 +111,7 @@ def compile_answers(csv_f, json_f, cross_file_answer_map=None):
           'timeCompleted': timestamp,
           'number': user_id,
           'location': location,
-          '3a': extra_location,
+          'ala': extra_location,
           'answers': {},
           'otherAnswers': {}
         })
@@ -172,7 +172,7 @@ def compile_answers(csv_f, json_f, cross_file_answer_map=None):
     return cross_file_answer_map, respondents, answers
 
 
-def do_compilation(csv_path='results-normalized.csv', json_path='data/questions.json', answer_map_path='data/cross_file_answer_map.json'):
+def do_compilation(csv_path='results-normalized.csv', json_path='src/data/questions.json', answer_map_path='src/data/cross_file_answer_map.json'):
     with open(csv_path, encoding='utf-8', newline='') as csv_f, \
      open(json_path, encoding='utf-8') as json_f, \
      open(answer_map_path, encoding='utf-8') as answer_map:
@@ -181,16 +181,16 @@ def do_compilation(csv_path='results-normalized.csv', json_path='data/questions.
           json.load(json_f),
           cross_file_answer_map=json.load(answer_map)
         )
-    with open('data/cross_file_answer_map.json', 'w', encoding='utf-8') as f:
+    with open('src/data/cross_file_answer_map.json', 'w', encoding='utf-8') as f:
         json.dump(cross_file_answer_map, f, indent=4)
-    with open('data/respondents.json', 'w', encoding='utf-8') as f:
+    with open('src/data/respondents.json', 'w', encoding='utf-8') as f:
         f.write(regex.sub(r'\[\n\s+(.+?)\n\s*]', r'[\1]', json.dumps(respondents, indent=4)))
-    with open('data/question_answerers.json', 'w', encoding='utf-8') as f:
+    with open('src/data/question_answerers.json', 'w', encoding='utf-8') as f:
         f.write(regex.sub(r'(\d),\n\s*', r'\1, ', json.dumps(question_answered_by_map, indent=4)))
     print('\n:)')
 
 
-def do_special_cases(json_questions_path='data/question_answerers.json', json_users_path='data/respondents.json'):
+def do_special_cases(json_questions_path='src/data/question_answerers.json', json_users_path='src/data/respondents.json'):
     '''assumed to be run after do_compilation()'''
     with open(json_users_path, encoding='utf-8') as user_f, \
      open(json_questions_path, encoding='utf-8') as q_f:
@@ -250,7 +250,7 @@ def do_special_cases(json_questions_path='data/question_answerers.json', json_us
         q_f.write(regex.sub(r'(\d),\n\s*', r'\1, ', json.dumps(qj, indent=4)))
 
 
-def normalize_map_names(map_path='data/map/lb_2009_administrative_districts.geojson', locations_path='data/map/locations.json'):
+def normalize_map_names(map_path='src/data/map/lb_2009_administrative_districts.geojson', locations_path='src/data/map/locations.json'):
     with open(map_path) as map_f, open(locations_path) as locations_f:
         lb_map, locations = json.load(map_f), json.load(locations_f)
     cross_file_name_map = {'districts': {}, 'governorates': {}}
@@ -267,6 +267,5 @@ def normalize_map_names(map_path='data/map/lb_2009_administrative_districts.geoj
         props['DISTRICT'] = districts[props['DISTRICT']]
     with open(map_path, 'w') as f:
         json.dump(lb_map, f)
-    with open('data/map/cross_file_name_map.json', 'w') as f:
+    with open('src/data/map/cross_file_name_map.json', 'w') as f:
         json.dump(cross_file_name_map, f, indent=4)
-
