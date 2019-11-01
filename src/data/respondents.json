@@ -3,7 +3,7 @@
         "timeCompleted": "2019/08/13 5:15:44 AM MDT",
         "number": 0,
         "location": "Khalwat",
-        "3a": "Yes, Dubai",
+        "ala": "Yes, Dubai",
         "answers": {
             "0.0": [1],
             "0.1": [0],
@@ -139,7 +139,7 @@
         "timeCompleted": "2019/08/13 5:27:37 AM MDT",
         "number": 1,
         "location": "Halba",
-        "3a": "No",
+        "ala": "No",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -257,7 +257,7 @@
         "timeCompleted": "2019/08/13 5:43:20 AM MDT",
         "number": 2,
         "location": "Marjaayoun",
-        "3a": "\u0628\u064a\u0631\u0648\u062a",
+        "ala": "\u0628\u064a\u0631\u0648\u062a",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -380,7 +380,7 @@
         "timeCompleted": "2019/08/13 5:47:35 AM MDT",
         "number": 3,
         "location": "Kfarshima",
-        "3a": "Qatar",
+        "ala": "Qatar",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -551,7 +551,7 @@
         "timeCompleted": "2019/08/13 5:48:11 AM MDT",
         "number": 4,
         "location": "Zahle",
-        "3a": "",
+        "ala": "",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -668,7 +668,7 @@
         "timeCompleted": "2019/08/13 5:48:14 AM MDT",
         "number": 5,
         "location": "Qoubaiyat",
-        "3a": "",
+        "ala": "",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -884,7 +884,7 @@
         "timeCompleted": "2019/08/13 6:04:45 AM MDT",
         "number": 6,
         "location": "Kfour El Arabi",
-        "3a": "Batroun city",
+        "ala": "Batroun city",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -1056,7 +1056,7 @@
         "timeCompleted": "2019/08/13 6:28:30 AM MDT",
         "number": 7,
         "location": "Tannourine",
-        "3a": "Mashgharah",
+        "ala": "Mashgharah",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -1195,7 +1195,7 @@
         "timeCompleted": "2019/08/13 6:30:09 AM MDT",
         "number": 8,
         "location": "Beirut",
-        "3a": "nope",
+        "ala": "nope",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -1353,7 +1353,7 @@
         "timeCompleted": "2019/08/13 6:32:31 AM MDT",
         "number": 9,
         "location": "Ebba",
-        "3a": "Beirut & America",
+        "ala": "Beirut & America",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -1548,7 +1548,7 @@
         "timeCompleted": "2019/08/13 6:43:01 AM MDT",
         "number": 10,
         "location": "Nabatieh",
-        "3a": "Dearborn",
+        "ala": "Dearborn",
         "answers": {
             "0.0": [1],
             "0.1": [0],
@@ -1689,7 +1689,7 @@
         "timeCompleted": "2019/08/13 6:46:49 AM MDT",
         "number": 11,
         "location": "Aalay",
-        "3a": "UK, Beirut (Self taught Arabic at the age of 15 as my parents didn\u2019t speak Arabic at home, effectively modelled on my family\u2019s Aley/Beiruti accent)",
+        "ala": "UK, Beirut (Self taught Arabic at the age of 15 as my parents didn\u2019t speak Arabic at home, effectively modelled on my family\u2019s Aley/Beiruti accent)",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -1882,7 +1882,7 @@
         "timeCompleted": "2019/08/13 6:47:32 AM MDT",
         "number": 12,
         "location": "Beirut",
-        "3a": "Saudi Arabia",
+        "ala": "Saudi Arabia",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -2047,7 +2047,7 @@
         "timeCompleted": "2019/08/13 6:48:01 AM MDT",
         "number": 13,
         "location": "Qana",
-        "3a": "Beirut ",
+        "ala": "Beirut ",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -2215,7 +2215,7 @@
         "timeCompleted": "2019/08/13 6:56:27 AM MDT",
         "number": 14,
         "location": "Tripoli",
-        "3a": "Beirut",
+        "ala": "Beirut",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -2372,7 +2372,7 @@
         "timeCompleted": "2019/08/13 7:21:12 AM MDT",
         "number": 15,
         "location": "Beirut",
-        "3a": "",
+        "ala": "",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -2510,7 +2510,7 @@
         "timeCompleted": "2019/08/13 7:22:55 AM MDT",
         "number": 16,
         "location": "Btekhnay",
-        "3a": "Ashrafieh, California, Germany ",
+        "ala": "Ashrafieh, California, Germany ",
         "answers": {
             "0.0": [1],
             "0.1": [0],
@@ -2667,7 +2667,7 @@
         "timeCompleted": "2019/08/13 7:39:38 AM MDT",
         "number": 17,
         "location": "Sidon",
-        "3a": "Zambia, san francisco",
+        "ala": "Zambia, san francisco",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -2782,7 +2782,7 @@
         "timeCompleted": "2019/08/13 7:40:55 AM MDT",
         "number": 18,
         "location": "Tyre",
-        "3a": "Beirut",
+        "ala": "Beirut",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -2942,7 +2942,7 @@
         "timeCompleted": "2019/08/13 7:45:31 AM MDT",
         "number": 19,
         "location": "Koura",
-        "3a": "Akkar",
+        "ala": "Akkar",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -3072,7 +3072,7 @@
         "timeCompleted": "2019/08/13 7:52:50 AM MDT",
         "number": 20,
         "location": "Kherbet Qanafar",
-        "3a": "USA",
+        "ala": "USA",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -3221,7 +3221,7 @@
         "timeCompleted": "2019/08/13 8:00:58 AM MDT",
         "number": 21,
         "location": "Beirut",
-        "3a": "United States of America",
+        "ala": "United States of America",
         "answers": {
             "0.0": [0],
             "0.1": [1],
@@ -3383,7 +3383,7 @@
         "timeCompleted": "2019/08/13 8:07:12 AM MDT",
         "number": 22,
         "location": "Miziara",
-        "3a": "Nigeria, made my accent much less Northern since I didn't grow up with them",
+        "ala": "Nigeria, made my accent much less Northern since I didn't grow up with them",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -3537,7 +3537,7 @@
         "timeCompleted": "2019/08/13 8:37:50 AM MDT",
         "number": 23,
         "location": "Baskinta",
-        "3a": "\u0628\u064a\u0631\u0648\u062a",
+        "ala": "\u0628\u064a\u0631\u0648\u062a",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -3657,7 +3657,7 @@
         "timeCompleted": "2019/08/13 8:46:14 AM MDT",
         "number": 24,
         "location": "Batroun",
-        "3a": "Tripoli",
+        "ala": "Tripoli",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -3863,7 +3863,7 @@
         "timeCompleted": "2019/08/13 8:50:36 AM MDT",
         "number": 25,
         "location": "Ain Kfar Zabad",
-        "3a": "The US - have lived here since I was 12 but I visit often",
+        "ala": "The US - have lived here since I was 12 but I visit often",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -4013,7 +4013,7 @@
         "timeCompleted": "2019/08/13 8:51:11 AM MDT",
         "number": 26,
         "location": "Hrajel",
-        "3a": "",
+        "ala": "",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -4148,7 +4148,7 @@
         "timeCompleted": "2019/08/13 9:01:06 AM MDT",
         "number": 27,
         "location": "Beirut",
-        "3a": "Went to american school",
+        "ala": "Went to american school",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -4337,7 +4337,7 @@
         "timeCompleted": "2019/08/13 9:01:14 AM MDT",
         "number": 28,
         "location": "Tripoli",
-        "3a": "Jib Janine and the US",
+        "ala": "Jib Janine and the US",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -4483,7 +4483,7 @@
         "timeCompleted": "2019/08/13 9:02:08 AM MDT",
         "number": 29,
         "location": "Bednayel",
-        "3a": "Beirut",
+        "ala": "Beirut",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -4598,7 +4598,7 @@
         "timeCompleted": "2019/08/13 9:25:46 AM MDT",
         "number": 30,
         "location": "Beirut",
-        "3a": "Zouk Mosbeh, Ballouneh, Hadat",
+        "ala": "Zouk Mosbeh, Ballouneh, Hadat",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -4739,7 +4739,7 @@
         "timeCompleted": "2019/08/13 9:43:04 AM MDT",
         "number": 31,
         "location": "Beirut",
-        "3a": "Born in montreal, brought up around francophones, had many west beiruti friends",
+        "ala": "Born in montreal, brought up around francophones, had many west beiruti friends",
         "answers": {
             "0.0": [1],
             "0.1": [0],
@@ -4939,7 +4939,7 @@
         "timeCompleted": "2019/08/13 9:45:04 AM MDT",
         "number": 32,
         "location": "Biyada",
-        "3a": "Paris",
+        "ala": "Paris",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -5058,7 +5058,7 @@
         "timeCompleted": "2019/08/13 9:50:15 AM MDT",
         "number": 33,
         "location": "Zahle",
-        "3a": "",
+        "ala": "",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -5231,7 +5231,7 @@
         "timeCompleted": "2019/08/13 9:51:13 AM MDT",
         "number": 34,
         "location": "English",
-        "3a": "I moved to Beirut for three years after having lived in a village my whole life",
+        "ala": "I moved to Beirut for three years after having lived in a village my whole life",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -5389,7 +5389,7 @@
         "timeCompleted": "2019/08/13 9:52:51 AM MDT",
         "number": 35,
         "location": "Beirut",
-        "3a": "",
+        "ala": "",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -5526,7 +5526,7 @@
         "timeCompleted": "2019/08/13 9:54:21 AM MDT",
         "number": 36,
         "location": "Habbouch",
-        "3a": "Beirut",
+        "ala": "Beirut",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -5695,7 +5695,7 @@
         "timeCompleted": "2019/08/13 9:58:36 AM MDT",
         "number": 37,
         "location": "Tripoli",
-        "3a": "Kuwait",
+        "ala": "Kuwait",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -5859,7 +5859,7 @@
         "timeCompleted": "2019/08/13 10:07:16 AM MDT",
         "number": 38,
         "location": "Chouaifet El Aamroussieh",
-        "3a": "Jounieh",
+        "ala": "Jounieh",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -6006,7 +6006,7 @@
         "timeCompleted": "2019/08/13 10:28:08 AM MDT",
         "number": 39,
         "location": "Charoun",
-        "3a": "Baakline",
+        "ala": "Baakline",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -6135,7 +6135,7 @@
         "timeCompleted": "2019/08/13 10:29:11 AM MDT",
         "number": 40,
         "location": "Bint Jbeil",
-        "3a": "Beirut",
+        "ala": "Beirut",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -6318,7 +6318,7 @@
         "timeCompleted": "2019/08/13 10:32:40 AM MDT",
         "number": 41,
         "location": "Joun",
-        "3a": "Usa",
+        "ala": "Usa",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -6451,7 +6451,7 @@
         "timeCompleted": "2019/08/13 11:10:26 AM MDT",
         "number": 42,
         "location": "Kfarhamam",
-        "3a": "Beirut",
+        "ala": "Beirut",
         "answers": {
             "0.0": [1],
             "0.1": [0],
@@ -6585,7 +6585,7 @@
         "timeCompleted": "2019/08/13 11:14:27 AM MDT",
         "number": 43,
         "location": "Beirut",
-        "3a": "",
+        "ala": "",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -6753,7 +6753,7 @@
         "timeCompleted": "2019/08/13 11:18:09 AM MDT",
         "number": 44,
         "location": "Byblos",
-        "3a": "Bchaaleh, above Batroun",
+        "ala": "Bchaaleh, above Batroun",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -6919,7 +6919,7 @@
         "timeCompleted": "2019/08/13 11:35:47 AM MDT",
         "number": 45,
         "location": "Rasm El Hadath",
-        "3a": "Beirut, California",
+        "ala": "Beirut, California",
         "answers": {
             "0.0": [0],
             "0.1": [1],
@@ -7046,7 +7046,7 @@
         "timeCompleted": "2019/08/13 11:37:34 AM MDT",
         "number": 46,
         "location": "Beirut",
-        "3a": "FRANCE, USA",
+        "ala": "FRANCE, USA",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -7179,7 +7179,7 @@
         "timeCompleted": "2019/08/13 11:48:37 AM MDT",
         "number": 47,
         "location": "Chouaifet El Aamroussieh",
-        "3a": "Lived in Jbeil entire life, then Beirut past few years",
+        "ala": "Lived in Jbeil entire life, then Beirut past few years",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -7375,7 +7375,7 @@
         "timeCompleted": "2019/08/13 11:49:06 AM MDT",
         "number": 48,
         "location": "Beirut",
-        "3a": "Usa",
+        "ala": "Usa",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -7500,7 +7500,7 @@
         "timeCompleted": "2019/08/13 12:41:53 PM MDT",
         "number": 49,
         "location": "Tripoli",
-        "3a": "Montreal",
+        "ala": "Montreal",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -7633,7 +7633,7 @@
         "timeCompleted": "2019/08/13 12:50:46 PM MDT",
         "number": 50,
         "location": "Aamchit",
-        "3a": "Cyprus; France ",
+        "ala": "Cyprus; France ",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -7841,7 +7841,7 @@
         "timeCompleted": "2019/08/13 1:07:51 PM MDT",
         "number": 51,
         "location": "Zahle",
-        "3a": "I lived in Louaize, Hazmieh, Paris, and the US",
+        "ala": "I lived in Louaize, Hazmieh, Paris, and the US",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -8022,7 +8022,7 @@
         "timeCompleted": "2019/08/13 1:11:50 PM MDT",
         "number": 52,
         "location": "Tripoli",
-        "3a": "",
+        "ala": "",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -8189,7 +8189,7 @@
         "timeCompleted": "2019/08/13 1:25:30 PM MDT",
         "number": 53,
         "location": "Beirut",
-        "3a": "canada",
+        "ala": "canada",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -8325,7 +8325,7 @@
         "timeCompleted": "2019/08/13 1:41:24 PM MDT",
         "number": 54,
         "location": "Aalay",
-        "3a": "",
+        "ala": "",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -8445,7 +8445,7 @@
         "timeCompleted": "2019/08/13 2:05:44 PM MDT",
         "number": 55,
         "location": "Beirut",
-        "3a": "None",
+        "ala": "None",
         "answers": {
             "0.0": [1],
             "0.1": [0],
@@ -8624,7 +8624,7 @@
         "timeCompleted": "2019/08/13 2:11:13 PM MDT",
         "number": 56,
         "location": "Aaidmoun",
-        "3a": "I was born in tripoli and lived here almost all of my life but visiting the village every few weeks has had a significant effect on some of the words i use. ",
+        "ala": "I was born in tripoli and lived here almost all of my life but visiting the village every few weeks has had a significant effect on some of the words i use. ",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -8758,7 +8758,7 @@
         "timeCompleted": "2019/08/13 2:21:32 PM MDT",
         "number": 57,
         "location": "Ghadir",
-        "3a": "Spain, Panama",
+        "ala": "Spain, Panama",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -8930,7 +8930,7 @@
         "timeCompleted": "2019/08/13 2:33:41 PM MDT",
         "number": 58,
         "location": "Batroun",
-        "3a": "Beirut",
+        "ala": "Beirut",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -9052,7 +9052,7 @@
         "timeCompleted": "2019/08/13 2:41:09 PM MDT",
         "number": 59,
         "location": "Ashqout",
-        "3a": "jbeil and furn al chebbak",
+        "ala": "jbeil and furn al chebbak",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -9187,7 +9187,7 @@
         "timeCompleted": "2019/08/13 2:44:40 PM MDT",
         "number": 60,
         "location": "Beirut",
-        "3a": "",
+        "ala": "",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -9337,7 +9337,7 @@
         "timeCompleted": "2019/08/13 2:52:47 PM MDT",
         "number": 61,
         "location": "Beirut",
-        "3a": "I was sometimes made fun of because of my Beirut accent ",
+        "ala": "I was sometimes made fun of because of my Beirut accent ",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -9457,7 +9457,7 @@
         "timeCompleted": "2019/08/13 3:18:23 PM MDT",
         "number": 62,
         "location": "Beirut",
-        "3a": "",
+        "ala": "",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -9646,7 +9646,7 @@
         "timeCompleted": "2019/08/13 3:22:49 PM MDT",
         "number": 63,
         "location": "Irzay",
-        "3a": "Beirut's Southern Suburb",
+        "ala": "Beirut's Southern Suburb",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -9818,7 +9818,7 @@
         "timeCompleted": "2019/08/13 3:36:11 PM MDT",
         "number": 64,
         "location": "Dbayeh",
-        "3a": "Beirut",
+        "ala": "Beirut",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -9984,7 +9984,7 @@
         "timeCompleted": "2019/08/13 3:48:50 PM MDT",
         "number": 65,
         "location": "Beirut",
-        "3a": "Aleppo",
+        "ala": "Aleppo",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -10143,7 +10143,7 @@
         "timeCompleted": "2019/08/13 3:56:55 PM MDT",
         "number": 66,
         "location": "Byblos",
-        "3a": "beirut",
+        "ala": "beirut",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -10275,7 +10275,7 @@
         "timeCompleted": "2019/08/13 4:05:01 PM MDT",
         "number": 67,
         "location": "Toura",
-        "3a": "Beirut, Manchester (UK) and Sierra Leone ",
+        "ala": "Beirut, Manchester (UK) and Sierra Leone ",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -10439,7 +10439,7 @@
         "timeCompleted": "2019/08/13 5:02:49 PM MDT",
         "number": 68,
         "location": "Daraaoun",
-        "3a": "",
+        "ala": "",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -10584,7 +10584,7 @@
         "timeCompleted": "2019/08/13 5:23:13 PM MDT",
         "number": 69,
         "location": "Beirut",
-        "3a": "",
+        "ala": "",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -10705,7 +10705,7 @@
         "timeCompleted": "2019/08/13 5:36:51 PM MDT",
         "number": 70,
         "location": "Chaqra",
-        "3a": "Saudi Arabia, Beirut",
+        "ala": "Saudi Arabia, Beirut",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -10855,7 +10855,7 @@
         "timeCompleted": "2019/08/13 5:45:58 PM MDT",
         "number": 71,
         "location": "Khirbet Selm",
-        "3a": "Mostly in Beirut",
+        "ala": "Mostly in Beirut",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -11005,7 +11005,7 @@
         "timeCompleted": "2019/08/13 6:08:50 PM MDT",
         "number": 72,
         "location": "Nabatieh",
-        "3a": "Grew up in Beirut ",
+        "ala": "Grew up in Beirut ",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -11133,7 +11133,7 @@
         "timeCompleted": "2019/08/13 6:16:08 PM MDT",
         "number": 73,
         "location": "Haris",
-        "3a": "Belgium",
+        "ala": "Belgium",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -11269,7 +11269,7 @@
         "timeCompleted": "2019/08/13 6:36:42 PM MDT",
         "number": 74,
         "location": "Nmairiyeh",
-        "3a": "I was born in Dubai, UAE. You could say the different cultures and nationalities there affected my speech. Every Lebanese person I run into think I\u2019m either Jordanian or Palestinian.",
+        "ala": "I was born in Dubai, UAE. You could say the different cultures and nationalities there affected my speech. Every Lebanese person I run into think I\u2019m either Jordanian or Palestinian.",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -11470,7 +11470,7 @@
         "timeCompleted": "2019/08/13 7:15:49 PM MDT",
         "number": 75,
         "location": "Tripoli",
-        "3a": "Sydney",
+        "ala": "Sydney",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -11584,7 +11584,7 @@
         "timeCompleted": "2019/08/13 11:01:34 PM MDT",
         "number": 76,
         "location": "Benney",
-        "3a": "Tartu, Estonia",
+        "ala": "Tartu, Estonia",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -11699,7 +11699,7 @@
         "timeCompleted": "2019/08/13 11:17:32 PM MDT",
         "number": 77,
         "location": "Kfar Houneh",
-        "3a": "Hazmieh",
+        "ala": "Hazmieh",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -11842,7 +11842,7 @@
         "timeCompleted": "2019/08/14 1:03:40 AM MDT",
         "number": 78,
         "location": "Deir El Qamar",
-        "3a": "Eastern suburbs of Beirut ",
+        "ala": "Eastern suburbs of Beirut ",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -11981,7 +11981,7 @@
         "timeCompleted": "2019/08/14 1:04:50 AM MDT",
         "number": 79,
         "location": "Marjaayoun",
-        "3a": "Beirut",
+        "ala": "Beirut",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -12156,7 +12156,7 @@
         "timeCompleted": "2019/08/14 3:32:06 AM MDT",
         "number": 80,
         "location": "Beirut",
-        "3a": "",
+        "ala": "",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -12305,7 +12305,7 @@
         "timeCompleted": "2019/08/14 4:30:08 AM MDT",
         "number": 81,
         "location": "Byblos",
-        "3a": "USA",
+        "ala": "USA",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -12421,7 +12421,7 @@
         "timeCompleted": "2019/08/14 4:57:34 AM MDT",
         "number": 82,
         "location": "Kfar Houneh",
-        "3a": "",
+        "ala": "",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -12600,7 +12600,7 @@
         "timeCompleted": "2019/08/14 8:00:34 AM MDT",
         "number": 83,
         "location": "Kfar Houneh",
-        "3a": "",
+        "ala": "",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -12729,7 +12729,7 @@
         "timeCompleted": "2019/08/15 2:07:47 AM MDT",
         "number": 84,
         "location": "Sultaniyeh",
-        "3a": "Lived in Riyadh for the first 14 years of my life. It did have some impact. Used to accidentally say some Jordanian words while talking but I stopped that by the time I was 16. I still feel like my vocab is still limited though.",
+        "ala": "Lived in Riyadh for the first 14 years of my life. It did have some impact. Used to accidentally say some Jordanian words while talking but I stopped that by the time I was 16. I still feel like my vocab is still limited though.",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -12895,7 +12895,7 @@
         "timeCompleted": "2019/08/15 3:13:48 AM MDT",
         "number": 85,
         "location": "Sohmor",
-        "3a": "",
+        "ala": "",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -13053,7 +13053,7 @@
         "timeCompleted": "2019/08/15 10:04:59 PM MDT",
         "number": 86,
         "location": "Nabatieh",
-        "3a": "",
+        "ala": "",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -13235,7 +13235,7 @@
         "timeCompleted": "2019/08/16 12:40:32 AM MDT",
         "number": 87,
         "location": "Ain El Kharroube",
-        "3a": "",
+        "ala": "",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -13349,7 +13349,7 @@
         "timeCompleted": "2019/08/16 7:21:30 AM MDT",
         "number": 88,
         "location": "Beirut",
-        "3a": "Riyadh, Saudi Arabia",
+        "ala": "Riyadh, Saudi Arabia",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -13500,7 +13500,7 @@
         "timeCompleted": "2019/08/16 10:06:44 AM MDT",
         "number": 89,
         "location": "Mechmech",
-        "3a": "Beirut Achrafieh",
+        "ala": "Beirut Achrafieh",
         "answers": {
             "0.0": [1],
             "0.1": [0],
@@ -13644,7 +13644,7 @@
         "timeCompleted": "2019/08/16 11:19:20 PM MDT",
         "number": 90,
         "location": "Beirut",
-        "3a": "new jersey, USA",
+        "ala": "new jersey, USA",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -13782,7 +13782,7 @@
         "timeCompleted": "2019/08/20 6:31:31 AM MDT",
         "number": 91,
         "location": "Habbouch",
-        "3a": "",
+        "ala": "",
         "answers": {
             "0.0": [1],
             "0.1": [0],
@@ -13903,7 +13903,7 @@
         "timeCompleted": "2019/08/20 10:48:26 AM MDT",
         "number": 92,
         "location": "Beirut",
-        "3a": "Dad is from Aleppo and mom is from Saida",
+        "ala": "Dad is from Aleppo and mom is from Saida",
         "answers": {
             "0.0": [1],
             "0.1": [0],
@@ -14052,7 +14052,7 @@
         "timeCompleted": "2019/09/04 11:17:44 PM MDT",
         "number": 93,
         "location": "Beirut",
-        "3a": "Jeddah, Toronto",
+        "ala": "Jeddah, Toronto",
         "answers": {
             "0.0": [1],
             "0.1": [1],
@@ -14204,7 +14204,7 @@
         "timeCompleted": "2019/09/05 1:52:53 AM MDT",
         "number": 94,
         "location": "Tripoli",
-        "3a": "Kuwait, Lattakia Syria",
+        "ala": "Kuwait, Lattakia Syria",
         "answers": {
             "0.0": [0],
             "0.1": [0],
@@ -14356,7 +14356,7 @@
         "timeCompleted": "2019/09/07 7:37:45 PM MDT",
         "number": 95,
         "location": "Tyre",
-        "3a": "Speaking to other arabs",
+        "ala": "Speaking to other arabs",
         "answers": {
             "0.0": [0],
             "0.1": [0],
