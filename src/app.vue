@@ -89,8 +89,8 @@ export default {
       pins.map(pin => this.$set(this.selection, pin.place.name, pin.place));
     },
     unselect(pins) {
-      // better for performance than deleting (much faster, especially on later re-selects)
-      pins.map(pin => this.$set(this.selection, pin.place.name, undefined));
+      // better for performance than this.$delete (much faster, especially on later re-selects)
+      pins.map(pin => this.selection[pin.place.name] = undefined);
     }
   }
 };

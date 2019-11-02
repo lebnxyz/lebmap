@@ -14,16 +14,17 @@ import questions from './data/questions.json';
 Vue.use((vue, settings) => vue.component('fitty', Fitty));
 
 new Vue({
-  data() {
-    return {
-      questions,
-      locations,
-      respondents,
-      locationsByDistrict: nest().key(d => d.district).map(values(locations)),
-      respondentQuery: new Query(respondents)
-    }
-  },
-  el: '#app',
   render: h => h(App),
-  components: { App }
+  el: '#app',
+  components: {
+    App
+  },
+  created() {
+    // create non-reactive data
+    this.questions = questions;
+    this.locations = locations;
+    this.respondents = respondents;
+    this.locationsByDistrict = nest().key(d => d.district).map(values(locations));
+    this.respondentQuery = new Query(respondents);
+  }
 });
