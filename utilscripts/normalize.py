@@ -78,7 +78,7 @@ def normalize_questions(csv_header, json_li):
             types = ' or '.join([f'[{head}]{"".join(tail)}' for head, *tail in types])
             english_2_type = input(f'{types}? (blank to skip) ')
             if english_2_type and not english_1_type.startswith(english_2_type):
-                english_1_type = ['english', 'transliteration'][english_1_type == 't']
+                english_2_type = ['english', 'transliteration'][english_2_type == 't']
                 example[english_2_type] = english_2
         csv_header[idx] = f'{q_idx}.{example_idx}'
     return csv_header, json_li
@@ -125,7 +125,18 @@ def compile_answers(csv_f, json_f, cross_file_answer_map=None):
                     json_it = iter(json_f)
                     j_question = next(json_it)
             if question_no not in answers:
-                answers[question_no] = {'number': question_no, 'environment': '', 'options': {}, 'otherOptions': {}}
+                try:
+                    headline, *tailline = j_question['headline'].split()
+                except KeyError:
+                    raise SystemExit(f'Question {question_no} has no headline')
+                answers[question_no] = {
+                  'number': question_no,
+                  'question': j_question['question'],
+                  'headline': ' '.join([headline.title(), *tailline]),  # .capitalize() doesn't handle non-initial letters
+                  'environment': '',
+                  'options': {},
+                  'otherOptions': {}
+                }
             if '.' in question_no and not answers[question_no]['environment']:
                 example_no = int(question_no.split('.')[1])
                 answers[question_no]['environment'] = j_question['environmentTemplate'].format(

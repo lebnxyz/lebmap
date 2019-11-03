@@ -6,9 +6,10 @@
             "'yemkin' was only added after a few responses had already been submitted",
             "This only concerns unstressed syllables. I should've taken the opportunity to ask about stressed syllables as well"
         ],
+        "headline": "unstressed kasra in final syllable",
         "insights": [[
-            "tense kasra (/i/)",
-            "lax kasra (/e/)"
+            "tense/high (/i/)",
+            "lax/mid (/e/)"
         ]],
         "options": {
             "e": 0,
@@ -70,9 +71,10 @@
         "number": 1,
         "question": "Similarly, how do you pronounce the \u064a at the end of these words?",
         "flaws": [],
+        "headline": "word-final yaa2 \u064a",
         "insights": [[
-            "tense word-final yaa2 (/i/)",
-            "lax word-final yaa2 (/e/)"
+            "tense/high (/i/)",
+            "lax/mid (/e/)"
         ]],
         "options": {
             "e": 0,
@@ -126,9 +128,10 @@
         "number": 2,
         "question": "How do you pronounce the \u0648 sound at the end of these words? Closer to \"o\" or to \"u\"?",
         "flaws": [],
+        "headline": "word-final round vowel",
         "insights": [[
-            "tense damma (/u/)",
-            "lax damma (/o/)"
+            "tense/high damma (/u/)",
+            "lax/mid damma (/o/)"
         ]],
         "options": {
             "o": 0,
@@ -169,12 +172,13 @@
             "I really, really, really should have asked about the word 2aal. Also waa7ad",
             "Some people don't use 7aawal, which I only found out afterwards."
         ],
+        "headline": "alif",
         "insights": [[
-            "raised alif",
-            "neutrally pronounced alif",
-            "lowered alif",
-            "backed alif",
-            "rounded alif"
+            "raised",
+            "neutrally pronounced",
+            "lowered",
+            "backed",
+            "rounded"
         ]],
         "options": {
             "mid front unrounded /e\u031e\u02d0/": 0,
@@ -269,11 +273,12 @@
         "number": 4,
         "question": "Try saying these words. Do you pronounce the first vowel as a damme (o/u) or a kasra (e/i)?",
         "flaws": [],
+        "headline": "kasra vs. damma",
         "insights": [[
-            "rounded 'indeterminate' vowel (damma)",
-            "unrounded 'indeterminate' vowel (kasra)",
-            "lax 'indeterminate' vowel (low)",
-            "tense 'indeterminate' vowel (high)"
+            "rounded (damma)",
+            "unrounded (kasra)",
+            "lax/mid",
+            "tense/high"
         ]],
         "options": {
             "o/u": 0,
@@ -354,11 +359,12 @@
         "number": 5,
         "question": "How do you pronounce your \u0642 in 3amiyye?",
         "flaws": [],
+        "headline": "qaaf",
         "insights": [[
-            "preserved [q]",
-            "debuccalized [q] to [2]",
-            "preserved [q] in proper names",
-            "preserved [q] in some words"
+            "preserved",
+            "debuccalized to [2]",
+            "preserved in proper names",
+            "preserved in some words"
         ]],
         "options": {
             "q": 0,
@@ -385,10 +391,11 @@
         "number": 6,
         "question": "How do you pronounce the word \u0633\u0627\u0626\u0644\u0629 (she has asked) in the following forms?",
         "flaws": [],
+        "headline": "suffixed form, 3rd-person feminine participle",
         "insights": [[
-            "cluster-final VCt- ending in 3sg.f participle",
-            "CVt- ending in 3sg.f participle",
-            "long-vowel CVVt- ending in 3sg.f participle"
+            "cluster-final 'iCt-' ending",
+            "'Cit-' ending, with short i",
+            "'Ciit-' ending, with long ii"
         ]],
         "options": {
             "s\u01132ilt-": 0,
@@ -410,7 +417,7 @@
             {
                 "transliteration": "?-ne",
                 "english": "she's asked me",
-                "arabic": " (\u0647\u064a \u0633\u0627\u0626\u0644\u0629 + \u0646\u064a",
+                "arabic": "\u0647\u064a \u0633\u0627\u0626\u0644\u0629 + \u0646\u064a",
                 "environmentArgs": ["-ne", "consonant"],
                 "number": 0,
                 "index": "6.0"
@@ -418,7 +425,7 @@
             {
                 "transliteration": "?-(h)a",
                 "english": "she's asked her",
-                "arabic": " (\u0647\u064a \u0633\u0627\u0626\u0644\u0629 + \u0647\u0627",
+                "arabic": "\u0647\u064a \u0633\u0627\u0626\u0644\u0629 + \u0647\u0627",
                 "environmentArgs": ["-(h)a", "historically consonant-initial (meaning it still shifts stress) if now usually vowel"],
                 "number": 1,
                 "index": "6.1"
@@ -426,7 +433,7 @@
             {
                 "transliteration": "?-k",
                 "english": "she's asked you",
-                "arabic": " (\u0647\u064a \u0633\u0627\u0626\u0644\u0629 + \u0643",
+                "arabic": "\u0647\u064a \u0633\u0627\u0626\u0644\u0629 + \u0643",
                 "environmentArgs": ["-ak/-ek", "vowel"],
                 "number": 2,
                 "index": "6.2"
@@ -439,12 +446,13 @@
         "flaws": [
             "I didn't include a question asking what the 'N/A' folks say instead"
         ],
+        "headline": "suffixed form, 2nd- vs. 3rd-person feminine participle",
         "insights": [[
-            "distinction between 3sg.f/1sg.f and 2sg.f participles",
-            "leveling of sg.f participles in all numbers",
-            "preference toward original 2nd-person form of sg.f participles",
-            "preference toward original 3rd-person form of sg.f participles",
-            "complete avoidance of sg.f participles"
+            "distinction between the two",
+            "leveling (no distinction)",
+            "preference toward second-person form",
+            "preference toward third-person form",
+            "complete avoidance"
         ]],
         "options": {
             "I do; 2sg.f s\u01132ilt\u012b, 3sg.f s\u01132l\u012bto": 0,
@@ -473,9 +481,10 @@
         "flaws": [
             "'Meshteryiin' popped into my head a few days after this post. A few people ended up including it in 'other', indicating that I should have included it in the main options"
         ],
+        "headline": "participles in m-...-y (\u0645-...-\u064a)",
         "insights": [[
-            "-iyyiin ending for final-weak participles in forms higher than 2",
-            "-iin ending for final-weak participles in forms higher than 2"
+            "-iyyiin \u0640\u0650\u064a\u0651\u0650\u064a\u0646 ending",
+            "-iin \u0640\u0650\u064a\u0646 ending"
         ]],
         "options": {
             "meshtr\u012bn": 0,
@@ -498,9 +507,10 @@
         "flaws": [
             "Should've included a question asking how the 'no h in yeha' folks pronounce it"
         ],
+        "headline": "3rd-person personal suffix",
         "insights": [[
-            "preservation of /h/ in 3sg suffixes",
-            "elision/assimilation of /h/ in 3sg suffixes"
+            "preservation of /h/",
+            "elision/assimilation of /h/"
         ]],
         "options": {
             "always": 0,
@@ -576,12 +586,13 @@
             "I didn't include another 'productive' passive verb to accompany ynsm3, which would have helped greatly. As is, this data doesn't at all show if ynsm3 is unique among productive ynf3l passives in being predominantly pronounced yen-SA-ma3",
             "I only used the \u064a\u0646\u0644\u0642\u0649 Arabic spelling of 'to be found' rather than writing \u064a\u0646\u0644\u0642\u0649/\u064a\u0646\u0644\u0642\u064a, which *may* have influenced people not to choose the '-el' pronunciations. Hopefully not"
         ],
+        "headline": "imperfective 'infa3al' \u0627\u0646\u0641\u0639\u0644",
         "insights": [[
-            "preservation of original form-7 and form-8 stress",
-            "preservation of original form-7 and form-8 voweling",
-            "raising of form-7 vowels (to kasra)",
-            "leveling of form-7 stress (in line with loss of ending vowel)",
-            "elision of newly unstressed vowel after form-7 stress-leveling"
+            "preservation of original stress",
+            "preservation of original voweling",
+            "raising of vowels (to kasra)",
+            "leveling of stress (to match the loss of fus7a's final vowels)",
+            "elision of newly unstressed vowel after stress-leveling"
         ]],
         "options": {
             "yen-FA-3al": 0,
@@ -641,10 +652,11 @@
         "number": 11,
         "question": "How do you say \"I don't know\"?",
         "flaws": [],
+        "headline": "verb negation",
         "insights": [[
-            "pre-verbal particle for negation",
-            "circumfix for negation",
-            "suffix for negation"
+            "pre-verbal particle",
+            "circumfix",
+            "suffix"
         ]],
         "options": {
             "ma b3ref": 0,
@@ -671,11 +683,14 @@
         "number": 12,
         "question": "Do you prefer \u0645\u062a\u0641\u0639\u0644 \"metfe33el\" or \u0645\u0641\u0639\u0644 \"mfa33al\"?",
         "flaws": [],
+        "headline": "participle of 'tfa33al' \u062a\u0641\u0639\u0651\u0644",
         "insights": [[
-            "preservation of form-5 participle",
-            "leveling of form-5 participle to form-2 passive participle",
-            "acceptance of non-leveled form-5 participle",
-            "rejection of form-5 participle leveled to form-2 passive"
+            "preservation of 'metfe33el' \u0645\u062a\u0641\u0639\u0644",
+            "shift to 'mfa33al' \u0645\u0641\u0639\u0651\u0644"
+        ],
+        [
+            "acceptance of 'metfe33el' \u0645\u062a\u0641\u0639\u0644",
+            "rejection of 'metfe33el' \u0645\u062a\u0641\u0639\u0644"
         ]],
         "options": {
             "I prefer metfe33el": 0,
@@ -690,10 +705,10 @@
             "I prefer mfa33al, and metfe33el sounds weird/wrong"
         ],
         "optionsIndicate": [
-            [[0]],
-            [[0, 1, 2]],
-            [[1, 2]],
-            [[1, 3]]
+            [[0], [0]],
+            [[0, 1], [0]],
+            [[1], [0]],
+            [[1], [1]]
         ],
         "environmentTemplate": "",
         "examples": [
@@ -711,6 +726,7 @@
         "number": 13,
         "question": "Do \u0645\u062a\u062e\u0628\u064a \"met5ebbe\" and \u0645\u062e\u0628\u0649 \"m5abba\" mean different things to you?",
         "flaws": [],
+        "headline": "metfe33el متفّل vs. mfa33al مفعّل",
         "insights": [[
             "preservation of form-5 participle",
             "leveling of form-5 participle to form-2 passive",
@@ -718,14 +734,14 @@
             "preference toward mfa33al over metfe33el"
         ]],
         "options": {
-            "Yes, met5ebbe means hiding oneself whereas m5abba means hidden by someone else": 0,
-            "'Meh', possible distinction but not salient: they both mean hidden by whoever": 1,
+            "Yes: met5ebbe means hiding oneself, whereas m5abba means hidden by someone else": 0,
+            "'Meh': I guess there can be a difference, but it's not usually important. They both mean hidden by whomever": 1,
             "No, they mean the same thing and I prefer met5ebbe": 2,
             "No, they mean the same thing and I prefer m5abba": 3
         },
         "optionsList": [
-            "Yes, met5ebbe means hiding oneself whereas m5abba means hidden by someone else",
-            "'Meh', possible distinction but not salient: they both mean hidden by whoever",
+            "Yes: met5ebbe means hiding oneself, whereas m5abba means hidden by someone else",
+            "'Meh': I guess there can be a difference, but it's not usually important. They both mean hidden by whomever",
             "No, they mean the same thing and I prefer met5ebbe",
             "No, they mean the same thing and I prefer m5abba"
         ],
@@ -742,6 +758,7 @@
         "number": 14,
         "question": "How do you pronounce the double-\u0646 (double \"N\") in these words?",
         "flaws": [],
+        "headline": "C:iC, shadda'd consonant + kasra + same consonant",
         "insights": [[
             "collapse of C:iC (with identical C) to single geminate consonant, C:",
             "removal of initial gemination in C:iC (with identical C), to CiC",
@@ -794,11 +811,12 @@
         "number": 15,
         "question": "How do you pronounce \u0628\u064a\u062a (house) in the following words?",
         "flaws": [],
+        "headline": "historic /aj/ \u0640\u064e\u064a\u0652\u0640 diphthong",
         "insights": [[
-            "preserved diphthong",
-            "diphthong collapses into monophthong",
-            "mid monophthong \u0113 for original diphthong",
-            "high monophthong \u012b for original diphthong"
+            "preserved",
+            "collapsed into monophthong",
+            "collapsed into lax/mid monophthong \u0113",
+            "collapsed into tense/high monophthong \u012b"
         ]],
         "options": {
             "b\u0113t": 0,
@@ -847,16 +865,17 @@
         "number": 16,
         "question": "How would you pronounce \u0639\u0645 with the following example words?",
         "flaws": [
-            "A few people indicated 'would never use 3am[ma]' for every single option. I'm not sure what that means, but it indicates I did something wrong asking this."
+            "A few people indicated 'would never use 3am[ma]' for every single option. I'm not sure why, but it means I did something wrong asking this."
         ],
+        "headline": "present-progressive particle",
         "insights": [
             [
-                "final m in progressive-aspect marker",
-                "final vowel in progressive-aspect marker"
+                "final m",
+                "final vowel"
             ],
             [
-                "present-progressive particle 3am[ma]",
-                "present-progressive particle mma"
+                "3am[ma]",
+                "mma"
             ]
         ],
         "options": {
@@ -882,8 +901,7 @@
             {
                 "transliteration": "2\u016bl",
                 "english": "I'm saying",
-                "arabic": "",
-                "t": "2oul",
+                "arabic": "\u0642\u0648\u0644",
                 "environmentArgs": ["single consonant", "2"],
                 "number": 0,
                 "index": "16.0"
@@ -891,8 +909,7 @@
             {
                 "transliteration": "b2\u016bl",
                 "english": "I'm saying",
-                "arabic": "",
-                "t": "b2oul",
+                "arabic": "\u0628\u0642\u0648\u0644",
                 "environmentArgs": ["two-consonant cluster", "b2"],
                 "number": 1,
                 "index": "16.1"
@@ -900,8 +917,7 @@
             {
                 "transliteration": "imz7",
                 "english": "I'm joking",
-                "arabic": "",
-                "t": "emza7",
+                "arabic": "\u0625\u0645\u0632\u062d",
                 "environmentArgs": ["single hamza preceding a vowel", "(2)e"],
                 "number": 2,
                 "index": "16.2"
@@ -909,8 +925,7 @@
             {
                 "transliteration": "bimz7",
                 "english": "I'm joking",
-                "arabic": "",
-                "t": "bemza7",
+                "arabic": "\u0628\u0645\u0632\u062d",
                 "environmentArgs": ["single consonant", "b"],
                 "number": 3,
                 "index": "16.3"
@@ -918,8 +933,7 @@
             {
                 "transliteration": "y2\u016bl",
                 "english": "he's saying",
-                "arabic": "",
-                "t": "y2oul",
+                "arabic": "\u064a\u0642\u0648\u0644",
                 "environmentArgs": ["vowel", "y"],
                 "number": 4,
                 "index": "16.4"
@@ -927,8 +941,7 @@
             {
                 "transliteration": "bi2\u016bl",
                 "english": "he's saying",
-                "arabic": "",
-                "t": "bi2oul",
+                "arabic": "\u0628\u064a\u0642\u0648\u0644",
                 "environmentArgs": ["single consonant", "b"],
                 "number": 5,
                 "index": "16.5"
@@ -936,8 +949,7 @@
             {
                 "transliteration": "yimz7",
                 "english": "he's joking",
-                "arabic": "",
-                "t": "yemza7",
+                "arabic": "\u064a\u0645\u0632\u062d",
                 "environmentArgs": ["single consonant (semivowel)", "y"],
                 "number": 6,
                 "index": "16.6"
@@ -945,8 +957,7 @@
             {
                 "transliteration": "byimz7",
                 "english": "he's joking",
-                "arabic": "",
-                "t": "byemza7",
+                "arabic": "\u0628\u064a\u0645\u0632\u062d",
                 "environmentArgs": ["two-consonant cluster", "by"],
                 "number": 7,
                 "index": "16.7"
@@ -959,14 +970,15 @@
         "flaws": [
             "Confusing question-phrasing that doesn't match up with what the answer choices are asking"
         ],
+        "headline": "'still' and 'yet'",
         "insights": [
             [
-                "preference toward issa/lissa for 'still'",
-                "preference toward ba3d for 'still'"
+                "preference toward issa/lissa",
+                "preference toward ba3d"
             ],
             [
-                "interpretation of negated ba3d to mean 'still have not'",
-                "interpretation of negated ba3d to mean 'have not yet'"
+                "mish + ba3d meaning 'still have not'",
+                "mish + ba3d meaning 'have not yet'"
             ]
         ],
         "options": {
@@ -990,16 +1002,14 @@
                 "transliteration": "b3dna msh/ma mbalsh\u012bn",
                 "english": "?",
                 "arabic": "\u0628\u0639\u062f\u0646\u0627 (\u0645\u0634/\u0645\u0627) \u0645\u0628\u0644\u0634\u064a\u0646",
-                "t": " ba3dna {mesh/ma} mbalsh\u012bn",
                 "environmentArgs": ["past participle"],
                 "number": 0,
                 "index": "17.0"
             },
             {
-                "transliteration": "b3dna ma bllshna",
+                "transliteration": "b3dna ma ballashna",
                 "english": "?",
                 "arabic": "\u0628\u0639\u062f\u0646\u0627 \u0645\u0627 \u0628\u0644\u0634\u0646\u0627",
-                "t": " ba3dna ma ballashna",
                 "environmentArgs": ["simple past"],
                 "number": 1,
                 "index": "17.1"
@@ -1010,9 +1020,10 @@
         "number": 18,
         "question": "Does the question \u0628\u0639\u062f\u0650\u0643 \u0641\u0627\u064a\u0642\u0629\u061f \"ba3dek f\u0113y2a?\" mean \"are you still awake?\"",
         "flaws": [],
+        "headline": "meaning of ba3d + ambiguous participle",
         "insights": [[
-            "interpretation of f\u01013il as invariably a past participle",
-            "interpretation of f\u01013il as invariably an adjective"
+            "'have just' + present perfect",
+            "'still' + adjective"
         ]],
         "options": {
             "No, it means 'have you just woken up?'. 'Are you still awake?' needs a different adjective": 0,
@@ -1036,9 +1047,10 @@
         "number": 19,
         "question": "How do you pronounce the \"\u0628\u062a\" syllable in the following words?",
         "flaws": [],
+        "headline": "final vowel of 3sg.f past verbs (fa3alat \u0641\u0639\u0644\u062a)",
         "insights": [[
-            "preservation of 3sg.f verbs' original final /a/ vowel",
-            "raising of 3sg.f verbs' final /a/ to kasra"
+            "preserved as /a/",
+            "raised to kasra /i/"
         ]],
         "options": {
             "bat": 0,
@@ -1095,22 +1107,23 @@
             "The 'bit' options were added later... but then that distinction wasn't the point of the question, so I could even have just done 'bet/bit'",
             "There was no distinct -bat option; respondents had to just pick one with the right syllable count and choose '-bat' above"
         ],
+        "headline": "3sg.f past verbs (fa3alat \u0641\u0639\u0644\u062a)",
         "insights": [
             [
-                "deletion of unstressed medial /a/ in 3sg.f past verbs",
-                "preservation of unstressed medial /a/ in 3sg.f past verbs"
+                "deletion of unstressed medial /a/",
+                "preservation of unstressed medial /a/"
             ],
             [
-                "preservation of final /a/ in 3sg.f past verbs",
-                "raising of final /a/ in 3sg.f past verbs"
+                "final syllable preserves fat7a (/a/)",
+                "final syllable raised to kasra (/i/)"
             ],
             [
-                "lax final vowel (/e/) in 3sg.f past verbs",
-                "tense final vowel (/i/) in 3sg.f past verbs"
+                "raised final syllable is lax/mid (/e/)",
+                "raised final syllable is tense/high (/i/)"
             ],
             [
-                "2 syllables for 3sg.f past verbs",
-                "3 syllables for 3sg.f past verbs"
+                "2 syllables",
+                "3 syllables"
             ]
         ],
         "options": {
@@ -1146,23 +1159,24 @@
         "flaws": [
             "Again: 'bit' options were added later, but that distinction wasn't what the question was looking for anyway"
         ],
+        "headline": "1sg past verbs (fa3altu \u0641\u0639\u0644\u062a)",
         "insights": [
             [
-                "deletion of unstressed initial /a/ in first-person past verbs",
-                "preservation of unstressed initial /a/ in first-person past verbs"
+                "deletion of unstressed initial /a/",
+                "preservation of unstressed initial /a/"
             ],
             [
-                "cluster-final 1sg past verbs",
-                "epenthetic kasra between final cluster of 1sg.past verbs"
+                "ending in consonant cluster",
+                "epenthetic kasra between final cluster"
             ],
             [
-                "lax epenthetic final vowel in 1sg past verbs (/e/)",
-                "tense epenthetic final vowel in 1sg past verbs (/i/)"
+                "lax/mid epenthetic final vowel (/e/)",
+                "tense/high epenthetic final vowel (/i/)"
             ],
             [
-                "1",
-                "2",
-                "3"
+                "1 syllable",
+                "2 syllables",
+                "3 syllables"
             ]
         ],
         "options": {
@@ -1196,6 +1210,7 @@
         "number": 22,
         "question": "Which do you use for the meaning of \"in order to\"?",
         "flaws": [],
+        "headline": "'in order to'",
         "insights": [[]],
         "options": {
             "la-": 0,
@@ -1216,8 +1231,9 @@
         "number": 23,
         "question": "Besides those two, which of these other words would you use to say \"I went to the store IN ORDER TO buy some tomatoes?\"",
         "flaws": [
-            "I unknowingly assumed the 'nothing' structure was universal and didn't need asking about, but I probably should've included it. One person gave it as a free response"
+            "I unknowingly assumed the 'nothing' structure was universal and didn't need asking about, but I probably should've included it. One person gave it as an 'other' response"
         ],
+        "headline": "'in order to'",
         "insights": [[
             "semantic broadening of kermel",
             "use of 7atta rather than, or for the same thing as, la7attelete/ta7attele",
@@ -1253,10 +1269,11 @@
         "flaws": [
             "Poorly phrased question and poorly framed answer choices"
         ],
+        "headline": "internal-passive formations",
         "insights": [[
-            "replacement of internal passive with generic plural",
-            "acceptance of verbal internal passive",
-            "acceptance of participial internal passive"
+            "unacceptable, use generic plural instead",
+            "acceptable on ifta3al \u0627\u0641\u062a\u0639\u0644 and infa3al \u0627\u0646\u0641\u0639\u0644 verbs",
+            "acceptable on m- \u0645-initial participles"
         ]],
         "options": {
             "byesta3mluwwa/-\u016bha": 0,
@@ -1280,15 +1297,16 @@
         "number": 25,
         "question": "How would you say \"the walls are colored and the car is closed\"?",
         "flaws": [],
+        "headline": "m- \u0645-initial passive participles",
         "insights": [
             [
-                "passive participle identical to active participle (deleted distinguishing /a/)",
-                "passive participle distinct (by an /a/ vowel) from active participle"
+                "identical to active, deleted distinguishing /a/",
+                "distinct from active by an /a/ vowel"
             ],
             [
-                "(before subject)",
-                "(after subject)",
-                "distinguishing of passive from active via word order"
+                "preferably before the subject",
+                "preferably after the subject",
+                "distinguished from active via word order"
             ]
         ],
         "options": {
@@ -1316,12 +1334,13 @@
         "number": 26,
         "question": "Which of these sounds most like something you'd say?",
         "flaws": [
-            "I forgot about assimilation of the /r/ into the /l/ as in Sallak, which does occur as well"
+            "I forgot about assimilation of the /r/ into the /l/ as in Sallak, which commonly occurs as well"
         ],
+        "headline": "'S\u0101r + l-' (\u0635\u0627\u0631 + \u0644\u0640 = \u0635\u0631\u0644\u0640)",
         "insights": [
             [
-                "assimilation of /l/ in Saar + l- to /r/",
-                "preservation of /l/ in Saar + l-"
+                "assimilation of /l/ to /r/",
+                "preservation of /l/"
             ],
             [
                 "Sarr- for duration",
@@ -1330,8 +1349,8 @@
                 "Sarl- for 'happening to'"
             ],
             [
-                "expressing of duration with S\u0101r",
-                "expression of duration with Sarl-"
+                "S\u0101r for duration",
+                "'S\u0101r + l-' for duration"
             ]
         ],
         "options": {
@@ -1359,6 +1378,7 @@
         "number": 27,
         "question": "How do you say \"here he is\"?",
         "flaws": [],
+        "headline": "'here it is!'",
         "insights": [[
             "Geminate /77/ in a77- derivatives",
             "Reduced /7/ in a77- derivatives"
@@ -1384,10 +1404,13 @@
     {
         "number": 28,
         "question": "How do you say \"we had written\"?",
-        "flaws": [],
+        "flaws": [
+            "Only a few months after the survey did I begin to notice how k\u0113yin works. Should have formulated a question that includes it"
+        ],
+        "headline": "past-perfect construction",
         "insights": [[
-            "past perfect = k\u0113n + simple past",
-            "past perfect = k\u0113n + past participle"
+            "k\u0113n + simple past",
+            "k\u0113n + past participle"
         ]],
         "options": {
             "kenna k\u0113tb\u012bn": 0,
@@ -1410,9 +1433,10 @@
         "flaws": [
             "I forgot to include 'ho/haw'. Should have at least had an Other option"
         ],
+        "headline": "'these'",
         "insights": [[
-            "/l/ > /d/ in 'these'",
-            "/l/ > /D/ in 'these'"
+            "/l/ > /d/ in 'hole' \u0647\u0648\u0644\u064a derivatives",
+            "/l/ > /D/ in 'hole' \u0647\u0648\u0644\u064a derivatives"
         ]],
         "options": {
             "h\u014dl": 0,
@@ -1444,10 +1468,11 @@
         "flaws": [
             "Two words isn't really enough to go off of"
         ],
+        "headline": "prepositions construed with 'min' \u0645\u0646",
         "insights": [[
-            "most prepositions construed with 'men'",
-            "some prepositions construed with 'men'",
-            "avoidance of construing prepositions with 'men'"
+            "most?",
+            "some",
+            "avoided"
         ]],
         "options": {
             "7ad minnak, ta7t minnak": 0,
@@ -1471,6 +1496,7 @@
         "number": 31,
         "question": "How do you pronounce \u062c\u0627\u064a/\u062c\u0627\u064a\u064a (\"coming\", masculine)?",
         "flaws": [],
+        "headline": "'coming' (fus7a jaa2in \u062c\u0627\u0621\u064d)",
         "insights": [[]],
         "options": {
             "je": 0,
@@ -1493,6 +1519,7 @@
     {
         "number": 32,
         "question": "There's a lot of variety in the word meaning \"belonging to\"! For each variant below (if you use it), indicate whether can be used for masculine, feminine, or both -- and also indicate whether it's plural, singular, or both.",
+        "headline": "'belonging to' (derivatives of taba3 \u062a\u0628\u0639)",
         "flaws": [],
         "insights": [
             [
@@ -1525,7 +1552,7 @@
             [[1], []],
             [[0], []]
         ],
-        "environmentTemplate": "of what's morphologically a {0} form",
+        "environmentTemplate": "interpretation of what's morphologically a {0} form",
         "examples": [
             {
                 "transliteration": "taba3",
@@ -1605,10 +1632,11 @@
         "number": 33,
         "question": "Your mom's forgotten to tell you about something important. How do you tell her that she could have let you know?",
         "flaws": [],
+        "headline": "'you could have told me!'",
         "insights": [
             [
-                "k\u0113n + simple past for 'could/should have'",
-                "k\u0113n + present subjunctive for 'could/should have'"
+                "k\u0113n + simple past",
+                "k\u0113n + present subjunctive"
             ],
             [
                 "'vowel harmony' in 'to say'",
@@ -1637,9 +1665,10 @@
         "number": 34,
         "question": "How do you say \u0641\u064a + \u064a?",
         "flaws": [],
+        "headline": "fiyye \u0641\u064a\u064a vs. f\u012bne \u0641\u064a\u0646\u064a",
         "insights": [[
-            "epenthetic -n- in 'fi + i'",
-            "no epenthetic -n- in 'fi + i'"
+            "-n- (f\u012bne \u0641\u064a\u0646\u064a)",
+            "no -n- (fiyye \u0641\u064a\u064a)"
         ]],
         "options": {
             "fiyye": 0,
@@ -1677,6 +1706,7 @@
         "number": 35,
         "question": "How do you say \"what's wrong with you?\" or \"what's your problem?\" to a male?",
         "flaws": [],
+        "headline": "'what's your problem?!'",
         "insights": [[]],
         "options": {
             "shu b\u012bk": 0,
@@ -1706,6 +1736,7 @@
         "number": 36,
         "question": "How would you ask a male, \"did you end up seeing it?\"",
         "flaws": [],
+        "headline": "'to end up [doing]'",
         "insights": [[
             "agreement in conjugation of 3\u0101d for subject",
             "no agreement in conjugation of 3\u0101d"
@@ -1737,9 +1768,10 @@
         "flaws": [
             "Really awkward shoehorning of 'b3ish', should have just done it in a different question"
         ],
+        "headline": "'no more'/'no longer'",
         "insights": [[
-            "usage of 'y3ish'",
-            "usage of ba2a"
+            "uses 'y3ish'",
+            "uses ba2a"
         ]],
         "options": {
             "ma ba2 \u0113kol": 0,
@@ -1771,10 +1803,10 @@
         "flaws": [
             "I forgot to include 'het ta-', which may have unfairly skewed results away from 'het la-'"
         ],
+        "headline": "'let's...'",
         "insights": [[
-            "het alone for \"let's\"",
-            "het paired with la- for \"let's\"",
-            "no use of 'het' for \"let's\""
+            "h\u0113t \u0647\u0627\u062a alone",
+            "h\u0113t \u0647\u0627\u062a paired with la-"
         ]],
         "options": {
             "h\u0113t nDhar": 0,
@@ -1789,7 +1821,7 @@
         "optionsIndicate": [
             [[0]],
             [[1]],
-            [[2]]
+            [[]]
         ],
         "environmentTemplate": "",
         "examples": []
@@ -1798,9 +1830,10 @@
         "number": 39,
         "question": "What word do you usually use to negate adjectives & participles (like \u062d\u0644\u0648 \u200e\u200e7elo, \u0634\u0627\u064a\u0641 sh\u0113yef)?",
         "flaws": [],
+        "headline": "non-verb negation",
         "insights": [[
-            "'mesh' for nonverbal negation",
-            "'ma' for nonverbal negation"
+            "mish \u0645\u0634",
+            "ma \u0645\u0627"
         ]],
         "options": {
             "ma": 0,
@@ -1824,6 +1857,7 @@
         "number": 40,
         "question": "What verbs do you use to say \"don't worry\" to a male?",
         "flaws": [],
+        "headline": "'don't worry'",
         "insights": [[]],
         "options": {
             "tsh\u012bl": 0,
@@ -1850,6 +1884,7 @@
         "number": 41,
         "question": "How do you say \"we want\"?",
         "flaws": [],
+        "headline": "'we want'",
         "insights": [
             [
                 "nasal assimilation of /b/ to /m/",
@@ -1882,9 +1917,10 @@
         "number": 42,
         "question": "How do you usually say \"who is he?\"",
         "flaws": [],
+        "headline": "m\u012bn \u0645\u064a\u0646 + personal suffix \u0636\u0645\u064a\u0631 \u0645\u062a\u0635\u0644",
         "insights": [[
-            "acceptable to add prepositional suffixes to miin",
-            "no prepositional suffixes usable with miin"
+            "acceptable",
+            "unacceptable"
         ]],
         "options": {
             "m\u012bno/m\u012bnu": 0,
@@ -1905,19 +1941,20 @@
         "number": 43,
         "question": "How do you say \"spoon\"?",
         "flaws": [
-            "Thank goodness I included an 'other' option in the question. Had no idea there were this many variations, so the only two multiple-choice options I gave were mal32a and ma3l2a"
+            "Thank goodness I included an 'other' option in the question. Had no idea there was this much variation, the only two multiple-choice options I gave were mal32a and ma3l2a"
         ],
+        "headline": "spoon",
         "insights": [
             [
-                "metathesis of /l3/ -> /3l/ in 'spoon'",
-                "metathesis of /3(a)2/ -> /2(a)3/ in 'spoon'",
-                "no metathesis in 'spoon'"
+                "metathesis of /l3/ -> /3l/",
+                "metathesis of /3(a)2/ -> /2(a)3/",
+                "no metathesis"
             ],
             [
-                "deletion of 2 / C2C in 'spoon'",
-                "deletion of 3 / 23 in 'spoon'",
-                "deletion of unstressed interconsonantal /a/ in 'spoon'",
-                "preservation of unstressed interconsonantal /a/ in 'spoon'"
+                "deletion of 2 / C2C",
+                "deletion of 3 / 23",
+                "deletion of unstressed interconsonantal /a/",
+                "preservation of unstressed interconsonantal /a/"
             ]
         ],
         "options": {
