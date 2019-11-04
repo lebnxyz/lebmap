@@ -18,9 +18,17 @@
         </g>
       </svg>
     </div>
-    <div id="info" class="column">
-      <answer-list :selection="selection"></answer-list>
-    </div>
+    <tabs id="info" class="info-tabs column">
+      <tab title="Questions" :disabled="true">
+        <!-- ... -->
+      </tab>
+      <tab title="Insights" :disabled="true">
+        <!-- ... -->
+      </tab>
+      <tab title="Answers">
+        <answer-list :selection="selection"></answer-list>
+      </tab>
+    </tabs>
   </div>
 </template>
 
@@ -96,7 +104,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 #container {
   display: flex;
   height: 100%;
@@ -108,5 +116,13 @@ export default {
   flex-direction: column;
   flex: 1;
   overflow: auto;
+}
+
+.vue-tab {
+  color: white;
+  cursor: pointer;
+  font-family: sans-serif;
+  display: inline-block;
+  padding: 1em;
 }
 </style>

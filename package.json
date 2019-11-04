@@ -29,7 +29,8 @@
     "fitty": "^2.2.6",
     "typeface-montserrat": "0.0.75",
     "vue": "^2.6.10",
-    "vue-hot-reload-api": "^2.3.4"
+    "vue-hot-reload-api": "^2.3.4",
+    "vue-slim-tabs": "^0.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",

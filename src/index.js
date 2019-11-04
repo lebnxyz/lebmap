@@ -3,6 +3,7 @@ import Vue from 'vue';
 
 import 'typeface-montserrat';
 import { Query } from './scripts/utils.js';
+import * as Tabs from 'vue-slim-tabs';
 import Fitty from './vue-fitty.vue';
 
 import App from './app.vue';
@@ -12,6 +13,7 @@ import questions from './data/questions.json';
 
 
 Vue.use((vue, settings) => vue.component('fitty', Fitty));
+Vue.use(Tabs);
 
 new Vue({
   render: h => h(App),
