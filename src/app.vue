@@ -19,8 +19,12 @@
       </svg>
     </div>
     <tabs id="info" class="info-tabs column">
-      <tab title="Questions" :disabled="true">
-        <!-- ... -->
+      <tab title="Questions">
+        <ol>
+          <li v-for="q in $root.questions" :key="q.number" style="color:white;">
+            {{q}}
+          </li>
+        </ol>
       </tab>
       <tab title="Insights" :disabled="true">
         <!-- ... -->

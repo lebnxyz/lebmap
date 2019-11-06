@@ -6,11 +6,6 @@
       :responses="$root.respondentQuery.count('WHERE location = $1', place.name)"
     ></location>
   </div>
-  <ol v-else style="color:white;">
-    <li v-for="q in $root.questions" :key="q.number" style="color:white;">
-      {{q}}
-    </li>
-  </ol>
 </template>
 
 <script>

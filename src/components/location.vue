@@ -5,7 +5,7 @@
       :options="{maxSize: 20, minSize: 1, multiLine: true}"
       :create-listener="createResizeListener"
       :destroy-listener="destroyResizeListener"
-    >
+      >
       {{name}}, <span class="faint">{{district}}</span>
       <span v-if="responses > 1">{{responses}}</span>
       </fitty>
