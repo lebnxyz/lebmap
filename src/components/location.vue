@@ -1,13 +1,15 @@
 <template>
   <div class="location">
-    <fitty
-      :options="{maxSize: 20, multiLine: true}"
+    <div> <!-- because outer div's padding messes fitty up -->
+      <fitty
+      :options="{maxSize: 20, minSize: 1, multiLine: true}"
       :create-listener="createResizeListener"
       :destroy-listener="destroyResizeListener"
     >
       {{name}}, <span class="faint">{{district}}</span>
       <span v-if="responses > 1">{{responses}}</span>
-    </fitty>
+      </fitty>
+    </div>
     <span class="arrow"></span>
   </div>
 </template>
