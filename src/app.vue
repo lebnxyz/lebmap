@@ -128,5 +128,24 @@ export default {
   font-family: sans-serif;
   display: inline-block;
   padding: 1em;
+  background-color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  transition: background-color 300ms;
+}
+
+.vue-tab:hover {
+  background-color: #333;
+}
+
+.vue-tab[aria-selected="true"] {
+  background-color: #fff;
+  color: black;
+}
+
+.vue-tab[aria-disabled="true"] {
+  cursor: not-allowed;
+  color: #555;
+  background-color: #000;
 }
 </style>
