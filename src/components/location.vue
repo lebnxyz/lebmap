@@ -1,6 +1,6 @@
 <template>
   <div class="location">
-    <div> <!-- because outer div's padding messes fitty up -->
+    <div style="float:left;"> <!-- because outer div's padding messes fitty up -->
       <fitty
       :options="{maxSize: 20, minSize: 1, multiLine: true}"
       :create-listener="createResizeListener"
@@ -39,11 +39,14 @@ export default {
   font-size: larger;
   color: white;
   cursor: pointer;
+  border-radius: 5px;
   background-color: #1c1c1c;
+  position: relative;
   width: 50%;
   padding: 1em 0 1em 1em;
   margin-bottom: 1em;
   transition: 0.5s;
+  overflow: hidden; /* weird css subelement-height-or-something-like-that hack */
 }
 
 .location:hover {
@@ -55,8 +58,18 @@ export default {
 }
 
 .arrow {
-  float: right;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 5px 5px 0;
+  top: 0;
+  right: 0;
+  height: 100%;
   padding-right: 10px;
+  padding-left: 10px;
+  background-color: #777;
 }
 
 .arrow::after {
