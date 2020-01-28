@@ -1,6 +1,6 @@
 <template>
   <div class="location">
-    <div style="float:left;"> <!-- because outer div's padding messes fitty up -->
+    <div> <!-- because outer div's padding messes fitty up -->
       <fitty
       :options="{maxSize: 20, minSize: 1, multiLine: true}"
       :create-listener="createResizeListener"
@@ -43,7 +43,7 @@ export default {
   background-color: #1c1c1c;
   position: relative;
   width: 50%;
-  padding: 1em 0 1em 1em;
+  padding: 1em 2.5em 1em 1em;
   margin-bottom: 1em;
   transition: 0.5s;
   overflow: hidden; /* weird css subelement-height-or-something-like-that hack */
@@ -67,13 +67,14 @@ export default {
   top: 0;
   right: 0;
   height: 100%;
+  width: 1em;
   padding-right: 10px;
   padding-left: 10px;
   background-color: #777;
 }
 
 .arrow::after {
-  content: "\25B6 \FE0E";
+  content: "\25B6";
   font-size: 20px;
 }
 </style>
