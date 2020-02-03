@@ -1,5 +1,5 @@
 <template>
-  <div :class="{item: true, nonbold: !bold}">
+  <div @click="click" :class="{item: true, bold}">
     <div> <!-- because outer div's padding messes fitty up -->
       <fitty
       :options="{maxSize, minSize, multiLine}"
@@ -30,7 +30,7 @@ export default {
     },
     bold: {
       type: Boolean,
-      default: true
+      default: false
     }
   },
   methods: {
@@ -39,6 +39,9 @@ export default {
     },
     destroyResizeListener(func) {
       window.removeEventListener('resize', func);
+    },
+    click(e) {
+      this.$emit('click', e);
     }
   }
 };
@@ -47,7 +50,6 @@ export default {
 <style scoped>
 .item {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
   font-size: larger;
   color: white;
   cursor: pointer;
@@ -61,8 +63,8 @@ export default {
   overflow: hidden; /* weird css subelement-height-or-something-like-that hack */
 }
 
-.nonbold {
-  font-weight: unset;
+.bold {
+  font-weight: 800;
 }
 
 .item:hover {

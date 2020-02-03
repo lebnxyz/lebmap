@@ -143,21 +143,32 @@ def compile_answers(csv_f, json_f, cross_file_answer_map=None):
                 except KeyError:
                     raise SystemExit(f'Question {question_no} has no headline')
                 answers[major] = {
-                  'headline': ' '.join([_capfirst(headline), *tailline]),
                   'question': j_question['question'],
+                  'headline': ' '.join([_capfirst(headline), *tailline]),
+                  'flaws': j_question['flaws'],
                   'answers': {}
                 }
-            if minor not in answers.setdefault(major, {}):
+            if minor not in answers[major]['answers']:
                 answers[major]['answers'][minor] = {
                   'number': question_no,
                   'environment': '',
+                  'english': '',
+                  'arabic': '',
+                  'transliteration': '',
                   'options': {},
                   'otherOptions': {}
                 }
-            if '.' in question_no and not answers[major]['answers'][minor]['environment']:
-                answers[major]['answers'][minor]['environment'] = j_question['environmentTemplate'].format(
-                  *j_question['examples'][int(minor)]['environmentArgs']
-                )
+            q = answers[major]['answers'][minor]
+            if '.' in question_no:
+                ex = j_question['examples'][int(minor)]
+                if not q['environment']:
+                    q['environment'] = j_question['environmentTemplate'].format(
+                      *ex['environmentArgs']
+                    )
+                if not q['english']:
+                    q['english'] = ex['english']
+                    q['arabic'] = ex['arabic']
+                    q['transliteration'] = ex['transliteration']
             option_map = dict(zip(range(1, 1 + len(j_question['optionsList'])), j_question['optionsList']))
             newline_printed = False
             for option in answer.split(';'):
@@ -188,12 +199,15 @@ def compile_answers(csv_f, json_f, cross_file_answer_map=None):
                         respondents[-1]['otherAnswers'].setdefault(question_no, []).append(option)
                     else:
                         number = j_question['options'][option]
-                        answers[major]['answers'][minor]['options'].setdefault(number, {}).setdefault('answeredBy', []).append(user_id)
-                        if 'indicates' not in answers[major]['answers'][minor]['options'][number]:
-                            answers[major]['answers'][minor]['options'][number]['indicates'] = [
-                            j_question['insights'][primary][secondary]
-                            for primary, primary_li in enumerate(j_question['optionsIndicate'][number])
-                            for secondary in primary_li
+                        d = answers[major]['answers'][minor]['options'].setdefault(number, {})
+                        d['number'] = number
+                        d['value'] = option
+                        d.setdefault('answeredBy', []).append(user_id)
+                        if 'indicates' not in d:
+                            d['indicates'] = [
+                              j_question['insights'][primary][secondary]
+                              for primary, primary_li in enumerate(j_question['optionsIndicate'][number])
+                              for secondary in primary_li
                             ]
                         respondents[-1]['answers'].setdefault(question_no, []).append(number)
     return cross_file_answer_map, respondents, answers

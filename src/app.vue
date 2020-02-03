@@ -20,17 +20,15 @@
     </div>
     <tabs id="info" class="info-tabs column">
       <tab title="Questions">
-        <ol>
-          <li v-for="q in $root.questions" :key="q.number" style="color:white;">
-            {{q}}
-          </li>
-        </ol>
+        <question-list :questionMap="$root.questionMap" @show-respondents="showRespondents"></question-list>
       </tab>
-      <tab title="Insights">
-        <insight-list :questionMap="$root.questionMap"></insight-list>
+      <tab title="Insights" :disabled="true">
+        <!--  -->
       </tab>
       <tab title="Answers">
-        <list :selection="selectionValues" iterKey="name" v-slot="{item: place}">
+        <list :selection="selectionValues" iterKey="name" v-slot="{item: place}"
+          :bold="true"
+        >
           {{place.name}}, <span class="faint">{{place.district}}</span>
           <span v-if="place.responses > 1">{{place.responses}}</span>
         </list>
@@ -43,7 +41,7 @@
 import DummyRegion from './components/dummy-region.vue';
 import Region from './components/region.vue';
 import List from './components/list.vue';
-import InsightList from './components/insight-list.vue'
+import QuestionList from './components/question-list.vue'
 
 import { geoMercator, geoPath, geoMercatorRaw } from 'd3';
 import * as utils from './scripts/utils.js';
@@ -56,7 +54,7 @@ export default {
     DummyRegion,
     Region,
     List,
-    InsightList
+    QuestionList
   },
   data() {
     const regionPaths = [];
@@ -111,6 +109,9 @@ export default {
     unselect(pins) {
       // better for performance than this.$delete (much faster, especially on later re-selects)
       pins.map(pin => this.selection[pin.place.name] = undefined);
+    },
+    showRespondents(respondents) {
+      
     }
   }
 };

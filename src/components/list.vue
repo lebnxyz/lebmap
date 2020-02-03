@@ -1,6 +1,8 @@
 <template>
   <div v-if="filteredSelection.length">
-    <list-item :bold="bold" v-for="item in filteredSelection" :key="item[iterKey]">
+    <list-item v-bind="$attrs" v-for="item in filteredSelection" :key="item[iterKey]"
+      @click="click(item)"
+    >
       <slot v-bind:item="item"></slot>
     </list-item>
   </div>
@@ -17,15 +19,16 @@ export default {
   },
   props: {
     selection: Array,
-    iterKey: String,
-    bold: {
-      type: Boolean,
-      default: true
-    }
+    iterKey: String
   },
   computed: {
     filteredSelection() {
       return this.selection.filter(i => i !== undefined);
+    }
+  },
+  methods: {
+    click(item) {
+      this.$emit('item-clicked', item);
     }
   }
 };

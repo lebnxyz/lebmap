@@ -612,7 +612,7 @@
             [[2, 3]],
             [[2, 3, 4]]
         ],
-        "environmentTemplate": "a {0} verb that {1} the productive passive of {2}",
+        "environmentTemplate": "for a {0} verb that {1} the productive passive of {2}",
         "examples": [
             {
                 "transliteration": "ynksr",
