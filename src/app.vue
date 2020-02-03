@@ -30,7 +30,10 @@
         <!-- ... -->
       </tab>
       <tab title="Answers">
-        <answer-list :selection="selection"></answer-list>
+        <list :selection="selection" key="name" v-slot="slot">
+          {{slot.item.name}}, <span class="faint">{{slot.item.district}}</span>
+          <span v-if="slot.item.responses > 1">{{slot.item.responses}}</span>
+        </list>
       </tab>
     </tabs>
   </div>
@@ -39,7 +42,7 @@
 <script>
 import DummyRegion from './components/dummy-region.vue';
 import Region from './components/region.vue';
-import AnswerList from './components/answer-list.vue';
+import List from './components/list.vue';
 
 import { geoMercator, geoPath, geoMercatorRaw } from 'd3';
 import * as utils from './scripts/utils.js';
@@ -51,7 +54,7 @@ export default {
   components: {
     DummyRegion,
     Region,
-    AnswerList
+    List
   },
   data() {
     const regionPaths = [];
@@ -113,6 +116,10 @@ export default {
   display: flex;
   height: 100%;
   flex: none;
+}
+
+.faint {
+  color: darkgray;
 }
 
 .column {

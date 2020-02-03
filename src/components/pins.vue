@@ -25,10 +25,13 @@ export default {
   data() {
     const pins = [];
     Object.values(this.locations || {}).forEach(
-      place => pins.push({
-        coords: place.location,
-        place: place
-      })
+      place => {
+        place['responses'] = this.$root.respondentQuery.count('WHERE location = $1', place.name);
+        pins.push({
+          coords: place.location,
+          place: place
+        })
+      }
     );
     return {pins};
   }
