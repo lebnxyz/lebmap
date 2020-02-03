@@ -25,11 +25,11 @@ export default {
     },
     MIN_RAD: {
       type: Number,
-      default: 4
+      default: 3
     },
     MAX_RAD: {
       type: Number,
-      default: 10
+      default: 15
     }
   },
   data() {
