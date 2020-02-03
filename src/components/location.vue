@@ -1,25 +1,21 @@
 <template>
-  <div class="location">
-    <div> <!-- because outer div's padding messes fitty up -->
-      <fitty
-      :options="{maxSize: 20, minSize: 1, multiLine: true}"
-      :create-listener="createResizeListener"
-      :destroy-listener="destroyResizeListener"
-      >
-      {{name}}, <span class="faint">{{district}}</span>
-      <span v-if="responses > 1">{{responses}}</span>
-      </fitty>
-    </div>
-    <span class="arrow"></span>
-  </div>
+  <list-item>
+    {{name}}, <span class="faint">{{district}}</span>
+    <span v-if="responses > 1">{{responses}}</span>
+  </list-item>
 </template>
 
 <script>
+import ListItem from './list-item.vue';
+
 export default {
   props: {
     name: String,
     district: String,
     responses: Number
+  },
+  components: {
+    ListItem
   },
   methods: {
     createResizeListener(func) {
@@ -33,48 +29,7 @@ export default {
 </script>
 
 <style scoped>
-.location {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  font-size: larger;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-  background-color: #1c1c1c;
-  position: relative;
-  width: 50%;
-  padding: 1em 2.5em 1em 1em;
-  margin-bottom: 1em;
-  transition: 0.5s;
-  overflow: hidden; /* weird css subelement-height-or-something-like-that hack */
-}
-
-.location:hover {
-  background-color: #555;
-}
-
 .faint {
   color: darkgray;
-}
-
-.arrow {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0 5px 5px 0;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 1em;
-  padding-right: 10px;
-  padding-left: 10px;
-  background-color: #777;
-}
-
-.arrow::after {
-  content: "\25B6";
-  font-size: 20px;
 }
 </style>

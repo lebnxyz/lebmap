@@ -7,6 +7,18 @@ regex.DEFAULT_VERSION = regex.VERSION1
 
 from utilscripts import badjson
 
+def capfirst(s):
+    '''
+    str.capitalize() doesn't handle "'this'", and str.title() is a bit
+    overzealous ("3rd-person" -> "3Rd-Person")
+    '''
+    if s[0].isnumeric():
+        return s
+    if s[0].isalpha():
+        return s.capitalize()
+    i = next(i for i, v in enumerate(s) if v.isalpha())
+    return f'{s[:i]}{s[i].upper()}{s[i+1:]}'
+
 
 def parse(title, current_question):
     print(title)
@@ -132,7 +144,7 @@ def compile_answers(csv_f, json_f, cross_file_answer_map=None):
                 answers[question_no] = {
                   'number': question_no,
                   'question': j_question['question'],
-                  'headline': ' '.join([headline.title(), *tailline]),  # .capitalize() doesn't handle non-initial letters
+                  'headline': ' '.join([capfirst(headline), *tailline]),
                   'environment': '',
                   'options': {},
                   'otherOptions': {}
