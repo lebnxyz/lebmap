@@ -1,6 +1,6 @@
 <template>
   <div v-if="filteredSelection.length">
-    <list-item v-for="item in filteredSelection" :key="item[key]">
+    <list-item :bold="bold" v-for="item in filteredSelection" :key="item[iterKey]">
       <slot v-bind:item="item"></slot>
     </list-item>
   </div>
@@ -11,17 +11,21 @@ import ListItem from './list-item.vue';
 
 
 export default {
-  name: 'AnswerList',
+  name: 'List',
   components: {
     ListItem
   },
   props: {
-    selection: Object,
-    key: String
+    selection: Array,
+    iterKey: String,
+    bold: {
+      type: Boolean,
+      default: true
+    }
   },
   computed: {
     filteredSelection() {
-      return Object.values(this.selection).filter(i => i !== undefined);
+      return this.selection.filter(i => i !== undefined);
     }
   }
 };

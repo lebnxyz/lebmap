@@ -26,13 +26,13 @@
           </li>
         </ol>
       </tab>
-      <tab title="Insights" :disabled="true">
-        <!-- ... -->
+      <tab title="Insights">
+        <insight-list :questionMap="$root.questionMap"></insight-list>
       </tab>
       <tab title="Answers">
-        <list :selection="selection" key="name" v-slot="slot">
-          {{slot.item.name}}, <span class="faint">{{slot.item.district}}</span>
-          <span v-if="slot.item.responses > 1">{{slot.item.responses}}</span>
+        <list :selection="selectionValues" iterKey="name" v-slot="{item: place}">
+          {{place.name}}, <span class="faint">{{place.district}}</span>
+          <span v-if="place.responses > 1">{{place.responses}}</span>
         </list>
       </tab>
     </tabs>
@@ -43,6 +43,7 @@
 import DummyRegion from './components/dummy-region.vue';
 import Region from './components/region.vue';
 import List from './components/list.vue';
+import InsightList from './components/insight-list.vue'
 
 import { geoMercator, geoPath, geoMercatorRaw } from 'd3';
 import * as utils from './scripts/utils.js';
@@ -54,7 +55,8 @@ export default {
   components: {
     DummyRegion,
     Region,
-    List
+    List,
+    InsightList
   },
   data() {
     const regionPaths = [];
@@ -86,6 +88,9 @@ export default {
     },
     path() {
       return geoPath(this.projection);
+    },
+    selectionValues() {
+      return Object.values(this.selection);
     }
   },
   created() {

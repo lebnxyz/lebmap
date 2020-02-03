@@ -7,7 +7,7 @@ regex.DEFAULT_VERSION = regex.VERSION1
 
 from utilscripts import badjson
 
-def capfirst(s):
+def _capfirst(s):
     '''
     str.capitalize() doesn't handle "'this'", and str.title() is a bit
     overzealous ("3rd-person" -> "3Rd-Person")
@@ -20,7 +20,7 @@ def capfirst(s):
     return f'{s[:i]}{s[i].upper()}{s[i+1:]}'
 
 
-def parse(title, current_question):
+def _parse(title, current_question):
     print(title)
     lbrack = title.rfind('[')
     if lbrack == -1:
@@ -50,7 +50,7 @@ def normalize_questions(csv_header, json_li):
     q_idx = -1
     example_idx = 0
     for idx, title in enumerate(csv_header[3:], 3):
-        question, current_question, arabic, english_1, english_2 = parse(title, current_question)
+        question, current_question, arabic, english_1, english_2 = _parse(title, current_question)
         has_examples = any(map(None.__ne__, (arabic, english_1, english_2)))
         if not has_examples:
             q_idx += 1
@@ -136,23 +136,27 @@ def compile_answers(csv_f, json_f, cross_file_answer_map=None):
                 except StopIteration:
                     json_it = iter(json_f)
                     j_question = next(json_it)
-            if question_no not in answers:
+            major, minor, *_ = *question_no.split('.', 1), '0'
+            if major not in answers:
                 try:
                     headline, *tailline = j_question['headline'].split()
                 except KeyError:
                     raise SystemExit(f'Question {question_no} has no headline')
-                answers[question_no] = {
-                  'number': question_no,
+                answers[major] = {
+                  'headline': ' '.join([_capfirst(headline), *tailline]),
                   'question': j_question['question'],
-                  'headline': ' '.join([capfirst(headline), *tailline]),
+                  'answers': {}
+                }
+            if minor not in answers.setdefault(major, {}):
+                answers[major]['answers'][minor] = {
+                  'number': question_no,
                   'environment': '',
                   'options': {},
                   'otherOptions': {}
                 }
-            if '.' in question_no and not answers[question_no]['environment']:
-                example_no = int(question_no.split('.')[1])
-                answers[question_no]['environment'] = j_question['environmentTemplate'].format(
-                  *j_question['examples'][example_no]['environmentArgs']
+            if '.' in question_no and not answers[major]['answers'][minor]['environment']:
+                answers[major]['answers'][minor]['environment'] = j_question['environmentTemplate'].format(
+                  *j_question['examples'][int(minor)]['environmentArgs']
                 )
             option_map = dict(zip(range(1, 1 + len(j_question['optionsList'])), j_question['optionsList']))
             newline_printed = False
@@ -179,14 +183,14 @@ def compile_answers(csv_f, json_f, cross_file_answer_map=None):
                     options = [None]
                 for option in options:
                     if option is None or option.startswith('Other'):
-                        answers[question_no]['otherOptions'].setdefault(option, {}).setdefault('answeredBy', []).append(user_id)
+                        answers[major]['answers'][minor]['otherOptions'].setdefault(option, {}).setdefault('answeredBy', []).append(user_id)
                         respondents[-1]['answers'].setdefault(question_no, []).append(-1)
                         respondents[-1]['otherAnswers'].setdefault(question_no, []).append(option)
                     else:
                         number = j_question['options'][option]
-                        answers[question_no]['options'].setdefault(number, {}).setdefault('answeredBy', []).append(user_id)
-                        if 'indicates' not in answers[question_no]['options'][number]:
-                            answers[question_no]['options'][number]['indicates'] = [
+                        answers[major]['answers'][minor]['options'].setdefault(number, {}).setdefault('answeredBy', []).append(user_id)
+                        if 'indicates' not in answers[major]['answers'][minor]['options'][number]:
+                            answers[major]['answers'][minor]['options'][number]['indicates'] = [
                             j_question['insights'][primary][secondary]
                             for primary, primary_li in enumerate(j_question['optionsIndicate'][number])
                             for secondary in primary_li
@@ -239,33 +243,33 @@ def do_special_cases(json_questions_path='src/data/question_answerers.json', jso
                 if len(user_answers['19.0']) == 1:
                     user_answers['20'] = adjusted_20
                     for option in original_20:
-                        if option in qj['19.0']['options'] and user_id in qj['19.0']['options'][option]['answeredBy']:
-                            qj['19.0']['options'][option]['answeredBy'].remove(user_id)
+                        if option in qj['19']['answers']['0']['options'] and user_id in qj['19']['answers']['0']['options'][option]['answeredBy']:
+                            qj['19']['answers']['0']['options'][option]['answeredBy'].remove(user_id)
                 else:
                     user_answers['20'] = list(dict.fromkeys(original_20 + adjusted_20))
                 for option in adjusted_20:
-                    if option in qj['20']['options'] and user_id not in qj['20']['options'][option]['answeredBy']:
-                        qj['20']['options'][option]['answeredBy'].append(user_id)
+                    if option in qj['20']['answers']['0']['options'] and user_id not in qj['20']['answers']['0']['options'][option]['answeredBy']:
+                        qj['20']['answers']['0']['options'][option]['answeredBy'].append(user_id)
             '''
             take care of the fact that "N/A, I'd never say 3am here" should XOR with the other '3amma'
             options in question 16
             '''
-            for qno in (f'16.{minor}' for minor in range(8)):
-                if 0 in user_answers[qno]:
-                    user_answers[qno] = [0]
+            for minor in map(str, range(8)):
+                if 0 in user_answers[f'16.{minor}']:
+                    user_answers[f'16.{minor}'] = [0]
                     for i in range(1, 4):
-                        if i in qj[qno]['options'] and user_id in qj[qno]['options'][i]['answeredBy']:
-                            qj[qno]['options'][i]['answeredBy'].remove(user_id)
+                        if i in qj['16']['answers'][minor]['options'] and user_id in qj['16']['answers'][minor]['options'][i]['answeredBy']:
+                            qj['16']['answers'][minor]['options'][i]['answeredBy'].remove(user_id)
             '''
             take care of the fact that "N/A, I don't say this" should XOR with the other 'taba3' options
             in question 32
             '''
-            for qno in (f'32.{minor}' for minor in range(8)):
-                if 0 in user_answers[qno]:
-                    user_answers[qno] = [0]
+            for minor in map(str, range(8)):
+                if 0 in user_answers[f'32.{minor}']:
+                    user_answers[f'32.{minor}'] = [0]
                     for i in range(1, 5):
-                        if i in qj[qno]['options'] and user_id in qj[qno]['options'][i]['answeredBy']:
-                            qj[qno]['options'][i]['answeredBy'].remove(user_id)
+                        if i in qj['32']['answers'][minor]['options'] and user_id in qj['32']['answers'][minor]['options'][i]['answeredBy']:
+                            qj['32']['answers'][minor]['options'][i]['answeredBy'].remove(user_id)
     
     with open(json_users_path, 'w', encoding='utf-8') as user_f, \
      open(json_questions_path, 'w', encoding='utf-8') as q_f:

@@ -1,5 +1,5 @@
 <template>
-  <div class="item">
+  <div :class="{item: true, nonbold: !bold}">
     <div> <!-- because outer div's padding messes fitty up -->
       <fitty
       :options="{maxSize, minSize, multiLine}"
@@ -22,9 +22,13 @@ export default {
     },
     minSize: {
       type: Number,
-      default: 1
+      default: 14
     },
     multiLine: {
+      type: Boolean,
+      default: true
+    },
+    bold: {
       type: Boolean,
       default: true
     }
@@ -55,6 +59,10 @@ export default {
   margin-bottom: 1em;
   transition: 0.5s;
   overflow: hidden; /* weird css subelement-height-or-something-like-that hack */
+}
+
+.nonbold {
+  font-weight: unset;
 }
 
 .item:hover {

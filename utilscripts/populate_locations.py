@@ -1,4 +1,4 @@
-LAST_TIMESTAMP = '2019/09/07 7:37:45 PM MDT'
+LAST_TIMESTAMP = '2020/02/02 9:13:00 PM MDT'
 import csv
 import json
 import requests
@@ -95,6 +95,7 @@ def populate(d, responses, out):
         if response[0] == 'Timestamp':
             continue
         if response[0] == LAST_TIMESTAMP:
+            print('?')
             found_timestamp = True
             continue
         if not found_timestamp:
@@ -134,7 +135,7 @@ def populate(d, responses, out):
 def update_locations(
     new_csv_path='Lebanon_ Dialect Survey.csv',
     old_csv_path='results-normalized.csv',
-    json_path='data/map/locations.json'
+    json_path='src/data/map/locations.json'
   ):
     with open(new_csv_path, 'r', encoding='utf-8') as new_csv_f, \
      open(json_path, 'r', encoding='utf-8') as json_f:
