@@ -1,6 +1,6 @@
 <template>
   <circle
-    :class="{parentClicked, clicked: clicked && !parentClicked, pin: true}"
+    :class="{parentClicked, clicked: clicked && !parentClicked, highlighted, pin: true}"
     :cx="coords[0]"
     :cy="coords[1]"
     :r="radius"
@@ -19,6 +19,7 @@ export default {
     coords: Array,
     place: Object,
     parentClicked: Boolean,
+    highlightedPlaces: Set,
     multiplier: {
       type: Number,
       default: 1.5
@@ -38,15 +39,24 @@ export default {
         this.place.name, this.$root.respondentQuery, this.MIN_RAD, this.MAX_RAD
       ),
       hover: false,
-      clicked: false
+      clicked: false,
+      multiplier2: 1
     };
   },
   computed: {
     radius() {
       if (this.hover) {
-        return this.defaultRadius * this.multiplier;
+        return this.defaultRadius * this.multiplier * this.multiplier2;
       }
-      return this.defaultRadius;
+      return this.defaultRadius * this.multiplier2;
+    },
+    highlighted() {
+      if (this.highlightedPlaces.has(this.place.name)) {
+        this.multiplier2 = 1.5;
+        return true;
+      }
+      this.multiplier2 = 1;
+      return false;
     }
   },
   watch: {
@@ -86,5 +96,10 @@ export default {
 .pin.parentClicked {
   fill-opacity: 0.6;
   stroke-width: 1px;
+}
+
+.highlighted {
+  fill: #006868;
+  stroke: #00ffff;
 }
 </style>

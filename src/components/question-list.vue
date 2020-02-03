@@ -90,7 +90,7 @@ export default {
       this.answerInfo = answer;
     },
     showRespondents(option) {
-      this.$emit('show-respondents', option);
+      this.$emit('show-respondents', option.answeredBy);
     },
     backToQuestions() {
       this.clicked = false;
@@ -98,6 +98,7 @@ export default {
       this.qInfo = null;
     },
     backToQuestionInfo() {
+      this.$emit('show-respondents', []);
       this.subClicked = false;
     }
   }

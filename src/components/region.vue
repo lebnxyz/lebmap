@@ -10,6 +10,7 @@
       :locations="locations"
       :projection="projection"
       :clicked="clicked"
+      :highlighted-places="highlightedPlaces"
       @select-pin="selectPin"
       @unselect-pin="unselectPin"
     ></pins>
@@ -29,7 +30,8 @@ export default {
   props: {
     d: null,  // geopath
     district: String,
-    projection: null  // geoprojection
+    projection: null,  // geoprojection
+    highlightedPlaces: Set
   },
   data() {
     return {

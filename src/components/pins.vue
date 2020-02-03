@@ -4,6 +4,7 @@
       :coords="projection(p.coords)"
       :place="p.place"
       :parent-clicked="clicked"
+      :highlighted-places="highlightedPlaces"
       v-on="$listeners"
     ></pin>
   </g>
@@ -20,7 +21,8 @@ export default {
   props: {
     locations: Array,
     projection: null,  // geoprojection
-    clicked: Boolean
+    clicked: Boolean,
+    highlightedPlaces: Set
   },
   data() {
     const pins = [];

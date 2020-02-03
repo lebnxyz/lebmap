@@ -12,6 +12,7 @@
             :district="p.district"
             :d="path(p.o)"
             :projection="projection"
+            :highlighted-places="highlightedPlaces"
             @select="select"
             @unselect="unselect"
           ></region>
@@ -70,7 +71,8 @@ export default {
         width: null,
         height: null
       },
-      selection: {}
+      selection: {},
+      highlightedPlaces: new Set()
     }
   },
   computed: {
@@ -111,7 +113,9 @@ export default {
       pins.map(pin => this.selection[pin.place.name] = undefined);
     },
     showRespondents(respondents) {
-      
+      const s = new Set();
+      respondents.map(uid => s.add(this.$root.respondents[uid].location));
+      this.highlightedPlaces = s;
     }
   }
 };
