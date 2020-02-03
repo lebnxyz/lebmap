@@ -34,15 +34,13 @@
       <dl>
         <dt>Feature</dt>
         <dd>{{qInfo.headline}}</dd>
-        <template v-if="answerInfo.english || answerInfo.arabic || answerInfo.transliteration">
-          <dt>Option chosen</dt>
-          <dd>
-            <span v-if="answerInfo.english">{{answerInfo.english}}: </span>
-            <span v-if="answerInfo.arabic">{{answerInfo.arabic}} </span>
-            <span v-if="answerInfo.arabic && answerInfo.transliteration">&lrm;</span>
-            <span v-if="answerInfo.transliteration"><i>({{answerInfo.transliteration}})</i></span>
-          </dd>
-        </template>
+        <dt>Option chosen</dt>
+        <dd>
+          <span v-if="answerInfo.english">{{answerInfo.english}}: </span>
+          <span v-if="answerInfo.arabic">{{answerInfo.arabic}} </span>
+          <span v-if="answerInfo.arabic && answerInfo.transliteration">&lrm;</span>
+          <span v-if="answerInfo.transliteration"><i>({{answerInfo.transliteration}})</i></span>
+        </dd>
         <dt>Environment</dt>
         <dd>{{answerInfo.environment}}</dd>
         <dt>Options</dt>
