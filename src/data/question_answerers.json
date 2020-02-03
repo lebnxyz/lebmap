@@ -656,7 +656,7 @@
             },
             "6": {
                 "number": "3.6",
-                "environment": "between T and r, the first of which is, a pharyngealized consonant that colors alif emphatically",
+                "environment": "between T and r: the first, a pharyngealized consonant that colors alif emphatically",
                 "english": "airplane",
                 "arabic": "\u0637\u064a\u0627\u0631\u0629",
                 "transliteration": "Tyy?ra",
@@ -4062,7 +4062,7 @@
         "answers": {
             "0": {
                 "number": "34.0",
-                "environment": "for the meaning of '",
+                "environment": "for the meaning of 'I can'",
                 "english": "I can",
                 "arabic": "?",
                 "transliteration": "?",
@@ -4090,7 +4090,7 @@
             },
             "1": {
                 "number": "34.1",
-                "environment": "for the meaning of '",
+                "environment": "for the meaning of 'in me/with me', as an object",
                 "english": "in me/with me",
                 "arabic": "?",
                 "transliteration": "?",

@@ -255,7 +255,7 @@
                 "transliteration": "Tyy?ra",
                 "english": "airplane",
                 "arabic": "\u0637\u064a\u0627\u0631\u0629",
-                "environmentArgs": ["between", "T and r, the first of which is", "pharyngealized", "emphatically"],
+                "environmentArgs": ["between", "T and r: the first", "pharyngealized", "emphatically"],
                 "number": 6,
                 "index": "3.6"
             },
@@ -1688,7 +1688,7 @@
                 "transliteration": "?",
                 "english": "I can",
                 "arabic": "?",
-                "environmentArgs": "'I can'",
+                "environmentArgs": ["'I can'"],
                 "number": 0,
                 "index": "34.0"
             },
@@ -1696,7 +1696,7 @@
                 "transliteration": "?",
                 "english": "in me/with me",
                 "arabic": "?",
-                "environmentArgs": "'in me/with me', as an object'",
+                "environmentArgs": ["'in me/with me', as an object'"],
                 "number": 1,
                 "index": "34.1"
             }

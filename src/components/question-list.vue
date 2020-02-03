@@ -13,6 +13,12 @@
       <dl>
         <dt>Question</dt>
         <dd>{{qInfo.question}}</dd>
+        <dt>Flaws</dt>
+        <dd>
+          <ul>
+            <li v-for="item of qInfo.flaws" :key="item">{{item}}</li>
+          </ul>
+        </dd>
         <dt>Environments</dt>
         <dd>
           <list :selection="answerValues" iterKey="number" v-slot="{item: answer}"
@@ -28,8 +34,15 @@
       <dl>
         <dt>Feature</dt>
         <dd>{{qInfo.headline}}</dd>
-        <dt>Option chosen</dt>
-        <dd>{{answerInfo.english}}: {{answerInfo.arabic}} &lrm;<i>({{answerInfo.transliteration}})</i></dd>
+        <template v-if="answerInfo.english || answerInfo.arabic || answerInfo.transliteration">
+          <dt>Option chosen</dt>
+          <dd>
+            <span v-if="answerInfo.english">{{answerInfo.english}}: </span>
+            <span v-if="answerInfo.arabic">{{answerInfo.arabic}} </span>
+            <span v-if="answerInfo.arabic && answerInfo.transliteration">&lrm;</span>
+            <span v-if="answerInfo.transliteration"><i>({{answerInfo.transliteration}})</i></span>
+          </dd>
+        </template>
         <dt>Environment</dt>
         <dd>{{answerInfo.environment}}</dd>
         <dt>Options</dt>
@@ -37,7 +50,7 @@
           <list :selection="optionValues" iterKey="number" v-slot="{item: option}"
             @item-clicked="showRespondents"
           >
-            <i>{{option.value}}</i>.<template v-if="option.indicates.length > 0"> This answer indicates:</template>
+            <i>{{option.value}}</i><template v-if="option.indicates.length > 0">. This answer indicates:</template>
             <div v-for="item in option.indicates" :key="item" style="border: 1px solid white; padding: 5px;">{{item}}</div>
           </list>
         </dd>
