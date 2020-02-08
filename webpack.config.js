@@ -80,7 +80,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Lebanon',
+      title: 'Lebanese',
       template: './index.html'
     })
   ],
