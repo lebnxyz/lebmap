@@ -1,6 +1,6 @@
 <template>
   <circle
-    :class="{parentClicked, clicked: clicked && !parentClicked, highlighted, pin: true}"
+    :class="{parentClicked, clicked: clicked && !parentClicked && !highlighted, highlighted, pin: true}"
     :cx="coords[0]"
     :cy="coords[1]"
     :r="radius"
@@ -20,6 +20,7 @@ export default {
     place: Object,
     parentClicked: Boolean,
     highlightedPlaces: Set,
+    nSelected: Number,
     multiplier: {
       type: Number,
       default: 1.5
@@ -40,6 +41,7 @@ export default {
       ),
       hover: false,
       clicked: false,
+      selected: false,
       multiplier2: 1
     };
   },
@@ -51,12 +53,15 @@ export default {
       return this.defaultRadius * this.multiplier2;
     },
     highlighted() {
-      if (this.highlightedPlaces.has(this.place.name)) {
+      if (this.highlightable && this.highlightedPlaces.has(this.place.name)) {
         this.multiplier2 = 1.5;
         return true;
       }
       this.multiplier2 = 1;
       return false;
+    },
+    highlightable() {
+      return this.nSelected == 0 || this.selected;
     }
   },
   watch: {

@@ -13,6 +13,7 @@
             :d="path(p.o)"
             :projection="projection"
             :highlighted-places="highlightedPlaces"
+            :n-selected="nSelected"
             @select="select"
             @unselect="unselect"
           ></region>
@@ -72,6 +73,7 @@ export default {
         height: null
       },
       selection: {},
+      nSelected: 0,
       highlightedPlaces: new Set()
     }
   },
@@ -106,11 +108,19 @@ export default {
       this.window.height = window.innerHeight;
     },
     select(pins) {
-      pins.map(pin => this.$set(this.selection, pin.place.name, pin.place));
+      pins.map(pin => {
+        pin.selected = true;
+        this.$set(this.selection, pin.place.name, pin.place);
+        this.nSelected++;
+      });
     },
     unselect(pins) {
       // better for performance than this.$delete (much faster, especially on later re-selects)
-      pins.map(pin => this.selection[pin.place.name] = undefined);
+      pins.map(pin => {
+        pin.selected = false;
+        this.selection[pin.place.name] = undefined;
+        this.nSelected--;
+      });
     },
     showRespondents(respondents) {
       const s = new Set();
