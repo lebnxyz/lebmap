@@ -19,14 +19,29 @@
             <li v-for="item of qInfo.flaws" :key="item">{{item}}</li>
           </ul>
         </dd>
-        <dt>Environments</dt>
-        <dd>
-          <list :selection="answerValues" iterKey="number" v-slot="{item: answer}"
-            @item-clicked="viewAnswer"
-          >
-            {{answer.environment}}
-          </list>
-        </dd>
+        <template v-if="answerValues.length > 1">
+          <dt>Environments</dt>
+          <dd>
+            <list :selection="answerValues" iterKey="number" v-slot="{item: answer}"
+              @item-clicked="viewAnswer"
+            >
+              {{answer.environment}}
+            </list>
+          </dd>
+        </template>
+        <template v-else>
+          <dt>Options</dt>
+          <dd>
+            <list :selection="optionValues" iterKey="number" v-slot="{item: option}"
+              @item-clicked="showRespondents"
+            >
+              <i>{{option.value}}</i><template v-if="option.indicates.length > 0">. This answer indicates:</template>
+              <div v-for="item in option.indicates" :key="item" style="border: 1px solid white; padding: 5px;">
+                {{item}}
+              </div>
+            </list>
+          </dd>
+        </template>
       </dl>
     </template>
     <template v-else>
@@ -49,7 +64,9 @@
             @item-clicked="showRespondents"
           >
             <i>{{option.value}}</i><template v-if="option.indicates.length > 0">. This answer indicates:</template>
-            <div v-for="item in option.indicates" :key="item" style="border: 1px solid white; padding: 5px;">{{item}}</div>
+            <div v-for="item in option.indicates" :key="item" style="border: 1px solid white; padding: 5px;">
+              {{item}}
+            </div>
           </list>
         </dd>
       </dl>
@@ -85,6 +102,9 @@ export default {
       return Object.values(this.qInfo.answers);
     },
     optionValues() {
+      if (this.answerValues.length == 1) {
+        this.answerInfo = this.answerValues[0];
+      }
       if (this.answerInfo === null) {
         return [];
       }

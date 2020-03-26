@@ -1,6 +1,6 @@
 <template>
   <circle
-    :class="{parentClicked, clicked: clicked && !parentClicked && !highlighted, highlighted, pin: true}"
+    :class="{parentClicked, highlighted, both: clicked && highlighted, clicked: clicked && !parentClicked && !highlighted, pin: true}"
     :cx="coords[0]"
     :cy="coords[1]"
     :r="radius"
@@ -103,8 +103,12 @@ export default {
   stroke-width: 1px;
 }
 
-.highlighted {
+.pin.highlighted {
   fill: #006868;
   stroke: #00ffff;
+}
+
+.pin.both {
+  stroke: white;
 }
 </style>
