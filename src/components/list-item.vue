@@ -1,5 +1,5 @@
 <template>
-  <div @click="click" :class="{item: true, bold}">
+  <div @click="click" :class="{item: true, bordered: !arrow, bold}">
     <div> <!-- because outer div's padding messes fitty up -->
       <fitty
       :options="{maxSize, minSize, multiLine}"
@@ -9,13 +9,17 @@
         <slot></slot>
       </fitty>
     </div>
-    <span class="arrow"></span>
+    <span class="arrow" v-if="arrow"></span>
   </div>
 </template>
 
 <script>
 export default {
   props: {
+    arrow: {
+      type: Boolean,
+      default: true
+    },
     maxSize: {
       type: Number,
       default: 20
@@ -61,6 +65,10 @@ export default {
   margin-bottom: 1em;
   transition: 0.5s;
   overflow: hidden; /* weird css subelement-height-or-something-like-that hack */
+}
+
+.bordered {
+  border: 2px solid gray;
 }
 
 .bold {

@@ -1,6 +1,6 @@
 <template>
   <div v-if="filteredSelection.length">
-    <list-item v-bind="$attrs" v-for="item in filteredSelection" :key="item[iterKey]"
+    <list-item v-bind="$attrs" v-for="item in filteredSelection" :key="item[iterKey]" :arrow="arrows"
       @click="click(item)"
     >
       <slot v-bind:item="item"></slot>
@@ -19,7 +19,11 @@ export default {
   },
   props: {
     selection: Array,
-    iterKey: String
+    iterKey: String,
+    arrows: {
+      type: Boolean,
+      default: true
+    }
   },
   computed: {
     filteredSelection() {

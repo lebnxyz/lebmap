@@ -33,10 +33,13 @@
           <dt>Options</dt>
           <dd>
             <list :selection="optionValues" iterKey="number" v-slot="{item: option}"
+              :arrows="false"
               @item-clicked="showRespondents"
             >
               <i>{{option.value}}</i><template v-if="option.indicates.length > 0">. This answer indicates:</template>
-              <div v-for="item in option.indicates" :key="item" style="border: 1px solid white; padding: 5px;">
+              <div v-for="item in option.indicates" :key="item"
+                style="border: 1px solid white; border-radius: 5px; padding: 5px;"
+              >
                 {{item}}
               </div>
             </list>
@@ -61,10 +64,13 @@
         <dt>Options</dt>
         <dd>
           <list :selection="optionValues" iterKey="number" v-slot="{item: option}"
+            :arrows="false"
             @item-clicked="showRespondents"
           >
             <i>{{option.value}}</i><template v-if="option.indicates.length > 0">. This answer indicates:</template>
-            <div v-for="item in option.indicates" :key="item" style="border: 1px solid white; padding: 5px;">
+            <div v-for="item in option.indicates" :key="item"
+              style="border: 1px solid white; border-radius: 5px; padding: 5px;"
+            >
               {{item}}
             </div>
           </list>
@@ -102,13 +108,17 @@ export default {
       return Object.values(this.qInfo.answers);
     },
     optionValues() {
+      let answerInfo = this.answerInfo;
       if (this.answerValues.length == 1) {
-        this.answerInfo = this.answerValues[0];
+        answerInfo = this.answerValues[0];
       }
-      if (this.answerInfo === null) {
+      if (answerInfo === null) {
         return [];
       }
-      return Object.values(this.answerInfo.options);
+      return Object.values(answerInfo.options);
+    },
+    optionsShowing() {
+      return this.subClicked || this.answerValues.length == 1;
     }
   },
   methods: {
