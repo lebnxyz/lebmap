@@ -20,22 +20,31 @@
         </g>
       </svg>
     </div>
-    <tabs id="info" class="info-tabs column">
-      <tab title="Questions">
-        <question-list :questionMap="$root.questionMap" @show-respondents="showRespondents"></question-list>
-      </tab>
-      <tab title="Insights" :disabled="true">
-        <!--  -->
-      </tab>
-      <tab title="Answers">
-        <list :selection="selectionValues" iterKey="name" v-slot="{item: place}"
-          :bold="true"
-        >
-          {{place.name}}, <span class="faint">{{place.district}}</span>
-          <span v-if="place.responses > 1">{{place.responses}}</span>
-        </list>
-      </tab>
-    </tabs>
+
+    <div id="subcontainer" class="column">
+      <chart id="chart" class="row" :chart-data="chartData" v-if="chartData !== null"></chart>
+      
+      <tabs id="info" class="info-tabs">
+        <tab title="Questions">
+          <question-list :questionMap="$root.questionMap"
+            @show-respondents="showRespondents"
+            @show-chart="showChart"
+            @remove-chart="removeChart"
+          ></question-list>
+        </tab>
+        <tab title="Insights" :disabled="true">
+          <!--  -->
+        </tab>
+        <tab title="Answers">
+          <list :selection="selectionValues" iterKey="name" v-slot="{item: place}"
+            :bold="true"
+          >
+            {{place.name}}, <span class="faint">{{place.district}}</span>
+            <span v-if="place.responses > 1">{{place.responses}}</span>
+          </list>
+        </tab>
+      </tabs>
+    </div>
   </div>
 </template>
 
@@ -44,6 +53,7 @@ import DummyRegion from './components/dummy-region.vue';
 import Region from './components/region.vue';
 import List from './components/list.vue';
 import QuestionList from './components/question-list.vue'
+import Chart from './components/chart.vue'
 
 import { geoMercator, geoPath, geoMercatorRaw } from 'd3';
 import * as utils from './scripts/utils.js';
@@ -56,7 +66,8 @@ export default {
     DummyRegion,
     Region,
     List,
-    QuestionList
+    QuestionList,
+    Chart
   },
   data() {
     const regionPaths = [];
@@ -72,6 +83,7 @@ export default {
         width: null,
         height: null
       },
+      chartData: null,
       selection: {},
       nSelected: 0,
       highlightedPlaces: new Set()
@@ -126,6 +138,22 @@ export default {
       const s = new Set();
       respondents.map(uid => s.add(this.$root.respondents[uid].location));
       this.highlightedPlaces = s;
+    },
+    showChart(answerInfo) {
+      let options = Object.values(answerInfo.options);
+      this.chartData = {
+        labels: options.map(o => o.value),
+        datasets: [
+          {
+            label: 'main',
+            backgroundColor: '#006868',
+            data: options.map(o => o.answeredBy.length)
+          }
+        ]
+      };
+    },
+    removeChart() {
+      this.chartData = null;
     }
   }
 };
@@ -135,7 +163,6 @@ export default {
 #container {
   display: flex;
   height: 100%;
-  flex: none;
 }
 
 .faint {
@@ -147,6 +174,11 @@ export default {
   flex-direction: column;
   flex: 1;
   overflow: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
 }
 
 .vue-tab {

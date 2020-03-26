@@ -108,23 +108,31 @@ export default {
       return Object.values(this.qInfo.answers);
     },
     optionValues() {
-      let answerInfo = this.answerInfo;
-      if (this.answerValues.length == 1) {
-        answerInfo = this.answerValues[0];
-      }
-      if (answerInfo === null) {
+      if (this.answerInfo === null) {
         return [];
       }
-      return Object.values(answerInfo.options);
+      return Object.values(this.answerInfo.options);
     },
     optionsShowing() {
-      return this.subClicked || this.answerValues.length == 1;
+      return this.answerInfo !== null;  //this.subClicked || this.answerValues.length == 1;
+    }
+  },
+  watch: {
+    optionsShowing(value, old) {
+      if (value) {
+        this.$emit('show-chart', this.answerInfo);
+      } else {
+        this.$emit('remove-chart');
+      }
     }
   },
   methods: {
     viewQuestion(question) {
       this.clicked = true;
       this.qInfo = question;
+      if (this.answerValues.length == 1) {
+        this.answerInfo = this.answerValues[0];
+      }
     },
     viewAnswer(answer) {
       this.subClicked = true;
@@ -137,10 +145,12 @@ export default {
       this.clicked = false;
       this.subClicked = false;
       this.qInfo = null;
+      this.answerInfo = null;
     },
     backToQuestionInfo() {
-      this.$emit('show-respondents', []);
+      this.$emit('show-respondents', []);  // clear highlighted pins
       this.subClicked = false;
+      this.answerInfo = null;
     }
   }
 };
