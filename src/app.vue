@@ -22,7 +22,24 @@
     </div>
 
     <div id="subcontainer" class="column">
-      <chart id="chart" class="row" :chart-data="chartData" v-if="chartData !== null"></chart>
+      <chart id="chart" :chart-data="chartData" :styles="{height: '25%'}" :options="{
+        legend: {
+          display: false
+        },
+        scales: {
+          yAxes: [
+            {
+              display: true,
+              ticks: {
+                beginAtZero: true,
+                min: 0
+              }
+            }
+          ]
+        },
+        responsive: true,
+        maintainAspectRatio: false
+      }"></chart>
       
       <tabs id="info" class="info-tabs">
         <tab title="Questions">
@@ -83,7 +100,11 @@ export default {
         width: null,
         height: null
       },
-      chartData: null,
+      chartData: {
+        labels: [],
+        datasets: []
+      },
+      chartShowing: false,
       selection: {},
       nSelected: 0,
       highlightedPlaces: new Set()
@@ -141,11 +162,11 @@ export default {
     },
     showChart(answerInfo) {
       let options = Object.values(answerInfo.options);
+      this.chartShowing = true;
       this.chartData = {
         labels: options.map(o => o.value),
         datasets: [
           {
-            label: 'main',
             backgroundColor: '#006868',
             data: options.map(o => o.answeredBy.length)
           }
@@ -153,7 +174,11 @@ export default {
       };
     },
     removeChart() {
-      this.chartData = null;
+      this.chartData = {
+        labels: [],
+        datasets: []
+      };
+      this.chartShowing = false;
     }
   }
 };
@@ -179,6 +204,11 @@ export default {
 .row {
   display: flex;
   flex-direction: row;
+}
+
+#chart-container {
+  display: flex;
+  height: 25%;
 }
 
 .vue-tab {
