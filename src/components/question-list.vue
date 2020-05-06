@@ -89,11 +89,10 @@ export default {
     List
   },
   props: {
-    questionMap: Object
+    questionValues: Array
   },
   data() {
     return {
-      questionValues: Object.values(this.questionMap),
       clicked: false,
       subClicked: false,
       qInfo: null,

@@ -1,6 +1,6 @@
-{
-    "0": {
-        "question": "How do you pronounce the final kasra in these words? Closer to \"e\" (French \u00e9 as in \"le bl\u00e9\") or to \"i\" (French i as in \"le lit\")?",
+[
+    {
+        "number": 0, "question": "How do you pronounce the final kasra in these words? Closer to \"e\" (French \u00e9 as in \"le bl\u00e9\") or to \"i\" (French i as in \"le lit\")?",
         "headline": "Unstressed kasra in final syllable",
         "flaws": [
             "'yemkin' was only added after a few responses had already been submitted",
@@ -127,8 +127,8 @@
             }
         }
     },
-    "1": {
-        "question": "Similarly, how do you pronounce the \u064a at the end of these words?",
+    {
+        "number": 1, "question": "Similarly, how do you pronounce the \u064a at the end of these words?",
         "headline": "Word-final yaa2 \u064a",
         "flaws": [],
         "answers": {
@@ -246,8 +246,8 @@
             }
         }
     },
-    "2": {
-        "question": "How do you pronounce the \u0648 sound at the end of these words? Closer to \"o\" or to \"u\"?",
+    {
+        "number": 2, "question": "How do you pronounce the \u0648 sound at the end of these words? Closer to \"o\" or to \"u\"?",
         "headline": "Word-final round vowel",
         "flaws": [],
         "answers": {
@@ -309,8 +309,8 @@
             }
         }
     },
-    "3": {
-        "question": "How do you pronounce the \u0627 (alif) in these words? Give a quick listen to the recording of \"levels\" 1\u20135 above.",
+    {
+        "number": 3, "question": "How do you pronounce the \u0627 (alif) in these words? Give a quick listen to the recording of \"levels\" 1\u20135 above.",
         "headline": "Alif",
         "flaws": [
             "I really, really, really should have asked about the word 2aal. Also waa7ad",
@@ -772,8 +772,8 @@
             }
         }
     },
-    "4": {
-        "question": "Try saying these words. Do you pronounce the first vowel as a damme (o/u) or a kasra (e/i)?",
+    {
+        "number": 4, "question": "Try saying these words. Do you pronounce the first vowel as a damme (o/u) or a kasra (e/i)?",
         "headline": "Kasra vs. damma",
         "flaws": [],
         "answers": {
@@ -1052,8 +1052,8 @@
             }
         }
     },
-    "5": {
-        "question": "How do you pronounce your \u0642 in 3amiyye?",
+    {
+        "number": 5, "question": "How do you pronounce your \u0642 in 3amiyye?",
         "headline": "Qaaf",
         "flaws": [],
         "answers": {
@@ -1109,8 +1109,8 @@
             }
         }
     },
-    "6": {
-        "question": "How do you pronounce the word \u0633\u0627\u0626\u0644\u0629 (she has asked) in the following forms?",
+    {
+        "number": 6, "question": "How do you pronounce the word \u0633\u0627\u0626\u0644\u0629 (she has asked) in the following forms?",
         "headline": "Suffixed form, 3rd-person feminine participle",
         "flaws": [],
         "answers": {
@@ -1227,8 +1227,8 @@
             }
         }
     },
-    "7": {
-        "question": "Do you distinguish \"you(female) have asked him\" from \"she's asked him\"?",
+    {
+        "number": 7, "question": "Do you distinguish \"you(female) have asked him\" from \"she's asked him\"?",
         "headline": "Suffixed form, 2nd- vs. 3rd-person feminine participle",
         "flaws": [
             "I didn't include a question asking what the 'N/A' folks say instead"
@@ -1290,8 +1290,8 @@
             }
         }
     },
-    "8": {
-        "question": "How do you pronounce \"they have bought\"?",
+    {
+        "number": 8, "question": "How do you pronounce \"they have bought\"?",
         "headline": "Participles in m-...-y (\u0645-...-\u064a)",
         "flaws": [
             "'Meshteryiin' popped into my head a few days after this post. A few people ended up including it in 'other', indicating that I should have included it in the main options"
@@ -1428,8 +1428,8 @@
             }
         }
     },
-    "9": {
-        "question": "How often do you pronounce the \u0647 (h) of \u0640\u0647\u0627 and \u0640\u0647\u0646 in these words?",
+    {
+        "number": 9, "question": "How often do you pronounce the \u0647 (h) of \u0640\u0647\u0627 and \u0640\u0647\u0646 in these words?",
         "headline": "3rd-person personal suffix",
         "flaws": [
             "Should've included a question asking how the 'no h in yeha' folks pronounce it"
@@ -1665,8 +1665,8 @@
             }
         }
     },
-    "10": {
-        "question": "Here are some words that are \"3ala wazn\" \u064a\u0646\u0641\u0639\u0644. How do you tend to pronounce them?",
+    {
+        "number": 10, "question": "Here are some words that are \"3ala wazn\" \u064a\u0646\u0641\u0639\u0644. How do you tend to pronounce them?",
         "headline": "Imperfective 'infa3al' \u0627\u0646\u0641\u0639\u0644",
         "flaws": [
             "I didn't include another 'productive' passive verb to accompany ynsm3, which would have helped greatly. As is, this data doesn't at all show if ynsm3 is unique among productive ynf3l passives in being predominantly pronounced yen-SA-ma3",
@@ -1879,8 +1879,8 @@
             }
         }
     },
-    "11": {
-        "question": "How do you say \"I don't know\"?",
+    {
+        "number": 11, "question": "How do you say \"I don't know\"?",
         "headline": "Verb negation",
         "flaws": [],
         "answers": {
@@ -1934,8 +1934,8 @@
             }
         }
     },
-    "12": {
-        "question": "Do you prefer \u0645\u062a\u0641\u0639\u0644 \"metfe33el\" or \u0645\u0641\u0639\u0644 \"mfa33al\"?",
+    {
+        "number": 12, "question": "Do you prefer \u0645\u062a\u0641\u0639\u0644 \"metfe33el\" or \u0645\u0641\u0639\u0644 \"mfa33al\"?",
         "headline": "Participle of 'tfa33al' \u062a\u0641\u0639\u0651\u0644",
         "flaws": [],
         "answers": {
@@ -1992,8 +1992,8 @@
             }
         }
     },
-    "13": {
-        "question": "Do \u0645\u062a\u062e\u0628\u064a \"met5ebbe\" and \u0645\u062e\u0628\u0649 \"m5abba\" mean different things to you?",
+    {
+        "number": 13, "question": "Do \u0645\u062a\u062e\u0628\u064a \"met5ebbe\" and \u0645\u062e\u0628\u0649 \"m5abba\" mean different things to you?",
         "headline": "Metfe33el \u0645\u062a\u0641\u0651\u0644 vs. mfa33al \u0645\u0641\u0639\u0651\u0644",
         "flaws": [],
         "answers": {
@@ -2048,8 +2048,8 @@
             }
         }
     },
-    "14": {
-        "question": "How do you pronounce the double-\u0646 (double \"N\") in these words?",
+    {
+        "number": 14, "question": "How do you pronounce the double-\u0646 (double \"N\") in these words?",
         "headline": "C:ic, shadda'd consonant + kasra + same consonant",
         "flaws": [],
         "answers": {
@@ -2166,8 +2166,8 @@
             }
         }
     },
-    "15": {
-        "question": "How do you pronounce \u0628\u064a\u062a (house) in the following words?",
+    {
+        "number": 15, "question": "How do you pronounce \u0628\u064a\u062a (house) in the following words?",
         "headline": "Historic /aj/ \u0640\u064e\u064a\u0652\u0640 diphthong",
         "flaws": [],
         "answers": {
@@ -2280,8 +2280,8 @@
             }
         }
     },
-    "16": {
-        "question": "How would you pronounce \u0639\u0645 with the following example words?",
+    {
+        "number": 16, "question": "How would you pronounce \u0639\u0645 with the following example words?",
         "headline": "Present-progressive particle",
         "flaws": [
             "A few people indicated 'would never use 3am[ma]' for every single option. I'm not sure why, but it means I did something wrong asking this."
@@ -2625,8 +2625,8 @@
             }
         }
     },
-    "17": {
-        "question": "How would you usually say \"we haven't started yet\"/\"we still haven't started\"?",
+    {
+        "number": 17, "question": "How would you usually say \"we haven't started yet\"/\"we still haven't started\"?",
         "headline": "'Still' and 'yet'",
         "flaws": [
             "Confusing question-phrasing that doesn't match up with what the answer choices are asking"
@@ -2712,8 +2712,8 @@
             }
         }
     },
-    "18": {
-        "question": "Does the question \u0628\u0639\u062f\u0650\u0643 \u0641\u0627\u064a\u0642\u0629\u061f \"ba3dek f\u0113y2a?\" mean \"are you still awake?\"",
+    {
+        "number": 18, "question": "Does the question \u0628\u0639\u062f\u0650\u0643 \u0641\u0627\u064a\u0642\u0629\u061f \"ba3dek f\u0113y2a?\" mean \"are you still awake?\"",
         "headline": "Meaning of ba3d + ambiguous participle",
         "flaws": [],
         "answers": {
@@ -2757,8 +2757,8 @@
             }
         }
     },
-    "19": {
-        "question": "How do you pronounce the \"\u0628\u062a\" syllable in the following words?",
+    {
+        "number": 19, "question": "How do you pronounce the \"\u0628\u062a\" syllable in the following words?",
         "headline": "Final vowel of 3sg.f past verbs (fa3alat \u0641\u0639\u0644\u062a)",
         "flaws": [],
         "answers": {
@@ -2876,8 +2876,8 @@
             }
         }
     },
-    "20": {
-        "question": "How do you pronounce \"she wrote\" on its own?",
+    {
+        "number": 20, "question": "How do you pronounce \"she wrote\" on its own?",
         "headline": "3sg.f past verbs (fa3alat \u0641\u0639\u0644\u062a)",
         "flaws": [
             "The 'bit' options were added later... but then that distinction wasn't the point of the question, so I could even have just done 'bet/bit'",
@@ -2944,8 +2944,8 @@
             }
         }
     },
-    "21": {
-        "question": "How do you pronounce \"I wrote\"?",
+    {
+        "number": 21, "question": "How do you pronounce \"I wrote\"?",
         "headline": "1sg past verbs (fa3altu \u0641\u0639\u0644\u062a)",
         "flaws": [
             "Again: 'bit' options were added later, but that distinction wasn't what the question was looking for anyway"
@@ -3033,8 +3033,8 @@
             }
         }
     },
-    "22": {
-        "question": "Which do you use for the meaning of \"in order to\"?",
+    {
+        "number": 22, "question": "Which do you use for the meaning of \"in order to\"?",
         "headline": "'In order to'",
         "flaws": [],
         "answers": {
@@ -3064,8 +3064,8 @@
             }
         }
     },
-    "23": {
-        "question": "Besides those two, which of these other words would you use to say \"I went to the store IN ORDER TO buy some tomatoes?\"",
+    {
+        "number": 23, "question": "Besides those two, which of these other words would you use to say \"I went to the store IN ORDER TO buy some tomatoes?\"",
         "headline": "'In order to'",
         "flaws": [
             "I unknowingly assumed the 'nothing' structure was universal and didn't need asking about, but I probably should've included it. One person gave it as an 'other' response"
@@ -3180,8 +3180,8 @@
             }
         }
     },
-    "24": {
-        "question": "Verbs like \u0628\u064a\u0633\u062a\u0639\u0645\u0650\u0644 have a passive-voice form in Lebanese Arabic: \u0628\u064a\u0633\u062a\u0639\u0645\u064e\u0644. Do you use this?",
+    {
+        "number": 24, "question": "Verbs like \u0628\u064a\u0633\u062a\u0639\u0645\u0650\u0644 have a passive-voice form in Lebanese Arabic: \u0628\u064a\u0633\u062a\u0639\u0645\u064e\u0644. Do you use this?",
         "headline": "Internal-passive formations",
         "flaws": [
             "Poorly phrased question and poorly framed answer choices"
@@ -3226,8 +3226,8 @@
             }
         }
     },
-    "25": {
-        "question": "How would you say \"the walls are colored and the car is closed\"?",
+    {
+        "number": 25, "question": "How would you say \"the walls are colored and the car is closed\"?",
         "headline": "M- \u0645-initial passive participles",
         "flaws": [],
         "answers": {
@@ -3284,8 +3284,8 @@
             }
         }
     },
-    "26": {
-        "question": "Which of these sounds most like something you'd say?",
+    {
+        "number": 26, "question": "Which of these sounds most like something you'd say?",
         "headline": "'S\u0101r + l-' (\u0635\u0627\u0631 + \u0644\u0640 = \u0635\u0631\u0644\u0640)",
         "flaws": [
             "I forgot about assimilation of the /r/ into the /l/ as in Sallak, which commonly occurs as well"
@@ -3350,8 +3350,8 @@
             }
         }
     },
-    "27": {
-        "question": "How do you say \"here he is\"?",
+    {
+        "number": 27, "question": "How do you say \"here he is\"?",
         "headline": "'Here it is!'",
         "flaws": [],
         "answers": {
@@ -3392,8 +3392,8 @@
             }
         }
     },
-    "28": {
-        "question": "How do you say \"we had written\"?",
+    {
+        "number": 28, "question": "How do you say \"we had written\"?",
         "headline": "Past-perfect construction",
         "flaws": [
             "Only a few months after the survey did I begin to notice how k\u0113yin works. Should have formulated a question that includes it"
@@ -3429,8 +3429,8 @@
             }
         }
     },
-    "29": {
-        "question": "How do you say \"these\"?",
+    {
+        "number": 29, "question": "How do you say \"these\"?",
         "headline": "'These'",
         "flaws": [
             "I forgot to include 'ho/haw'. Should have at least had an Other option"
@@ -3487,8 +3487,8 @@
             }
         }
     },
-    "30": {
-        "question": "Which sound like the most-natural ways to say \"next to you\" and \"underneath you\"?",
+    {
+        "number": 30, "question": "Which sound like the most-natural ways to say \"next to you\" and \"underneath you\"?",
         "headline": "Prepositions construed with 'min' \u0645\u0646",
         "flaws": [
             "Two words isn't really enough to go off of"
@@ -3540,8 +3540,8 @@
             }
         }
     },
-    "31": {
-        "question": "How do you pronounce \u062c\u0627\u064a/\u062c\u0627\u064a\u064a (\"coming\", masculine)?",
+    {
+        "number": 31, "question": "How do you pronounce \u062c\u0627\u064a/\u062c\u0627\u064a\u064a (\"coming\", masculine)?",
         "headline": "'Coming' (fus7a jaa2in \u062c\u0627\u0621\u064d)",
         "flaws": [],
         "answers": {
@@ -3578,8 +3578,8 @@
             }
         }
     },
-    "32": {
-        "question": "There's a lot of variety in the word meaning \"belonging to\"! For each variant below (if you use it), indicate whether can be used for masculine, feminine, or both -- and also indicate whether it's plural, singular, or both.",
+    {
+        "number": 32, "question": "There's a lot of variety in the word meaning \"belonging to\"! For each variant below (if you use it), indicate whether can be used for masculine, feminine, or both -- and also indicate whether it's plural, singular, or both.",
         "headline": "'Belonging to' (derivatives of taba3 \u062a\u0628\u0639)",
         "flaws": [],
         "answers": {
@@ -4009,8 +4009,8 @@
             }
         }
     },
-    "33": {
-        "question": "Your mom's forgotten to tell you about something important. How do you tell her that she could have let you know?",
+    {
+        "number": 33, "question": "Your mom's forgotten to tell you about something important. How do you tell her that she could have let you know?",
         "headline": "'You could have told me!'",
         "flaws": [],
         "answers": {
@@ -4055,8 +4055,8 @@
             }
         }
     },
-    "34": {
-        "question": "How do you say \u0641\u064a + \u064a?",
+    {
+        "number": 34, "question": "How do you say \u0641\u064a + \u064a?",
         "headline": "Fiyye \u0641\u064a\u064a vs. f\u012bne \u0641\u064a\u0646\u064a",
         "flaws": [],
         "answers": {
@@ -4090,7 +4090,7 @@
             },
             "1": {
                 "number": "34.1",
-                "environment": "for the meaning of 'in me/with me', as an object",
+                "environment": "for the meaning of 'in me/with me', as an object'",
                 "english": "in me/with me",
                 "arabic": "?",
                 "transliteration": "?",
@@ -4124,8 +4124,8 @@
             }
         }
     },
-    "35": {
-        "question": "How do you say \"what's wrong with you?\" or \"what's your problem?\" to a male?",
+    {
+        "number": 35, "question": "How do you say \"what's wrong with you?\" or \"what's your problem?\" to a male?",
         "headline": "'What's your problem?!'",
         "flaws": [],
         "answers": {
@@ -4232,8 +4232,8 @@
             }
         }
     },
-    "36": {
-        "question": "How would you ask a male, \"did you end up seeing it?\"",
+    {
+        "number": 36, "question": "How would you ask a male, \"did you end up seeing it?\"",
         "headline": "'To end up [doing]'",
         "flaws": [],
         "answers": {
@@ -4281,8 +4281,8 @@
             }
         }
     },
-    "37": {
-        "question": "Which ways of saying \"no more\"/\"no longer\" sound natural to you?",
+    {
+        "number": 37, "question": "Which ways of saying \"no more\"/\"no longer\" sound natural to you?",
         "headline": "'No more'/'no longer'",
         "flaws": [
             "Really awkward shoehorning of 'b3ish', should have just done it in a different question"
@@ -4339,8 +4339,8 @@
             }
         }
     },
-    "38": {
-        "question": "How would you say \"let's head out\"?",
+    {
+        "number": 38, "question": "How would you say \"let's head out\"?",
         "headline": "'Let's...'",
         "flaws": [
             "I forgot to include 'het ta-', which may have unfairly skewed results away from 'het la-'"
@@ -4383,8 +4383,8 @@
             }
         }
     },
-    "39": {
-        "question": "What word do you usually use to negate adjectives & participles (like \u062d\u0644\u0648 \u200e\u200e7elo, \u0634\u0627\u064a\u0641 sh\u0113yef)?",
+    {
+        "number": 39, "question": "What word do you usually use to negate adjectives & participles (like \u062d\u0644\u0648 \u200e\u200e7elo, \u0634\u0627\u064a\u0641 sh\u0113yef)?",
         "headline": "Non-verb negation",
         "flaws": [],
         "answers": {
@@ -4418,8 +4418,8 @@
             }
         }
     },
-    "40": {
-        "question": "What verbs do you use to say \"don't worry\" to a male?",
+    {
+        "number": 40, "question": "What verbs do you use to say \"don't worry\" to a male?",
         "headline": "'Don't worry'",
         "flaws": [],
         "answers": {
@@ -4474,8 +4474,8 @@
             }
         }
     },
-    "41": {
-        "question": "How do you say \"we want\"?",
+    {
+        "number": 41, "question": "How do you say \"we want\"?",
         "headline": "'We want'",
         "flaws": [],
         "answers": {
@@ -4521,8 +4521,8 @@
             }
         }
     },
-    "42": {
-        "question": "How do you usually say \"who is he?\"",
+    {
+        "number": 42, "question": "How do you usually say \"who is he?\"",
         "headline": "M\u012bn \u0645\u064a\u0646 + personal suffix \u0636\u0645\u064a\u0631 \u0645\u062a\u0635\u0644",
         "flaws": [],
         "answers": {
@@ -4556,8 +4556,8 @@
             }
         }
     },
-    "43": {
-        "question": "How do you say \"spoon\"?",
+    {
+        "number": 43, "question": "How do you say \"spoon\"?",
         "headline": "Spoon",
         "flaws": [
             "Thank goodness I included an 'other' option in the question. Had no idea there was this much variation, the only two multiple-choice options I gave were mal32a and ma3l2a"
@@ -4663,4 +4663,4 @@
             }
         }
     }
-}
+]

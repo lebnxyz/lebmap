@@ -10,7 +10,7 @@ import App from './app.vue';
 import respondents from './data/respondents.json';
 import locations from './data/map/locations.json';
 import questions from './data/questions.json';
-import questionMap from './data/question_answerers.json'
+import questionValues from './data/question_answers.json'
 
 
 Vue.use((vue, settings) => vue.component('fitty', Fitty));
@@ -27,7 +27,7 @@ new Vue({
     this.questions = questions;
     this.locations = locations;
     this.respondents = respondents;
-    this.questionMap = questionMap;
+    this.questionValues = questionValues;
     this.locationsByDistrict = nest().key(d => d.district).map(values(locations));
     this.respondentQuery = new Query(respondents);
   }

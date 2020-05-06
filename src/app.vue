@@ -43,7 +43,7 @@
       
       <tabs id="info" class="info-tabs">
         <tab title="Questions">
-          <question-list :questionMap="$root.questionMap"
+          <question-list :questionValues="$root.questionValues"
             @show-respondents="showRespondents"
             @show-chart="showChart"
             @remove-chart="removeChart"
