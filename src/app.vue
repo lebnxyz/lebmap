@@ -162,23 +162,29 @@ export default {
     },
     showChart(answerInfo) {
       let options = Object.values(answerInfo.options);
-      this.chartShowing = true;
+      let data;
+      // remove undefined
+      if (Object.values(this.selection).filter(i => i).length === 0) {
+        data = options.map(o => o.answeredBy.length);
+      } else {
+      }
       this.chartData = {
         labels: options.map(o => o.value),
         datasets: [
           {
             backgroundColor: '#006868',
-            data: options.map(o => o.answeredBy.length)
+            data
           }
         ]
       };
+      this.chartShowing = true;
     },
     removeChart() {
+      this.chartShowing = false;
       this.chartData = {
         labels: [],
         datasets: []
       };
-      this.chartShowing = false;
     }
   }
 };

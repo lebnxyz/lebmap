@@ -296,6 +296,32 @@ def do_special_cases(json_questions_path='src/data/question_answers.json', json_
         q_f.write(regex.sub(r'(\d),\n\s*', r'\1, ', json.dumps(qj, indent=4)))
 
 
+def fix_toplevel_numbers(json_questions_path='src/data/question_answers.json', json_users_path='src/data/respondents.json'):
+    """since I'm alasql-ing it and alasql can't select raw array elements"""
+    with open(json_users_path, encoding='utf-8') as user_f, \
+     open(json_questions_path, encoding='utf-8') as q_f:
+        userj = json.load(user_f)
+        qj = json.load(q_f)
+        for user in userj:
+            for uids in user['answers'].values():
+                uids[:] = ({'uid': uid} for uid in uids)
+        for q in qj:
+            for answer in q['answers'].values():
+                for option in answer['options'].values():
+                    option['answeredBy'][:] = ({'uid': uid} for uid in option['answeredBy'])
+    
+    with open(json_users_path, 'w', encoding='utf-8') as user_f, \
+     open(json_questions_path, 'w', encoding='utf-8') as q_f:
+        user_f.write(regex.sub(r'\[\n\s+(.+?)\n\s*]', r'[\1]', json.dumps(userj, indent=4)))
+        q_f.write(regex.sub(r'(\d),\n\s*', r'\1, ', json.dumps(qj, indent=4)))
+
+
+def do_all_answers():
+    do_compilation()
+    do_special_cases()
+    fix_toplevel_numbers()
+
+
 def normalize_map_names(map_path='src/data/map/lb_2009_administrative_districts.geojson', locations_path='src/data/map/locations.json'):
     with open(map_path) as map_f, open(locations_path) as locations_f:
         lb_map, locations = json.load(map_f), json.load(locations_f)
