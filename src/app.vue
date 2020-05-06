@@ -157,7 +157,7 @@ export default {
     },
     showRespondents(respondents) {
       const s = new Set();
-      respondents.map(uid => s.add(this.$root.respondents[uid].location));
+      respondents.map(o => s.add(this.$root.respondents[o.uid].location));
       this.highlightedPlaces = s;
     },
     showChart(answerInfo) {
@@ -167,6 +167,7 @@ export default {
       if (Object.values(this.selection).filter(i => i).length === 0) {
         data = options.map(o => o.answeredBy.length);
       } else {
+        data = this.$root.respondentQuery('SELECT ');
       }
       this.chartData = {
         labels: options.map(o => o.value),
