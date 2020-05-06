@@ -10,7 +10,7 @@ import App from './app.vue';
 import respondents from './data/respondents.json';
 import locations from './data/map/locations.json';
 import questions from './data/questions.json';
-import questionValues from './data/question_answers.json'
+import questionValues from './data/question_answers.json';
 
 
 Vue.use((vue, settings) => vue.component('fitty', Fitty));

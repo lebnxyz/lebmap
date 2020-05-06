@@ -157,7 +157,7 @@ export default {
     },
     showRespondents(respondents) {
       const s = new Set();
-      respondents.map(o => s.add(this.$root.respondents[o.uid].location));
+      respondents.map(uid => s.add(this.$root.respondents[uid].location));
       this.highlightedPlaces = s;
     },
     showChart(answerInfo) {
@@ -167,7 +167,7 @@ export default {
       if (Object.values(this.selection).filter(i => i).length === 0) {
         data = options.map(o => o.answeredBy.length);
       } else {
-        data = this.$root.respondentQuery('SELECT ');
+        data = this.$root.RespondentQuery(`SEARCH COUNT(/WHERE(location IN ...) AS @user answers->34.1 /WHERE(num=1) AS @34.1) FROM $0`);
       }
       this.chartData = {
         labels: options.map(o => o.value),
