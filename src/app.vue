@@ -157,17 +157,26 @@ export default {
     },
     showRespondents(respondents) {
       const s = new Set();
-      respondents.map(uid => s.add(this.$root.respondents[uid].location));
+      respondents.map(o => s.add(this.$root.respondents[o.uid].location));
       this.highlightedPlaces = s;
     },
     showChart(answerInfo) {
-      let options = Object.values(answerInfo.options);
+      const options = Object.values(answerInfo.options);
       let data;
       // remove undefined
-      if (Object.values(this.selection).filter(i => i).length === 0) {
+      const places = Object.keys(this.selection).filter(i => this.selection[i]);
+      if (places.length === 0) {
         data = options.map(o => o.answeredBy.length);
       } else {
-        data = this.$root.RespondentQuery(`SEARCH COUNT(/WHERE(location IN ...) AS @user answers->34.1 /WHERE(num=1) AS @34.1) FROM $0`);
+        data = utils.searchAndGroupBy(
+          // not vulnerable to injection (not that that matters on a client-side app but still)
+          `SEARCH /WHERE(location IN ('${places.join("', '")}')) answers->${answerInfo.number} / RETURN (num AS result) FROM $0`,
+          this.$root.respondentQuery,
+          res => {
+            const o = Object.fromEntries(res.map(o => [o.result, o.count]));
+            return Object.keys(o).sort().map(k => o[k]);
+          }
+        );
       }
       this.chartData = {
         labels: options.map(o => o.value),

@@ -28,6 +28,26 @@ export class Query extends Function {
 }
 
 
+/**
+ * Addresses https://stackoverflow.com/questions/61633745/using-group-by-with-alasqls-search
+ * The column that results will be grouped by must be named `result`
+ * @param {string} query Search query that returns a groupable result
+ * @param {Query|Array} queryObj Either a Query instance (will be called) or a queryable array
+ * @param {Function<Object, R>} transform Function to transform resulting array
+ * @return {Object|R} Grouped array of [{result: Number, count: Number}], or return value of Function
+ */
+export function searchAndGroupBy(query, queryObj, transform) {
+    let res;
+    if (queryObj instanceof Query) {
+        res = queryObj(query);
+    } else {
+        res = alasql(query, queryObj);
+    }
+    res = alasql('SELECT result, COUNT(*) AS [count] FROM $0 GROUP BY result', [res]);
+    return transform === undefined ? res : transform(res);
+}
+
+
 export function normalize(value, min, max, lower, upper) {
     return (value - min) / (max - min) * (upper - lower) + lower;
 }
