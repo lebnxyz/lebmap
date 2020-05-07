@@ -138,6 +138,7 @@ def compile_answers(csv_f, json_f, cross_file_answer_map=None):
                 except StopIteration:
                     json_it = iter(json_f)
                     j_question = next(json_it)
+            respondents[-1]['answers'][question_no] = [False] * len(j_question['options'])
             major, minor, *_ = *map(int, question_no.split('.', 1)), 0
             if major not in majors:
                 try:
@@ -214,7 +215,7 @@ def compile_answers(csv_f, json_f, cross_file_answer_map=None):
                               for primary, primary_li in enumerate(j_question['optionsIndicate'][number])
                               for secondary in primary_li
                             ]
-                        respondents[-1]['answers'].setdefault(question_no, []).append(number)
+                        respondents[-1]['answers'][question_no][number] = True
     return cross_file_answer_map, respondents, answers
 
 
@@ -298,21 +299,24 @@ def do_special_cases(json_questions_path='src/data/question_answers.json', json_
 
 def fix_toplevel_numbers(json_questions_path='src/data/question_answers.json', json_users_path='src/data/respondents.json'):
     """since I'm alasql-ing it and alasql can't select raw array elements"""
-    with open(json_users_path, encoding='utf-8') as user_f, \
-     open(json_questions_path, encoding='utf-8') as q_f:
-        userj = json.load(user_f)
-        qj = json.load(q_f)
-        for user in userj:
-            user['answers'] = [{'question': k, 'option': op} for k, v in user['answers'].items() for op in v]
-        for q in qj:
-            for answer in q['answers'].values():
-                for option in answer['options'].values():
-                    option['answeredBy'][:] = ({'uid': uid} for uid in option['answeredBy'])
+    # with open(json_users_path, encoding='utf-8') as user_f, \
+    #  open(json_questions_path, encoding='utf-8') as q_f:
+    #     userj = json.load(user_f)
+    #     qj = json.load(q_f)
+    #     for user in userj:
+    #         for nums in user['answers'].values():
+    #             nums[:] = ({'num': num} for num in nums)
+    #         # once i added this i removed the for-loop above
+    #         user['answers'] = [{'question_number': k, 'option': op} for k, v in user['answers'].items() for op in v]
+    #     for q in qj:
+    #         for answer in q['answers'].values():
+    #             for option in answer['options'].values():
+    #                 option['answeredBy'][:] = ({'uid': uid} for uid in option['answeredBy'])
     
-    with open(json_users_path, 'w', encoding='utf-8') as user_f, \
-     open(json_questions_path, 'w', encoding='utf-8') as q_f:
-        user_f.write(regex.sub(r'\[\n\s+(.+?)\n\s*]', r'[\1]', json.dumps(userj, indent=4)))
-        q_f.write(regex.sub(r'(\d),\n\s*', r'\1, ', json.dumps(qj, indent=4)))
+    # with open(json_users_path, 'w', encoding='utf-8') as user_f, \
+    #  open(json_questions_path, 'w', encoding='utf-8') as q_f:
+    #     user_f.write(regex.sub(r'\[\n\s+(.+?)\n\s*]', r'[\1]', json.dumps(userj, indent=4)))
+    #     q_f.write(regex.sub(r'(\d),\n\s*', r'\1, ', json.dumps(qj, indent=4)))
 
 
 def do_all_answers():

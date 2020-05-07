@@ -1,10 +1,10 @@
 // SEARCH / AS @user answers ${questionNumber} /WHERE(num = ${optionNumber}) RETURN (@user->location AS result) FROM $0
 
 function tokenize(query) {
-  return query.match(/(\d+(?:\.\d+)?:\d+|[()&|!])/g);
+  return query.match(/(\d+(?:\.\d+)?:\d+|[()&|!*])/g);
 }
 
-function compile(query) {
+export function compile(query) {
   return tokenize(query).map(token => {
     switch(token) {
       case '!':
@@ -13,10 +13,14 @@ function compile(query) {
         return 'AND';
       case '|':
         return 'OR';
+      case '(':
+      case ')':
+        return token;
+      case '*':
+        return '= -1';
       default:
-        // gonna be a question-option thing
-        const [question, option] = token.match(/(\d+(?:\.\d+)):(\d+)/).slice(1);
-        return `(question = '${question}' AND option = ${option})`;
+        const [question, option] = token.match(/(\d+(?:\.\d+)?):(\d+)/).slice(1);
+        return `[${question}]->${option}`;
     }
   }).join(' ');
 }

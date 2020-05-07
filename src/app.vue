@@ -50,7 +50,10 @@
           ></question-list>
         </tab>
         <tab title="Query">
-          <!--  -->
+          <form @submit.prevent="queryRespondents">
+            <input type="text" v-model="query">
+            <button type="submit">Search</button>
+          </form>
         </tab>
         <tab title="Answers">
           <list :selection="selectionValues" iterKey="name" v-slot="{item: place}"
@@ -74,6 +77,7 @@ import Chart from './components/chart.vue'
 
 import { geoMercator, geoPath, geoMercatorRaw } from 'd3';
 import * as utils from './modules/utils.js';
+import { compile as compileQuery } from './modules/query.js';
 
 import mapJSON from './data/map/lb_2009_administrative_districts.json';
 
@@ -103,7 +107,8 @@ export default {
       chartInfo: null,
       selection: {},
       nSelected: 0,
-      highlightedPlaces: new Set()
+      highlightedPlaces: new Set(),
+      query: ''
     }
   },
   computed: {
@@ -130,31 +135,12 @@ export default {
           datasets: []
         }
       }
-      const options = Object.values(this.chartInfo.options);
-      let data;
-      // remove undefined
-      const places = Object.keys(this.selection).filter(i => this.selection[i]);
-      if (places.length === 0) {
-        data = options.map(o => o.answeredBy.length);
-      } else {
-        data = utils.searchAndGroupBy(
-          // not vulnerable to injection (not that that matters on a client-side app but still)
-          `SEARCH
-            /WHERE(location IN ('${places.join("', '")}'))
-            answers
-            /WHERE(question = '${this.chartInfo.number}')
-            RETURN (num AS result)
-          FROM $0`,
-          this.$root.respondentQuery,
-          'unflatten'
-        );
-      }
       return {
-        labels: options.map(o => o.value),
+        labels: this.chartInfo.labels,
         datasets: [
           {
             backgroundColor: '#006868',
-            data
+            data: this.chartInfo.data
           }
         ]
       }
@@ -192,14 +178,41 @@ export default {
     },
     showRespondents(respondents) {
       const s = new Set();
-      respondents.map(o => s.add(this.$root.respondents[o.uid].location));
+      respondents.map(uid => s.add(this.$root.respondents[uid].location));
       this.highlightedPlaces = s;
     },
     showChart(answerInfo) {
-      this.chartInfo = answerInfo;
+      const options = Object.values(answerInfo.options);
+      // remove undefined
+      const places = Object.keys(this.selection).filter(i => this.selection[i]);
+      let data;
+      if (places.length === 0) {
+        data = options.map(o => o.answeredBy.length);
+      } else {
+        data = utils.searchAndGroupBy(
+          // not vulnerable to injection (not that that matters on a client-side app but still)
+          `SEARCH
+            /WHERE(location IN ('${places.join("', '")}'))
+            answers
+            /WHERE(question = '${answerInfo.number}')
+            RETURN (num AS result)
+          FROM $0`,
+          this.$root.respondentQuery,
+          'unflatten'
+        );
+      }
+      this.chartInfo = {
+        labels: options.map(o => o.value),
+        data
+      }
     },
     removeChart() {
       this.chartInfo = null;
+    },
+    queryRespondents() {
+      this.$root.respondentQuery(
+        `SEARCH / AS @user answers WHERE(${compileQuery(this.query)}) RETURN (@user->location AS location) FROM $0`
+      );
     }
   }
 };
