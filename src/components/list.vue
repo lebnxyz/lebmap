@@ -2,7 +2,7 @@
   <div v-if="filteredSelection.length">
     <list-item v-bind="$attrs" v-for="(item, index) in filteredSelection" :key="item[iterKey]"
       :arrow="arrows"
-      :data-id="index"
+      :data-list-idx="index"
       @click="click(item, index)"
     >
       <slot v-bind:item="item"></slot>
@@ -37,7 +37,7 @@ export default {
     click(item, index) {
       if (this.highlightItems) {
         [...this.$el.querySelectorAll('.selected')].map(el => el.classList.toggle('selected', false));
-        this.$el.querySelector(`[data-id="${index}"]`).classList.toggle('selected', true);
+        this.$el.querySelector(`[data-list-idx="${index}"]`).classList.toggle('selected', true);
       }
       this.$emit('item-clicked', item);
     }

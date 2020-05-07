@@ -49,7 +49,7 @@
             @remove-chart="removeChart"
           ></question-list>
         </tab>
-        <tab title="Insights" :disabled="true">
+        <tab title="Query">
           <!--  -->
         </tab>
         <tab title="Answers">
@@ -141,13 +141,7 @@ export default {
           // not vulnerable to injection (not that that matters on a client-side app but still)
           `SEARCH /WHERE(location IN ('${places.join("', '")}')) answers->${this.chartInfo.number} / RETURN (num AS result) FROM $0`,
           this.$root.respondentQuery,
-          res => {
-            const o = Object.fromEntries(res.map(o => [o.result, o.count]));
-            return Array.from(
-              {length: Object.keys(this.chartInfo.options).length},
-              (_, i) => o[i]
-            );
-          }
+          'unflatten'
         );
       }
       return {
