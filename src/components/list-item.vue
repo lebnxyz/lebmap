@@ -44,8 +44,8 @@ export default {
     destroyResizeListener(func) {
       window.removeEventListener('resize', func);
     },
-    click(e) {
-      this.$emit('click', e);
+    click() {
+      this.$emit('click', this.$el);
     }
   }
 };
@@ -75,7 +75,7 @@ export default {
   font-weight: 800;
 }
 
-.item:hover {
+.item:hover, .item.selected {
   background-color: #555;
 }
 

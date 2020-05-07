@@ -1,7 +1,9 @@
 <template>
   <div v-if="filteredSelection.length">
-    <list-item v-bind="$attrs" v-for="item in filteredSelection" :key="item[iterKey]" :arrow="arrows"
-      @click="click(item)"
+    <list-item v-bind="$attrs" v-for="(item, index) in filteredSelection" :key="item[iterKey]"
+      :arrow="arrows"
+      :data-id="index"
+      @click="click(item, index)"
     >
       <slot v-bind:item="item"></slot>
     </list-item>
@@ -20,10 +22,11 @@ export default {
   props: {
     selection: Array,
     iterKey: String,
+    highlightItems: Boolean,
     arrows: {
       type: Boolean,
       default: true
-    }
+    },
   },
   computed: {
     filteredSelection() {
@@ -31,7 +34,11 @@ export default {
     }
   },
   methods: {
-    click(item) {
+    click(item, index) {
+      if (this.highlightItems) {
+        [...this.$el.querySelectorAll('.selected')].map(el => el.classList.toggle('selected', false));
+        this.$el.querySelector(`[data-id="${index}"]`).classList.toggle('selected', true);
+      }
       this.$emit('item-clicked', item);
     }
   }
@@ -41,9 +48,5 @@ export default {
 <style scoped>
 div {
   color: white;
-}
-
-.faint {
-  color: darkgray;
 }
 </style>

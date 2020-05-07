@@ -1,10 +1,13 @@
 <template>
-  <g v-if="district !== undefined">
+  <g
+    v-if="district !== undefined"
+    @mouseenter="mouseenter"
+  >
     <path
       :class="{clicked, region: true}"
       :id="id"
       :d="d"
-      @click="click"
+      @mousedown="toggle"
     ></path>
     <pins
       :locations="locations"
@@ -40,11 +43,30 @@ export default {
       id: utils.toID('path', this.district),
       locations: this.$root.locationsByDistrict['$' + this.district],
       hover: false,
-      clicked: false
+      clicked: false,
+      currentlyTogglable: true
     };
   },
+  computed: {
+    mouseDown() {
+      return this.$root.mouseDown;
+    }
+  },
+  watch: {
+    mouseDown(oldVal, newVal) {
+      if (!newVal) {
+        this.currentlyTogglable = true;
+      }
+    }
+  },
   methods: {
-    click() {
+    mouseenter() {
+      if (this.mouseDown && this.currentlyTogglable) {
+        this.toggle();
+        this.currentlyTogglable = false;
+      }
+    },
+    toggle() {
       this.clicked = !this.clicked;
       this.$emit(this.clicked ? 'select' : 'unselect', this.$children[0].$children);
     },

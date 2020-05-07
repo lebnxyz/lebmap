@@ -34,6 +34,7 @@
           <dd>
             <list :selection="optionValues" iterKey="number" v-slot="{item: option}"
               :arrows="false"
+              :highlight-items="true"
               @item-clicked="showRespondents"
             >
               <i>{{option.value}}</i><template v-if="option.indicates.length > 0">. This answer indicates:</template>
@@ -65,6 +66,7 @@
         <dd>
           <list :selection="optionValues" iterKey="number" v-slot="{item: option}"
             :arrows="false"
+            :highlight-items="true"
             @item-clicked="showRespondents"
           >
             <i>{{option.value}}</i><template v-if="option.indicates.length > 0">. This answer indicates:</template>
@@ -137,7 +139,7 @@ export default {
       this.subClicked = true;
       this.answerInfo = answer;
     },
-    showRespondents(option) {
+    showRespondents(option, event) {
       this.$emit('show-respondents', option.answeredBy);
     },
     backToQuestions() {

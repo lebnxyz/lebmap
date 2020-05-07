@@ -30,5 +30,26 @@ new Vue({
     this.questionValues = questionValues;
     this.locationsByDistrict = nest().key(d => d.district).map(values(locations));
     this.respondentQuery = new Query(respondents);
+  },
+  mounted() {
+    window.addEventListener('mousedown', this.setMouseDown);
+    window.addEventListener('mouseup', this.unsetMouseDown);
+  },
+  methods: {
+    setMouseDown() {
+      this.mouseDown = true;
+    },
+    unsetMouseDown() {
+      this.mouseDown = false;
+    }
+  },
+  data() {
+    return {
+      mouseDown: false
+    }
+  },
+  destroyed() {
+    window.removeEventListener('mousedown', this.setMouseDown);
+    window.removeEventListener('mouseup', this.unsetMouseDown);
   }
 });
