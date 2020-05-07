@@ -303,8 +303,7 @@ def fix_toplevel_numbers(json_questions_path='src/data/question_answers.json', j
         userj = json.load(user_f)
         qj = json.load(q_f)
         for user in userj:
-            for uids in user['answers'].values():
-                uids[:] = ({'num': uid} for uid in uids)
+            user['answers'] = [{'question': k, 'option': op} for k, v in user['answers'].items() for op in v]
         for q in qj:
             for answer in q['answers'].values():
                 for option in answer['options'].values():

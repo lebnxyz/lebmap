@@ -139,7 +139,12 @@ export default {
       } else {
         data = utils.searchAndGroupBy(
           // not vulnerable to injection (not that that matters on a client-side app but still)
-          `SEARCH /WHERE(location IN ('${places.join("', '")}')) answers->${this.chartInfo.number} / RETURN (num AS result) FROM $0`,
+          `SEARCH
+            /WHERE(location IN ('${places.join("', '")}'))
+            answers
+            /WHERE(question = '${this.chartInfo.number}')
+            RETURN (num AS result)
+          FROM $0`,
           this.$root.respondentQuery,
           'unflatten'
         );
