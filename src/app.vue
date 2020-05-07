@@ -100,11 +100,7 @@ export default {
         width: null,
         height: null
       },
-      chartData: {
-        labels: [],
-        datasets: []
-      },
-      chartShowing: false,
+      chartInfo: null,
       selection: {},
       nSelected: 0,
       highlightedPlaces: new Set()
@@ -126,6 +122,43 @@ export default {
     },
     selectionValues() {
       return Object.values(this.selection);
+    },
+    chartData() {
+      if (!this.chartShowing) {
+        return {
+          labels: [],
+          datasets: []
+        }
+      }
+      const options = Object.values(this.chartInfo.options);
+      let data;
+      // remove undefined
+      const places = Object.keys(this.selection).filter(i => this.selection[i]);
+      if (places.length === 0) {
+        data = options.map(o => o.answeredBy.length);
+      } else {
+        data = utils.searchAndGroupBy(
+          // not vulnerable to injection (not that that matters on a client-side app but still)
+          `SEARCH /WHERE(location IN ('${places.join("', '")}')) answers->${this.chartInfo.number} / RETURN (num AS result) FROM $0`,
+          this.$root.respondentQuery,
+          res => {
+            const o = Object.fromEntries(res.map(o => [o.result, o.count]));
+            return Object.keys(o).sort().map(k => o[k]);
+          }
+        );
+      }
+      return {
+        labels: options.map(o => o.value),
+        datasets: [
+          {
+            backgroundColor: '#006868',
+            data
+          }
+        ]
+      }
+    },
+    chartShowing() {
+      return this.chartInfo !== null;
     }
   },
   created() {
@@ -161,40 +194,10 @@ export default {
       this.highlightedPlaces = s;
     },
     showChart(answerInfo) {
-      const options = Object.values(answerInfo.options);
-      let data;
-      // remove undefined
-      const places = Object.keys(this.selection).filter(i => this.selection[i]);
-      if (places.length === 0) {
-        data = options.map(o => o.answeredBy.length);
-      } else {
-        data = utils.searchAndGroupBy(
-          // not vulnerable to injection (not that that matters on a client-side app but still)
-          `SEARCH /WHERE(location IN ('${places.join("', '")}')) answers->${answerInfo.number} / RETURN (num AS result) FROM $0`,
-          this.$root.respondentQuery,
-          res => {
-            const o = Object.fromEntries(res.map(o => [o.result, o.count]));
-            return Object.keys(o).sort().map(k => o[k]);
-          }
-        );
-      }
-      this.chartData = {
-        labels: options.map(o => o.value),
-        datasets: [
-          {
-            backgroundColor: '#006868',
-            data
-          }
-        ]
-      };
-      this.chartShowing = true;
+      this.chartInfo = answerInfo;
     },
     removeChart() {
-      this.chartShowing = false;
-      this.chartData = {
-        labels: [],
-        datasets: []
-      };
+      this.chartInfo = null;
     }
   }
 };
