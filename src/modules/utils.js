@@ -45,9 +45,6 @@ export function searchAndGroupBy(query, queryObj, transform) {
     res = alasql(query, queryObj);
   }
   res = alasql('SELECT result, COUNT(*) AS [count] FROM $0 GROUP BY result', [res]);
-  if (transform === undefined) {
-    return res;
-  }
   if (transform === 'unflatten') {
     const o = Object.fromEntries(res.map(o => [o.result, o.count]));
     return Array.from(
