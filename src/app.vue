@@ -143,7 +143,10 @@ export default {
           this.$root.respondentQuery,
           res => {
             const o = Object.fromEntries(res.map(o => [o.result, o.count]));
-            return Object.keys(o).sort().map(k => o[k]);
+            return Array.from(
+              {length: Object.keys(this.chartInfo.options).length},
+              (_, i) => o[i]
+            );
           }
         );
       }
