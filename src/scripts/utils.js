@@ -56,3 +56,9 @@ export function normalize(value, min, max, lower, upper) {
 export function toID(prefix, s, use_hash = false) {
     return `${use_hash ? '#' : ''}${prefix}-${s.replace(/\s/, '-').toLowerCase()}`;
 }
+
+export function d(...objs) {
+    objs.map(o => JSON.stringify(o))
+      .map(o => JSON.parse(o))
+      .forEach(o => console.log(o));
+}

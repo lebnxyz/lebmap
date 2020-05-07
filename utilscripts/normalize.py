@@ -155,7 +155,7 @@ def compile_answers(csv_f, json_f, cross_file_answer_map=None):
                 })
             if minor not in answers[major]['answers']:
                 answers[major]['answers'][minor] = {
-                  'number': f'{major}.{minor}',
+                  'number': question_no,
                   'environment': '',
                   'english': '',
                   'arabic': '',
