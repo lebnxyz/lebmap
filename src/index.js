@@ -2,7 +2,7 @@ import { nest, values } from 'd3';
 import Vue from 'vue';
 
 import 'typeface-montserrat';
-import { Query } from './scripts/utils.js';
+import { Query } from './modules/utils.js';
 import * as Tabs from 'vue-slim-tabs';
 import Fitty from './vue-fitty.vue';
 

@@ -73,7 +73,7 @@ import QuestionList from './components/question-list.vue'
 import Chart from './components/chart.vue'
 
 import { geoMercator, geoPath, geoMercatorRaw } from 'd3';
-import * as utils from './scripts/utils.js';
+import * as utils from './modules/utils.js';
 
 import mapJSON from './data/map/lb_2009_administrative_districts.json';
 

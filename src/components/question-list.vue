@@ -143,6 +143,7 @@ export default {
       this.$emit('show-respondents', option.answeredBy);
     },
     backToQuestions() {
+      this.$emit('show-respondents', []);  // clear highlighted pins
       this.clicked = false;
       this.subClicked = false;
       this.qInfo = null;

@@ -24,7 +24,7 @@
 <script>
 import Pins from './pins.vue';
 
-import * as utils from '../scripts/utils.js';
+import * as utils from '../modules/utils.js';
 
 export default {
   name: 'Region',

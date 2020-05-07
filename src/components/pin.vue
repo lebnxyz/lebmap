@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import * as oneOff from '../scripts/oneOffHelpers.js';
+import * as oneOff from '../modules/oneOffHelpers.js';
 
 export default {
   name: 'Pin',
