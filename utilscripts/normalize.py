@@ -247,36 +247,38 @@ def do_special_cases(json_questions_path='src/data/question_answers.json', json_
             user_answers = user['answers']
             user_id = user['number']
             '''
-            take care of ka-ta-b?t: -bat was not included in the survey,
-            with question 19 saying "if you say -bat, just pick one of
+            take care of kat(a)b?t: -bat was not included in the survey,
+            with question 20 saying "if you say -bat, just pick one of
             the options that has the correct syllable count, and your answer
-            to how you pronounce 'ktbt' in isolation (#20) will clarify"
+            to how you pronounce 'bat/bet/bit' above (#19) will clarify"
             '''
-            if 0 in user_answers['19.0']:
+            if user_answers['19.0'][0]:
                 # surprisingly, nobody answered more than one thing for 20
                 # but that could still change ofc
-                original_20 = user_answers['20']
-                adjusted_20 = [0 if i < 3 else 3 for i in original_20]
-                # if, for 19.0, they answered both "bat" and "bet", then combine the answers for 20
-                # in order to get both e.g. "kat-bat" and "kat-bet". Otherwise if they only answered
-                # "bat" for 19.0 then use only the adjusted answers for 20 so only use "kat-bat"
-                if len(user_answers['19.0']) == 1:
-                    user_answers['20'] = adjusted_20
-                    for option in original_20:
-                        if option in qj[19]['answers']['0']['options'] and user_id in qj[19]['answers']['0']['options'][option]['answeredBy']:
-                            qj[19]['answers']['0']['options'][option]['answeredBy'].remove(user_id)
-                else:
-                    user_answers['20'] = list(dict.fromkeys(original_20 + adjusted_20))
-                for option in adjusted_20:
-                    if option in qj[20]['answers']['0']['options'] and user_id not in qj[20]['answers']['0']['options'][option]['answeredBy']:
-                        qj[20]['answers']['0']['options'][option]['answeredBy'].append(user_id)
+                #
+                # if, for 19.0, they answered both "bat" and "bet", then combine with the answers for 20
+                # in order to get both e.g. "kat-bat" and "kat-bet"
+                orig_20, orig_19 = user_answers['20'], user_answers['19.0']
+                user_answers['20'] = [
+                  any(orig_20[1:3]),
+                  orig_19[1] and orig_20[1],
+                  orig_19[1] and orig_20[2],
+                  any(orig_20[4:6]),
+                  orig_19[1] and orig_20[5],
+                  orig_19[1] and orig_20[6]
+                ]
+                for (i, new_val) in enumerate(user_answers['20']):
+                    option = qj[20]['answers']['0']['options'].get(i, {}).get(str(i), [user_id])
+                    option.remove(user_id)
+                    if new_val:
+                        option.append(user_id)
             '''
             take care of the fact that "N/A, I'd never say 3am here" should XOR with the other '3amma'
             options in question 16
             '''
             for minor in map(str, range(8)):
-                if 0 in user_answers[f'16.{minor}']:
-                    user_answers[f'16.{minor}'] = [0]
+                if user_answers[f'16.{minor}'][0]:
+                    user_answers[f'16.{minor}'][1:] = [False] * (len(user_answers[f'16.{minor}']) - 1)
                     for i in range(1, 4):
                         if i in qj[16]['answers'][minor]['options'] and user_id in qj[16]['answers'][minor]['options'][i]['answeredBy']:
                             qj[16]['answers'][minor]['options'][i]['answeredBy'].remove(user_id)
@@ -285,8 +287,8 @@ def do_special_cases(json_questions_path='src/data/question_answers.json', json_
             in question 32
             '''
             for minor in map(str, range(8)):
-                if 0 in user_answers[f'32.{minor}']:
-                    user_answers[f'32.{minor}'] = [0]
+                if user_answers[f'32.{minor}'][0]:
+                    user_answers[f'32.{minor}'][1:] = [False] * (len(user_answers[f'16.{minor}']) - 1)
                     for i in range(1, 5):
                         if i in qj[32]['answers'][minor]['options'] and user_id in qj[32]['answers'][minor]['options'][i]['answeredBy']:
                             qj[32]['answers'][minor]['options'][i]['answeredBy'].remove(user_id)
@@ -322,7 +324,7 @@ def fix_toplevel_numbers(json_questions_path='src/data/question_answers.json', j
 def do_all_answers():
     do_compilation()
     do_special_cases()
-    fix_toplevel_numbers()
+    #fix_toplevel_numbers()
 
 
 def normalize_map_names(map_path='src/data/map/lb_2009_administrative_districts.geojson', locations_path='src/data/map/locations.json'):

@@ -184,22 +184,22 @@ export default {
     showChart(answerInfo) {
       const options = Object.values(answerInfo.options);
       // remove undefined
-      const places = Object.keys(this.selection).filter(i => this.selection[i]);
+      const selectedPlaces = Object.keys(this.selection).filter(i => this.selection[i]);
       let data;
-      if (places.length === 0) {
+      if (selectedPlaces.length === 0) {
         data = options.map(o => o.answeredBy.length);
       } else {
-        data = utils.searchAndGroupBy(
+        ({unflatten: data} = utils.searchAndGroupBy(
           // not vulnerable to injection (not that that matters on a client-side app but still)
           `SEARCH
-            /WHERE(location IN ('${places.join("', '")}'))
-            answers
-            /WHERE(question = '${answerInfo.number}')
-            RETURN (num AS result)
+            /WHERE(location IN ('${selectedPlaces.join("', '")}'))
+            answers->[${answerInfo.number}]
           FROM $0`,
           this.$root.respondentQuery,
-          'unflatten'
-        );
+          {unflatten: Object.keys(answerInfo.options).length},
+          // temporary dumb hack
+          x => x.reduce((a, e, i) => { e.forEach(ee => {if (ee) a.push({result: i}); }); return a; }, [])
+        ));
       }
       this.chartInfo = {
         labels: options.map(o => o.value),
@@ -210,9 +210,22 @@ export default {
       this.chartInfo = null;
     },
     queryRespondents() {
-      this.$root.respondentQuery(
-        `SEARCH / AS @user answers WHERE(${compileQuery(this.query)}) RETURN (@user->location AS location) FROM $0`
+      const selectedPlaces = Object.keys(this.selection).filter(i => this.selection[i]);
+      const {raw: respondents, call: chartData} = utils.searchAndGroupBy(
+        `SEARCH / AS @user answers WHERE(${compileQuery(this.query)}) RETURN (@user->location AS location) FROM $0`,
+        this.$root.respondentQuery,
+        {
+          unflatten: 2,
+          call(res) {
+
+          }
+        }
       );
+      showRespondents(respondents);
+      this.chartInfo = {
+        labels: ['yes', 'no'],
+        data: chartData
+      };
     }
   }
 };
