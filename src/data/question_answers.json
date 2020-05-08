@@ -1673,7 +1673,8 @@
         "headline": "Imperfective 'infa3al' \u0627\u0646\u0641\u0639\u0644",
         "flaws": [
             "I didn't include another 'productive' passive verb to accompany ynsm3, which would have helped greatly. As is, this data doesn't at all show if ynsm3 is unique among productive ynf3l passives in being predominantly pronounced yen-SA-ma3",
-            "I only used the \u064a\u0646\u0644\u0642\u0649 Arabic spelling of 'to be found' rather than writing \u064a\u0646\u0644\u0642\u0649/\u064a\u0646\u0644\u0642\u064a, which *may* have influenced people not to choose the '-el' pronunciations. Hopefully not"
+            "I only used the \u064a\u0646\u0644\u0642\u0649 Arabic spelling of 'to be found' rather than writing \u064a\u0646\u0644\u0642\u0649/\u064a\u0646\u0644\u0642\u064a, which *may* have influenced people not to choose the '-el' pronunciations. Hopefully not",
+            "I didn't understand yet that YE-nef-3el and YENF-3el are the same thing"
         ],
         "answers": {
             "0": {
@@ -3600,7 +3601,7 @@
         "answers": {
             "0": {
                 "number": "32.0",
-                "environment": "interpretation of what's morphologically a masculine-singular form",
+                "environment": "interpretation of taba3, morphologically a masculine-singular form",
                 "english": "",
                 "arabic": "\u062a\u0628\u0639",
                 "transliteration": "taba3",
@@ -3653,7 +3654,7 @@
             },
             "1": {
                 "number": "32.1",
-                "environment": "interpretation of what's morphologically a masculine and likely plural form",
+                "environment": "interpretation of tab3\u016bl, morphologically a masculine and likely plural form",
                 "english": "",
                 "arabic": "\u062a\u0628\u0639\u0648\u0644",
                 "transliteration": "tab3\u016bl",
@@ -3706,7 +3707,7 @@
             },
             "2": {
                 "number": "32.2",
-                "environment": "interpretation of what's morphologically a masculine-singular form",
+                "environment": "interpretation of t\u01133, morphologically a masculine-singular form",
                 "english": "",
                 "arabic": "\u062a\u0627\u0639",
                 "transliteration": "t\u01133",
@@ -3759,7 +3760,7 @@
             },
             "3": {
                 "number": "32.3",
-                "environment": "interpretation of what's morphologically a masculine and likely plural form",
+                "environment": "interpretation of ta3\u016bl, morphologically a masculine and likely plural form",
                 "english": "",
                 "arabic": "\u062a\u0639\u0648\u0644",
                 "transliteration": "ta3\u016bl",
@@ -3812,7 +3813,7 @@
             },
             "4": {
                 "number": "32.4",
-                "environment": "interpretation of what's morphologically a feminine-singular form",
+                "environment": "interpretation of tab3t, morphologically a feminine-singular form",
                 "english": "",
                 "arabic": "\u062a\u0628\u0639\u062a",
                 "transliteration": "tab3t",
@@ -3865,7 +3866,7 @@
             },
             "5": {
                 "number": "32.5",
-                "environment": "interpretation of what's morphologically a feminine-singular form",
+                "environment": "interpretation of tab3\u012bt, morphologically a feminine-singular form",
                 "english": "",
                 "arabic": "\u062a\u0628\u0639\u0650\u064a\u0652\u062a",
                 "transliteration": "tab3\u012bt",
@@ -3918,7 +3919,7 @@
             },
             "6": {
                 "number": "32.6",
-                "environment": "interpretation of what's morphologically a feminine-singular form",
+                "environment": "interpretation of t\u01133t, morphologically a feminine-singular form",
                 "english": "",
                 "arabic": "\u062a\u0627\u0639\u062a",
                 "transliteration": "t\u01133t",
@@ -3971,7 +3972,7 @@
             },
             "7": {
                 "number": "32.7",
-                "environment": "interpretation of what's morphologically a feminine-singular form",
+                "environment": "interpretation of ta3\u012bt, morphologically a feminine-singular form",
                 "english": "",
                 "arabic": "\u062a\u0639\u0650\u064a\u0652\u062a/\u062a\u0627\u0639\u0650\u064a\u0652\u062a",
                 "transliteration": "ta3\u012bt",

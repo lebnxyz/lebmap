@@ -1568,14 +1568,14 @@
             [[1], []],
             [[0], []]
         ],
-        "environmentTemplate": "interpretation of what's morphologically a {0} form",
+        "environmentTemplate": "interpretation of {0}, morphologically a {1} form",
         "examples": [
             {
                 "transliteration": "taba3",
                 "english": "",
                 "arabic": "\u062a\u0628\u0639",
                 "t": " taba3",
-                "environmentArgs": ["masculine-singular"],
+                "environmentArgs": ["taba3", "masculine-singular"],
                 "number": 0,
                 "index": "32.0"
             },
@@ -1584,7 +1584,7 @@
                 "english": "",
                 "arabic": "\u062a\u0628\u0639\u0648\u0644",
                 "t": " tab3\u016bl",
-                "environmentArgs": ["masculine and likely plural"],
+                "environmentArgs": ["tab3\u016bl", "masculine and likely plural"],
                 "number": 1,
                 "index": "32.1"
             },
@@ -1593,7 +1593,7 @@
                 "english": "",
                 "arabic": "\u062a\u0627\u0639",
                 "t": " t\u01133",
-                "environmentArgs": ["masculine-singular"],
+                "environmentArgs": ["t\u01133", "masculine-singular"],
                 "number": 2,
                 "index": "32.2"
             },
@@ -1602,7 +1602,7 @@
                 "english": "",
                 "arabic": "\u062a\u0639\u0648\u0644",
                 "t": " ta3\u016bl",
-                "environmentArgs": ["masculine and likely plural"],
+                "environmentArgs": ["ta3\u016bl", "masculine and likely plural"],
                 "number": 3,
                 "index": "32.3"
             },
@@ -1611,7 +1611,7 @@
                 "english": "",
                 "arabic": "\u062a\u0628\u0639\u062a",
                 "t": " tab3et",
-                "environmentArgs": ["feminine-singular"],
+                "environmentArgs": ["tab3t", "feminine-singular"],
                 "number": 4,
                 "index": "32.4"
             },
@@ -1620,7 +1620,7 @@
                 "english": "",
                 "arabic": "\u062a\u0628\u0639\u0650\u064a\u0652\u062a",
                 "t": "  tab3\u012bt",
-                "environmentArgs": ["feminine-singular"],
+                "environmentArgs": ["tab3\u012bt", "feminine-singular"],
                 "number": 5,
                 "index": "32.5"
             },
@@ -1629,7 +1629,7 @@
                 "english": "",
                 "arabic": "\u062a\u0627\u0639\u062a",
                 "t": " t\u01133et",
-                "environmentArgs": ["feminine-singular"],
+                "environmentArgs": ["t\u01133t", "feminine-singular"],
                 "number": 6,
                 "index": "32.6"
             },
@@ -1638,7 +1638,7 @@
                 "english": "",
                 "arabic": "\u062a\u0639\u0650\u064a\u0652\u062a/\u062a\u0627\u0639\u0650\u064a\u0652\u062a",
                 "t": "  ta3\u012bt/t\u01133\u012bt",
-                "environmentArgs": ["feminine-singular"],
+                "environmentArgs": ["ta3\u012bt", "feminine-singular"],
                 "number": 7,
                 "index": "32.7"
             }
