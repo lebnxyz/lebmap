@@ -140,7 +140,9 @@ export default {
         datasets: [
           {
             backgroundColor: '#006868',
-            data: this.chartInfo.data
+            data: this.chartInfo.data(
+              Object.keys(this.selection).filter(i => this.selection[i])
+            )
           }
         ]
       }
@@ -183,27 +185,25 @@ export default {
     },
     showChart(answerInfo) {
       const options = Object.values(answerInfo.options);
-      // remove undefined
-      const selectedPlaces = Object.keys(this.selection).filter(i => this.selection[i]);
-      let data;
-      if (selectedPlaces.length === 0) {
-        data = options.map(o => o.answeredBy.length);
-      } else {
-        ({unflatten: data} = utils.searchAndGroupBy(
-          // not vulnerable to injection (not that that matters on a client-side app but still)
-          `SEARCH
-            /WHERE(location IN ('${selectedPlaces.join("', '")}'))
-            answers->[${answerInfo.number}]
-          FROM $0`,
-          this.$root.respondentQuery,
-          {unflatten: Object.keys(answerInfo.options).length},
-          // temporary dumb hack
-          x => x.reduce((a, e, i) => { e.forEach(ee => {if (ee) a.push({result: i}); }); return a; }, [])
-        ));
-      }
       this.chartInfo = {
         labels: options.map(o => o.value),
-        data
+        data: selectedPlaces => {
+          if (selectedPlaces.length === 0) {
+            return options.map(o => o.answeredBy.length);
+          } else {
+            return utils.searchAndGroupBy(
+              // not vulnerable to injection (not that that matters on a client-side app but still)
+              `SEARCH
+                /WHERE(location IN ('${selectedPlaces.join("', '")}'))
+                answers->[${answerInfo.number}]
+              FROM $0`,
+              this.$root.respondentQuery,
+              {unflatten: Object.keys(answerInfo.options).length},
+              // temporary dumb hack
+              x => x.reduce((a, e, i) => { e.forEach(ee => {if (ee) a.push({result: i}); }); return a; }, [])
+            ).unflatten;
+          }
+        }
       }
     },
     removeChart() {
@@ -211,20 +211,25 @@ export default {
     },
     queryRespondents() {
       const selectedPlaces = Object.keys(this.selection).filter(i => this.selection[i]);
-      const {raw: respondents, call: chartData} = utils.searchAndGroupBy(
-        `SEARCH / AS @user answers WHERE(${compileQuery(this.query)}) RETURN (@user->location AS location) FROM $0`,
-        this.$root.respondentQuery,
-        {
-          unflatten: 2,
-          call(res) {
-
-          }
-        }
+      const respondents = this.$root.respondentQuery(
+        `SEARCH
+          / AS @user
+          answers WHERE(${compileQuery(this.query)})
+          RETURN (@user->number AS uid, @user->location AS location)
+        FROM $0`
       );
-      showRespondents(respondents);
+      this.showRespondents(respondents.map(o => o.uid));
       this.chartInfo = {
         labels: ['yes', 'no'],
-        data: chartData
+        data: selectedPlaces => {
+          if (selectedPlaces.length === 0) {
+            const hits = respondents.length;
+            return [hits, this.$root.respondents.length - hits];
+          } else {
+            const hits = respondents.filter(o => selectedPlaces.includes(o.location)).length;
+            return [hits, this.$root.respondents.filter(o => selectedPlaces.includes(o.location)).length - hits];
+          }
+        }
       };
     }
   }
