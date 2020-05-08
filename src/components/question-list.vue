@@ -176,8 +176,9 @@ export default {
 <style scoped>
 dl {
   color: white;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
+
 dt {
   font-weight: bold;
 }

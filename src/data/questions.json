@@ -127,7 +127,9 @@
     {
         "number": 2,
         "question": "How do you pronounce the \u0648 sound at the end of these words? Closer to \"o\" or to \"u\"?",
-        "flaws": [],
+        "flaws": [
+            "It's probably super easy for a speaker to hear themselves 'wrong' here"
+        ],
         "headline": "word-final round vowel",
         "insights": [[
             "tense/high damma (/u/)",
@@ -169,8 +171,8 @@
         "number": 3,
         "question": "How do you pronounce the \u0627 (alif) in these words? Give a quick listen to the recording of \"levels\" 1\u20135 above.",
         "flaws": [
-            "I really, really, really should have asked about the word 2aal. Also waa7ad",
-            "Some people don't use 7aawal, which I only found out afterwards."
+            "Should have asked about 2aal and waa7ad",
+            "Some people don't use 7aawal, which I only found out afterwards"
         ],
         "headline": "alif",
         "insights": [[
@@ -444,7 +446,8 @@
         "number": 7,
         "question": "Do you distinguish \"you(female) have asked him\" from \"she's asked him\"?",
         "flaws": [
-            "I didn't include a question asking what the 'N/A' folks say instead"
+            "I didn't include a question asking what the 'N/A' folks say instead",
+            "A lot of people answered N/A. That either means that there's miscommunication regarding what 'has done' means in English or that the actual Lebanese construction differs in meaning from person to person"
         ],
         "headline": "suffixed form, 2nd- vs. 3rd-person feminine participle",
         "insights": [[
@@ -479,7 +482,7 @@
         "number": 8,
         "question": "How do you pronounce \"they have bought\"?",
         "flaws": [
-            "'Meshteryiin' popped into my head a few days after this post. A few people ended up including it in 'other', indicating that I should have included it in the main options"
+            "'Meshteryiin' popped into my head a few days after this post. A few people ended up including it in 'other', meaning I should have included it in the main options"
         ],
         "headline": "participles in m-...-y (\u0645-...-\u064a)",
         "insights": [[
@@ -505,7 +508,7 @@
         "number": 9,
         "question": "How often do you pronounce the \u0647 (h) of \u0640\u0647\u0627 and \u0640\u0647\u0646 in these words?",
         "flaws": [
-            "Should've included a question asking how the 'no h in yeha' folks pronounce it"
+            "Should have included a question asking how the 'no h in yeha' folks pronounce it"
         ],
         "headline": "3rd-person personal suffix",
         "insights": [[
@@ -651,7 +654,9 @@
     {
         "number": 11,
         "question": "How do you say \"I don't know\"?",
-        "flaws": [],
+        "flaws": [
+            "Didn't include sh-less alif-negation as in 'ab3ref'"
+        ],
         "headline": "verb negation",
         "insights": [[
             "pre-verbal particle",
@@ -682,7 +687,9 @@
     {
         "number": 12,
         "question": "Do you prefer \u0645\u062a\u0641\u0639\u0644 \"metfe33el\" or \u0645\u0641\u0639\u0644 \"mfa33al\"?",
-        "flaws": [],
+        "flaws": [
+            "Didn't know that mfa33al has subsumed the meaning of mfa33il for many speakers, rendering this question slightly ill-founded"
+        ],
         "headline": "participle of 'tfa33al' \u062a\u0641\u0639\u0651\u0644",
         "insights": [[
             "preservation of 'metfe33el' \u0645\u062a\u0641\u0639\u0644",
@@ -810,7 +817,10 @@
     {
         "number": 15,
         "question": "How do you pronounce \u0628\u064a\u062a (house) in the following words?",
-        "flaws": [],
+        "flaws": [
+            "Should have asked about /aw/ as well",
+            "Didn't include /ej/ 'ey', which is an existent pronunciation distinct from /aj/ 'ay'"
+        ],
         "headline": "historic /aj/ \u0640\u064e\u064a\u0652\u0640 diphthong",
         "insights": [[
             "preserved",
@@ -865,7 +875,7 @@
         "number": 16,
         "question": "How would you pronounce \u0639\u0645 with the following example words?",
         "flaws": [
-            "A few people indicated 'would never use 3am[ma]' for every single option. I'm not sure why, but it means I did something wrong asking this."
+            "A few people indicated 'would never use 3am[ma]' for every single option. I'm not sure why, but it means I did something wrong asking this"
         ],
         "headline": "present-progressive particle",
         "insights": [
@@ -1231,7 +1241,8 @@
         "number": 23,
         "question": "Besides those two, which of these other words would you use to say \"I went to the store IN ORDER TO buy some tomatoes?\"",
         "flaws": [
-            "I unknowingly assumed the 'nothing' structure was universal and didn't need asking about, but I probably should've included it. One person gave it as an 'other' response"
+            "I unknowingly assumed the 'nothing' structure was universal and didn't need asking about, but I probably should've included it. One person gave it as an 'other' response",
+            "Didn't account for stacking as in 'menshen ta'"
         ],
         "headline": "'in order to'",
         "insights": [[
@@ -1296,7 +1307,9 @@
     {
         "number": 25,
         "question": "How would you say \"the walls are colored and the car is closed\"?",
-        "flaws": [],
+        "flaws": [
+            "Didn't know that mlawwan has displaced original *mlawwin for many speakers, rendering this question ill-founded"
+        ],
         "headline": "m- \u0645-initial passive participles",
         "insights": [
             [
@@ -1334,7 +1347,7 @@
         "number": 26,
         "question": "Which of these sounds most like something you'd say?",
         "flaws": [
-            "I forgot about assimilation of the /r/ into the /l/ as in Sallak, which commonly occurs as well"
+            "I forgot about assimilation of the /r/ into the /l/ as in Sallak"
         ],
         "headline": "'S\u0101r + l-' (\u0635\u0627\u0631 + \u0644\u0640 = \u0635\u0631\u0644\u0640)",
         "insights": [
@@ -1377,7 +1390,9 @@
     {
         "number": 27,
         "question": "How do you say \"here he is\"?",
-        "flaws": [],
+        "flaws": [
+            "There are SO MANY others, I should have included an 'other' option... missed out on 'a7ay/a7aw', 'layko', 'a7ouka', 'sha7uwwe', etc."
+        ],
         "headline": "'here it is!'",
         "insights": [[
             "Geminate /77/ in a77- derivatives",
@@ -1405,7 +1420,7 @@
         "number": 28,
         "question": "How do you say \"we had written\"?",
         "flaws": [
-            "Only a few months after the survey did I begin to notice how k\u0113yin works. Should have formulated a question that includes it"
+            "Should have included k\u0113yin as well"
         ],
         "headline": "past-perfect construction",
         "insights": [[
@@ -1431,7 +1446,7 @@
         "number": 29,
         "question": "How do you say \"these\"?",
         "flaws": [
-            "I forgot to include 'ho/haw'. Should have at least had an Other option"
+            "I forgot to include 'ho/haw' and didn't know about 'hawd\u014dl(e)'. Should have at least included an Other option"
         ],
         "headline": "'these'",
         "insights": [[
@@ -1466,7 +1481,7 @@
         "number": 30,
         "question": "Which sound like the most-natural ways to say \"next to you\" and \"underneath you\"?",
         "flaws": [
-            "Two words isn't really enough to go off of"
+            "Two words isn't really enough to show a pattern"
         ],
         "headline": "prepositions construed with 'min' \u0645\u0646",
         "insights": [[
@@ -1631,7 +1646,9 @@
     {
         "number": 33,
         "question": "Your mom's forgotten to tell you about something important. How do you tell her that she could have let you know?",
-        "flaws": [],
+        "flaws": [
+            "Two questions in one; the '2iiliil-' subquestion doesn't have a complete set of answers as a result"
+        ],
         "headline": "'you could have told me!'",
         "insights": [
             [
@@ -1766,7 +1783,7 @@
         "number": 37,
         "question": "Which ways of saying \"no more\"/\"no longer\" sound natural to you?",
         "flaws": [
-            "Really awkward shoehorning of 'b3ish', should have just done it in a different question"
+            "Really awkward shoehorning-in of 'b3ish', should have just done it in a different question"
         ],
         "headline": "'no more'/'no longer'",
         "insights": [[
@@ -1801,7 +1818,7 @@
         "number": 38,
         "question": "How would you say \"let's head out\"?",
         "flaws": [
-            "I forgot to include 'het ta-', which may have unfairly skewed results away from 'het la-'"
+            "I forgot to include 'h\u0113t ta-', which may have unfairly skewed results away from 'h\u0113t la-'"
         ],
         "headline": "'let's...'",
         "insights": [[
@@ -1941,7 +1958,7 @@
         "number": 43,
         "question": "How do you say \"spoon\"?",
         "flaws": [
-            "Thank goodness I included an 'other' option in the question. Had no idea there was this much variation, the only two multiple-choice options I gave were mal32a and ma3l2a"
+            "Thank goodness I included an 'other' option in the question. Had no idea there was this much variation. The only two multiple-choice options I initially gave were mal32a and ma3l2a"
         ],
         "headline": "spoon",
         "insights": [
