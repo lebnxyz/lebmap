@@ -67,7 +67,7 @@
           <list :selection="optionValues" iterKey="number" v-slot="{item: option}"
             :arrows="false"
             :highlight-items="true"
-            @item-clicked="showRespondents"
+            @item-clicked="optionClicked"
           >
             <i>{{option.value}}</i><template v-if="option.indicates.length > 0">. This answer indicates:</template>
             <div v-for="item in option.indicates" :key="item"
@@ -91,14 +91,24 @@ export default {
     List
   },
   props: {
-    questionValues: Array
+    questionValues: Array,
+    optionClickedFunc: {
+      type: Function,
+      default: () => {}
+    },
+    clearStateFunc: {
+      type: Function,
+      default: () => {}
+    }
   },
   data() {
     return {
       clicked: false,
       subClicked: false,
       qInfo: null,
-      answerInfo: null
+      answerInfo: null,
+      optionClicked: this.optionClickedFunc.bind(this),
+      clearState: this.clearStateFunc.bind(this)
     };
   },
   computed: {
@@ -127,6 +137,9 @@ export default {
       }
     }
   },
+  mounted() {
+    this.clearState();
+  },
   methods: {
     viewQuestion(question) {
       this.clicked = true;
@@ -139,18 +152,15 @@ export default {
       this.subClicked = true;
       this.answerInfo = answer;
     },
-    showRespondents(option, event) {
-      this.$emit('show-respondents', option.answeredBy);
-    },
     backToQuestions() {
-      this.$emit('show-respondents', []);  // clear highlighted pins
+      this.clearState();
       this.clicked = false;
       this.subClicked = false;
       this.qInfo = null;
       this.answerInfo = null;
     },
     backToQuestionInfo() {
-      this.$emit('show-respondents', []);  // clear highlighted pins
+      this.clearState();
       this.subClicked = false;
       this.answerInfo = null;
     }

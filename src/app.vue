@@ -44,6 +44,8 @@
       <tabs id="info" class="info-tabs">
         <tab title="Questions">
           <question-list :questionValues="$root.questionValues"
+            :option-clicked-func="function(option) { this.$emit('show-respondents', option.answeredBy); }"
+            :clear-state-func="function() { this.$emit('show-respondents', []) }"
             @show-respondents="showRespondents"
             @show-chart="showChart"
             @remove-chart="removeChart"
