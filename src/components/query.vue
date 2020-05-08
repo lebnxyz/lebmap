@@ -2,7 +2,7 @@
   <div class="fullwidth">
     <div class="fullwidth flex-container vertical">
       <form class="fullwidth flex-container vertical" @submit.prevent="queryRespondents">
-        <input type="text" v-model="query">
+        <input id="query" type="text" v-model="query">
         <button type="submit">Search</button>
       </form>
     </div>
@@ -45,7 +45,12 @@ export default {
       this.query += `${answerID}:${optionNo}`;
     },
     add(char) {
-      this.query += char;
+      const {selectionStart, selectionEnd} = document.getElementById('query');
+      this.query = [
+        this.query.substring(0, selectionStart).trim(),
+        char,
+        this.query.substring(selectionEnd).trim()
+      ].join('').trim();
     }
   }
 }
