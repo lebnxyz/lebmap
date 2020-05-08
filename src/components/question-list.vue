@@ -2,6 +2,7 @@
   <div>
     <template v-if="!clicked">
       <list :selection="questionValues" iterKey="number" v-slot="{item: question}"
+        :show-indices="showIndices"
         @item-clicked="viewQuestion"
       >
         {{question.headline}}
@@ -23,6 +24,7 @@
           <dt>Environments</dt>
           <dd>
             <list :selection="answerValues" iterKey="number" v-slot="{item: answer}"
+              :show-indices="showIndices"
               @item-clicked="viewAnswer"
             >
               {{answer.environment}}
@@ -33,6 +35,7 @@
           <dt>Options</dt>
           <dd>
             <list :selection="optionValues" iterKey="number" v-slot="{item: option}"
+              :show-indices="showIndices"
               :arrows="false"
               :highlight-items="true"
               @item-clicked="showRespondents"
@@ -65,6 +68,7 @@
         <dt>Options</dt>
         <dd>
           <list :selection="optionValues" iterKey="number" v-slot="{item: option}"
+            :show-indices="showIndices"
             :arrows="false"
             :highlight-items="true"
             @item-clicked="optionClicked"
@@ -92,6 +96,7 @@ export default {
   },
   props: {
     questionValues: Array,
+    showIndices: Boolean,
     optionClickedFunc: {
       type: Function,
       default: () => {}
@@ -131,9 +136,9 @@ export default {
   watch: {
     optionsShowing(value, old) {
       if (value) {
-        this.$emit('show-chart', this.answerInfo);
+        this.$emit('show-options', this.answerInfo);
       } else {
-        this.$emit('remove-chart');
+        this.$emit('remove-options');
       }
     }
   },

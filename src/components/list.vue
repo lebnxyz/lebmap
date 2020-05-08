@@ -5,7 +5,7 @@
       :data-list-idx="index"
       @click="click(item, index)"
     >
-      <slot v-bind:item="item"></slot>
+      <span class="index">{{showIndices ? `${index} ` : ''}}</span><slot v-bind:item="item"></slot>
     </list-item>
   </div>
 </template>
@@ -23,6 +23,7 @@ export default {
     selection: Array,
     iterKey: String,
     highlightItems: Boolean,
+    showIndices: Boolean,
     arrows: {
       type: Boolean,
       default: true
@@ -48,5 +49,9 @@ export default {
 <style scoped>
 div {
   color: white;
+}
+
+.index {
+  opacity: 55%;
 }
 </style>

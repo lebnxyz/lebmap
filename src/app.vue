@@ -47,15 +47,12 @@
             :option-clicked-func="function(option) { this.$emit('show-respondents', option.answeredBy); }"
             :clear-state-func="function() { this.$emit('show-respondents', []) }"
             @show-respondents="showRespondents"
-            @show-chart="showChart"
-            @remove-chart="removeChart"
+            @show-options="showChart"
+            @remove-options="removeChart"
           ></question-list>
         </tab>
         <tab title="Query">
-          <form @submit.prevent="queryRespondents">
-            <input type="text" v-model="query">
-            <button type="submit">Search</button>
-          </form>
+          <query @query-respondents="queryRespondents"></query>
         </tab>
         <tab title="Answers">
           <list :selection="selectionValues" iterKey="name" v-slot="{item: place}"
@@ -74,8 +71,9 @@
 import DummyRegion from './components/dummy-region.vue';
 import Region from './components/region.vue';
 import List from './components/list.vue';
-import QuestionList from './components/question-list.vue'
-import Chart from './components/chart.vue'
+import QuestionList from './components/question-list.vue';
+import Chart from './components/chart.vue';
+import Query from './components/query.vue';
 
 import { geoMercator, geoPath, geoMercatorRaw } from 'd3';
 import * as utils from './modules/utils.js';
@@ -90,7 +88,8 @@ export default {
     Region,
     List,
     QuestionList,
-    Chart
+    Chart,
+    Query
   },
   data() {
     const regionPaths = [];
@@ -110,7 +109,6 @@ export default {
       selection: {},
       nSelected: 0,
       highlightedPlaces: new Set(),
-      query: ''
     }
   },
   computed: {
@@ -211,18 +209,18 @@ export default {
     removeChart() {
       this.chartInfo = null;
     },
-    queryRespondents() {
+    queryRespondents(query) {
       const selectedPlaces = Object.keys(this.selection).filter(i => this.selection[i]);
       const respondents = this.$root.respondentQuery(
         `SEARCH
           / AS @user
-          answers WHERE(${compileQuery(this.query)})
+          answers WHERE(${compileQuery(query)})
           RETURN (@user->number AS uid, @user->location AS location)
         FROM $0`
       );
       this.showRespondents(respondents.map(o => o.uid));
       this.chartInfo = {
-        labels: ['yes', 'no'],
+        labels: ['correlation', 'anti-correlation'],
         data: selectedPlaces => {
           if (selectedPlaces.length === 0) {
             const hits = respondents.length;
