@@ -38,7 +38,7 @@
               :show-indices="showIndices"
               :arrows="false"
               :highlight-items="true"
-              @item-clicked="showRespondents"
+              @item-clicked="optionClicked"
             >
               <i>{{option.value}}</i><template v-if="option.indicates.length > 0">. This answer indicates:</template>
               <div v-for="item in option.indicates" :key="item"
