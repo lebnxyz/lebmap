@@ -42,7 +42,7 @@ export default {
       this.$emit('query-respondents', this.query);
     },
     addQuestion({number: answerID}, {number: optionNo}) {
-      this.query += `${answerID}:${optionNo}`;
+      this.add(` ${answerID}:${optionNo} `);
     },
     add(char) {
       const {selectionStart, selectionEnd} = document.getElementById('query');
