@@ -7,6 +7,7 @@
         @submit.prevent="queryRespondents"
       >
         <input
+          autofocus
           id="query"
           type="text"
           placeholder="Search for..."
