@@ -203,7 +203,7 @@ export default {
               this.$root.respondentQuery,
               {unflatten: Object.keys(answerInfo.options).length},
               // temporary dumb hack
-              x => x.reduce((a, e, i) => { e.forEach(ee => {if (ee) a.push({result: i}); }); return a; }, [])
+              x => x.reduce((a, e) => { e.forEach((ee, i) => {if (ee) a.push({result: i}); }); return a; }, [])
             ).unflatten;
           }
         }

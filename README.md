@@ -17,7 +17,7 @@ answer to a question.
 
 The *Answers* tab currently does nothing, although you can at least use it to check the names of the regions you've selected.
 
-The *Query* tab is a little bit more advanced, but also very powerful. It lets you search for specific combinations of answers
+The *Query* tab is a little bit more advanced, but also more powerful. It lets you search for specific combinations of answers
 to see how many people in your selected region of the map chose the answers you're looking for. For example, let's say our survey
 looks like this:
 
