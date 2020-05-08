@@ -57,7 +57,7 @@ export default {
     return {
       query: '',
       outOf: '',
-      current: null
+      current: 'query'
     };
   },
   methods: {
