@@ -18,6 +18,7 @@
     <question-list :questionValues="$root.questionValues"
         :option-clicked-func="function(option) { this.$emit('add-question', this.answerInfo, option); }"
         :show-indices="true"
+        @clear-state="$emit('clear-state')"
         @add-question="addQuestion"
     ></question-list>
   </div>

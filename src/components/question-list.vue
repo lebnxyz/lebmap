@@ -103,7 +103,7 @@ export default {
     },
     clearStateFunc: {
       type: Function,
-      default: () => {}
+      default: function() { this.$emit('clear-state'); }
     }
   },
   data() {

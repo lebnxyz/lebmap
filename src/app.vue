@@ -45,14 +45,17 @@
         <tab title="Questions">
           <question-list :questionValues="$root.questionValues"
             :option-clicked-func="function(option) { this.$emit('show-respondents', option.answeredBy); }"
-            :clear-state-func="function() { this.$emit('show-respondents', []) }"
+            @clear-state="clearState"
             @show-respondents="showRespondents"
             @show-options="showChart"
             @remove-options="removeChart"
           ></question-list>
         </tab>
         <tab title="Query">
-          <query @query-respondents="queryRespondents"></query>
+          <query
+            @query-respondents="queryRespondents"
+            @clear-state="clearState"
+          ></query>
         </tab>
         <tab title="Answers">
           <list :selection="selectionValues" iterKey="name" v-slot="{item: place}"
@@ -208,6 +211,10 @@ export default {
     },
     removeChart() {
       this.chartInfo = null;
+    },
+    clearState() {
+      this.showRespondents([]);
+      this.removeChart();
     },
     queryRespondents(query) {
       const selectedPlaces = Object.keys(this.selection).filter(i => this.selection[i]);
