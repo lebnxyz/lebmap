@@ -1,7 +1,7 @@
 // SEARCH / AS @user answers ${questionNumber} /WHERE(num = ${optionNumber}) RETURN (@user->location AS result) FROM $0
 
 function tokenize(query) {
-  return query.match(/(\d+(?:\.\d+)?:\d+|[()&|!*=])/g);
+  return query.match(/(\d+(?:\.\d+)?(?:\d+|\*)|[()&|!=])/g);
 }
 
 export function compile(query) {
@@ -17,9 +17,12 @@ export function compile(query) {
       case ')':
       case '=':
         return token;
-      case '*':
-        return '= -1';
       default:
+        // hacc
+        if (token.includes('*')) {
+          const question = token.match(/(\d+(?:\.\d+)?):\*/)[1];
+          return `-1 IN ${question}`;
+        }
         const [question, option] = token.match(/(\d+(?:\.\d+)?):(\d+)/).slice(1);
         return `[${question}]->${option}`;
     }
