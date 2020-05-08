@@ -1,23 +1,43 @@
 <template>
   <div class="fullwidth">
     <div class="fullwidth flex-container vertical">
-      <form class="fullwidth flex-container vertical" @submit.prevent="queryRespondents">
-        <input id="query" type="text" v-model="query">
+      <form
+        class="fullwidth flex-container vertical"
+        autocomplete="off"
+        @submit.prevent="queryRespondents"
+      >
+        <input
+          id="query"
+          type="text"
+          placeholder="Search for..."
+          v-model="query"
+          @focus="current = 'query'"
+        >
+        <span>/</span>
+        <input
+          id="outOf"
+          type="text"
+          placeholder="Out of..."
+          v-model="outOf"
+          @focus="current = 'outOf'"
+        >
         <button type="submit">Search</button>
       </form>
     </div>
-    <div class="flex-container vertical">
+    <div class="flex-container vertical space-bottom">
       <div>
         <button type="button" @click="add(' & ')">AND</button>
         <button type="button" @click="add(' | ')">OR</button>
         <button type="button" @click="add(' !')">NOT</button>
+        <button type="button" @click="add(' = ')">EQUALS</button>
         <button type="button" @click="add(' (')">(</button>
         <button type="button" @click="add(') ')">)</button>
       </div>
     </div>
-    <question-list :questionValues="$root.questionValues"
+    <question-list ref="ql" :questionValues="$root.questionValues"
         :option-clicked-func="function(option) { this.$emit('add-question', this.answerInfo, option); }"
         :show-indices="true"
+        :highlight-items="false"
         @clear-state="$emit('clear-state')"
         @add-question="addQuestion"
     ></question-list>
@@ -34,23 +54,40 @@ export default {
   },
   data() {
     return {
-      query: ''
+      query: '',
+      outOf: '',
+      current: null
     };
   },
   methods: {
+    getCurrent() {
+      return this[this.current];
+    },
+    setCurrent(value) {
+      this[this.current] = value;
+    },
     queryRespondents() {
-      this.$emit('query-respondents', this.query);
+      this.$refs.ql.backToQuestions();
+      this.$emit('query-respondents', this.query, this.outOf.length ? this.outOf : null);
     },
     addQuestion({number: answerID}, {number: optionNo}) {
       this.add(` ${answerID}:${optionNo} `);
     },
     add(char) {
-      const {selectionStart, selectionEnd} = document.getElementById('query');
-      this.query = [
-        this.query.substring(0, selectionStart).trim(),
-        char,
-        this.query.substring(selectionEnd).trim()
-      ].join('').trim();
+      if (this.current === null) {
+        return;
+      }
+      const currentEl = document.getElementById(this.current);
+      if (currentEl.value === '') {
+        this.setCurrent(char.trim());
+        currentEl.selectionStart = currentEl.selectionEnd = currentEl.value.length;
+      } else {
+        this.setCurrent([
+          this.getCurrent().substring(0, currentEl.selectionStart).trim(),
+          char,
+          this.getCurrent().substring(currentEl.selectionEnd).trim()
+        ].join('').trim());
+      }
     }
   }
 }
@@ -70,16 +107,17 @@ export default {
 }
 
 .flex-container {
-  padding-bottom: 1em;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
+.space-bottom {
+  margin-bottom: 2em;
+}
+
 form {
-  padding: 1em;
-  padding-bottom: 0;
-  margin-bottom: 0;
+  margin: 1em;
 }
 
 button {
@@ -105,18 +143,32 @@ button:hover {
 form button {
   flex: 1;
   padding: 1em;
-  margin-right: 1em;
+  margin: 1em;
+  margin-top: 0;
 }
 
 form input {
   font-family: 'Montserrat', sans-serif;
   font-size: medium;
   font-weight: 600;
-  flex: 7;
-  padding: 1em;
+  flex: 2;
+  min-width: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: .5em;
+  padding-right: .5em;
   border-radius: 10px;
   box-shadow: none;
   border: 0;
   background-color: white;
+}
+
+form span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: large;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin: 1em;
 }
 </style>

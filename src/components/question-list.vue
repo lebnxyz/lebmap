@@ -37,7 +37,7 @@
             <list :selection="optionValues" iterKey="number" v-slot="{item: option}"
               :show-indices="showIndices"
               :arrows="false"
-              :highlight-items="true"
+              :highlight-items="highlightItems"
               @item-clicked="optionClicked"
             >
               <i>{{option.value}}</i><template v-if="option.indicates.length > 0">. This answer indicates:</template>
@@ -70,7 +70,7 @@
           <list :selection="optionValues" iterKey="number" v-slot="{item: option}"
             :show-indices="showIndices"
             :arrows="false"
-            :highlight-items="true"
+            :highlight-items="highlightItems"
             @item-clicked="optionClicked"
           >
             <i>{{option.value}}</i><template v-if="option.indicates.length > 0">. This answer indicates:</template>
@@ -97,6 +97,10 @@ export default {
   props: {
     questionValues: Array,
     showIndices: Boolean,
+    highlightItems: {
+      type: Boolean,
+      default: true
+    },
     optionClickedFunc: {
       type: Function,
       default: () => {}

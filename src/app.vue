@@ -216,7 +216,7 @@ export default {
       this.showRespondents([]);
       this.removeChart();
     },
-    queryRespondents(query) {
+    queryRespondents(query, outOf) {
       const selectedPlaces = Object.keys(this.selection).filter(i => this.selection[i]);
       const respondents = this.$root.respondentQuery(
         `SEARCH
@@ -227,14 +227,24 @@ export default {
       );
       this.showRespondents(respondents.map(o => o.uid));
       this.chartInfo = {
-        labels: ['correlation', 'anti-correlation'],
+        labels: ['matches', 'non-matches'],
         data: selectedPlaces => {
+          let basePopulation = this.$root.respondents;
+          if (outOf !== null) {
+            basePopulation = this.$root.respondentQuery(
+              `SEARCH
+                / AS @user
+                answers WHERE(${compileQuery(outOf)})
+                RETURN (@user->location AS location)
+              FROM $0`
+            );
+          }
           if (selectedPlaces.length === 0) {
             const hits = respondents.length;
-            return [hits, this.$root.respondents.length - hits];
+            return [hits, basePopulation.length - hits];
           } else {
             const hits = respondents.filter(o => selectedPlaces.includes(o.location)).length;
-            return [hits, this.$root.respondents.filter(o => selectedPlaces.includes(o.location)).length - hits];
+            return [hits, basePopulation.filter(o => selectedPlaces.includes(o.location)).length - hits];
           }
         }
       };

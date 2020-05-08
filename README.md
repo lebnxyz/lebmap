@@ -54,6 +54,7 @@ about the amount of those people that can't go to sleep at night, I could use th
 
 For convenience, you can use the list of questions below the textbox to have the question codes inputted automatically, and
 you can add operators using the buttons below the textbox. The full syntax spec for querying is as follows:
+- `option = option`: Find respondents who either picked both of the two options or neither.
 - `option & option`: Find respondents who picked both options.
 - `option | option`: Find respondents who picked either one option or the other.
 - `!option`: Find respondents who did not pick this option.
