@@ -129,7 +129,7 @@
     },
     {
         "number": 1, "question": "Similarly, how do you pronounce the \u064a at the end of these words?",
-        "headline": "Word-final yaa2 \u064a",
+        "headline": "Word-final yaa \u064a",
         "flaws": [],
         "answers": {
             "0": {
@@ -249,9 +249,7 @@
     {
         "number": 2, "question": "How do you pronounce the \u0648 sound at the end of these words? Closer to \"o\" or to \"u\"?",
         "headline": "Word-final round vowel",
-        "flaws": [
-            "It's probably super easy for a speaker to hear themselves 'wrong' here"
-        ],
+        "flaws": [],
         "answers": {
             "0": {
                 "number": "2.0",
@@ -776,8 +774,10 @@
     },
     {
         "number": 4, "question": "Try saying these words. Do you pronounce the first vowel as a damme (o/u) or a kasra (e/i)?",
-        "headline": "Kasra vs. damma",
-        "flaws": [],
+        "headline": "Kasra vs. damme",
+        "flaws": [
+            "Some people say lighha \u0644\u0650\u063a\u0651\u0629 and that wasn't accounted for, which may have skewed the results"
+        ],
         "answers": {
             "0": {
                 "number": "4.0",
@@ -1113,7 +1113,7 @@
     },
     {
         "number": 6, "question": "How do you pronounce the word \u0633\u0627\u0626\u0644\u0629 (she has asked) in the following forms?",
-        "headline": "Suffixed form, 3rd-person feminine participle",
+        "headline": "Suffixed form of 3rd-person feminine participle",
         "flaws": [],
         "answers": {
             "0": {
@@ -1231,7 +1231,7 @@
     },
     {
         "number": 7, "question": "Do you distinguish \"you(female) have asked him\" from \"she's asked him\"?",
-        "headline": "Suffixed form, 2nd- vs. 3rd-person feminine participle",
+        "headline": "Suffixed form of 2nd- vs. 3rd-person feminine participle",
         "flaws": [
             "I didn't include a question asking what the 'N/A' folks say instead",
             "A lot of people answered N/A. That either means that there's miscommunication regarding what 'has done' means in English or that the actual Lebanese construction differs in meaning from person to person"
@@ -1670,7 +1670,7 @@
     },
     {
         "number": 10, "question": "Here are some words that are \"3ala wazn\" \u064a\u0646\u0641\u0639\u0644. How do you tend to pronounce them?",
-        "headline": "Imperfective 'infa3al' \u0627\u0646\u0641\u0639\u0644",
+        "headline": "Non-past pronunciation of 'nfa3al' \u0627\u0646\u0641\u0639\u0644",
         "flaws": [
             "I didn't include another 'productive' passive verb to accompany ynsm3, which would have helped greatly. As is, this data doesn't at all show if ynsm3 is unique among productive ynf3l passives in being predominantly pronounced yen-SA-ma3",
             "I only used the \u064a\u0646\u0644\u0642\u0649 Arabic spelling of 'to be found' rather than writing \u064a\u0646\u0644\u0642\u0649/\u064a\u0646\u0644\u0642\u064a, which *may* have influenced people not to choose the '-el' pronunciations. Hopefully not",
@@ -2176,7 +2176,7 @@
     },
     {
         "number": 15, "question": "How do you pronounce \u0628\u064a\u062a (house) in the following words?",
-        "headline": "Historic /aj/ \u0640\u064e\u064a\u0652\u0640 diphthong",
+        "headline": "Diphthong /aj/ \u0640\u064e\u064a\u0652\u0640",
         "flaws": [
             "Should have asked about /aw/ as well",
             "Didn't include /ej/ 'ey', which is an existent pronunciation distinct from /aj/ 'ay'"
@@ -2770,7 +2770,7 @@
     },
     {
         "number": 19, "question": "How do you pronounce the \"\u0628\u062a\" syllable in the following words?",
-        "headline": "Final vowel of 3sg.f past verbs (fa3alat \u0641\u0639\u0644\u062a)",
+        "headline": "Final vowel of 3sg.f past verbs (\u0647\u064a \u0643\u062a\u0628\u062a)",
         "flaws": [],
         "answers": {
             "0": {
@@ -2889,7 +2889,7 @@
     },
     {
         "number": 20, "question": "How do you pronounce \"she wrote\" on its own?",
-        "headline": "3sg.f past verbs (fa3alat \u0641\u0639\u0644\u062a)",
+        "headline": "3sg.f past verbs (\u0647\u064a \u0643\u062a\u0628\u062a)",
         "flaws": [
             "The 'bit' options were added later... but then that distinction wasn't the point of the question, so I could even have just done 'bet/bit'",
             "There was no distinct -bat option; respondents had to just pick one with the right syllable count and choose '-bat' above"
@@ -2979,7 +2979,7 @@
     },
     {
         "number": 21, "question": "How do you pronounce \"I wrote\"?",
-        "headline": "1sg past verbs (fa3altu \u0641\u0639\u0644\u062a)",
+        "headline": "1sg past verbs (\u0623\u0646\u0627 \u0643\u062a\u0628\u062a)",
         "flaws": [
             "Again: 'bit' options were added later, but that distinction wasn't what the question was looking for anyway"
         ],
@@ -3068,7 +3068,7 @@
     },
     {
         "number": 22, "question": "Which do you use for the meaning of \"in order to\"?",
-        "headline": "'In order to'",
+        "headline": "La vs. ta for 'in order to'",
         "flaws": [],
         "answers": {
             "0": {
@@ -3099,7 +3099,7 @@
     },
     {
         "number": 23, "question": "Besides those two, which of these other words would you use to say \"I went to the store IN ORDER TO buy some tomatoes?\"",
-        "headline": "'In order to'",
+        "headline": "Other words for 'in order to'",
         "flaws": [
             "I unknowingly assumed the 'nothing' structure was universal and didn't need asking about, but I probably should've included it. One person gave it as an 'other' response",
             "Didn't account for stacking as in 'menshen ta'"
@@ -3324,7 +3324,7 @@
         "number": 26, "question": "Which of these sounds most like something you'd say?",
         "headline": "'S\u0101r + l-' (\u0635\u0627\u0631 + \u0644\u0640 = \u0635\u0631\u0644\u0640)",
         "flaws": [
-            "I forgot about assimilation of the /r/ into the /l/ as in Sallak"
+            "I forgot about Sallak, with assimilation of the /r/ into the /l/!"
         ],
         "answers": {
             "0": {
@@ -3390,7 +3390,7 @@
         "number": 27, "question": "How do you say \"here he is\"?",
         "headline": "'Here it is!'",
         "flaws": [
-            "There are SO MANY others, I should have included an 'other' option... missed out on 'a7ay/a7aw', 'layko', 'a7ouka', 'sha7uwwe', etc."
+            "There are SO MANY, I should have included an 'other' option... missed out on 'a7ay/a7aw', 'layko', 'a7ouka', 'sha7uwwe', etc."
         ],
         "answers": {
             "0": {
@@ -3580,7 +3580,7 @@
     },
     {
         "number": 31, "question": "How do you pronounce \u062c\u0627\u064a/\u062c\u0627\u064a\u064a (\"coming\", masculine)?",
-        "headline": "'Coming' (fus7a jaa2in \u062c\u0627\u0621\u064d)",
+        "headline": "'Coming' (equivalent of fus7a jaa2in \u062c\u0627\u0621\u064d)",
         "flaws": [],
         "answers": {
             "0": {

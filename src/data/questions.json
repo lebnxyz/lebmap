@@ -71,7 +71,7 @@
         "number": 1,
         "question": "Similarly, how do you pronounce the \u064a at the end of these words?",
         "flaws": [],
-        "headline": "word-final yaa2 \u064a",
+        "headline": "word-final yaa \u064a",
         "insights": [[
             "tense/high (/i/)",
             "lax/mid (/e/)"
@@ -275,7 +275,7 @@
         "flaws": [
             "Some people say lighha \u0644\u0650\u063a\u0651\u0629 and that wasn't accounted for, which may have skewed the results"
         ],
-        "headline": "kasra vs. damma",
+        "headline": "kasra vs. damme",
         "insights": [[
             "rounded (damma)",
             "unrounded (kasra)",
@@ -393,7 +393,7 @@
         "number": 6,
         "question": "How do you pronounce the word \u0633\u0627\u0626\u0644\u0629 (she has asked) in the following forms?",
         "flaws": [],
-        "headline": "suffixed form, 3rd-person feminine participle",
+        "headline": "suffixed form of 3rd-person feminine participle",
         "insights": [[
             "cluster-final 'iCt-' ending",
             "'Cit-' ending, with short i",
@@ -449,7 +449,7 @@
             "I didn't include a question asking what the 'N/A' folks say instead",
             "A lot of people answered N/A. That either means that there's miscommunication regarding what 'has done' means in English or that the actual Lebanese construction differs in meaning from person to person"
         ],
-        "headline": "suffixed form, 2nd- vs. 3rd-person feminine participle",
+        "headline": "suffixed form of 2nd- vs. 3rd-person feminine participle",
         "insights": [[
             "distinction between the two",
             "leveling (no distinction)",
@@ -590,7 +590,7 @@
             "I only used the \u064a\u0646\u0644\u0642\u0649 Arabic spelling of 'to be found' rather than writing \u064a\u0646\u0644\u0642\u0649/\u064a\u0646\u0644\u0642\u064a, which *may* have influenced people not to choose the '-el' pronunciations. Hopefully not",
             "I didn't understand yet that YE-nef-3el and YENF-3el are the same thing"
         ],
-        "headline": "imperfective 'infa3al' \u0627\u0646\u0641\u0639\u0644",
+        "headline": "non-past pronunciation of 'nfa3al' \u0627\u0646\u0641\u0639\u0644",
         "insights": [[
             "preservation of original stress",
             "preservation of original voweling",
@@ -822,7 +822,7 @@
             "Should have asked about /aw/ as well",
             "Didn't include /ej/ 'ey', which is an existent pronunciation distinct from /aj/ 'ay'"
         ],
-        "headline": "historic /aj/ \u0640\u064e\u064a\u0652\u0640 diphthong",
+        "headline": "diphthong /aj/ \u0640\u064e\u064a\u0652\u0640",
         "insights": [[
             "preserved",
             "collapsed into monophthong",
@@ -1058,7 +1058,7 @@
         "number": 19,
         "question": "How do you pronounce the \"\u0628\u062a\" syllable in the following words?",
         "flaws": [],
-        "headline": "final vowel of 3sg.f past verbs (fa3alat \u0641\u0639\u0644\u062a)",
+        "headline": "final vowel of 3sg.f past verbs (\u0647\u064a \u0643\u062a\u0628\u062a)",
         "insights": [[
             "preserved as /a/",
             "raised to kasra /i/"
@@ -1118,7 +1118,7 @@
             "The 'bit' options were added later... but then that distinction wasn't the point of the question, so I could even have just done 'bet/bit'",
             "There was no distinct -bat option; respondents had to just pick one with the right syllable count and choose '-bat' above"
         ],
-        "headline": "3sg.f past verbs (fa3alat \u0641\u0639\u0644\u062a)",
+        "headline": "3sg.f past verbs (\u0647\u064a \u0643\u062a\u0628\u062a)",
         "insights": [
             [
                 "deletion of unstressed medial /a/",
@@ -1170,7 +1170,7 @@
         "flaws": [
             "Again: 'bit' options were added later, but that distinction wasn't what the question was looking for anyway"
         ],
-        "headline": "1sg past verbs (fa3altu \u0641\u0639\u0644\u062a)",
+        "headline": "1sg past verbs (\u0623\u0646\u0627 \u0643\u062a\u0628\u062a)",
         "insights": [
             [
                 "deletion of unstressed initial /a/",
@@ -1221,7 +1221,7 @@
         "number": 22,
         "question": "Which do you use for the meaning of \"in order to\"?",
         "flaws": [],
-        "headline": "'in order to'",
+        "headline": "la vs. ta for 'in order to'",
         "insights": [[]],
         "options": {
             "la-": 0,
@@ -1245,7 +1245,7 @@
             "I unknowingly assumed the 'nothing' structure was universal and didn't need asking about, but I probably should've included it. One person gave it as an 'other' response",
             "Didn't account for stacking as in 'menshen ta'"
         ],
-        "headline": "'in order to'",
+        "headline": "other words for 'in order to'",
         "insights": [[
             "semantic broadening of kermel",
             "use of 7atta rather than, or for the same thing as, la7attelete/ta7attele",
@@ -1348,7 +1348,7 @@
         "number": 26,
         "question": "Which of these sounds most like something you'd say?",
         "flaws": [
-            "I forgot about assimilation of the /r/ into the /l/ as in Sallak"
+            "I forgot about Sallak, with assimilation of the /r/ into the /l/!"
         ],
         "headline": "'S\u0101r + l-' (\u0635\u0627\u0631 + \u0644\u0640 = \u0635\u0631\u0644\u0640)",
         "insights": [
@@ -1392,7 +1392,7 @@
         "number": 27,
         "question": "How do you say \"here he is\"?",
         "flaws": [
-            "There are SO MANY others, I should have included an 'other' option... missed out on 'a7ay/a7aw', 'layko', 'a7ouka', 'sha7uwwe', etc."
+            "There are SO MANY, I should have included an 'other' option... missed out on 'a7ay/a7aw', 'layko', 'a7ouka', 'sha7uwwe', etc."
         ],
         "headline": "'here it is!'",
         "insights": [[
@@ -1512,7 +1512,7 @@
         "number": 31,
         "question": "How do you pronounce \u062c\u0627\u064a/\u062c\u0627\u064a\u064a (\"coming\", masculine)?",
         "flaws": [],
-        "headline": "'coming' (fus7a jaa2in \u062c\u0627\u0621\u064d)",
+        "headline": "'coming' (equivalent of fus7a jaa2in \u062c\u0627\u0621\u064d)",
         "insights": [[]],
         "options": {
             "je": 0,
