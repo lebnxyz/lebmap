@@ -237,12 +237,14 @@ def do_compilation(csv_path='results-normalized.csv', json_path='src/data/questi
     print('\n:)')
 
 
-def do_special_cases(json_questions_path='src/data/question_answers.json', json_users_path='src/data/respondents.json'):
+def do_special_cases(json_questions_path='src/data/question_answers.json', json_users_path='src/data/respondents.json', original_json_questions_path='src/data/questions.json'):
     '''assumed to be run after do_compilation()'''
     with open(json_users_path, encoding='utf-8') as user_f, \
+     open(original_json_questions_path, encoding='utf-8') as oq_f, \
      open(json_questions_path, encoding='utf-8') as q_f:
         userj = json.load(user_f)
         qj = json.load(q_f)
+        reference = json.load(oq_f)
         for user in userj:
             user_answers = user['answers']
             user_id = user['number']
@@ -265,13 +267,27 @@ def do_special_cases(json_questions_path='src/data/question_answers.json', json_
                   orig_19[1] and orig_20[2],
                   any(orig_20[4:6]),
                   orig_19[1] and orig_20[5],
-                  orig_19[1] and orig_20[6]
+                  orig_19[1] and orig_20[6],
                 ]
                 for (i, new_val) in enumerate(user_answers['20']):
-                    option = qj[20]['answers']['0']['options'].get(i, {}).get(str(i), [user_id])
-                    option.remove(user_id)
+                    try:
+                        option = qj[20]['answers']['0']['options'][str(i)]
+                    except KeyError:
+                        j_question = reference[20]
+                        option = {
+                          "number": i, "value": j_question['optionsList'][i],
+                          "answeredBy": [],
+                          "indicates": [
+                              j_question['insights'][primary][secondary]
+                              for primary, primary_li in enumerate(j_question['optionsIndicate'][i])
+                              for secondary in primary_li
+                            ]
+                        }
+                        qj[20]['answers']['0']['options'][str(i)] = option
+                    if user_id in option['answeredBy']:
+                        option['answeredBy'].remove(user_id)
                     if new_val:
-                        option.append(user_id)
+                        option['answeredBy'].append(user_id)
             '''
             take care of the fact that "N/A, I'd never say 3am here" should XOR with the other '3amma'
             options in question 16

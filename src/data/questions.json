@@ -127,9 +127,7 @@
     {
         "number": 2,
         "question": "How do you pronounce the \u0648 sound at the end of these words? Closer to \"o\" or to \"u\"?",
-        "flaws": [
-            "It's probably super easy for a speaker to hear themselves 'wrong' here"
-        ],
+        "flaws": [],
         "headline": "word-final round vowel",
         "insights": [[
             "tense/high damma (/u/)",
@@ -274,7 +272,9 @@
     {
         "number": 4,
         "question": "Try saying these words. Do you pronounce the first vowel as a damme (o/u) or a kasra (e/i)?",
-        "flaws": [],
+        "flaws": [
+            "Some people say lighha \u0644\u0650\u063a\u0651\u0629 and that wasn't accounted for, which may have skewed the results"
+        ],
         "headline": "kasra vs. damma",
         "insights": [[
             "rounded (damma)",

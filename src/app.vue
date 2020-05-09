@@ -188,8 +188,9 @@ export default {
     },
     showChart(answerInfo) {
       const options = Object.values(answerInfo.options);
+      const numOptions = 1 + Math.max(...Object.values(options).map(o => o.number));
       this.chartInfo = {
-        labels: options.map(o => o.value),
+        labels: Array.from({length: numOptions}, (v, i) => options[i] === undefined ? '' : options[i].value),
         data: selectedPlaces => {
           if (selectedPlaces.length === 0) {
             return options.map(o => o.answeredBy.length);
@@ -201,7 +202,7 @@ export default {
                 answers->[${answerInfo.number}]
               FROM $0`,
               this.$root.respondentQuery,
-              {unflatten: Object.keys(answerInfo.options).length},
+              {unflatten: numOptions},
               // temporary dumb hack
               x => x.reduce((a, e) => { e.forEach((ee, i) => {if (ee) a.push({result: i}); }); return a; }, [])
             ).unflatten;

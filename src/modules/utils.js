@@ -29,6 +29,7 @@ export class Query extends Function {
 
 
 function unflatten(results, optionLength) {
+  console.log(optionLength);
   const o = Object.fromEntries(results.map(o => [o.result, o.count]));
   return Array.from(
     {length: optionLength},
@@ -53,10 +54,14 @@ export function searchAndGroupBy(query, queryObj, transform, post) {
   } else {
     res = alasql(query, queryObj);
   }
+  console.log(query);
+  console.log('pre', res);
   if (post !== undefined) {
     res = post(res);
   }
+  console.log('post', res);
   res = alasql('SELECT result, COUNT(*) AS [count] FROM $0 GROUP BY result', [res]);
+  console.log('post post', res);
   if (transform === undefined) {
     return res;
   }
@@ -70,6 +75,7 @@ export function searchAndGroupBy(query, queryObj, transform, post) {
   if (transform.call !== undefined) {
     ret.call = transform.call(res);
   }
+  console.log('ret', ret);
   return ret;
 }
 
@@ -84,7 +90,7 @@ export function toID(prefix, s, use_hash = false) {
 }
 
 export function d(...objs) {
-  objs.map(o => JSON.stringify(o))
+  console.log(...objs.map(o => JSON.stringify(o))
     .map(o => JSON.parse(o))
-    .forEach(o => console.log(o));
+  );
 }
