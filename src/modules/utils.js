@@ -54,14 +54,10 @@ export function searchAndGroupBy(query, queryObj, transform, post) {
   } else {
     res = alasql(query, queryObj);
   }
-  console.log(query);
-  console.log('pre', res);
   if (post !== undefined) {
     res = post(res);
   }
-  console.log('post', res);
   res = alasql('SELECT result, COUNT(*) AS [count] FROM $0 GROUP BY result', [res]);
-  console.log('post post', res);
   if (transform === undefined) {
     return res;
   }
@@ -75,7 +71,6 @@ export function searchAndGroupBy(query, queryObj, transform, post) {
   if (transform.call !== undefined) {
     ret.call = transform.call(res);
   }
-  console.log('ret', ret);
   return ret;
 }
 
