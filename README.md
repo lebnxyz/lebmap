@@ -42,7 +42,7 @@ Let's try using the code `question number . example number : option number` to r
 would refer to "Espresso" (question #0 & example #0), `0.1` would refer to "Decaf" (question #0 & example #1), and `0.0:1` would
 refer to semi-weekly espresso-drinkers (question #0, example #0, option #1). Similarly, `0.1:2` would refer to non-drinkers of decaf
 (question #0, example #1, option #2). Notice that question #1 has no examples listed, and it instead jumps straight into the options;
-that means our code for referring to it doesn't have to have the dot in it. `1.0` refers to early sleepers (question #1, option #0),
+that means our code for referring to it doesn't have to have the dot in it. `1:0` refers to early sleepers (question #1, option #0),
 and `1:2` refers to our insomniac friends who don't sleep (question #1, option #2).
 
 So! Under the *Query* tab, you can make use of these codes along with some operators to phrase a specific question about the survey's
