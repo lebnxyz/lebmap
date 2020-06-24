@@ -1,4 +1,4 @@
-# [leb](https://lebnxyz.github.io/lebmap)
+# [lebmap](https://lebnxyz.github.io/lebmap)
 An interactive map charting dialectal features of Lebanese Arabic. Based on the results of
 [this survey](https://forms.gle/U4h1xtSJZ5nnv5Ku7) posted to /r/Lebanon on 8/13/19.
 
