@@ -5,7 +5,7 @@ An interactive map charting dialectal features of Lebanese Arabic. Based on the 
 ## How to use
 The default tab, *Questions*, contains a list of everything that was asked on the survey. If you click on any one question,
 you'll be provided with a list of the different words or situations that were asked about as a part of that
-question, if any; clicking on one of these will finally show you a list of specific options for the realization of those
+question, if any; clicking on one of these will then show you a list of specific options for the realization of those
 words or situations. This will activate the chart at the top to show how many people answered one way or another. Clicking
 on one of these specific options will highlight pins on the map.
 
@@ -56,7 +56,8 @@ about the amount of those people that can't go to sleep at night, I could use th
 answer for not being able to sleep as they did for drinking either espresso or decaf semi-weekly, that's where the `=` operator comes
 in. Feel free to play around with combining this with other operators to create complex queries.
 
-I'm not really sure if the "Out of..." textbox on the *Query* tab is useful or not. By default, when you input a query, it
+I'm not really sure if the "Out of..." textbox on the *Query* tab is useful or not. It shouldn't be used for now, but my reasoning
+for including it was: by default, when you input a query, it
 searches for respondents within the region you've selected on the map (or within the whole map if you haven't selected any region),
 so the idea of putting a second query into the "Out of..." box is that it further restricts the search to only people who match that
 second query. For example, I can search for `0.0:0` *out of* `0.0:0 | 0.0:1` to figure out how many people drink espresso daily, out
@@ -65,8 +66,9 @@ the map (it only impacts what's graphed on the bar-chart), and the app doesn't c
 between your "Search for..." query and your "Out of..." query, so it's up to you to make sure the latter's results actually make up
 a superset of the former's.
 
-For convenience, you can use the list of questions below the textbox to have question codes inputted automatically, and
-you can add operators using the row of buttons below the textbox. The full syntax spec for querying is as follows:
+For convenience, you can click around inside the list of questions below the textbox to have question codes inputted
+automatically, and you can add operators using the row of buttons below the textbox. The full syntax spec for querying
+is as follows:
 - `option = option`: Find respondents who picked either both of the two options or neither.
 - `option & option`: Find respondents who picked both options.
 - `option | option`: Find respondents who picked either one option or the other.
@@ -79,19 +81,24 @@ you can add operators using the row of buttons below the textbox. The full synta
 i.e. wrote in a response that wasn't one of the multiple-choice answers.)
 
 ## Comments
-I finished the important functionality on 5/7/2020, which makes 9 months from start to end going by calendar dates, but
-git history reveals that I actually only made commits on 24 separate days during that time. So that's procrastination
-for you. (There's still a bit more that I can do, though. For example, the map was apparently intended to be used for
-tracking voting, so it treats Beirut as three separate parts -- that isn't useful here, and it somewhat messes up the way
+I procrastinated a lil bit and stretched out less than a month's worth of work over, like, 3/4 of a year from start to finish.
+But at least we did eventually finish! (That is, I finished the important functionality on 5/7/2020, which makes 9 months from
+start to end going by calendar dates, but git history reveals that I actually only made commits on 24 separate days during that
+time.)
+
+There's still a bit more that I can do, anyway. For example, the Lebanon map data I used was apparently specifically intended
+for tracking voting, so it treats Beirut as three separate parts -- that isn't useful here, and it slightly messes up the way
 Beirut's pin(s) look(s) when it or its region is selected. I could also try implementing the "Answers" tab, which would
-show specific respondents and their statistics and answer choices. But the really necessary stuff is all done!)
+show specific respondents and their statistics and answer choices. But the really necessary stuff is all in place, which I'm
+happy about.
 
-I'm also kind of miffed that I published the survey before I actually knew enough about Lebanese to ask half of these questions.
+OOTH, I'm a bit sad that I published the survey before I actually knew enough about Lebanese to ask half of these questions.
 A lot of them are based on shaky understandings of phonology or regional morphological variation and could have yielded
-some way-more-useful insights had they been asked properly. Oh well. This project is a precursor to and building-block for
-the remainder of @lebnxyz, which will include a comprehensive online dictionary hooked into a (hopefully better) survey.
+some way-more-useful insights had I waited to ask them until I'd learned a bit more. Oh well. This project is a precursor
+to and building-block for the remainder of [@lebnxyz](https://github.com/lebnxyz), which will include a comprehensive online
+dictionary hooked into a (hopefully better) survey.
 
-Also! Some of the code is hot garbage, especially the parts relating to the query functionality. Pardon :)
+Also! Some of the code is hot garbage, especially the parts relating to the query functionality. Pardon me there :)
 
 ## Build info
 I really wanted to love [Parcel](https://parceljs.org), but (as of release 1.12.3) it just isn't mature enough yet to be reliable.
