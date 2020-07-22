@@ -82,15 +82,13 @@ i.e. wrote in a response that wasn't one of the multiple-choice answers.)
 
 ## Comments
 I procrastinated a lil bit and stretched out less than a month's worth of work over, like, 3/4 of a year from start to finish.
-But at least we did eventually finish! (That is, I finished the important functionality on 5/7/2020, which makes 9 months from
-start to end going by calendar dates, but git history reveals that I actually only made commits on 24 separate days during that
-time.)
+But at least we did eventually finish!
 
 There's still a bit more that I can do, anyway. For example, the Lebanon map data I used was apparently specifically intended
 for tracking voting, so it treats Beirut as three separate parts -- that isn't useful here, and it slightly messes up the way
 Beirut's pin(s) look(s) when it or its region is selected. I could also try implementing the "Answers" tab, which would
 show specific respondents and their statistics and answer choices. But the really necessary stuff is all in place, which I'm
-happy about.
+very happy about.
 
 OOTH, I'm a bit sad that I published the survey before I actually knew enough about Lebanese to ask half of these questions.
 A lot of them are based on shaky understandings of phonology or regional morphological variation and could have yielded
