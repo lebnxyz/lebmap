@@ -24,7 +24,7 @@
   "homepage": "https://github.com/supposedly/leb#readme",
   "dependencies": {
     "alasql": "^0.5.6",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "core-js": "^3.6.4",
     "d3": "^5.15.0",
     "fitty": "^2.3.0",
