@@ -1,4 +1,4 @@
-LAST_TIMESTAMP = '2020/02/02 9:13:00 PM MDT'
+LAST_TIMESTAMP = '2021/07/21 7:17:39 AM MDT'
 import csv
 import json
 import requests
