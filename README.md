@@ -2,6 +2,12 @@
 An interactive map charting dialectal features of Lebanese Arabic. Based on the results of
 [this survey](https://forms.gle/U4h1xtSJZ5nnv5Ku7) posted to /r/Lebanon on 8/13/19.
 
+
+Please check out [this quick photo album](https://imgur.com/a/OQ0WGU9) for an intro that's
+not technical. (The captions do assume knowledge of Arabic, but it should help you
+understand how the map and querying features work even if you can't read those parts.)
+If you're looking for a more-boring description, carry on!
+
 ## How to use
 The default tab, *Questions*, contains a list of everything that was asked on the survey. If you click on any one question,
 you'll be provided with a list of the different words or situations that were asked about as a part of that
@@ -53,11 +59,12 @@ phrase that question as `0.0:1 | 0.1:1`; the operator `|` means that we want eit
 about the amount of those people that can't go to sleep at night, I could use the query `(0.0:1 | 0.1:1) & 1:2`.
 
 **On the other hand**, if I want to find out about the correlation of those results -- that is, how many people picked the **same**
-answer for not being able to sleep as they did for drinking either espresso or decaf semi-weekly, that's where the `=` operator comes
-in. Feel free to play around with combining this with other operators to create complex queries.
+answer for not being able to sleep as they did for drinking either espresso or decaf semi-weekly -- that's where the `=` operator comes
+in. `0.0:0 = 1:2` lets me know how strong the correlation is between espressoholics and non-sleepers, for example. Feel free to play
+around combining this with other operators to create complex queries.
 
-I'm not really sure if the "Out of..." textbox on the *Query* tab is useful or not. It shouldn't be used for now, but my reasoning
-for including it was: by default, when you input a query, it
+Lastly, I'm not really sure if the "Out of..." textbox on the *Query* tab is useful or not. It shouldn't be used for now because it's
+incomplete, but my reasoning for including it was: by default, when you input a query, it
 searches for respondents within the region you've selected on the map (or within the whole map if you haven't selected any region),
 so the idea of putting a second query into the "Out of..." box is that it further restricts the search to only people who match that
 second query. For example, I can search for `0.0:0` *out of* `0.0:0 | 0.0:1` to figure out how many people drink espresso daily, out
@@ -90,7 +97,7 @@ Beirut's pin(s) look(s) when it or its region is selected. I could also try impl
 show specific respondents and their statistics and answer choices. But the really necessary stuff is all in place, which I'm
 very happy about.
 
-OOTH, I'm a bit sad that I published the survey before I actually knew enough about Lebanese to ask half of these questions.
+OTOH, I'm a bit sad that I published the survey before I actually knew enough about Lebanese to ask half of these questions.
 A lot of them are based on shaky understandings of phonology or regional morphological variation and could have yielded
 some way-more-useful insights had I waited to ask them until I'd learned a bit more. Oh well. This project is a precursor
 to and building-block for the remainder of [@lebnxyz](https://github.com/lebnxyz), which will include a comprehensive online
